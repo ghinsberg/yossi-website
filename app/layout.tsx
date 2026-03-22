@@ -5,9 +5,42 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Yossi Ghinsberg | Transformation Keynote Speaker",
+  title: {
+    default: "Yossi Ghinsberg | Transformation Keynote Speaker",
+    template: "%s | Yossi Ghinsberg",
+  },
   description:
     "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author. Book Yossi Ghinsberg for transformation keynotes on leadership, resilience, and navigating disruption.",
+  keywords: [
+    "keynote speaker",
+    "transformation",
+    "leadership",
+    "AI",
+    "resilience",
+    "Yossi Ghinsberg",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: "Yossi Ghinsberg",
+    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
+    description:
+      "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author.",
+    images: [
+      {
+        url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yossi Ghinsberg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
+    description:
+      "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author.",
+    images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
+  },
 };
 
 export default function RootLayout({
