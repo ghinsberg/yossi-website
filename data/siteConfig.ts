@@ -36,6 +36,8 @@ export const siteConfig: SiteConfig = {
   navigation: [
     { label: "Keynotes", href: "/keynotes" },
     { label: "Story", href: "/story" },
+    { label: "Endorsements", href: "/endorsements" },
+    { label: "Videos", href: "/videos" },
     { label: "Book Yossi", href: "/book-yossi" },
   ],
   contact: {
