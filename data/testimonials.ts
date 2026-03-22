@@ -11,6 +11,15 @@ export const testimonials: Testimonial[] = [
   // Tier 1 — Lead testimonials
   {
     quote:
+      "YOSSI GHINSBERG DEFINITELY RANKS ON MY TOP 5 LIST OF UNFORGETTABLE SPEAKERS",
+    author: "Derek Sweeney",
+    title: "President",
+    company: "The Sweeney Agency",
+    tier: 1,
+    usage: ["endorsements", "homepage"],
+  },
+  {
+    quote:
       "I have travelled the globe seeing and engaging motivational and keynote speakers over the past 13 years and never have I seen an audience as captivated by a speaker as they were by Yossi. He has a truly remarkable gift for making an audience not just hear but feel.",
     author: "Rachel McVinish",
     title: "President Asia Pacific",
