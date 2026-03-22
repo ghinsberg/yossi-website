@@ -117,10 +117,9 @@ export default function StoryPage() {
               the next decision.
             </p>
             <p className="mt-8">
-              That understanding became a book. Then a global bestseller in 20
-              languages. Then a Hollywood film with Daniel Radcliffe. Then two
-              decades of keynotes on the world&apos;s biggest stages.
+              That understanding became <em className="not-italic font-semibold text-brand-bg">Jungle</em> — a book that has sold over a million copies in more than 20 languages. It became a Hollywood film starring Daniel Radcliffe. Years later, he distilled everything he had learned about leadership and nature into a second book, <em className="not-italic font-semibold text-brand-bg">Laws of the Jungle</em>. Then came two decades of keynotes on the world&apos;s biggest stages.
             </p>
+            <p className="mt-8">His TEDxMelbourne talk brought the Amazon story to a new generation.</p>
           </div>
         </div>
       </section>
@@ -153,6 +152,20 @@ export default function StoryPage() {
         </div>
       </section>
 
+      {/* 8b. Stage photo */}
+      <section className="py-8 bg-brand-bg">
+        <div className="max-w-4xl mx-auto px-6">
+          <img
+            src="/images/stage/on-stage.jpg"
+            alt="Yossi Ghinsberg keynoting at ASPIRE conference, ICE Krakow, 2017"
+            className="w-full rounded-xl"
+          />
+          <p className="text-sm text-brand-text-secondary text-center mt-3 italic">
+            ASPIRE conference, ICE Krakow, 2017 — 2,000 attendees
+          </p>
+        </div>
+      </section>
+
       {/* 9. The Life After */}
       <section className="bg-brand-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
@@ -160,7 +173,9 @@ export default function StoryPage() {
             He went back to the Amazon. Not to relive the ordeal, but to give
             something back. He was instrumental in creating the Chalalan
             Ecolodge — a model for indigenous-led eco-tourism run by the
-            Uchupiamona people. He helped establish Madidi National Park. He
+            Uchupiamona people. In 2025, the Uchupiamona Nation officially
+            appointed him their Ambassador to the World — a recognition of
+            decades of partnership. He helped establish Madidi National Park. He
             worked for seven years in addiction rehabilitation across multiple
             countries. He built businesses. He crossed continents. He kept living
             at the edge.
@@ -173,10 +188,12 @@ export default function StoryPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed">
             He has shared stages with Richard Branson, Bill Clinton, Queen Noor,
-            Steve Ballmer, Nassim Taleb, Deepak Chopra, and Steve Irwin. He has
-            been voted Most Unforgettable Speaker. His books have sold millions
-            of copies in 20 languages. He speaks to audiences of 10,000 and
-            leaves them permanently changed.
+            Steve Ballmer, Nassim Taleb, Deepak Chopra, and Steve Irwin. In
+            2025, he delivered the keynote at MDRT&apos;s Global Conference to
+            6,000 financial professionals — one of the largest speaking
+            engagements in the industry. He has been voted Most Unforgettable
+            Speaker. His books have sold millions of copies in 20 languages. He
+            speaks to audiences of 10,000 and leaves them permanently changed.
           </p>
           <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed mt-8">
             Some call him the real most interesting man in the world.
@@ -187,6 +204,65 @@ export default function StoryPage() {
           <p className="text-2xl md:text-3xl font-heading font-bold text-brand-gold mt-8">
             Be Brave.
           </p>
+        </div>
+      </section>
+
+      {/* Credential Stack */}
+      <section className="bg-brand-bg py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+            {[
+              {
+                icon: (
+                  <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                ),
+                label: "Voted Most Unforgettable Speaker",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21 4H3a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1zM12 16c-1.1 0-2-.45-2-1h-1v-2h1c0-.55.9-1 2-1s2 .45 2 1h1v2h-1c0 .55-.9 1-2 1zm-8-2V8h4v1H5v4h3v1H4zm16 0h-4v-1h3V9h-3V8h4v6z" />
+                  </svg>
+                ),
+                label: "1M+ Books Sold in 20+ Languages",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V4h-4z" />
+                  </svg>
+                ),
+                label: "Hollywood Film with Daniel Radcliffe",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                  </svg>
+                ),
+                label: "MDRT 2025 — 6,000 Attendees",
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 00-.98-.85c-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20H8c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1h-3v-2.08a6.993 6.993 0 005.91-5.78c.1-.6-.39-1.14-1-1.14z" />
+                  </svg>
+                ),
+                label: "Shared Stages: Branson, Clinton, Taleb",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div className="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center mb-3">
+                  {item.icon}
+                </div>
+                <p className="text-brand-text text-sm font-medium leading-tight">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
