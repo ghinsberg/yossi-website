@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">BMW</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="#FFFFFF">
+  <!-- BMW roundel -->
+  <circle cx="100" cy="30" r="27" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <circle cx="100" cy="30" r="23" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Inner quadrants -->
+  <path d="M100 7v23H77c0-12.7 10.3-23 23-23z" fill="#FFFFFF"/>
+  <path d="M100 30h23c0 12.7-10.3 23-23 23V30z" fill="#FFFFFF"/>
+  <!-- BMW letters on outer ring -->
+  <text x="82" y="5.5" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#FFFFFF">B</text>
+  <text x="97" y="3" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#FFFFFF">M</text>
+  <text x="113" y="5.5" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#FFFFFF">W</text>
 </svg>

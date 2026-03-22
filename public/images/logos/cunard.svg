@@ -1,3 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">CUNARD</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="#FFFFFF">
+  <!-- Cunard logo with lion -->
+  <text x="100" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="normal" fill="#FFFFFF" letter-spacing="6">CUNARD</text>
+  <!-- Crown/lion simplified -->
+  <path d="M90 10l3 4h4l-3 4 3 4h-4l-3 4-3-4h-4l3-4-3-4h4l3-4z" fill="#FFFFFF" transform="translate(10,-2) scale(0.7)"/>
 </svg>

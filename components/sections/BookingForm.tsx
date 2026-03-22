@@ -83,6 +83,29 @@ export default function BookingForm() {
     }
   }
 
+  function buildMailtoFallback() {
+    const subject = encodeURIComponent(
+      `Booking Enquiry from ${formData.name} — ${formData.organisation}`
+    );
+    const body = encodeURIComponent(
+      [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Organisation: ${formData.organisation}`,
+        `Phone: ${formData.phone || "N/A"}`,
+        `Event Date: ${formData.eventDate}`,
+        `Event Location: ${formData.eventLocation}`,
+        `Audience Size: ${formData.audienceSize || "N/A"}`,
+        `Format: ${formData.format}`,
+        `Budget: ${formData.budget}`,
+        `Keynote Interest: ${formData.keynote}`,
+        `Message: ${formData.message || "N/A"}`,
+        `Referral: ${formData.referral || "N/A"}`,
+      ].join("\n")
+    );
+    return `mailto:michael@encorespeakers.com?subject=${subject}&body=${body}`;
+  }
+
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const validationErrors = validate();
@@ -92,7 +115,7 @@ export default function BookingForm() {
     }
     setStatus("submitting");
     try {
-      const response = await fetch("https://formspree.io/f/PLACEHOLDER", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -100,9 +123,13 @@ export default function BookingForm() {
       if (response.ok) {
         setStatus("success");
       } else {
+        // API returned an error — fall back to mailto
+        window.location.href = buildMailtoFallback();
         setStatus("error");
       }
     } catch {
+      // Network error — fall back to mailto
+      window.location.href = buildMailtoFallback();
       setStatus("error");
     }
   }

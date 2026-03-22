@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/stage/carousel-3.jpg')" }}
+        style={{ backgroundImage: "url('/images/stage/carousel-1.jpg')" }}
       />
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-brand-bg" />

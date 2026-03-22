@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">DISCOVERY CHANNEL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="#FFFFFF">
+  <!-- Discovery Channel logo -->
+  <circle cx="30" cy="30" r="18" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Globe/earth shape inside circle -->
+  <ellipse cx="30" cy="30" rx="8" ry="18" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <line x1="12" y1="30" x2="48" y2="30" stroke="#FFFFFF" stroke-width="1"/>
+  <path d="M14 22c5 1 10 1.5 16 1.5s11-.5 16-1.5" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <path d="M14 38c5-1 10-1.5 16-1.5s11 .5 16 1.5" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="55" y="26" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" letter-spacing="1">DISCOVERY</text>
+  <text x="55" y="40" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF" letter-spacing="2">CHANNEL</text>
 </svg>
