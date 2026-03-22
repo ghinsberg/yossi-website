@@ -61,9 +61,13 @@ export default function BookingForm() {
     if (!formData.eventDate) errs.eventDate = "Event date is required";
     if (!formData.eventLocation.trim())
       errs.eventLocation = "Event location is required";
+    if (!formData.audienceSize)
+      errs.audienceSize = "Please select audience size";
     if (!formData.format) errs.format = "Please select a format";
     if (!formData.budget || formData.budget === "")
       errs.budget = "Please select a budget range";
+    if (!formData.message.trim())
+      errs.message = "Please describe your event briefly";
     return errs;
   }
 
@@ -285,6 +289,7 @@ export default function BookingForm() {
         <div>
           <label htmlFor="audienceSize" className={labelStyles}>
             Expected audience size
+            <span className="text-brand-gold ml-1">*</span>
           </label>
           <select
             id="audienceSize"
@@ -300,6 +305,9 @@ export default function BookingForm() {
             <option value="1000-5000">1,000&ndash;5,000</option>
             <option value="5000+">5,000+</option>
           </select>
+          {errors.audienceSize && (
+            <p className="text-red-400 text-sm mt-1">{errors.audienceSize}</p>
+          )}
         </div>
 
         {/* Format */}
@@ -403,6 +411,7 @@ export default function BookingForm() {
         <label htmlFor="message" className={labelStyles}>
           Tell us briefly about your audience and what you&apos;re hoping
           Yossi&apos;s keynote will achieve
+          <span className="text-brand-gold ml-1">*</span>
         </label>
         <textarea
           id="message"
@@ -413,6 +422,9 @@ export default function BookingForm() {
           placeholder="e.g. We're hosting our annual leadership summit for 500 senior executives..."
           className={inputStyles}
         />
+        {errors.message && (
+          <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+        )}
       </div>
 
       {/* Referral - full width */}

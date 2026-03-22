@@ -93,7 +93,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "It was a joy to have you on the screens. Kerwin would have been honoured to see you up there. On behalf of myself and the whole K-Team -- THANK YOU!",
+      "It was a joy to have you on the screens. Kerwin would have been honoured to see you up there. On behalf of myself and the whole K-Team — THANK YOU!",
     author: "Elise Cimino",
     title: "Event Coordinator",
     company: "Business Mastery International (Kerwin Rae)",
