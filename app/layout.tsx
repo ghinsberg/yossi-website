@@ -3,6 +3,7 @@ import "./globals.css";
 import CredentialBar from "@/components/layout/CredentialBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: {
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="bg-brand-bg text-brand-text font-body antialiased">
+        <StructuredData />
         <CredentialBar />
         <Header />
         <main>{children}</main>
