@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <span className="text-xl font-extrabold tracking-[0.2em] uppercase text-brand-gold font-heading">
-                GHINSBERG
+                YOSSI GHINSBERG
               </span>
             </Link>
             <p className="mt-3 text-brand-text-secondary text-sm">

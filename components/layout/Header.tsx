@@ -43,7 +43,7 @@ export default function Header() {
           {/* Wordmark */}
           <Link href="/" className="flex-shrink-0">
             <span className="text-xl font-extrabold tracking-[0.2em] uppercase text-brand-gold font-heading">
-              GHINSBERG
+              YOSSI GHINSBERG
             </span>
           </Link>
 

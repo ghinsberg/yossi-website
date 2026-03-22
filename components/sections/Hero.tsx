@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/stage/on-stage.jpg')" }}
+        style={{ backgroundImage: "url('/images/stage/carousel-3.jpg')" }}
       />
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-brand-bg" />
@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
         <p className="text-brand-gold text-lg md:text-xl tracking-[0.3em] uppercase font-heading font-extrabold mb-6">
-          GHINSBERG
+          YOSSI GHINSBERG
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-text leading-tight mb-6">
           Survival Wisdom for the AI Age
