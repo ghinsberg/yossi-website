@@ -5,11 +5,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Media & Books",
   description:
-    "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+    "Bestselling author of Jungle (1M+ copies, 20 languages). Daniel Radcliffe film. Discovery Channel. TEDx. Press kit and speaker resources.",
   openGraph: {
     title: "Media & Books | Yossi Ghinsberg",
     description:
-      "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+      "Bestselling author of Jungle (1M+ copies, 20 languages). Daniel Radcliffe film. Discovery Channel. TEDx. Press kit and speaker resources.",
     images: [
       {
         url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Media & Books | Yossi Ghinsberg",
     description:
-      "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+      "Bestselling author of Jungle (1M+ copies, 20 languages). Daniel Radcliffe film. Discovery Channel. TEDx. Press kit and speaker resources.",
     images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
   },
 };

@@ -4,11 +4,11 @@ import VideosPageClient from "./VideosPageClient";
 export const metadata: Metadata = {
   title: "Videos",
   description:
-    "Watch Yossi Ghinsberg on stage. Speaker highlight reel, TEDx talks, and media appearances from the world's most unforgettable transformation keynote speaker.",
+    "Watch Yossi Ghinsberg's speaker reel, TEDx talk, and keynote highlights. See why audiences of 10,000 sit in silence.",
   openGraph: {
     title: "Videos | Yossi Ghinsberg",
     description:
-      "Watch Yossi Ghinsberg on stage. Speaker highlight reel, TEDx talks, and media appearances from the world's most unforgettable transformation keynote speaker.",
+      "Watch Yossi Ghinsberg's speaker reel, TEDx talk, and keynote highlights. See why audiences of 10,000 sit in silence.",
     images: [
       {
         url: "https://yossighinsberg.com/images/stage/carousel-1.jpg",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Videos | Yossi Ghinsberg",
     description:
-      "Watch Yossi Ghinsberg on stage. Speaker highlight reel, TEDx talks, and media appearances from the world's most unforgettable transformation keynote speaker.",
+      "Watch Yossi Ghinsberg's speaker reel, TEDx talk, and keynote highlights. See why audiences of 10,000 sit in silence.",
     images: ["https://yossighinsberg.com/images/stage/carousel-1.jpg"],
   },
 };

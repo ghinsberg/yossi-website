@@ -8,7 +8,18 @@ import TestimonialCard from "@/components/ui/TestimonialCard";
 export const metadata = {
   title: "Keynote Programs",
   description:
-    "Three transformation keynotes by Yossi Ghinsberg: Be Brave in a New World, Surviving the Jungle, and Laws of the Jungle. Book the speaker voted Most Unforgettable.",
+    "Three transformation keynotes: Be Brave in a New World (AI/leadership), Surviving the Jungle (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+  openGraph: {
+    title: "Keynote Programs | Yossi Ghinsberg",
+    description:
+      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Surviving the Jungle (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Keynote Programs | Yossi Ghinsberg",
+    description:
+      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Surviving the Jungle (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+  },
 };
 
 const formatOptions = [

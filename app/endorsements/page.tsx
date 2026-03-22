@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Endorsements",
   description:
-    "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+    "What Google, Apple, Microsoft, and top event producers say about Yossi Ghinsberg. Rated #2 inspirational speaker by The Sweeney Agency.",
   openGraph: {
     title: "Endorsements | Yossi Ghinsberg",
     description:
-      "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+      "What Google, Apple, Microsoft, and top event producers say about Yossi Ghinsberg. Rated #2 inspirational speaker by The Sweeney Agency.",
     images: [
       {
         url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
@@ -25,19 +25,39 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Endorsements | Yossi Ghinsberg",
     description:
-      "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+      "What Google, Apple, Microsoft, and top event producers say about Yossi Ghinsberg. Rated #2 inspirational speaker by The Sweeney Agency.",
     images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
   },
 };
+
+const eventProducerNames = [
+  "Francesco Prandoni",
+  "Dee Knopp",
+  "Elise Cimino",
+  "Nina Sutton",
+];
+
+const corporateLeaderNames = [
+  "Rachel McVinish",
+  "Regina Bedoya, CLU, ChFC",
+  "Mark Wang",
+  "Stuart Hayes",
+  "Pauline Nguyen",
+];
 
 export default function EndorsementsPage() {
   const featured = testimonials.find(
     (t) => t.author === "Derek Sweeney"
   );
   const rest = testimonials.filter((t) => t.author !== "Derek Sweeney");
-  const tier1 = rest.filter((t) => t.tier === 1);
-  const tier2 = rest.filter((t) => t.tier === 2);
-  const tier3 = rest.filter((t) => t.tier === 3);
+
+  const eventProducers = rest.filter((t) =>
+    eventProducerNames.includes(t.author)
+  );
+  const corporateLeaders = rest.filter((t) =>
+    corporateLeaderNames.includes(t.author)
+  );
+  const readersAndAudiences = rest.filter((t) => t.tier === 3);
 
   return (
     <>
@@ -47,7 +67,7 @@ export default function EndorsementsPage() {
           What They Say
         </h1>
         <p className="text-lg md:text-xl text-brand-text-secondary mt-4 max-w-2xl mx-auto">
-          From CEOs to event producers, Yossi transforms every room he enters.
+          Audiences don&apos;t just listen to Yossi. They feel something shift.
         </p>
         <div className="w-16 h-0.5 bg-brand-gold mx-auto mt-8" />
       </section>
@@ -73,11 +93,29 @@ export default function EndorsementsPage() {
         </section>
       )}
 
-      {/* Tier 1 — Large Cards */}
+      {/* #2 Rated Speaker Callout */}
+      <section className="bg-brand-bg py-8 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-brand-gold/10 border border-brand-gold/30 rounded-xl py-8 px-6">
+            <p className="text-brand-gold text-4xl md:text-5xl font-heading font-bold">#2</p>
+            <p className="text-brand-text text-lg md:text-xl font-heading font-semibold mt-2">
+              of 10 Highest Rated Inspirational Speakers for Business
+            </p>
+            <p className="text-brand-text-secondary text-sm mt-3">
+              The Sweeney Agency (2017) — based on client feedback and reviews
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Producers & Bureaus */}
       <section className="bg-brand-bg py-16 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
+            Event Producers &amp; Bureaus
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tier1.map((t, i) => (
+            {eventProducers.map((t, i) => (
               <div
                 key={i}
                 className="bg-white/[0.03] border border-white/10 rounded-xl p-8 md:p-10 relative"
@@ -100,11 +138,14 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      {/* Tier 2 — Standard Cards */}
+      {/* Corporate Leaders */}
       <section className="bg-brand-bg py-8 md:py-16 px-6">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
+            Corporate Leaders
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {tier2.map((t, i) => (
+            {corporateLeaders.map((t, i) => (
               <div
                 key={i}
                 className="bg-white/[0.03] border border-white/10 rounded-xl p-6 relative"
@@ -129,12 +170,15 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      {/* Tier 3 — Small Cards */}
-      {tier3.length > 0 && (
+      {/* Readers & Audiences */}
+      {readersAndAudiences.length > 0 && (
         <section className="bg-brand-bg py-8 md:py-16 px-6">
           <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
+              Readers &amp; Audiences
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {tier3.map((t, i) => (
+              {readersAndAudiences.map((t, i) => (
                 <div
                   key={i}
                   className="bg-white/[0.02] border border-white/5 rounded-lg p-5 relative"

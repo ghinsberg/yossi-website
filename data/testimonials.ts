@@ -66,10 +66,10 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Very appreciate for your sharing. Yossi's story and sharing will be our chicken soup for the souls of our business, family, society and whole life.",
+      "Thank you for making our event one of the very best we have ever held. Your presentation had an enormous impact on our audience and gave us the inspiration and tools necessary to Be Brave and win in our business.",
     author: "Mark Wang",
-    title: "President North America & China",
-    company: "Jeunesse Global",
+    title: "President, Honolulu, Hawaii",
+    company: "Insurance Industry Conference",
     tier: 2,
     usage: ["keynotes"],
   },

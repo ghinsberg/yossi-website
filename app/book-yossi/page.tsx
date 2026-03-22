@@ -6,9 +6,20 @@ import { siteConfig } from "@/data/siteConfig";
 import { testimonials } from "@/data/testimonials";
 
 export const metadata: Metadata = {
-  title: "Book Yossi",
+  title: "Book Yossi Ghinsberg",
   description:
-    "Book Yossi Ghinsberg for your next event. Transformation keynotes on leadership, resilience, and navigating disruption. We respond within 24 hours.",
+    "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+  openGraph: {
+    title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
+    description:
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
+    description:
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+  },
 };
 
 const bookingTestimonial = testimonials.find(

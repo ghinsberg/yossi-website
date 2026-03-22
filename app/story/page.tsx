@@ -1,9 +1,20 @@
 import Button from "@/components/ui/Button";
 
 export const metadata = {
-  title: "The Story",
+  title: "The Story of Yossi Ghinsberg",
   description:
-    "In 1981, Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon. Then he built AI companies in Silicon Valley. The story behind the speaker voted Most Unforgettable.",
+    "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+  openGraph: {
+    title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
+    description:
+      "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
+    description:
+      "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+  },
 };
 
 export default function StoryPage() {
