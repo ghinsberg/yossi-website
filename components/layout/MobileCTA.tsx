@@ -11,7 +11,7 @@ export default function MobileCTA() {
       <div className="py-3 px-4">
         <Link
           href="/book-yossi"
-          className="block w-full text-center text-black font-semibold py-2"
+          className="block w-full text-center text-black font-semibold py-3 min-h-[44px] flex items-center justify-center"
         >
           Check Availability
         </Link>

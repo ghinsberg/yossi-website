@@ -68,7 +68,7 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
+            className="md:hidden flex flex-col justify-center items-center w-11 h-11 gap-1.5"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -92,7 +92,7 @@ export default function Header() {
           <button
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="text-white w-8 h-8 flex items-center justify-center"
+            className="text-white w-11 h-11 flex items-center justify-center"
           >
             <svg
               width="24"

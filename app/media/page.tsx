@@ -1,9 +1,31 @@
 import Button from "@/components/ui/Button";
 
-export const metadata = {
-  title: "Media & Books | Yossi Ghinsberg",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Media & Books",
   description:
-    "Explore Yossi Ghinsberg's bestselling books, the Hollywood film starring Daniel Radcliffe, Discovery Channel features, and global media presence.",
+    "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+  openGraph: {
+    title: "Media & Books | Yossi Ghinsberg",
+    description:
+      "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+    images: [
+      {
+        url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yossi Ghinsberg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Media & Books | Yossi Ghinsberg",
+    description:
+      "Explore Yossi Ghinsberg's bestselling books, the Daniel Radcliffe film 'Jungle', and global media appearances including Discovery Channel and TEDx.",
+    images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
+  },
 };
 
 const mediaLogos = [
@@ -43,6 +65,7 @@ export default function MediaPage() {
                 <img
                   src={logo.src}
                   alt={logo.name}
+                  loading="lazy"
                   className="h-10 md:h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert"
                 />
                 <span className="text-xs text-brand-text-secondary/60">
@@ -180,6 +203,7 @@ export default function MediaPage() {
                 title="Jungle (2017) Official Trailer"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full"
               />
             </div>

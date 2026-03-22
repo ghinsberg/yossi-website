@@ -2,10 +2,32 @@ import { testimonials } from "@/data/testimonials";
 import ClientLogos from "@/components/sections/ClientLogos";
 import Button from "@/components/ui/Button";
 
-export const metadata = {
-  title: "Endorsements | Yossi Ghinsberg",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Endorsements",
   description:
-    "What CEOs, event producers, and audiences say about Yossi Ghinsberg — voted Most Unforgettable Speaker.",
+    "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+  openGraph: {
+    title: "Endorsements | Yossi Ghinsberg",
+    description:
+      "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+    images: [
+      {
+        url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Yossi Ghinsberg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Endorsements | Yossi Ghinsberg",
+    description:
+      "What CEOs and event producers say about Yossi Ghinsberg. Read testimonials from leaders at Google, Apple, MDRT, and more.",
+    images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
+  },
 };
 
 export default function EndorsementsPage() {
