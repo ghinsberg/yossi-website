@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0A0A0A;
+  --color-brand-surface: #1B3A2D;
+  --color-brand-gold: #B8860B;
+  --color-brand-gold-light: #D4A843;
+  --color-brand-teal: #01696F;
+  --color-brand-teal-light: #028A92;
+  --color-brand-text: #FFFFFF;
+  --color-brand-text-secondary: #CDCCCA;
+  --color-brand-light-bg: #F7F6F2;
+
+  --font-heading: "DM Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
