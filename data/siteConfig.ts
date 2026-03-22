@@ -38,6 +38,7 @@ export const siteConfig: SiteConfig = {
     { label: "Story", href: "/story" },
     { label: "Endorsements", href: "/endorsements" },
     { label: "Videos", href: "/videos" },
+    { label: "Media", href: "/media" },
     { label: "Book Yossi", href: "/book-yossi" },
   ],
   contact: {
