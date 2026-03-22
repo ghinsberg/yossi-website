@@ -432,15 +432,23 @@ export default function BookingForm() {
         <label htmlFor="referral" className={labelStyles}>
           How did you hear about Yossi?
         </label>
-        <input
-          type="text"
+        <select
           id="referral"
           name="referral"
           value={formData.referral}
           onChange={handleChange}
-          placeholder="e.g. Google, referral, saw him speak..."
-          className={inputStyles}
-        />
+          className={selectStyles}
+        >
+          <option value="">Select...</option>
+          <option value="Speaker bureau">Speaker bureau</option>
+          <option value="Colleague or friend referral">Colleague or friend referral</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google search">Google search</option>
+          <option value="AI assistant (ChatGPT, Perplexity, etc.)">AI assistant (ChatGPT, Perplexity, etc.)</option>
+          <option value="Saw Yossi speak at an event">Saw Yossi speak at an event</option>
+          <option value="Read the book / saw the film">Read the book / saw the film</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
 
       {/* Error message */}

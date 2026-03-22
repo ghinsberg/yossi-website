@@ -17,6 +17,9 @@ export default function Footer() {
             <p className="mt-3 text-brand-text-secondary text-sm">
               Transformation Keynote Speaker
             </p>
+            <p className="text-brand-gold text-lg font-heading font-bold mt-4 tracking-wider">
+              Be Brave.
+            </p>
           </div>
 
           {/* Column 2: Quick Links */}
@@ -29,6 +32,9 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "Keynotes", href: "/keynotes" },
                 { label: "Story", href: "/story" },
+                { label: "Videos", href: "/videos" },
+                { label: "Endorsements", href: "/endorsements" },
+                { label: "Media & Books", href: "/media-books" },
                 { label: "Book Yossi", href: "/book-yossi" },
               ].map((link) => (
                 <li key={link.href}>
