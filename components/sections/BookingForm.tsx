@@ -400,7 +400,7 @@ export default function BookingForm() {
             <option value="Be Brave in a New World">
               Be Brave in a New World
             </option>
-            <option value="Surviving the Jungle">Surviving the Jungle</option>
+            <option value="Made, Not Broken">Made, Not Broken</option>
             <option value="Laws of the Jungle">Laws of the Jungle</option>
           </select>
         </div>
