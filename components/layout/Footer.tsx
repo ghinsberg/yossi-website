@@ -13,7 +13,7 @@ export default function Footer() {
               <img
                 src="/images/yossi-ghinsberg-logo.svg"
                 alt="Yossi Ghinsberg"
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
             <p className="mt-3 text-brand-text-secondary text-sm">
