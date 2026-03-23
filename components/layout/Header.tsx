@@ -42,9 +42,11 @@ export default function Header() {
         <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Wordmark */}
           <Link href="/" className="flex-shrink-0">
-            <span className="text-xl font-extrabold tracking-[0.2em] uppercase text-brand-gold font-heading">
-              YOSSI GHINSBERG
-            </span>
+            <img
+              src="/images/yossi-ghinsberg-logo.png"
+              alt="Yossi Ghinsberg"
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

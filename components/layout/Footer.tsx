@@ -10,9 +10,11 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div>
             <Link href="/">
-              <span className="text-xl font-extrabold tracking-[0.2em] uppercase text-brand-gold font-heading">
-                YOSSI GHINSBERG
-              </span>
+              <img
+                src="/images/yossi-ghinsberg-logo.png"
+                alt="Yossi Ghinsberg"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-3 text-brand-text-secondary text-sm">
               Transformation Keynote Speaker
