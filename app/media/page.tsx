@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import { mediaLogos } from "@/data/clients";
 
 import type { Metadata } from "next";
 
@@ -28,14 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const mediaLogos = [
-  { name: "Discovery Channel", src: "/images/media/discovery-channel.svg" },
-  { name: "Larry King", src: "/images/media/larry-king.svg" },
-  { name: "TEDx", src: "/images/media/tedx.svg" },
-  { name: "TechCrunch", src: "/images/media/techcrunch.svg" },
-  { name: "Cunard", src: "/images/media/cunard.svg" },
-  { name: "YPO", src: "/images/media/ypo.svg" },
-];
 
 export default function MediaPage() {
   return (
@@ -59,11 +52,11 @@ export default function MediaPage() {
           <p className="text-center text-sm uppercase tracking-[0.2em] text-brand-text-secondary mb-10">
             As Seen In
           </p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
             {mediaLogos.map((logo) => (
-              <div key={logo.name} className="flex flex-col items-center gap-2">
+              <div key={logo.slug} className="flex flex-col items-center gap-2">
                 <img
-                  src={logo.src}
+                  src={`/images/media/${logo.slug}.svg`}
                   alt={logo.name}
                   loading="lazy"
                   className="h-10 md:h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0 invert"
