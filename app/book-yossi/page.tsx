@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const bookingTestimonial = testimonials.find(
-  (t) => t.tier === 1 && t.usage.includes("booking")
+  (t) => t.author === "Regina Bedoya, CLU, ChFC"
 )!;
 
 const steps = [

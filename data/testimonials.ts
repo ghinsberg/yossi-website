@@ -3,111 +3,241 @@ export interface Testimonial {
   author: string;
   title: string;
   company: string;
-  tier: 1 | 2 | 3;
-  usage: string[];
+  category: "ceo" | "corporate" | "bureau" | "event" | "industry" | "other";
 }
 
 export const testimonials: Testimonial[] = [
-  // Tier 1 — Lead testimonials
+  // CEOs & C-Suite
   {
-    quote:
-      "YOSSI GHINSBERG DEFINITELY RANKS ON MY TOP 5 LIST OF UNFORGETTABLE SPEAKERS",
-    author: "Derek Sweeney",
-    title: "President",
-    company: "The Sweeney Agency",
-    tier: 1,
-    usage: ["endorsements", "homepage"],
+    quote: "Yossi Ghinsberg ranks number one in my experience.",
+    author: "Chris Varelas",
+    title: "Head of National Investment Bank",
+    company: "Citibank",
+    category: "ceo",
   },
   {
-    quote:
-      "I have travelled the globe seeing and engaging motivational and keynote speakers over the past 13 years and never have I seen an audience as captivated by a speaker as they were by Yossi. He has a truly remarkable gift for making an audience not just hear but feel.",
+    quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams.",
+    author: "Bert Wong",
+    title: "CEO",
+    company: "Fuji Xerox",
+    category: "ceo",
+  },
+  {
+    quote: "Yossi's story is inspirational and full of practical business lessons.",
+    author: "Abe Peled",
+    title: "Chairman and CEO",
+    company: "NDS",
+    category: "ceo",
+  },
+  {
+    quote: "We were so impressed that we invited Yossi for a second presentation the following day. He is a speaker of exceptional caliber.",
+    author: "Elmo de Alwis",
+    title: "CEO and Managing Director",
+    company: "Sigma Pharmaceuticals",
+    category: "ceo",
+  },
+  {
+    quote: "Truly moving and yet inspirational.",
+    author: "Dr. Santrupt B Misra",
+    title: "CEO",
+    company: "Aditya Birla Corporation",
+    category: "ceo",
+  },
+  {
+    quote: "Yossi is the ultimate blow them away, bring the house down kind of speaker.",
+    author: "Leanne Christie",
+    title: "CEO & Co-Founder",
+    company: "ODE Management",
+    category: "ceo",
+  },
+  {
+    quote: "Yossi is among the most impressive speakers we have ever had. His message is something I will always carry with me.",
+    author: "Jerry C. Meyer",
+    title: "President/COO",
+    company: "Aegis Living",
+    category: "ceo",
+  },
+
+  // Corporate Leaders
+  {
+    quote: "Spectacular, inspiring, emotional, breathtaking. I will be recommending Yossi for keynotes wherever and whenever possible.",
+    author: "John Zaharakis",
+    title: "General Manager, Conferences & Events",
+    company: "American Express",
+    category: "corporate",
+  },
+  {
+    quote: "Every person I spoke with was enthralled and captivated. Yossi's insights will help us build our partner ecosystem.",
+    author: "John Hennessey",
+    title: "General Manager, Small, Medium and Corporate Business",
+    company: "Microsoft",
+    category: "corporate",
+  },
+  {
+    quote: "Yossi has an amazing ability to reach out and touch people's inner self.",
+    author: "Abhijit Das",
+    title: "Regional Business Leader, Asia Partner Sales",
+    company: "Microsoft",
+    category: "corporate",
+  },
+  {
+    quote: "Nothing short of a magician. Yossi created an enormous sense of exhilaration in the room.",
+    author: "Ron Yariv",
+    title: "Managing Director, International Sales",
+    company: "Hilton International",
+    category: "corporate",
+  },
+  {
+    quote: "Yossi's style is extremely moving and inspiring. His content is something audiences can relate easily to their own situations.",
+    author: "Christopher Stenhouse",
+    title: "General Manager",
+    company: "Telstra",
+    category: "corporate",
+  },
+  {
+    quote: "Yossi had everyone on the edge of their seats. He was a major talking point of the conference.",
+    author: "Paul Woess",
+    title: "National Training Manager",
+    company: "Schwarzkopf",
+    category: "corporate",
+  },
+  {
+    quote: "I have never seen a packed room so totally absorbed at a convention session in my career.",
+    author: "Bob Fuller",
+    title: "Tech Support Executive",
+    company: "IBM",
+    category: "corporate",
+  },
+  {
+    quote: "I have travelled the globe seeing and engaging motivational and keynote speakers over the past 13 years and never have I seen an audience as captivated by a speaker as they were by Yossi. He has a truly remarkable gift for making an audience not just hear but feel.",
     author: "Rachel McVinish",
     title: "President Asia Pacific",
     company: "Jeunesse Global",
-    tier: 1,
-    usage: ["homepage", "one-pager"],
+    category: "corporate",
   },
   {
-    quote:
-      "Yossi doesn't just recount a survival story. He invites you into a world where survival becomes transformation. He takes you on a journey into the jungle that becomes a journey into the soul. His words don't feel rehearsed; they feel remembered. And in the remembering, he draws out something universal.",
+    quote: "Yossi doesn't just recount a survival story. He invites you into a world where survival becomes transformation. His words don't feel rehearsed; they feel remembered. And in the remembering, he draws out something universal.",
     author: "Regina Bedoya, CLU, ChFC",
-    title: "MDRT Past President",
+    title: "Past President",
     company: "MDRT",
-    tier: 1,
-    usage: ["homepage", "booking", "one-pager"],
+    category: "corporate",
   },
   {
-    quote:
-      "It was a moving and emotional talk, probably the best I have ever listened to. Our guests were excited, sad and inspired at the same time, during the live show and after the post-event cocktail hour.",
+    quote: "Thank you for making our event one of the very best we have ever held. Your presentation had an enormous impact on our audience and gave us the inspiration and tools necessary to Be Brave and win in our business.",
+    author: "Mark Wang",
+    title: "Executive President, Greater China & North America",
+    company: "Jeunesse Global",
+    category: "corporate",
+  },
+
+  // Bureau Presidents & Speaker Industry
+  {
+    quote: "YOSSI GHINSBERG DEFINITELY RANKS ON MY TOP 5 LIST OF UNFORGETTABLE SPEAKERS.",
+    author: "Derek Sweeney",
+    title: "Director of Speaker Ideas",
+    company: "The Sweeney Agency",
+    category: "bureau",
+  },
+  {
+    quote: "Gripping and hugely inspirational. Yossi delivers messages that can change a person's mindset and sometimes even transform a life.",
+    author: "Marek Kriwald",
+    title: "Founder",
+    company: "Parliament Speakers",
+    category: "bureau",
+  },
+  {
+    quote: "The electric energy Yossi creates is extraordinary. He speaks to anyone who has ever been at the point of giving up.",
+    author: "Julie Masters",
+    title: "Co-Founder",
+    company: "ODE Management",
+    category: "bureau",
+  },
+  {
+    quote: "Yossi possesses the extremely rare gift of a great storyteller. I look forward to working with him again.",
+    author: "Wendy Hand",
+    title: "Managing Partner",
+    company: "Big Yellow Suitcase",
+    category: "bureau",
+  },
+
+  // Event Organizers
+  {
+    quote: "Delegate feedback was fantastic, captivating — they didn't want him to stop. I give my unreserved recommendation.",
+    author: "Kerry McWhinnie",
+    title: "Event Organizer",
+    company: "RE/MAX",
+    category: "event",
+  },
+  {
+    quote: "The group was still talking about Yossi long after — which is a great sign.",
+    author: "Kerin Clancy",
+    title: "Event Manager",
+    company: "Commonwealth Bank",
+    category: "event",
+  },
+  {
+    quote: "Yossi leaves an impression on the hearts of delegates, one that will not be forgotten in years to come.",
+    author: "Eugene De Villiers",
+    title: "Founder",
+    company: "Extra Mile Company",
+    category: "event",
+  },
+  {
+    quote: "It was a moving and emotional talk, probably the best I have ever listened to. Our guests were excited, sad and inspired at the same time.",
     author: "Francesco Prandoni",
     title: "Event Producer",
     company: "DOC-Events",
-    tier: 1,
-    usage: ["homepage", "keynotes"],
+    category: "event",
   },
-  // Tier 2 — Supporting
   {
-    quote:
-      "Thank you so much for joining us live yesterday for your keynote. Our audience really were amazed by your story and in awe of everything you endured and overcame. After the event we had a cocktail networking lounge and the attendees were all speaking about your keynote thru that hour. You definitely made an impact.",
+    quote: "Our audience really were amazed by your story and in awe of everything you endured and overcame. You definitely made an impact.",
     author: "Dee Knopp",
     title: "Executive Director",
     company: "Diversity Alliance for Science",
-    tier: 2,
-    usage: ["keynotes"],
+    category: "event",
+  },
+
+  // Industry Leaders & Notable
+  {
+    quote: "Delegates described Yossi's presentation as a life-changing event.",
+    author: "Peter Chenoweth",
+    title: "President",
+    company: "CCIQ",
+    category: "industry",
   },
   {
-    quote:
-      "I wanted to express my great admiration and gratitude to you for sharing your inspirational story. Your journey and the lessons you imparted resonated deeply with me and I found them incredibly moving. Your wisdom and insights during our chat left a lasting impression.",
-    author: "Stuart Hayes",
-    title: "Director",
-    company: "H&D&U, Melbourne",
-    tier: 2,
-    usage: ["keynotes"],
+    quote: "The audience reaction has been unlike any other speaker we've had before.",
+    author: "Matt Perez",
+    title: "COO & Co-Founder",
+    company: "Nearsoft",
+    category: "other",
   },
   {
-    quote:
-      "Thank you for making our event one of the very best we have ever held. Your presentation had an enormous impact on our audience and gave us the inspiration and tools necessary to Be Brave and win in our business.",
-    author: "Mark Wang",
-    title: "President, Honolulu, Hawaii",
-    company: "Insurance Industry Conference",
-    tier: 2,
-    usage: ["keynotes"],
+    quote: "I was transported to another world. It was deeply personal and profoundly moving.",
+    author: "Gilbert Enoka",
+    title: "Mental Skills Coach",
+    company: "New Zealand All Blacks",
+    category: "other",
   },
   {
-    quote:
-      "We loved SO MUCH your company last night Yossi. Thank you for the generosity of your knowledge, your stories and most of all, your authentic candour.",
-    author: "Pauline Nguyen",
-    title: "Speaker, Author & Restaurateur",
-    company: "Sydney",
-    tier: 2,
-    usage: ["keynotes"],
+    quote: "Yossi brought a vision of the possible that began to manifest the moment he spoke.",
+    author: "Lisa Jensen",
+    title: "Marketing",
+    company: "Procter & Gamble",
+    category: "other",
   },
   {
-    quote:
-      "Thank you so much for your contribution to our event. Your story is inspiring and was the perfect addition to our Jungle theme brunch.",
-    author: "Nina Sutton",
-    title: "Property Management Partners",
-    company: "Melbourne",
-    tier: 2,
-    usage: ["keynotes"],
+    quote: "Thank you for your words of wisdom, kindness and humility. They had a profound effect.",
+    author: "Rastislav Geschwandtner",
+    title: "Founder",
+    company: "TEDxBratislava",
+    category: "other",
   },
   {
-    quote:
-      "It was a joy to have you on the screens. Kerwin would have been honoured to see you up there. On behalf of myself and the whole K-Team — THANK YOU!",
-    author: "Elise Cimino",
-    title: "Event Coordinator",
-    company: "Business Mastery International (Kerwin Rae)",
-    tier: 2,
-    usage: ["keynotes"],
-  },
-  // Tier 3 — Reader/Audience
-  {
-    quote:
-      "Your words passed through me like light in a forest. It's not often one is seen so clearly, with open heart and clarity.",
-    author: "Gaia Tamagnini",
-    title: "Reader",
-    company: "Umbria, Italy",
-    tier: 3,
-    usage: ["books"],
+    quote: "Max scores in every evaluation category.",
+    author: "Juan Federico Salaverria Q.",
+    title: "Education Chair",
+    company: "YPO El Salvador",
+    category: "industry",
   },
 ];

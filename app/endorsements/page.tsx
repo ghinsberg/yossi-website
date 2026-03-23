@@ -26,39 +26,126 @@ export const metadata: Metadata = {
     title: "Endorsements | Yossi Ghinsberg",
     description:
       "What Google, Apple, Microsoft, and top event producers say about Yossi Ghinsberg. Rated #2 inspirational speaker by The Sweeney Agency.",
-    images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
+    images: [
+      "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
+    ],
   },
 };
 
-const eventProducerNames = [
-  "Francesco Prandoni",
-  "Dee Knopp",
-  "Elise Cimino",
-  "Nina Sutton",
-];
+/* ── helpers ── */
+function TestimonialCard({
+  quote,
+  author,
+  title,
+  company,
+  variant = "standard",
+}: {
+  quote: string;
+  author: string;
+  title: string;
+  company: string;
+  variant?: "standard" | "large" | "featured";
+}) {
+  const isLarge = variant === "large";
+  const isFeatured = variant === "featured";
 
-const corporateLeaderNames = [
-  "Rachel McVinish",
-  "Regina Bedoya, CLU, ChFC",
-  "Mark Wang",
-  "Stuart Hayes",
-  "Pauline Nguyen",
-];
+  return (
+    <div
+      className={`relative rounded-xl border border-white/10 ${
+        isFeatured
+          ? "bg-brand-surface p-10 md:p-14 md:col-span-full"
+          : isLarge
+            ? "bg-white/[0.03] p-8 md:p-10"
+            : "bg-white/[0.03] p-6"
+      }`}
+    >
+      <span
+        className={`text-brand-gold leading-none font-serif absolute opacity-50 ${
+          isFeatured
+            ? "text-7xl top-4 left-6 md:top-6 md:left-10"
+            : isLarge
+              ? "text-5xl top-4 left-6"
+              : "text-4xl top-3 left-5 opacity-40"
+        }`}
+      >
+        &ldquo;
+      </span>
+      <blockquote
+        className={`italic leading-relaxed ${
+          isFeatured
+            ? "text-brand-text text-xl md:text-2xl mt-8"
+            : isLarge
+              ? "text-brand-text-secondary text-lg md:text-xl mt-6"
+              : "text-brand-text-secondary text-base mt-4"
+        }`}
+      >
+        {quote}
+      </blockquote>
+      <div
+        className={`border-t border-white/10 ${
+          isFeatured ? "mt-8 pt-6" : isLarge ? "mt-6 pt-4" : "mt-4 pt-3"
+        }`}
+      >
+        <p
+          className={`text-brand-text font-semibold ${
+            isFeatured ? "text-base" : isLarge ? "text-sm" : "text-sm"
+          }`}
+        >
+          {author}
+        </p>
+        <p
+          className={`text-brand-text-secondary ${
+            isFeatured ? "text-sm mt-1" : "text-xs"
+          }`}
+        >
+          {title}, {company}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CategoryHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-10 text-center">
+      <h2 className="text-2xl font-heading font-bold text-brand-text">
+        {children}
+      </h2>
+      <div className="w-16 h-0.5 bg-brand-gold mx-auto mt-4" />
+    </div>
+  );
+}
+
+/* ── data slices ── */
+const featured = testimonials.find((t) => t.author === "Derek Sweeney");
+const ceos = testimonials.filter((t) => t.category === "ceo");
+const corporateFeatured = testimonials.filter(
+  (t) =>
+    t.category === "corporate" &&
+    (t.author === "Rachel McVinish" ||
+      t.author === "Regina Bedoya, CLU, ChFC")
+);
+const corporateStandard = testimonials.filter(
+  (t) =>
+    t.category === "corporate" &&
+    t.author !== "Rachel McVinish" &&
+    t.author !== "Regina Bedoya, CLU, ChFC"
+);
+const bureaus = testimonials.filter(
+  (t) => t.category === "bureau" && t.author !== "Derek Sweeney"
+);
+const events = testimonials.filter((t) => t.category === "event");
+const industryAndOther = testimonials.filter(
+  (t) => t.category === "industry" || t.category === "other"
+);
+const prominentIndustry = industryAndOther.filter(
+  (t) => t.author === "Gilbert Enoka" || t.author === "Lisa Jensen"
+);
+const restIndustry = industryAndOther.filter(
+  (t) => t.author !== "Gilbert Enoka" && t.author !== "Lisa Jensen"
+);
 
 export default function EndorsementsPage() {
-  const featured = testimonials.find(
-    (t) => t.author === "Derek Sweeney"
-  );
-  const rest = testimonials.filter((t) => t.author !== "Derek Sweeney");
-
-  const eventProducers = rest.filter((t) =>
-    eventProducerNames.includes(t.author)
-  );
-  const corporateLeaders = rest.filter((t) =>
-    corporateLeaderNames.includes(t.author)
-  );
-  const readersAndAudiences = rest.filter((t) => t.tier === 3);
-
   return (
     <>
       {/* Hero */}
@@ -72,7 +159,7 @@ export default function EndorsementsPage() {
         <div className="w-16 h-0.5 bg-brand-gold mx-auto mt-8" />
       </section>
 
-      {/* Featured Testimonial */}
+      {/* Featured Testimonial — Derek Sweeney */}
       {featured && (
         <section className="bg-brand-bg py-16 md:py-24 px-6">
           <div className="max-w-4xl mx-auto bg-brand-surface rounded-2xl p-10 md:p-16 text-center relative">
@@ -97,7 +184,9 @@ export default function EndorsementsPage() {
       <section className="bg-brand-bg py-8 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-brand-gold/10 border border-brand-gold/30 rounded-xl py-8 px-6">
-            <p className="text-brand-gold text-4xl md:text-5xl font-heading font-bold">#2</p>
+            <p className="text-brand-gold text-4xl md:text-5xl font-heading font-bold">
+              #2
+            </p>
             <p className="text-brand-text text-lg md:text-xl font-heading font-semibold mt-2">
               of 10 Highest Rated Inspirational Speakers for Business
             </p>
@@ -108,101 +197,129 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      {/* Event Producers & Bureaus */}
-      <section className="bg-brand-bg py-16 md:py-24 px-6">
+      {/* CEOs & C-Suite */}
+      <section className="bg-white/[0.02] py-16 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
-            Event Producers &amp; Bureaus
-          </h2>
+          <CategoryHeading>CEOs &amp; C-Suite</CategoryHeading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {eventProducers.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white/[0.03] border border-white/10 rounded-xl p-8 md:p-10 relative"
-              >
-                <span className="text-brand-gold text-5xl leading-none font-serif absolute top-4 left-6 opacity-50">
-                  &ldquo;
-                </span>
-                <blockquote className="text-brand-text-secondary text-lg md:text-xl italic leading-relaxed mt-6">
-                  {t.quote}
-                </blockquote>
-                <div className="mt-6 pt-4 border-t border-white/10">
-                  <p className="text-brand-text font-semibold">{t.author}</p>
-                  <p className="text-brand-text-secondary text-sm">
-                    {t.title}, {t.company}
-                  </p>
-                </div>
-              </div>
+            {ceos.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+                variant="large"
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Corporate Leaders */}
-      <section className="bg-brand-bg py-8 md:py-16 px-6">
+      <section className="bg-brand-bg py-16 md:py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
-            Corporate Leaders
-          </h2>
+          <CategoryHeading>Corporate Leaders</CategoryHeading>
+
+          {/* Featured corporate — Rachel McVinish & Regina Bedoya */}
+          <div className="grid grid-cols-1 gap-8 mb-8">
+            {corporateFeatured.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+                variant="featured"
+              />
+            ))}
+          </div>
+
+          {/* Standard corporate */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {corporateLeaders.map((t, i) => (
-              <div
-                key={i}
-                className="bg-white/[0.03] border border-white/10 rounded-xl p-6 relative"
-              >
-                <span className="text-brand-gold text-4xl leading-none font-serif absolute top-3 left-5 opacity-40">
-                  &ldquo;
-                </span>
-                <blockquote className="text-brand-text-secondary text-base italic leading-relaxed mt-4">
-                  {t.quote}
-                </blockquote>
-                <div className="mt-4 pt-3 border-t border-white/10">
-                  <p className="text-brand-text font-semibold text-sm">
-                    {t.author}
-                  </p>
-                  <p className="text-brand-text-secondary text-xs">
-                    {t.title}, {t.company}
-                  </p>
-                </div>
-              </div>
+            {corporateStandard.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Readers & Audiences */}
-      {readersAndAudiences.length > 0 && (
-        <section className="bg-brand-bg py-8 md:py-16 px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-10 text-center">
-              Readers &amp; Audiences
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {readersAndAudiences.map((t, i) => (
-                <div
-                  key={i}
-                  className="bg-white/[0.02] border border-white/5 rounded-lg p-5 relative"
-                >
-                  <span className="text-brand-gold text-3xl leading-none font-serif absolute top-2 left-4 opacity-30">
-                    &ldquo;
-                  </span>
-                  <blockquote className="text-brand-text-secondary text-sm italic leading-relaxed mt-3">
-                    {t.quote}
-                  </blockquote>
-                  <div className="mt-3 pt-2 border-t border-white/5">
-                    <p className="text-brand-text font-semibold text-xs">
-                      {t.author}
-                    </p>
-                    <p className="text-brand-text-secondary text-xs">
-                      {t.title}, {t.company}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* Speaker Bureaus */}
+      <section className="bg-white/[0.02] py-16 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <CategoryHeading>Speaker Bureaus</CategoryHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {bureaus.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+                variant="large"
+              />
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+      {/* Event Organizers */}
+      <section className="bg-brand-bg py-16 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <CategoryHeading>Event Organizers</CategoryHeading>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {events.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Leaders & Notable */}
+      <section className="bg-white/[0.02] py-16 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <CategoryHeading>Industry Leaders &amp; Notable</CategoryHeading>
+
+          {/* Prominent — Gilbert Enoka & Lisa Jensen */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {prominentIndustry.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+                variant="large"
+              />
+            ))}
+          </div>
+
+          {/* Rest */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {restIndustry.map((t) => (
+              <TestimonialCard
+                key={t.author}
+                quote={t.quote}
+                author={t.author}
+                title={t.title}
+                company={t.company}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Client Logo Wall */}
       <section className="bg-brand-bg py-16 md:py-24">

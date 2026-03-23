@@ -48,8 +48,7 @@ const formatOptions = [
 export default function KeynotesPage() {
   const keynoteTestimonials = testimonials.filter(
     (t) =>
-      t.usage.includes("keynotes") &&
-      (t.author === "Francesco Prandoni" || t.author === "Dee Knopp")
+      t.author === "Francesco Prandoni" || t.author === "Dee Knopp"
   );
 
   return (
