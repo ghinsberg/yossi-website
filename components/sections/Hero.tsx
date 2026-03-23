@@ -6,21 +6,18 @@ export default function Hero() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/stage/carousel-1.jpg')" }}
+        style={{ backgroundImage: "url('/images/stage/carousel-3.jpg')" }}
       />
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-brand-bg" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
-        <p className="text-brand-gold text-lg md:text-xl tracking-[0.3em] uppercase font-heading font-extrabold mb-6">
-          YOSSI GHINSBERG
-        </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-text leading-tight mb-6">
-          Survival Wisdom for the AI Age
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-brand-text leading-tight mb-6">
+          Survival Wisdom<br />for the AI Age
         </h1>
-        <p className="text-lg md:text-xl text-brand-text-secondary leading-relaxed mb-10 max-w-2xl mx-auto whitespace-pre-line">
-          {`Jungle survivor. AI visionary. Bestselling author. Hollywood film.\nHe doesn't deliver keynotes — he transforms rooms.`}
+        <p className="text-lg md:text-xl text-brand-text-secondary/80 leading-relaxed mb-10 max-w-xl mx-auto">
+          He doesn&apos;t deliver keynotes — he transforms rooms.
         </p>
 
         <div className="flex flex-row items-center justify-center gap-4">
@@ -30,19 +27,6 @@ export default function Hero() {
           <Button variant="gold" href="/book-yossi">
             Check Availability
           </Button>
-        </div>
-
-        {/* Proof badges */}
-        <div className="mt-12 hidden md:flex items-center justify-center gap-8">
-          <span className="text-brand-text-secondary text-sm font-medium">
-            Hollywood Feature Film — Daniel Radcliffe
-          </span>
-          <span className="border-l border-white/20 pl-8 text-brand-text-secondary text-sm font-medium">
-            Millions of copies sold — 20 languages
-          </span>
-          <span className="border-l border-white/20 pl-8 text-brand-text-secondary text-sm font-medium">
-            Shared stages: Branson &middot; Clinton &middot; Taleb
-          </span>
         </div>
       </div>
 

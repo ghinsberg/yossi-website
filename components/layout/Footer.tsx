@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <img
-                src="/images/yossi-ghinsberg-logo.png"
+                src="/images/yossi-ghinsberg-logo.svg"
                 alt="Yossi Ghinsberg"
                 className="h-8 w-auto"
               />

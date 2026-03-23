@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 506" width="752" height="506">
+<defs>
+  <linearGradient id="goldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#f8e7a1"/>
+    <stop offset="18%" stop-color="#e9cc73"/>
+    <stop offset="50%" stop-color="#b7862f"/>
+    <stop offset="78%" stop-color="#d8ae53"/>
+    <stop offset="100%" stop-color="#7f5717"/>
+  </linearGradient>
+  <linearGradient id="goldStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#fff2bc"/>
+    <stop offset="100%" stop-color="#6d470f"/>
+  </linearGradient>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#020202"/>
+    <stop offset="50%" stop-color="#151515"/>
+    <stop offset="100%" stop-color="#040404"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+    <stop offset="0%" stop-color="#2c2c2c" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="180%">
+    <feDropShadow dx="0" dy="9" stdDeviation="6" flood-color="#000000" flood-opacity="0.55"/>
+  </filter>
+</defs>
+<g filter="url(#shadow)">
+  <text x="55" y="300"
+        textLength="198" lengthAdjust="spacingAndGlyphs"
+        font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+        font-size="76"
+        font-weight="900"
+        fill="url(#goldFill)"
+        stroke="url(#goldStroke)"
+        stroke-width="1.3">YOSSI</text>
+  <rect x="292" y="105" width="4" height="216" rx="1.6" fill="url(#goldFill)" stroke="url(#goldStroke)" stroke-width="0.7"/>
+  <text x="316" y="300"
+        textLength="382" lengthAdjust="spacingAndGlyphs"
+        font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+        font-size="76"
+        font-weight="900"
+        fill="url(#goldFill)"
+        stroke="url(#goldStroke)"
+        stroke-width="1.3">GHINSBERG</text>
+</g>
+<g opacity="0.25">
+  <text x="56.2" y="296"
+        textLength="198" lengthAdjust="spacingAndGlyphs"
+        font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+        font-size="76"
+        font-weight="900"
+        fill="none"
+        stroke="#fff4c6"
+        stroke-width="0.7">YOSSI</text>
+  <text x="317.2" y="296"
+        textLength="382" lengthAdjust="spacingAndGlyphs"
+        font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+        font-size="76"
+        font-weight="900"
+        fill="none"
+        stroke="#fff4c6"
+        stroke-width="0.7">GHINSBERG</text>
+</g>
+</svg>

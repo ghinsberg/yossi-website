@@ -43,9 +43,9 @@ export default function Header() {
           {/* Wordmark */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/yossi-ghinsberg-logo.png"
+              src="/images/yossi-ghinsberg-logo.svg"
               alt="Yossi Ghinsberg"
-              className="h-10 md:h-12 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </Link>
 
