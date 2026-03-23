@@ -17,7 +17,7 @@ export default function Hero() {
           Survival Wisdom<br />for the AI Age
         </h1>
         <p className="text-lg md:text-xl text-brand-text-secondary/80 leading-relaxed mb-10 max-w-xl mx-auto">
-          He doesn&apos;t deliver keynotes — he transforms rooms.
+          He doesn&apos;t deliver keynotes. He transforms rooms.
         </p>
 
         <div className="flex flex-row items-center justify-center gap-4">

@@ -8,7 +8,7 @@ import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: {
-    default: "Yossi Ghinsberg — Transformation Keynote Speaker",
+    default: "Yossi Ghinsberg | Transformation Keynote Speaker",
     template: "%s | Yossi Ghinsberg",
   },
   description:
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Yossi Ghinsberg",
-    title: "Yossi Ghinsberg — Transformation Keynote Speaker",
+    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
     description:
       "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author (1M+ copies), Daniel Radcliffe film. Book Yossi for your next event.",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yossi Ghinsberg — Transformation Keynote Speaker",
+    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
     description:
       "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author (1M+ copies), Daniel Radcliffe film. Book Yossi for your next event.",
     images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],

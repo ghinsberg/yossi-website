@@ -42,7 +42,7 @@ export default function StructuredData() {
             "@type": "Event",
             name: "Transformation Keynote by Yossi Ghinsberg",
             description:
-              "A powerful keynote on leadership, resilience, and navigating disruption — delivered by jungle survivor and bestselling author Yossi Ghinsberg.",
+              "A powerful keynote on leadership, resilience, and navigating disruption. Delivered by jungle survivor and bestselling author Yossi Ghinsberg.",
             performer: {
               "@type": "Person",
               "@id": "https://yossighinsberg.com/#person",
@@ -68,7 +68,7 @@ export default function StructuredData() {
         name: "Yossi Ghinsberg",
         url: "https://yossighinsberg.com",
         description:
-          "Official website of Yossi Ghinsberg — transformation keynote speaker",
+          "Official website of Yossi Ghinsberg, transformation keynote speaker",
         publisher: {
           "@type": "Person",
           "@id": "https://yossighinsberg.com/#person",

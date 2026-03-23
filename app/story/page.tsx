@@ -62,7 +62,7 @@ export default function StoryPage() {
       <section className="bg-brand-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
           <p>
-            The group fell apart in the way that groups do — slowly, then
+            The group fell apart in the way that groups do. Slowly, then
             catastrophically. Disagreements. Fear. A guide who may have been
             leading them nowhere. One by one, they went their separate ways, deep
             in territory no map had charted.
@@ -92,7 +92,7 @@ export default function StoryPage() {
             made it to the river.
           </p>
           <p className="mt-8">
-            Three weeks after he was declared missing, a search party found him —
+            Three weeks after he was declared missing, a search party found him:
             his friend Kevin, and indigenous villagers who had refused to stop
             looking. He spent three months in hospital recovering.
           </p>
@@ -128,7 +128,7 @@ export default function StoryPage() {
               the next decision.
             </p>
             <p className="mt-8">
-              That understanding became <em className="not-italic font-semibold text-brand-bg">Jungle</em> — a book that has sold over a million copies in more than 20 languages. It became a Hollywood film starring Daniel Radcliffe. Years later, he distilled everything he had learned about leadership and nature into a second book, <em className="not-italic font-semibold text-brand-bg">Laws of the Jungle</em>. Then came two decades of keynotes on the world&apos;s biggest stages.
+              That understanding became <em className="not-italic font-semibold text-brand-bg">Jungle</em>, a book that has sold over a million copies in more than 20 languages. It became a Hollywood film starring Daniel Radcliffe. Years later, he distilled everything he had learned about leadership and nature into a second book, <em className="not-italic font-semibold text-brand-bg">Laws of the Jungle</em>. Then came two decades of keynotes on the world&apos;s biggest stages.
             </p>
             <p className="mt-8">His TEDxMelbourne talk brought the Amazon story to a new generation.</p>
           </div>
@@ -147,7 +147,7 @@ export default function StoryPage() {
               else got there.
             </p>
             <p className="mt-8">
-              Between 2013 and 2017, he was in Silicon Valley — building AI
+              Between 2013 and 2017, he was in Silicon Valley, building AI
               companies when artificial intelligence was still an academic
               conversation. His ventures, Blinq and Headbox, were built around
               the concept of Digital Entities: intelligent representations of
@@ -172,7 +172,7 @@ export default function StoryPage() {
             className="w-full rounded-xl"
           />
           <p className="text-sm text-brand-text-secondary text-center mt-3 italic">
-            ASPIRE conference, ICE Krakow, 2017 — 2,000 attendees
+            ASPIRE conference, ICE Krakow, 2017. 2,000 attendees
           </p>
         </div>
       </section>
@@ -183,9 +183,9 @@ export default function StoryPage() {
           <p>
             He went back to the Amazon. Not to relive the ordeal, but to give
             something back. He was instrumental in creating the Chalalan
-            Ecolodge — a model for indigenous-led eco-tourism run by the
+            Ecolodge, a model for indigenous-led eco-tourism run by the
             Uchupiamona people. In 2025, the Uchupiamona Nation officially
-            appointed him their Ambassador to the World — a recognition of
+            appointed him their Ambassador to the World, a recognition of
             decades of partnership. He helped establish Madidi National Park. He
             worked for seven years in addiction rehabilitation across multiple
             countries. He built businesses. He crossed continents. He kept living
@@ -201,7 +201,7 @@ export default function StoryPage() {
             He has shared stages with Richard Branson, Bill Clinton, Queen Noor,
             Steve Ballmer, Nassim Taleb, Deepak Chopra, and Steve Irwin. In
             2025, he delivered the keynote at MDRT&apos;s Global Conference to
-            6,000 financial professionals — one of the largest speaking
+            6,000 financial professionals, one of the largest speaking
             engagements in the industry. He has been voted Most Unforgettable
             Speaker. His books have sold millions of copies in 20 languages. He
             speaks to audiences of 10,000 and leaves them permanently changed.
@@ -253,7 +253,7 @@ export default function StoryPage() {
                     <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                   </svg>
                 ),
-                label: "MDRT 2025 — 6,000 Attendees",
+                label: "MDRT 2025, 6,000 Attendees",
               },
               {
                 icon: (

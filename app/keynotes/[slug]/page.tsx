@@ -19,7 +19,7 @@ export async function generateMetadata({
     title: keynote.title,
     description:
       keynote.subtitle +
-      " — Transformation keynote by Yossi Ghinsberg.",
+      " | Transformation keynote by Yossi Ghinsberg.",
   };
 }
 

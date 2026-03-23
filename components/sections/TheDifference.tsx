@@ -14,7 +14,7 @@ export default function TheDifference() {
               Before AI was a buzzword, he was building it in Silicon Valley.
             </h2>
             <p className="mt-6 text-brand-bg/70 text-lg leading-relaxed">
-              Yossi Ghinsberg is not a speaker who adapted his story to the moment. He is a man who has always lived in the future before it arrived. In 1981, he survived 21 days alone in the Bolivian Amazon. Between 2013 and 2017, he was building AI companies in Silicon Valley — a decade before the world caught up. His authority on survival, resilience, and navigating the unknown is not academic. It is lived. And it is unlike anything else on the speaking circuit.
+              Yossi Ghinsberg is not a speaker who adapted his story to the moment. He is a man who has always lived in the future before it arrived. In 1981, he survived 21 days alone in the Bolivian Amazon. Between 2013 and 2017, he was building AI companies in Silicon Valley, a decade before the world caught up. His authority on survival, resilience, and navigating the unknown is not academic. It is lived, and unlike anything else on the speaking circuit.
             </p>
             <div className="mt-8">
               <Button variant="teal" href="/story">

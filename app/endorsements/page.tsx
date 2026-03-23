@@ -191,7 +191,7 @@ export default function EndorsementsPage() {
               of 10 Highest Rated Inspirational Speakers for Business
             </p>
             <p className="text-brand-text-secondary text-sm mt-3">
-              The Sweeney Agency (2017) — based on client feedback and reviews
+              The Sweeney Agency (2017), based on client feedback and reviews
             </p>
           </div>
         </div>

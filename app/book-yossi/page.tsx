@@ -27,7 +27,7 @@ const bookingTestimonial = testimonials.find(
 )!;
 
 const steps = [
-  "We review your enquiry and confirm availability — within 24 hours",
+  "We review your enquiry and confirm availability, within 24 hours",
   "A brief call with Yossi or his team to understand your event",
   "A tailored proposal within 48 hours",
   "Pre-event briefing to customise the keynote for your audience",
