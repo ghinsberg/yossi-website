@@ -1,6 +1,30 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+
+// Web Speech API type shim (not in default TS DOM lib)
+interface ISpeechRecognition extends EventTarget {
+  lang: string;
+  interimResults: boolean;
+  maxAlternatives: number;
+  start(): void;
+  stop(): void;
+  onresult: ((event: ISpeechRecognitionEvent) => void) | null;
+  onerror: ((event: Event) => void) | null;
+  onend: (() => void) | null;
+}
+interface ISpeechRecognitionEvent extends Event {
+  results: { [index: number]: { [index: number]: { transcript: string } } };
+}
+interface ISpeechRecognitionConstructor {
+  new (): ISpeechRecognition;
+}
+declare global {
+  interface Window {
+    SpeechRecognition: ISpeechRecognitionConstructor;
+    webkitSpeechRecognition: ISpeechRecognitionConstructor;
+  }
+}
 
 interface Message {
   role: "user" | "assistant";
@@ -139,8 +163,10 @@ export default function ChatbotMount() {
   const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const recognitionRef = useRef<ISpeechRecognition | null>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -149,6 +175,39 @@ export default function ChatbotMount() {
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
+
+  const toggleListening = useCallback(() => {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) return; // browser doesn't support it — button won't render
+
+    if (isListening) {
+      recognitionRef.current?.stop();
+      setIsListening(false);
+      return;
+    }
+
+    const recognition = new SR();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onresult = (event: ISpeechRecognitionEvent) => {
+      const transcript = event.results[0][0].transcript;
+      setInput(transcript);
+      setIsListening(false);
+      // Auto-send after a brief moment so user can see what was captured
+      setTimeout(() => {
+        inputRef.current?.form?.requestSubmit();
+      }, 400);
+    };
+
+    recognition.onerror = () => setIsListening(false);
+    recognition.onend = () => setIsListening(false);
+
+    recognitionRef.current = recognition;
+    recognition.start();
+    setIsListening(true);
+  }, [isListening]);
 
   async function handleSend() {
     const text = input.trim();
@@ -283,6 +342,33 @@ export default function ChatbotMount() {
                 disabled={isLoading}
                 className="flex-1 bg-brand-surface text-brand-text text-sm rounded-full px-4 py-2.5 outline-none focus:ring-2 focus:ring-brand-gold/50 placeholder:text-brand-text-secondary/50 disabled:opacity-50"
               />
+              {/* Mic button — only renders if browser supports Web Speech API */}
+              {typeof window !== "undefined" &&
+                (window.SpeechRecognition || window.webkitSpeechRecognition) && (
+                <button
+                  type="button"
+                  onClick={toggleListening}
+                  disabled={isLoading}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all shrink-0 ${
+                    isListening
+                      ? "bg-red-500 hover:bg-red-600 animate-pulse"
+                      : "bg-brand-surface hover:bg-brand-gold/20 text-brand-text-secondary hover:text-brand-gold"
+                  }`}
+                  aria-label={isListening ? "Stop recording" : "Speak your question"}
+                  title={isListening ? "Listening… click to stop" : "Speak your question"}
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                    {isListening ? (
+                      // Stop / waveform icon while listening
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    ) : (
+                      // Mic icon
+                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 1.93c-3.95-.49-7-3.85-7-7.93H2c0 4.42 2.72 8.22 6.72 9.6V21h2v-3.47c-.24-.03-.48-.07-.72-.1zM12 16c-.35 0-.69-.04-1.03-.1l-1.07 1.07A9.01 9.01 0 0 0 11 17.93V21h2v-3.07c1.81-.47 3.35-1.56 4.4-3.01l-1.43-1.43C15.19 14.66 13.71 16 12 16zm5.5-4c0 3.03-2.47 5.5-5.5 5.5v2c4.14 0 7.5-3.36 7.5-7.5h-2z" />
+                    )}
+                  </svg>
+                </button>
+              )}
+
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
