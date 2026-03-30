@@ -187,7 +187,7 @@ export default function ChatbotMount() {
     }
 
     const recognition = new SR();
-    recognition.lang = "en-US";
+    recognition.lang = navigator.language || "en-US"; // matches visitor's browser language
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
 
