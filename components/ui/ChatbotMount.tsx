@@ -60,6 +60,80 @@ function isOffTopicQuestion(text: string): boolean {
   return !RELEVANT_KEYWORDS.some((k) => lower.includes(k));
 }
 
+// Speaker icon — shown next to each Yossi response
+function SpeakerButton({ text }: { text: string }) {
+  const [state, setState] = useState<"idle" | "loading" | "playing">("idle");
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  async function handleSpeak() {
+    // If already playing, stop it
+    if (state === "playing" && audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+      setState("idle");
+      return;
+    }
+
+    setState("loading");
+
+    try {
+      const res = await fetch(`${API_URL}/speak`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+
+      if (!res.ok) throw new Error(`TTS error: ${res.status}`);
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      audioRef.current = audio;
+
+      audio.onended = () => {
+        setState("idle");
+        URL.revokeObjectURL(url);
+        audioRef.current = null;
+      };
+      audio.onerror = () => {
+        setState("idle");
+        audioRef.current = null;
+      };
+
+      setState("playing");
+      await audio.play();
+    } catch {
+      setState("idle");
+    }
+  }
+
+  return (
+    <button
+      onClick={handleSpeak}
+      disabled={state === "loading"}
+      className="mt-1.5 ml-1 flex items-center gap-1 text-brand-text-secondary/40 hover:text-brand-gold transition-colors disabled:opacity-30"
+      aria-label={state === "playing" ? "Stop audio" : "Play response aloud"}
+      title={state === "playing" ? "Stop" : "Hear this"}
+    >
+      {state === "loading" && (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 animate-spin">
+          <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
+        </svg>
+      )}
+      {state === "playing" && (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-brand-gold">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+        </svg>
+      )}
+      {state === "idle" && (
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 export default function ChatbotMount() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
@@ -161,7 +235,7 @@ export default function ChatbotMount() {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                className={`flex flex-col ${msg.role === "user" ? "items-end" : "items-start"}`}
               >
                 <div
                   className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
@@ -172,6 +246,9 @@ export default function ChatbotMount() {
                 >
                   {msg.content}
                 </div>
+                {msg.role === "assistant" && (
+                  <SpeakerButton text={msg.content} />
+                )}
               </div>
             ))}
             {isLoading && (
