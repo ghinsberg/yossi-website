@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[2.5]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[1.7]"
         style={{ backgroundImage: "url('/images/stage/carousel-3.jpg')" }}
       />
       {/* Dark gradient overlay */}
@@ -20,7 +20,7 @@ export default function Hero() {
           He doesn&apos;t deliver keynotes. He transforms rooms.
         </p>
 
-        <div className="flex flex-row items-center justify-center gap-4">
+        <div className="flex flex-row items-center justify-between w-full max-w-2xl mx-auto">
           <Button variant="outline" href="#reel">
             Watch the Reel
           </Button>
