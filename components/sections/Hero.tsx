@@ -12,11 +12,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-brand-bg" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+      <div className="relative z-10 max-w-4xl mx-auto text-center px-6 -mt-32">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-brand-text leading-tight mb-6">
           Survival Wisdom<br />for an Uncertain World
         </h1>
-        <p className="text-lg md:text-xl text-brand-text-secondary/80 leading-relaxed mb-10 max-w-xl mx-auto">
+        <p className="text-lg md:text-xl text-white leading-relaxed mb-10 max-w-xl mx-auto">
           He doesn&apos;t deliver keynotes. He transforms rooms.
         </p>
 

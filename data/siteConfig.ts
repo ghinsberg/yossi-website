@@ -63,11 +63,7 @@ export const siteConfig: SiteConfig = {
     youtube: "https://www.youtube.com/@yossighinsberg",
   },
   credentialBar: [
-    "Voted Most Unforgettable Speaker",
-    "Millions of copies",
-    "Hollywood Film",
-    "AI Visionary",
-    "Branson \u00b7 Clinton \u00b7 Taleb",
+    "The laws of the jungle are the laws of nature — the bigger the dream, the greater the resistance to it",
   ],
   speakerReelId: "LCRjBVnQ5JM",
 } as const satisfies SiteConfig;
