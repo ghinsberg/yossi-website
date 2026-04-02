@@ -14,20 +14,22 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-brand-text leading-tight mb-6">
-          Survival Wisdom<br />for the AI Age
+          Survival Wisdom<br />for an Uncertain World
         </h1>
         <p className="text-lg md:text-xl text-brand-text-secondary/80 leading-relaxed mb-10 max-w-xl mx-auto">
           He doesn&apos;t deliver keynotes. He transforms rooms.
         </p>
 
-        <div className="flex flex-row items-center justify-between w-full max-w-2xl mx-auto">
-          <Button variant="outline" href="#reel">
-            Watch the Reel
-          </Button>
-          <Button variant="gold" href="/book-yossi">
-            Check Availability
-          </Button>
-        </div>
+      </div>
+
+      {/* Buttons — flanking Yossi below his arms */}
+      <div className="absolute bottom-[22%] left-0 right-0 flex justify-between px-12 md:px-24 lg:px-40">
+        <Button variant="outline" href="#reel">
+          Watch the Reel
+        </Button>
+        <Button variant="gold" href="/book-yossi">
+          Check Availability
+        </Button>
       </div>
 
       {/* Scroll indicator */}

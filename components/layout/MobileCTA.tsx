@@ -13,7 +13,7 @@ export default function MobileCTA() {
           href="/book-yossi"
           className="block w-full text-center text-black font-semibold py-3 min-h-[44px] flex items-center justify-center"
         >
-          Check Availability
+          Make Your Event Unforgettable
         </Link>
       </div>
     </div>
