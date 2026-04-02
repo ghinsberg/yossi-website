@@ -5,11 +5,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-[2.5]"
         style={{ backgroundImage: "url('/images/stage/carousel-3.jpg')" }}
       />
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-brand-bg" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-brand-bg" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
