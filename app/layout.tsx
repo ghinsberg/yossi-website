@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileCTA from "@/components/layout/MobileCTA";
 import StructuredData from "@/components/StructuredData";
+import ChatbotMount from "@/components/ui/ChatbotMount";
 
 export const metadata: Metadata = {
   title: {
@@ -63,6 +64,7 @@ export default function RootLayout({
         <main className="pb-16 md:pb-0">{children}</main>
         <MobileCTA />
         <Footer />
+        <ChatbotMount />
       </body>
     </html>
   );

@@ -56,21 +56,28 @@ export default function Footer() {
             <h3 className="text-sm uppercase tracking-wider text-brand-text-secondary mb-4">
               Book Yossi
             </h3>
-            <p className="text-sm text-brand-text-secondary">
-              Represented by {siteConfig.contact.company}
-            </p>
-            <p className="text-sm text-brand-text-secondary mt-2">
-              {siteConfig.contact.name}
-            </p>
-            <a
-              href={`mailto:${siteConfig.contact.email}`}
-              className="text-sm text-brand-gold hover:text-brand-gold-light transition block mt-1"
-            >
-              {siteConfig.contact.email}
-            </a>
-            <p className="text-sm text-brand-text-secondary mt-1">
-              {siteConfig.contact.phone}
-            </p>
+            {siteConfig.contacts.map((agent, i) => (
+              <div key={agent.name} className={i > 0 ? "mt-6" : ""}>
+                <p className="text-xs uppercase tracking-wider text-brand-text-secondary/60">
+                  {agent.region}
+                </p>
+                <p className="text-sm text-brand-text-secondary mt-1">
+                  Represented by {agent.company}
+                </p>
+                <p className="text-sm text-brand-text-secondary mt-1">
+                  {agent.name}
+                </p>
+                <a
+                  href={`mailto:${agent.email}`}
+                  className="text-sm text-brand-gold hover:text-brand-gold-light transition block mt-1"
+                >
+                  {agent.email}
+                </a>
+                <p className="text-sm text-brand-text-secondary mt-1">
+                  {agent.phone}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -8,17 +8,17 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "Book Yossi Ghinsberg",
   description:
-    "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+    "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   openGraph: {
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
   twitter: {
     card: "summary_large_image",
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Encore Speakers.",
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
 };
 
@@ -82,27 +82,35 @@ export default function BookYossiPage() {
             </div>
 
             {/* Prefer to speak directly */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mt-8">
-              <h3 className="text-lg font-semibold mb-4">
-                Prefer to speak directly?
-              </h3>
-              <p className="font-semibold">{siteConfig.contact.name}</p>
-              <p className="text-brand-text-secondary text-sm">
-                {siteConfig.contact.company}
-              </p>
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="text-brand-gold text-sm block mt-2 hover:underline"
+            {siteConfig.contacts.map((agent) => (
+              <div
+                key={agent.name}
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 mt-8"
               >
-                {siteConfig.contact.email}
-              </a>
-              <a
-                href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
-                className="text-brand-text-secondary text-sm block mt-1 hover:underline"
-              >
-                {siteConfig.contact.phone}
-              </a>
-            </div>
+                <h3 className="text-lg font-semibold mb-1">
+                  {agent.region}
+                </h3>
+                <p className="text-xs uppercase tracking-wider text-brand-text-secondary/60 mb-4">
+                  Prefer to speak directly?
+                </p>
+                <p className="font-semibold">{agent.name}</p>
+                <p className="text-brand-text-secondary text-sm">
+                  {agent.company}
+                </p>
+                <a
+                  href={`mailto:${agent.email}`}
+                  className="text-brand-gold text-sm block mt-2 hover:underline"
+                >
+                  {agent.email}
+                </a>
+                <a
+                  href={`tel:${agent.phone.replace(/\s/g, "")}`}
+                  className="text-brand-text-secondary text-sm block mt-1 hover:underline"
+                >
+                  {agent.phone}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>

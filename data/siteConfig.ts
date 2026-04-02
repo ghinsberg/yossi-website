@@ -8,6 +8,7 @@ export interface ContactInfo {
   company: string;
   email: string;
   phone: string;
+  region: string;
 }
 
 export interface SocialLinks {
@@ -21,7 +22,7 @@ export interface SiteConfig {
   siteDescription: string;
   siteUrl: string;
   navigation: NavItem[];
-  contact: ContactInfo;
+  contacts: ContactInfo[];
   social: SocialLinks;
   credentialBar: string[];
   speakerReelId: string;
@@ -41,12 +42,22 @@ export const siteConfig: SiteConfig = {
     { label: "Media", href: "/media" },
     { label: "Book Yossi", href: "/book-yossi" },
   ],
-  contact: {
-    name: "Michael Arnot",
-    company: "Encore Speakers",
-    email: "michael@encorespeakers.com",
-    phone: "+61 (0)422 002 685",
-  },
+  contacts: [
+    {
+      name: "Michelle Carter",
+      company: "Carter Global Speakers",
+      email: "Michelle@carterglobalspeakers.com",
+      phone: "+1 703 819 2511",
+      region: "North America",
+    },
+    {
+      name: "Michael Arnot",
+      company: "Encore Speakers",
+      email: "michael@encorespeakers.com",
+      phone: "+61 (0)422 002 685",
+      region: "Europe & Australasia",
+    },
+  ],
   social: {
     linkedin: "https://www.linkedin.com/in/yossighinsberg/",
     youtube: "https://www.youtube.com/@yossighinsberg",
