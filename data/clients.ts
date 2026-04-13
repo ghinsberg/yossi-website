@@ -1,20 +1,22 @@
 export interface Client {
   name: string;
   slug: string;
+  ext?: string;
 }
 
 export const clients: Client[] = [
-  { name: "Google", slug: "google" },
-  { name: "Apple", slug: "apple" },
-  { name: "IBM", slug: "ibm" },
-  { name: "Microsoft", slug: "microsoft" },
-  { name: "Coca-Cola", slug: "coca-cola" },
-  { name: "BMW", slug: "bmw" },
-  { name: "American Express", slug: "american-express" },
-  { name: "MDRT", slug: "mdrt" },
-  { name: "YPO", slug: "ypo" },
-  { name: "Cunard", slug: "cunard" },
-  { name: "TEDx", slug: "tedx" },
+  { name: "Google", slug: "google", ext: "png" },
+  { name: "Apple", slug: "apple", ext: "png" },
+  { name: "Microsoft", slug: "microsoft", ext: "png" },
+  { name: "Coca-Cola", slug: "coca-cola", ext: "png" },
+  { name: "BMW", slug: "bmw", ext: "png" },
+  { name: "American Express", slug: "american-express", ext: "jpeg" },
+  { name: "Citibank", slug: "citibank", ext: "png" },
+  { name: "BP", slug: "bp", ext: "png" },
+  { name: "General Motors", slug: "general-motors", ext: "jpeg" },
+  { name: "MDRT", slug: "mdrt", ext: "png" },
+  { name: "All Blacks", slug: "all-blacks", ext: "png" },
+  { name: "Singularity University", slug: "singularity-university", ext: "png" },
 ];
 
 export const mediaLogos: Client[] = [

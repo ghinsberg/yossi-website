@@ -3,9 +3,13 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "runtimeExecutable": "/usr/local/node/bin/node",
+      "runtimeArgs": ["/usr/local/node/bin/npm", "run", "dev"],
+      "port": 3000,
+      "autoPort": true,
+      "env": {
+        "PATH": "/usr/local/node/bin:/usr/bin:/bin"
+      }
     }
   ]
 }
