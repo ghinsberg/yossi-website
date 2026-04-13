@@ -23,7 +23,7 @@ export default function VideoPlayer({
 
   return (
     <div>
-      <div className="bg-brand-bg rounded-xl overflow-hidden aspect-video relative">
+      <div className="rounded-2xl overflow-hidden aspect-video relative shadow-[0_0_80px_rgba(0,0,0,0.6)]">
         {isPlaying ? (
           <iframe
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
@@ -39,20 +39,19 @@ export default function VideoPlayer({
             aria-label="Play video"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-center scale-105 group-hover:scale-100 transition-transform duration-700"
               style={{ backgroundImage: `url(${posterUrl})` }}
             />
-            <div className="absolute inset-0 bg-black/40" />
-            <div
-              className={`${playButtonSize} rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:scale-110 group-hover:bg-brand-gold transition-all duration-300 relative z-10`}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="white"
-                className="w-8 h-8 ml-1"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300" />
+
+            {/* Play button */}
+            <div className="relative z-10 flex flex-col items-center gap-4">
+              <div className={`${playButtonSize} rounded-full bg-brand-gold flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] transition-all duration-300`}>
+                <svg viewBox="0 0 24 24" fill="white" className="w-9 h-9 ml-1.5">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <span className="text-white/80 text-sm font-medium tracking-wide">Watch the Reel · 2 min</span>
             </div>
           </button>
         )}
