@@ -64,7 +64,7 @@ export default function Header() {
               href="/book-yossi"
               className="bg-brand-gold text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-brand-gold-light transition"
             >
-              Check Availability
+              Book a Call
             </Link>
           </nav>
 
@@ -140,7 +140,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="bg-brand-gold text-black text-sm font-semibold px-8 py-3 rounded-full hover:bg-brand-gold-light transition"
           >
-            Check Availability
+            Book a Call
           </Link>
         </div>
       </div>

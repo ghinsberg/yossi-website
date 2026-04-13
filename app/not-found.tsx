@@ -25,7 +25,7 @@ export default function NotFound() {
             Back to Homepage
           </Button>
           <Button variant="gold" href="/book-yossi" size="lg">
-            Check Availability
+            Book a Call
           </Button>
         </div>
       </div>

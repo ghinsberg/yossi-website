@@ -341,7 +341,7 @@ export default function EndorsementsPage() {
             href="/book-yossi"
             className="border-black text-black hover:bg-black hover:text-brand-gold"
           >
-            Check Availability
+            Book a Call
           </Button>
         </div>
       </section>

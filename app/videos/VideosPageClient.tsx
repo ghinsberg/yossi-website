@@ -249,7 +249,7 @@ export default function VideosPageClient() {
           </p>
           <div className="mt-8">
             <Button variant="gold" href="/book-yossi" size="lg">
-              Check Availability
+              Book a Call
             </Button>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function FooterCTA() {
             href="/book-yossi"
             className="inline-flex items-center justify-center bg-black text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-brand-bg transition-all"
           >
-            Check Availability
+            Book a Call
           </a>
         </div>
       </div>

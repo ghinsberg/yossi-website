@@ -28,7 +28,7 @@ export default function Hero() {
           Watch the Reel
         </Button>
         <Button variant="gold" href="/book-yossi">
-          Check Availability
+          Book a Call
         </Button>
       </div>
 

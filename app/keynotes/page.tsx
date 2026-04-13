@@ -194,7 +194,7 @@ export default function KeynotesPage() {
       {/* CTA */}
       <div className="text-center mt-16 pb-20">
         <Button variant="gold" href="/book-yossi" size="lg">
-          Check Availability
+          Book a Call
         </Button>
       </div>
     </main>

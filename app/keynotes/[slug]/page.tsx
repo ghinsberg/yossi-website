@@ -180,7 +180,7 @@ export default async function KeynotePage({
               size="lg"
               className="bg-black text-white hover:bg-black/80"
             >
-              Check Availability
+              Book a Call
             </Button>
           </div>
         </div>
