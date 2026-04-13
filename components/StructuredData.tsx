@@ -1,23 +1,25 @@
+const BASE_URL = "https://yossi-website.vercel.app";
+
 export default function StructuredData() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://yossighinsberg.com/#person",
+        "@id": `${BASE_URL}/#person`,
         name: "Yossi Ghinsberg",
-        url: "https://yossighinsberg.com",
-        image:
-          "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
-        jobTitle: "Transformation Keynote Speaker",
+        url: BASE_URL,
+        image: `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`,
+        jobTitle: "Keynote Speaker",
         description:
-          "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author. Keynotes on leadership, resilience, and navigating disruption.",
+          "Survival wisdom for an uncertain world. Jungle survivor, bestselling author (1M+ copies), Hollywood film. Trusted by Google, Apple, Microsoft, BMW and more.",
         knowsAbout: [
           "Leadership",
           "Survival",
-          "Artificial Intelligence",
           "Resilience",
           "Transformation",
+          "Navigating Uncertainty",
+          "Human Potential",
         ],
         sameAs: [
           "https://www.linkedin.com/in/yossighinsberg/",
@@ -37,41 +39,40 @@ export default function StructuredData() {
             name: "Worldwide",
           },
         },
-        performerIn: [
+        memberOf: [
           {
-            "@type": "Event",
-            name: "Transformation Keynote by Yossi Ghinsberg",
-            description:
-              "A powerful keynote on leadership, resilience, and navigating disruption. Delivered by jungle survivor and bestselling author Yossi Ghinsberg.",
-            performer: {
-              "@type": "Person",
-              "@id": "https://yossighinsberg.com/#person",
-            },
-            organizer: {
-              "@type": "Organization",
-              name: "Encore Speakers Bureau",
-              url: "https://encorespeakers.com",
-            },
-            eventAttendanceMode:
-              "https://schema.org/OfflineEventAttendanceMode",
-            eventStatus: "https://schema.org/EventScheduled",
-            offers: {
-              "@type": "Offer",
-              url: "https://yossighinsberg.com/book-yossi",
-              availability: "https://schema.org/InStock",
-            },
+            "@type": "Organization",
+            name: "Carter Global Speakers",
+            url: "https://carterglobalspeakers.com",
+            description: "North America booking agent",
+          },
+          {
+            "@type": "Organization",
+            name: "Encore Speakers",
+            url: "https://encorespeakers.com",
+            description: "Europe & Australasia booking agent",
           },
         ],
+        offers: {
+          "@type": "Offer",
+          url: `${BASE_URL}/book-yossi`,
+          availability: "https://schema.org/InStock",
+          description: "Book Yossi Ghinsberg for your keynote or event",
+        },
       },
       {
         "@type": "WebSite",
         name: "Yossi Ghinsberg",
-        url: "https://yossighinsberg.com",
-        description:
-          "Official website of Yossi Ghinsberg, transformation keynote speaker",
+        url: BASE_URL,
+        description: "Official website of Yossi Ghinsberg, keynote speaker",
         publisher: {
           "@type": "Person",
-          "@id": "https://yossighinsberg.com/#person",
+          "@id": `${BASE_URL}/#person`,
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${BASE_URL}/keynotes`,
+          "query-input": "required name=search_term_string",
         },
       },
     ],

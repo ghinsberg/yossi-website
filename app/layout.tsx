@@ -7,42 +7,52 @@ import MobileCTA from "@/components/layout/MobileCTA";
 import StructuredData from "@/components/StructuredData";
 import ChatbotMount from "@/components/ui/ChatbotMount";
 
+const BASE_URL = "https://yossi-website.vercel.app";
+const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
+const DESCRIPTION =
+  "Survival wisdom for an uncertain world. Yossi Ghinsberg is a transformation keynote speaker — jungle survivor, bestselling author (1M+ copies), Hollywood film. Trusted by Google, Apple, Microsoft, BMW and more.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
-    default: "Yossi Ghinsberg | Transformation Keynote Speaker",
+    default: "Yossi Ghinsberg | Keynote Speaker",
     template: "%s | Yossi Ghinsberg",
   },
-  description:
-    "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author (1M+ copies), Daniel Radcliffe film. Book Yossi for your next event.",
+  description: DESCRIPTION,
   keywords: [
     "keynote speaker",
-    "transformation",
-    "leadership",
-    "AI",
-    "resilience",
+    "transformation keynote",
+    "leadership speaker",
+    "resilience speaker",
+    "survival wisdom",
     "Yossi Ghinsberg",
+    "motivational speaker",
+    "conference speaker",
   ],
+  authors: [{ name: "Yossi Ghinsberg" }],
+  creator: "Yossi Ghinsberg",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     type: "website",
     siteName: "Yossi Ghinsberg",
-    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
-    description:
-      "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author (1M+ copies), Daniel Radcliffe film. Book Yossi for your next event.",
-    images: [
-      {
-        url: "https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Yossi Ghinsberg",
-      },
-    ],
+    url: BASE_URL,
+    title: "Yossi Ghinsberg | Keynote Speaker",
+    description: DESCRIPTION,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg — Keynote Speaker" }],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yossi Ghinsberg | Transformation Keynote Speaker",
-    description:
-      "Voted Most Unforgettable Speaker. Jungle survivor, AI visionary, bestselling author (1M+ copies), Daniel Radcliffe film. Book Yossi for your next event.",
-    images: ["https://yossighinsberg.com/images/headshots/yossi-headshot-1.jpg"],
+    title: "Yossi Ghinsberg | Keynote Speaker",
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
+  alternates: {
+    canonical: BASE_URL,
   },
 };
 
