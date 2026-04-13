@@ -17,7 +17,7 @@ export default function Hero() {
           Survival Wisdom<br />for an Uncertain World
         </h1>
         <p className="text-lg md:text-xl text-white leading-relaxed mb-10 max-w-xl mx-auto">
-          He doesn&apos;t deliver keynotes. He transforms rooms.
+          Your team walks out different. That&apos;s not a promise. That&apos;s his track record.
         </p>
 
       </div>
