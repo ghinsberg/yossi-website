@@ -7,6 +7,7 @@ import MobileCTA from "@/components/layout/MobileCTA";
 import StructuredData from "@/components/StructuredData";
 import ChatbotMount from "@/components/ui/ChatbotMount";
 import Analytics from "@/components/Analytics";
+import Contentsquare from "@/components/Contentsquare";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossi-website.vercel.app";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
@@ -70,6 +71,7 @@ export default function RootLayout({
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <Analytics />
+        <Contentsquare />
         <StructuredData />
         <CredentialBar />
         <Header />
