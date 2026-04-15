@@ -6,8 +6,9 @@ import Footer from "@/components/layout/Footer";
 import MobileCTA from "@/components/layout/MobileCTA";
 import StructuredData from "@/components/StructuredData";
 import ChatbotMount from "@/components/ui/ChatbotMount";
+import Analytics from "@/components/Analytics";
 
-const BASE_URL = "https://yossi-website.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossi-website.vercel.app";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 const DESCRIPTION =
   "Survival wisdom for an uncertain world. Yossi Ghinsberg is a transformation keynote speaker — jungle survivor, bestselling author (1M+ copies), Hollywood film. Trusted by Google, Apple, Microsoft, BMW and more.";
@@ -68,6 +69,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
+        <Analytics />
         <StructuredData />
         <CredentialBar />
         <Header />

@@ -1,4 +1,4 @@
-const BASE_URL = "https://yossi-website.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossi-website.vercel.app";
 
 export default function StructuredData() {
   const schema = {
