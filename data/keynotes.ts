@@ -19,6 +19,7 @@ export interface Keynote {
   takeaways: KeynoteTakeaway[];
   bestFor: string;
   solves: string[];
+  outcomes: string[];
   testimonial: KeynoteTestimonial;
 }
 
@@ -55,6 +56,11 @@ export const keynotes: Keynote[] = [
       "Poor decision-making under pressure",
       "Fear of change",
       "Leadership stagnation",
+    ],
+    outcomes: [
+      "Leaders make faster, bolder decisions under uncertainty",
+      "Teams shift from reactive to adaptive",
+      "Creative confidence returns to risk-averse cultures",
     ],
     testimonial: {
       quote:
@@ -98,6 +104,11 @@ export const keynotes: Keynote[] = [
       "Poor resilience",
       "Teams facing extreme pressure",
     ],
+    outcomes: [
+      "Burned-out teams rediscover purpose and drive",
+      "People stop avoiding hard conversations and hard decisions",
+      "Resilience becomes a skill, not a personality trait",
+    ],
     testimonial: {
       quote:
         "It was a moving and emotional talk, probably the best I have ever listened to. Our guests were excited, sad and inspired at the same time, during the live show and after the post-event cocktail hour.",
@@ -137,6 +148,11 @@ export const keynotes: Keynote[] = [
       "Poor culture",
       "Low team performance",
       "Lack of purpose & engagement",
+    ],
+    outcomes: [
+      "Senior leaders leave with a sharper sense of their own legacy",
+      "Culture shifts from compliance to ownership",
+      "Teams align around purpose, not just process",
     ],
     testimonial: {
       quote:
