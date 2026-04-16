@@ -57,6 +57,13 @@ export const siteConfig: SiteConfig = {
       phone: "+61 (0)422 002 685",
       region: "Europe & Australasia",
     },
+    {
+      name: "Juanita Cortes Cleves",
+      company: "Smart Speakers",
+      email: "juanita.cortes@smartspeakers.co",
+      phone: "+57 313 8985266",
+      region: "Latin America",
+    },
   ],
   social: {
     linkedin: "https://www.linkedin.com/in/yossighinsberg/",

@@ -122,7 +122,7 @@ class BackgroundCanvas:
         c.rect(0, H - HEADER_H - 1.5*mm, W, 1.5*mm, fill=1, stroke=0)
 
         # Dark footer band
-        FOOTER_H = 18 * mm
+        FOOTER_H = 20 * mm
         c.setFillColor(DARK)
         c.rect(0, 0, W, FOOTER_H, fill=1, stroke=0)
 
@@ -135,7 +135,7 @@ def build():
         pagesize=A4,
         leftMargin=MARGIN, rightMargin=MARGIN,
         topMargin=62*mm,   # below dark header
-        bottomMargin=22*mm,
+        bottomMargin=24*mm,
     )
 
     story = []
@@ -279,18 +279,26 @@ def build():
         c.setFont("Helvetica", 7.5)
         c.drawString(MARGIN, 6*mm, "Michelle Carter  |  Michelle@carterglobalspeakers.com  |  +1 703 819 2511")
 
-        mid = W / 2
+        col2 = W / 3
         c.setFillColor(WHITE)
         c.setFont("Helvetica-Bold", 8)
-        c.drawString(mid, 11*mm, "EUROPE & AUSTRALASIA")
+        c.drawString(col2, 11*mm, "EUROPE & AUSTRALASIA")
         c.setFillColor(colors.HexColor("#AAAAAA"))
         c.setFont("Helvetica", 7.5)
-        c.drawString(mid, 6*mm, "Michael Arnot  |  michael@encorespeakers.com  |  +61 422 002 685")
+        c.drawString(col2, 6*mm, "Michael Arnot  |  michael@encorespeakers.com  |  +61 422 002 685")
+
+        col3 = 2 * W / 3
+        c.setFillColor(WHITE)
+        c.setFont("Helvetica-Bold", 8)
+        c.drawString(col3, 11*mm, "LATIN AMERICA")
+        c.setFillColor(colors.HexColor("#AAAAAA"))
+        c.setFont("Helvetica", 7.5)
+        c.drawString(col3, 6*mm, "Juanita Cortes  |  juanita.cortes@smartspeakers.co  |  +57 313 8985266")
 
         # Website right
         c.setFillColor(GOLD)
         c.setFont("Helvetica-Bold", 8)
-        c.drawRightString(W - MARGIN, 8*mm, "ghinsberg.com")
+        c.drawRightString(W - MARGIN, 1.5*mm, "ghinsberg.com")
 
         c.restoreState()
 
