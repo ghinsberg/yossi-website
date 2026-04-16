@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import DemoReel from "@/components/sections/DemoReel";
 import KeynotesPreview from "@/components/sections/KeynotesPreview";
 import ClientLogos from "@/components/sections/ClientLogos";
+import ResultsTestimonials from "@/components/sections/ResultsTestimonials";
 import FeaturedTestimonial from "@/components/sections/FeaturedTestimonial";
 import TheDifference from "@/components/sections/TheDifference";
 import MediaLogos from "@/components/sections/MediaLogos";
@@ -14,6 +15,7 @@ export default function Home() {
       <DemoReel />
       <KeynotesPreview />
       <ClientLogos />
+      <ResultsTestimonials />
       <FeaturedTestimonial />
       <TheDifference />
       <MediaLogos />

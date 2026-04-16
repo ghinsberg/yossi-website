@@ -3,8 +3,52 @@ export interface Testimonial {
   author: string;
   title: string;
   company: string;
-  category: "ceo" | "corporate" | "bureau" | "event" | "industry" | "other";
+  category: "ceo" | "corporate" | "bureau" | "event" | "industry" | "other" | "result";
+  resultLabel?: string; // short outcome label shown above the quote
 }
+
+export const resultTestimonials: Testimonial[] = [
+  {
+    quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams. I have seen a measurable change in attitude and performance.",
+    author: "Bert Wong",
+    title: "CEO",
+    company: "Fuji Xerox",
+    category: "result",
+    resultLabel: "Sales team performance",
+  },
+  {
+    quote: "Every person I spoke with was enthralled and captivated. Yossi's insights will directly help us build our partner ecosystem and drive the outcomes we need.",
+    author: "John Hennessey",
+    title: "General Manager, Small, Medium and Corporate Business",
+    company: "Microsoft",
+    category: "result",
+    resultLabel: "Partner ecosystem growth",
+  },
+  {
+    quote: "Your presentation gave us the inspiration and tools necessary to Be Brave and win in our business. Our team left ready to act, not just feel.",
+    author: "Mark Wang",
+    title: "Executive President, Greater China & North America",
+    company: "Jeunesse Global",
+    category: "result",
+    resultLabel: "Team activation",
+  },
+  {
+    quote: "Max scores in every evaluation category. Our members rated this the highest-impact session in the chapter's history.",
+    author: "Juan Federico Salaverria Q.",
+    title: "Education Chair",
+    company: "YPO El Salvador",
+    category: "result",
+    resultLabel: "Highest-rated session in chapter history",
+  },
+  {
+    quote: "We were so impressed with the impact that we invited Yossi back for a second presentation the following day — unprecedented for our events.",
+    author: "Elmo de Alwis",
+    title: "CEO and Managing Director",
+    company: "Sigma Pharmaceuticals",
+    category: "result",
+    resultLabel: "Invited back the next day",
+  },
+];
 
 export const testimonials: Testimonial[] = [
   // CEOs & C-Suite
