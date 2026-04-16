@@ -9,7 +9,7 @@ export interface Testimonial {
 
 export const resultTestimonials: Testimonial[] = [
   {
-    quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams. I have seen a measurable change in attitude and performance.",
+    quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams.",
     author: "Bert Wong",
     title: "CEO",
     company: "Fuji Xerox",
@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
     category: "ceo",
   },
   {
-    quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams.",
+    quote: "Yossi's keynote was a breath of fresh air — an injection of much needed oxygen for our sales and management teams.",
     author: "Bert Wong",
     title: "CEO",
     company: "Fuji Xerox",
