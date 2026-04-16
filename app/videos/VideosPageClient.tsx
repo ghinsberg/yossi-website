@@ -1,192 +1,57 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { featuredReel, keynoteVideos, storyVideos, shortVideos, Video } from "@/data/videos";
 
-interface Video {
-  id: string;
-  youtubeId: string | null;
-  title: string;
-  description: string;
-  category: string;
-  duration?: string;
-}
+function VideoThumbnail({ video }: { video: Video }) {
+  const [playing, setPlaying] = useState(false);
+  const thumb = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
 
-const videos: Video[] = [
-  {
-    id: "speaker-reel",
-    youtubeId: "LCRjBVnQ5JM",
-    title: "Speaker Reel",
-    description: "90-second highlight reel showcasing Yossi on stage",
-    category: "Keynote Highlights",
-    duration: "1:30",
-  },
-  {
-    id: "tedx-melbourne",
-    youtubeId: "TEDx_PLACEHOLDER",
-    title: "TEDxMelbourne 2018",
-    description: "Yossi shares his transformation story at TEDxMelbourne",
-    category: "TEDx",
-    duration: "18:00",
-  },
-  {
-    id: "i-shouldnt-be-alive",
-    youtubeId: null,
-    title: '"I Shouldn\'t Be Alive"',
-    description:
-      "Discovery Channel documentary on Yossi's survival in the Amazon",
-    category: "Media Appearances",
-    duration: "45:00",
-  },
-  {
-    id: "ypo-clips",
-    youtubeId: null,
-    title: "YPO Keynote Clips",
-    description: "Selected clips from YPO chapter events worldwide",
-    category: "Media Appearances",
-    duration: "12:00",
-  },
-];
-
-const categories = ["Keynote Highlights", "TEDx", "Media Appearances"];
-
-function VideoCard({ video }: { video: Video }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const hasYoutube = video.youtubeId !== null;
-  const thumbnailUrl = hasYoutube
-    ? `https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`
-    : null;
+  if (playing) {
+    return (
+      <div className="aspect-video w-full rounded-xl overflow-hidden">
+        <iframe
+          src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+          title={video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full"
+        />
+      </div>
+    );
+  }
 
   return (
-    <div className="group">
-      <div className="relative aspect-video rounded-xl overflow-hidden bg-white/5">
-        {isPlaying && hasYoutube ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full absolute inset-0"
-            title={video.title}
-          />
-        ) : (
-          <button
-            onClick={() => hasYoutube && setIsPlaying(true)}
-            className={`w-full h-full flex items-center justify-center ${
-              hasYoutube ? "cursor-pointer" : "cursor-default"
-            }`}
-            aria-label={hasYoutube ? `Play ${video.title}` : video.title}
-          >
-            {thumbnailUrl ? (
-              <Image
-                src={thumbnailUrl}
-                alt={video.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            ) : (
-              <div className="w-full h-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-12 h-12 text-white/20"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            )}
-            {/* Play button overlay */}
-            {hasYoutube && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors duration-300">
-                <div className="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:scale-110 group-hover:bg-brand-gold transition-all duration-300">
-                  <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 ml-0.5">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            )}
-            {/* Placeholder badge */}
-            {!hasYoutube && (
-              <div className="absolute bottom-3 left-3 bg-white/10 backdrop-blur-sm text-white/60 text-xs px-2 py-1 rounded">
-                Coming Soon
-              </div>
-            )}
-          </button>
-        )}
-        {/* Duration badge */}
-        {video.duration && !isPlaying && (
-          <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
-            {video.duration}
-          </div>
-        )}
-      </div>
-      {/* Card info */}
-      <div className="mt-4">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-brand-gold">
-            {video.category}
-          </span>
+    <button
+      onClick={() => setPlaying(true)}
+      className="group relative aspect-video w-full rounded-xl overflow-hidden block"
+      aria-label={`Play ${video.title}`}
+    >
+      {/* Thumbnail */}
+      <img
+        src={thumb}
+        alt={video.title}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+      {/* Play button */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-14 h-14 rounded-full bg-brand-gold flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg className="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
         </div>
-        <h3 className="text-lg font-heading font-semibold text-brand-text">
-          {video.title}
-        </h3>
-        <p className="text-sm text-brand-text-secondary mt-1">
-          {video.description}
-        </p>
       </div>
-    </div>
+    </button>
   );
 }
 
-function FeaturedPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = "LCRjBVnQ5JM";
-
+function VideoCard({ video }: { video: Video }) {
   return (
-    <div className="relative aspect-video rounded-2xl overflow-hidden bg-white/5 shadow-2xl shadow-brand-gold/5">
-      {isPlaying ? (
-        <iframe
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full h-full absolute inset-0"
-          title="Yossi Ghinsberg Speaker Reel"
-        />
-      ) : (
-        <button
-          onClick={() => setIsPlaying(true)}
-          className="w-full h-full flex items-center justify-center cursor-pointer group"
-          aria-label="Play speaker highlight reel"
-        >
-          <Image
-            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-            alt="Yossi Ghinsberg Speaker Reel"
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-            sizes="(max-width: 768px) 100vw, 80vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:scale-110 group-hover:bg-brand-gold transition-all duration-300 shadow-lg shadow-brand-gold/30">
-              <svg viewBox="0 0 24 24" fill="white" className="w-8 h-8 md:w-10 md:h-10 ml-1">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-          </div>
-          <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
-            <p className="text-xs uppercase tracking-wider text-brand-gold font-semibold mb-1">
-              Featured
-            </p>
-            <h3 className="text-xl md:text-2xl font-heading font-bold text-white">
-              Speaker Highlight Reel
-            </h3>
-            <p className="text-sm text-white/70 mt-1">1:30</p>
-          </div>
-        </button>
-      )}
+    <div className="flex flex-col gap-3">
+      <VideoThumbnail video={video} />
+      <p className="text-sm font-medium text-brand-text leading-snug">{video.title}</p>
     </div>
   );
 }
@@ -194,64 +59,82 @@ function FeaturedPlayer() {
 export default function VideosPageClient() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-20 md:py-28 bg-brand-bg">
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-center">
-            See Yossi in Action
+      {/* Header */}
+      <section className="py-16 md:py-24 text-center">
+        <div className="max-w-3xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+            Watch Yossi
           </h1>
-          <p className="text-xl text-brand-text-secondary text-center max-w-3xl mx-auto mt-6">
-            From electrifying keynotes to in-depth interviews, experience the
-            power and presence that make Yossi one of the most unforgettable
-            speakers in the world.
+          <p className="text-xl text-brand-text-secondary">
+            See why audiences of 10,000 sit in silence — and leave permanently changed.
           </p>
         </div>
       </section>
 
-      {/* Featured Video */}
-      <section className="pb-16 md:pb-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <FeaturedPlayer />
+      {/* Featured Reel */}
+      <section className="max-w-4xl mx-auto px-6 mb-20">
+        <div className="aspect-video w-full rounded-2xl overflow-hidden">
+          <iframe
+            src={`https://www.youtube.com/embed/${featuredReel.id}`}
+            title={featuredReel.title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+        <p className="text-center text-brand-text-secondary text-sm mt-4 uppercase tracking-widest">
+          Speaker Reel
+        </p>
+      </section>
+
+      {/* Keynote Clips */}
+      <section className="max-w-6xl mx-auto px-6 mb-20">
+        <h2 className="text-2xl font-heading font-bold mb-8">From the Stage</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {keynoteVideos.map((v) => (
+            <VideoCard key={v.id} video={v} />
+          ))}
         </div>
       </section>
 
-      {/* Video Grid by Category */}
-      {categories.map((category) => {
-        const categoryVideos = videos.filter((v) => v.category === category);
-        if (categoryVideos.length === 0) return null;
+      {/* The Story */}
+      <section className="max-w-6xl mx-auto px-6 mb-20">
+        <h2 className="text-2xl font-heading font-bold mb-2">The Story</h2>
+        <p className="text-brand-text-secondary mb-8">
+          21 days alone in the Amazon. A bestselling book. A Hollywood film starring Daniel Radcliffe.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {storyVideos.map((v) => (
+            <VideoCard key={v.id} video={v} />
+          ))}
+        </div>
+      </section>
 
-        return (
-          <section
-            key={category}
-            className="border-t border-white/10 py-16 md:py-20"
-          >
-            <div className="max-w-7xl mx-auto px-6">
-              <SectionHeading title={category} align="left" />
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                {categoryVideos.map((video) => (
-                  <VideoCard key={video.id} video={video} />
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })}
+      {/* Shorts */}
+      <section className="max-w-6xl mx-auto px-6 mb-20">
+        <h2 className="text-2xl font-heading font-bold mb-8">Quick Clips</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {shortVideos.map((v) => (
+            <VideoCard key={v.id} video={v} />
+          ))}
+        </div>
+      </section>
 
       {/* CTA */}
-      <section className="border-t border-white/10 py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Ready to bring transformation to your stage?
-          </h2>
-          <p className="text-lg text-brand-text-secondary mt-4">
-            Book Yossi for your next event and give your audience an experience
-            they will never forget.
+      <section className="py-16 text-center border-t border-white/10">
+        <div className="max-w-2xl mx-auto px-6">
+          <p className="text-xl font-heading font-semibold mb-2">
+            Want to see Yossi live at your event?
           </p>
-          <div className="mt-8">
-            <Button variant="gold" href="/book-yossi" size="lg">
-              Book a Call
-            </Button>
-          </div>
+          <p className="text-brand-text-secondary mb-6">
+            Check availability and get a tailored proposal within 48 hours.
+          </p>
+          <a
+            href="/book-yossi"
+            className="inline-block bg-brand-gold text-black font-semibold px-8 py-4 rounded-full hover:bg-brand-gold/90 transition-colors"
+          >
+            Book a Call
+          </a>
         </div>
       </section>
     </>
