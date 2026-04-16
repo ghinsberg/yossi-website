@@ -81,6 +81,24 @@ export default function BookYossiPage() {
               </div>
             </div>
 
+            {/* Speaker One-Sheet */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mt-8">
+              <h3 className="text-lg font-semibold mb-1">Speaker One-Sheet</h3>
+              <p className="text-brand-text-secondary text-sm mb-5">
+                Keynotes, outcomes, client list, and testimonials — everything your internal team needs to present the booking.
+              </p>
+              <a
+                href="/yossi-ghinsberg-speaker-onesheet.pdf"
+                download
+                className="inline-flex items-center gap-2 bg-brand-gold text-black text-sm font-semibold px-5 py-3 rounded-full hover:bg-brand-gold/90 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
+
             {/* Prefer to speak directly */}
             {siteConfig.contacts.map((agent) => (
               <div
