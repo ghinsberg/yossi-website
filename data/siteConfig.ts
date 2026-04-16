@@ -30,9 +30,9 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   siteName: "Yossi Ghinsberg",
-  siteTitle: "Yossi Ghinsberg | Transformation Keynote Speaker",
+  siteTitle: "Yossi Ghinsberg | Keynote Speaker",
   siteDescription:
-    "Voted Most Unforgettable Speaker. Yossi Ghinsberg is a transformation keynote speaker on survival, AI, and leading through disruption. From the Amazon jungle to Silicon Valley, he helps leaders navigate uncertainty with courage and clarity.",
+    "Voted Most Unforgettable Speaker. Yossi Ghinsberg survived 21 days alone in the Amazon and spent years building AI companies in Silicon Valley. He speaks to audiences of 10,000 and leaves them permanently changed.",
   siteUrl: "https://yossighinsberg.com",
   navigation: [
     { label: "Keynotes", href: "/keynotes" },

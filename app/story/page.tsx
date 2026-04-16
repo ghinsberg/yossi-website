@@ -198,13 +198,11 @@ export default function StoryPage() {
       <section className="bg-brand-surface py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-            He has shared stages with Richard Branson, Bill Clinton, Queen Noor,
-            Steve Ballmer, Nassim Taleb, Deepak Chopra, and Steve Irwin. In
-            2025, he delivered the keynote at MDRT&apos;s Global Conference to
-            6,000 financial professionals, one of the largest speaking
-            engagements in the industry. He has been voted Most Unforgettable
-            Speaker. His books have sold millions of copies in 20 languages. He
-            speaks to audiences of 10,000 and leaves them permanently changed.
+            In 2025, he delivered the keynote at MDRT&apos;s Global Conference
+            to 6,000 financial professionals. He has been voted Most
+            Unforgettable Speaker. His books have sold over one million copies
+            in 20 languages. He speaks to audiences of 10,000 and leaves them
+            permanently changed.
           </p>
           <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed mt-8">
             Some call him the real most interesting man in the world.
@@ -261,7 +259,7 @@ export default function StoryPage() {
                     <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 00-.98-.85c-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20H8c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1h-3v-2.08a6.993 6.993 0 005.91-5.78c.1-.6-.39-1.14-1-1.14z" />
                   </svg>
                 ),
-                label: "Shared Stages: Branson, Clinton, Taleb",
+                label: "Voted Most Unforgettable Speaker",
               },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center">
