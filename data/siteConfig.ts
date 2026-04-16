@@ -30,9 +30,9 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   siteName: "Yossi Ghinsberg",
-  siteTitle: "Yossi Ghinsberg | Keynote Speaker",
+  siteTitle: "Yossi Ghinsberg | An Epic Storyteller Audiences Never Forget",
   siteDescription:
-    "Voted Most Unforgettable Speaker. Yossi Ghinsberg survived 21 days alone in the Amazon and spent years building AI companies in Silicon Valley. He speaks to audiences of 10,000 and leaves them permanently changed.",
+    "Voted Most Unforgettable Speaker. Yossi Ghinsberg survived 21 days alone in the Amazon. His story became a book — over one million copies sold — and a Hollywood film. He speaks to audiences of 10,000 and leaves them permanently changed.",
   siteUrl: "https://yossighinsberg.com",
   navigation: [
     { label: "Keynotes", href: "/keynotes" },

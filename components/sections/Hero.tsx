@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6 -mt-32">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-brand-text leading-tight mb-6">
-          Survival Wisdom<br />for an Uncertain World
+          An Epic Storyteller<br />Audiences Never Forget
         </h1>
         <p className="text-lg md:text-xl text-white leading-relaxed mb-10 max-w-xl mx-auto">
           Your team walks out different. That&apos;s not a promise. That&apos;s his track record.
