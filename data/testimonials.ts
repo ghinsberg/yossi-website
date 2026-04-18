@@ -5,9 +5,19 @@ export interface Testimonial {
   company: string;
   category: "ceo" | "corporate" | "bureau" | "event" | "industry" | "other" | "result";
   resultLabel?: string; // short outcome label shown above the quote
+  logo?: string; // path to company logo in /public
 }
 
 export const resultTestimonials: Testimonial[] = [
+  {
+    quote: "Yossi doesn't just recount a survival story. He invites you into a world where survival becomes transformation. His words don't feel rehearsed; they feel remembered. And in the remembering, he draws out something universal.",
+    author: "Regina Bedoya, CLU, ChFC",
+    title: "Past President",
+    company: "MDRT",
+    category: "result",
+    resultLabel: "Most Unforgettable Speaker",
+    logo: "/images/logos/mdrt.svg",
+  },
   {
     quote: "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams.",
     author: "Bert Wong",
@@ -23,6 +33,7 @@ export const resultTestimonials: Testimonial[] = [
     company: "Microsoft",
     category: "result",
     resultLabel: "Partner ecosystem growth",
+    logo: "/images/logos/microsoft.svg",
   },
   {
     quote: "Your presentation gave us the inspiration and tools necessary to Be Brave and win in our business. Our team left ready to act, not just feel.",
@@ -39,6 +50,7 @@ export const resultTestimonials: Testimonial[] = [
     company: "YPO El Salvador",
     category: "result",
     resultLabel: "Highest-rated session in chapter history",
+    logo: "/images/logos/ypo.svg",
   },
   {
     quote: "We were so impressed with the impact that we invited Yossi back for a second presentation the following day — unprecedented for our events.",
