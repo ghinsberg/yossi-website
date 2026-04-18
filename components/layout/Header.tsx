@@ -45,7 +45,7 @@ export default function Header() {
             <img
               src="/images/yossi-ghinsberg-logo_site.png"
               alt="Yossi Ghinsberg"
-              className="h-10 md:h-14 w-auto"
+              className="h-12 md:h-20 w-auto"
             />
           </Link>
 

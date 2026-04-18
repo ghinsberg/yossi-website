@@ -51,23 +51,18 @@ export default function Hero() {
       {/* Content — left aligned, Bear-style */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-8 md:px-16 pb-8">
         <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <p className="text-brand-gold text-sm md:text-base uppercase tracking-[0.3em] font-semibold mb-4">
-            Yossi Ghinsberg
-          </p>
-
           {/* Headline */}
-          <h1 className="font-heading font-black leading-none mb-2">
-            <span className="block text-white text-6xl md:text-8xl lg:text-[10rem] uppercase">
+          <h1 className="font-heading font-bold leading-none mb-2">
+            <span className="block text-white text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight">
               Aim High
             </span>
-            <span className="block text-brand-gold text-5xl md:text-7xl lg:text-8xl uppercase">
-              Never Ever Give Up!
+            <span className="block text-brand-gold text-3xl md:text-5xl lg:text-6xl uppercase tracking-tight">
+              Never Ever Give Up
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white/80 text-lg md:text-xl mt-6 mb-10 max-w-xl leading-relaxed">
+          <p className="text-white/70 text-base md:text-lg mt-6 mb-10 max-w-lg leading-relaxed font-light tracking-wide">
             The speaker who changes the room.
           </p>
 
