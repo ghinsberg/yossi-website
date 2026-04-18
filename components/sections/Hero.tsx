@@ -68,7 +68,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-white/80 text-lg md:text-xl mt-6 mb-10 max-w-xl leading-relaxed">
-            Your team walks out different. That&apos;s not a promise. That&apos;s his track record.
+            The speaker who changes the room.
           </p>
 
           {/* Buttons */}
