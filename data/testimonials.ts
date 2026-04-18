@@ -25,6 +25,7 @@ export const resultTestimonials: Testimonial[] = [
     company: "Fuji Xerox",
     category: "result",
     resultLabel: "Sales team performance",
+    logo: "/images/clients/fuji-xerox.png",
   },
   {
     quote: "Every person I spoke with was enthralled and captivated. Yossi's insights will directly help us build our partner ecosystem and drive the outcomes we need.",
@@ -42,6 +43,7 @@ export const resultTestimonials: Testimonial[] = [
     company: "Jeunesse Global",
     category: "result",
     resultLabel: "Team activation",
+    logo: "/images/clients/jeunesse.png",
   },
   {
     quote: "Max scores in every evaluation category. Our members rated this the highest-impact session in the chapter's history.",
@@ -59,6 +61,7 @@ export const resultTestimonials: Testimonial[] = [
     company: "Sigma Pharmaceuticals",
     category: "result",
     resultLabel: "Invited back the next day",
+    logo: "/images/clients/sigma.png",
   },
 ];
 

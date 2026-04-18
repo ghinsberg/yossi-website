@@ -43,9 +43,9 @@ export default function Header() {
           {/* Wordmark */}
           <Link href="/" className="flex-shrink-0">
             <img
-              src="/images/yossi-ghinsberg-logo_site.png"
+              src="/images/yossi-ghinsberg-logo-clean.png"
               alt="Yossi Ghinsberg"
-              className="h-12 md:h-20 w-auto mix-blend-lighten"
+              className="h-16 md:h-24 w-auto"
             />
           </Link>
 
@@ -101,7 +101,7 @@ export default function Header() {
         <div className="flex justify-between items-center px-6 pt-6 pb-4">
           <Link href="/" onClick={() => setMenuOpen(false)}>
             <img
-              src="/images/yossi-ghinsberg-logo_site.png"
+              src="/images/yossi-ghinsberg-logo-clean.png"
               alt="Yossi Ghinsberg"
               className="h-8 w-auto"
             />
