@@ -72,10 +72,10 @@ export const siteConfig: SiteConfig = {
   social: {
     linkedin: "https://www.linkedin.com/in/yossighinsberg/",
     youtube: "https://www.youtube.com/@yossighinsberg",
-    instagram: "https://www.instagram.com/yossighinsberg",
-    tiktok: "https://www.tiktok.com/@yossighinsberg",
-    facebook: "https://www.facebook.com/yossighinsberg",
-    x: "https://x.com/yossighinsberg",
+    instagram: "https://www.instagram.com/yossi_ghinsberg/",
+    tiktok: "https://www.tiktok.com/@ghinsberg",
+    facebook: "https://www.facebook.com/ghinsberg/",
+    x: "https://x.com/yossi_ghinsberg",
   },
   credentialBar: [
     "The laws of the jungle are the laws of nature — the bigger the dream, the greater the resistance to it",
