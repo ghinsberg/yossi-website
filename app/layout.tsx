@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import MobileCTA from "@/components/layout/MobileCTA";
 import StructuredData from "@/components/StructuredData";
 import ChatbotMount from "@/components/ui/ChatbotMount";
+import MeteorCursor from "@/components/ui/MeteorCursor";
 import Analytics from "@/components/Analytics";
 import Contentsquare from "@/components/Contentsquare";
 
@@ -79,6 +80,7 @@ export default function RootLayout({
         <MobileCTA />
         <Footer />
         <ChatbotMount />
+        <MeteorCursor />
       </body>
     </html>
   );
