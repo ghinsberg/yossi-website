@@ -48,9 +48,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/10 to-transparent z-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/70 via-transparent to-transparent z-10" />
 
-      {/* Content — left aligned, Bear-style */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-8 md:px-16 pb-8">
-        <div className="max-w-3xl">
+      {/* Content — pinned left, Bear-style */}
+      <div className="relative z-20 w-full pb-8">
+        <div className="max-w-sm md:max-w-md px-8 md:px-14">
           {/* Headline */}
           <h1 className="font-heading font-bold leading-none mb-2">
             <span className="block text-white text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight">
@@ -62,7 +62,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white/70 text-base md:text-lg mt-6 mb-10 max-w-lg leading-relaxed font-light tracking-wide">
+          <p className="text-white/70 text-sm md:text-base mt-5 mb-8 leading-relaxed font-light tracking-wide">
             The speaker who changes the room.
           </p>
 
