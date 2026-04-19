@@ -67,13 +67,27 @@ export default function Hero() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-6">
             <Button variant="gold" href="/book-yossi">
               Book a Call
             </Button>
             <Button variant="outline" href="#reel">
               Watch the Reel
             </Button>
+          </div>
+
+          {/* Carousel dots — below buttons */}
+          <div className="flex gap-2">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setPrev(current); setCurrent(i); }}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === current ? "bg-brand-gold w-6" : "bg-white/40 w-2"
+                }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
 
@@ -88,20 +102,6 @@ export default function Hero() {
                 {s.label}
               </p>
             </div>
-          ))}
-        </div>
-
-        {/* Carousel dots */}
-        <div className="absolute left-8 md:left-16 bottom-8 flex gap-2">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => { setPrev(current); setCurrent(i); }}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                i === current ? "bg-brand-gold w-6" : "bg-white/40"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
           ))}
         </div>
       </div>
