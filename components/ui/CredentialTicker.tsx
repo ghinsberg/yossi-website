@@ -1,6 +1,6 @@
 "use client";
 
-const items = [
+const audienceItems = [
   { number: "8,000", event: "Booking.com", city: "Amsterdam" },
   { number: "6,000", event: "MDRT Global Conference", city: "Miami" },
   { number: "5,000", event: "Amway", city: "Melbourne" },
@@ -8,26 +8,62 @@ const items = [
   { number: "3,500", event: "YPO Edge", city: "Singapore" },
 ];
 
-const separator = <span className="mx-6 opacity-40">·</span>;
+const stageNames = [
+  "Dr. Wayne Dyer",
+  "Richard Branson",
+  "Bill Clinton",
+  "Queen Rania",
+  "Steve Ballmer",
+  "Nassim Taleb",
+  "John Cleese",
+  "Steve Irwin",
+  "PM Lee Hsien Loong",
+  "Billie Jean King",
+];
+
+const dot = <span className="mx-5 opacity-30 font-light">·</span>;
+const bigDot = <span className="mx-8 text-brand-bg/20 font-black text-xl">◆</span>;
 
 function TickerContent() {
   return (
-    <>
-      {items.map((item, i) => (
-        <span key={i} className="inline-flex items-baseline gap-2 mx-6 whitespace-nowrap">
-          <span className="text-brand-bg font-heading font-black text-lg tracking-tight">
+    <span className="inline-flex items-center whitespace-nowrap">
+      {/* Audience sizes */}
+      {audienceItems.map((item, i) => (
+        <span key={`a-${i}`} className="inline-flex items-baseline gap-2">
+          <span className="text-brand-bg font-heading font-black text-base tracking-tight">
             {item.number}
           </span>
-          <span className="text-brand-bg/80 font-medium text-sm uppercase tracking-widest">
+          <span className="text-brand-bg/50 text-[10px] uppercase tracking-widest font-semibold mr-1">
+            attendees
+          </span>
+          <span className="text-brand-bg/80 font-semibold text-xs uppercase tracking-widest">
             {item.event}
           </span>
-          {separator}
-          <span className="text-brand-bg/60 text-sm uppercase tracking-widest">
+          {dot}
+          <span className="text-brand-bg/60 text-xs uppercase tracking-widest">
             {item.city}
           </span>
+          {bigDot}
         </span>
       ))}
-    </>
+
+      {/* Divider label */}
+      <span className="inline-flex items-center mr-6">
+        <span className="text-brand-bg/50 text-[10px] uppercase tracking-[0.3em] font-semibold mr-5">
+          Shared the stage with
+        </span>
+      </span>
+
+      {/* Luminaries */}
+      {stageNames.map((name, i) => (
+        <span key={`n-${i}`} className="inline-flex items-center">
+          <span className="text-brand-bg font-semibold text-xs uppercase tracking-widest">
+            {name}
+          </span>
+          {i < stageNames.length - 1 ? dot : bigDot}
+        </span>
+      ))}
+    </span>
   );
 }
 
@@ -35,13 +71,12 @@ export default function CredentialTicker() {
   return (
     <div className="bg-brand-gold overflow-hidden py-3.5 select-none">
       <div
-        className="flex"
+        className="flex items-center"
         style={{
-          animation: "ticker 30s linear infinite",
+          animation: "ticker 50s linear infinite",
           width: "max-content",
         }}
       >
-        {/* Duplicated for seamless loop */}
         <TickerContent />
         <TickerContent />
         <TickerContent />
