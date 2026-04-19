@@ -45,8 +45,8 @@ export default function Hero() {
       ))}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-black/40 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent z-10" />
 
       {/* Content — left aligned, Bear-style */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-8 md:px-16 pb-8">
