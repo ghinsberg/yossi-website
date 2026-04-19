@@ -243,7 +243,7 @@ export default function StoryPage() {
                     <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V4h-4z" />
                   </svg>
                 ),
-                label: "Hollywood Film with Daniel Radcliffe",
+                label: "Hollywood Film — Daniel Radcliffe",
               },
               {
                 icon: (
@@ -251,15 +251,15 @@ export default function StoryPage() {
                     <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                   </svg>
                 ),
-                label: "MDRT 2025, 6,000 Attendees",
+                label: "MDRT Main Stage 2025 — 6,000 Attendees",
               },
               {
                 icon: (
                   <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15a.998.998 0 00-.98-.85c-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20H8c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1h-3v-2.08a6.993 6.993 0 005.91-5.78c.1-.6-.39-1.14-1-1.14z" />
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                   </svg>
                 ),
-                label: "Voted Most Unforgettable Speaker",
+                label: "TEDxMelbourne — The Amazon Survival Story",
               },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center">
@@ -275,8 +275,63 @@ export default function StoryPage() {
         </div>
       </section>
 
+      {/* What audiences leave with */}
+      <section className="bg-brand-light-bg py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-bg mb-12 text-center">
+            What audiences leave with
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "A new frame for fear",
+                body: "Yossi doesn't teach people to eliminate fear. He shows them — through lived example — that fear is information, not a verdict. Audiences leave with a different relationship to uncertainty.",
+              },
+              {
+                title: "Permission to aim higher",
+                body: "The Amazon story works because it is real, not theoretical. When a room of 5,000 people hears what one human being survived on instinct alone, the bar for what is possible shifts permanently.",
+              },
+              {
+                title: "One decision they won't put off",
+                body: "Every talk ends with the same challenge: what are you waiting for? Not as a slogan. As a direct question. Audiences consistently report that they acted on something within 48 hours of the talk.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="border-t-2 border-brand-gold/30 pt-6">
+                <h3 className="font-heading font-bold text-brand-bg text-lg mb-3">{item.title}</h3>
+                <p className="text-brand-bg/70 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted by */}
+      <section className="bg-brand-bg py-14 border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-center text-brand-text-secondary text-xs uppercase tracking-widest mb-10">
+            Trusted by organisations that take their people seriously
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-10 opacity-50">
+            {["google", "apple", "microsoft", "bmw", "ypo", "mdrt"].map((logo) => (
+              <img
+                key={logo}
+                src={`/images/logos/${logo}.svg`}
+                alt={logo}
+                className="h-6 w-auto grayscale invert brightness-200"
+              />
+            ))}
+          </div>
+          <p className="text-center text-brand-text-secondary/50 text-xs mt-10">
+            Google · Apple · Microsoft · BMW · YPO · MDRT · Coca-Cola · IBM · American Express · Cunard
+          </p>
+        </div>
+      </section>
+
       {/* 11. CTA */}
-      <section className="bg-brand-bg py-16 text-center">
+      <section className="bg-brand-bg py-16 text-center px-6">
+        <p className="text-brand-text-secondary text-base mb-6 max-w-md mx-auto">
+          If you are looking for a speaker your audience will still talk about a year from now, this is the conversation to start.
+        </p>
         <Button variant="gold" href="/book-yossi" size="lg">
           Book Yossi to Speak
         </Button>
