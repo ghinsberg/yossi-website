@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import CredentialTicker from "@/components/ui/CredentialTicker";
 import DemoReel from "@/components/sections/DemoReel";
 import KeynotesPreview from "@/components/sections/KeynotesPreview";
 import ClientLogos from "@/components/sections/ClientLogos";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CredentialTicker />
       <DemoReel />
       <KeynotesPreview />
       <ClientLogos />
