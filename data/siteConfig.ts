@@ -14,6 +14,10 @@ export interface ContactInfo {
 export interface SocialLinks {
   linkedin: string;
   youtube: string;
+  instagram: string;
+  tiktok: string;
+  facebook: string;
+  x: string;
 }
 
 export interface SiteConfig {
@@ -68,6 +72,10 @@ export const siteConfig: SiteConfig = {
   social: {
     linkedin: "https://www.linkedin.com/in/yossighinsberg/",
     youtube: "https://www.youtube.com/@yossighinsberg",
+    instagram: "https://www.instagram.com/yossighinsberg",
+    tiktok: "https://www.tiktok.com/@yossighinsberg",
+    facebook: "https://www.facebook.com/yossighinsberg",
+    x: "https://x.com/yossighinsberg",
   },
   credentialBar: [
     "The laws of the jungle are the laws of nature — the bigger the dream, the greater the resistance to it",
