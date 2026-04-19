@@ -91,6 +91,18 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* MDRT badge — appears only on slide 2 */}
+        <div className={`absolute top-8 right-8 md:right-16 flex flex-col items-end gap-1.5 transition-opacity duration-1000 ${current === 1 ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+          <img
+            src="/images/logos/mdrt.svg"
+            alt="MDRT"
+            className="h-8 md:h-10 w-auto invert brightness-200"
+          />
+          <p className="text-white/60 text-xs uppercase tracking-widest">
+            Main Stage 2025
+          </p>
+        </div>
+
         {/* Stats — bottom right */}
         <div className="absolute right-8 md:right-16 bottom-8 flex gap-8 md:gap-12">
           {stats.map((s) => (
