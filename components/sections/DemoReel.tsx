@@ -8,13 +8,13 @@ export default function DemoReel() {
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-widest text-brand-gold mb-4">
-            Speaker Reel
+            Watch
           </p>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-text mb-4">
             See it for yourself.
           </h2>
           <p className="text-brand-text-secondary text-lg max-w-xl mx-auto">
-            5,000 people on their feet. Every time. Watch the two-minute reel.
+            On their feet. Every time. Two minutes.
           </p>
         </div>
 
@@ -29,8 +29,8 @@ export default function DemoReel() {
         <div className="mt-8 flex flex-wrap justify-center gap-8 text-center">
           {[
             { stat: "1M+", label: "Books sold" },
-            { stat: "Voted #1", label: "Most unforgettable speaker" },
-            { stat: "Hollywood", label: "Feature film" },
+            { stat: "Most Unforgettable", label: "Speaker — The Sweeney Agency" },
+            { stat: "Jungle", label: "Film starring Daniel Radcliffe" },
             { stat: "55+", label: "Countries" },
           ].map(({ stat, label }) => (
             <div key={label}>
