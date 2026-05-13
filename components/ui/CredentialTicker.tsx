@@ -6,6 +6,7 @@ const audienceItems = [
   { number: "5,000", event: "Amway", city: "Melbourne" },
   { number: "5,000", event: "Jeunesse", city: "Bangkok" },
   { number: "3,500", event: "YPO Edge", city: "Singapore" },
+  { number: "1M+", event: "Books Sold", city: "20 Languages" },
 ];
 
 const stageNames = [

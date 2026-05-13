@@ -10,11 +10,6 @@ const images = [
   "/images/stage/hero-4.jpg",
 ];
 
-const stats = [
-  { value: "10,000+", label: "Audience Size" },
-  { value: "1M+", label: "Books Sold" },
-  { value: "20", label: "Languages" },
-];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -53,17 +48,17 @@ export default function Hero() {
         <div className="max-w-sm md:max-w-md px-8 md:px-14">
           {/* Headline */}
           <h1 className="font-heading font-bold leading-none mb-2">
-            <span className="block text-white text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight">
-              Aim High
+            <span className="block text-white text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
+              What We Can Be
             </span>
-            <span className="block text-brand-gold text-3xl md:text-5xl lg:text-6xl uppercase tracking-tight">
-              Never Ever Give Up
+            <span className="block text-brand-gold text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
+              We Must Be
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white/70 text-sm md:text-base mt-5 mb-8 leading-relaxed font-light tracking-wide">
-            The speaker who changes the room.
+          <p className="text-white/60 text-xs md:text-sm mt-4 mb-8 uppercase tracking-[0.2em] font-medium">
+            Yossi Ghinsberg&apos;s Laws of the Jungle
           </p>
 
           {/* Buttons */}
@@ -103,19 +98,6 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Stats — bottom right */}
-        <div className="absolute right-8 md:right-16 bottom-8 flex gap-8 md:gap-12">
-          {stats.map((s) => (
-            <div key={s.label} className="text-right">
-              <p className="text-white text-2xl md:text-4xl font-heading font-black leading-none">
-                {s.value}
-              </p>
-              <p className="text-white/50 text-xs uppercase tracking-widest mt-1">
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Scroll indicator */}

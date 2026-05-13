@@ -78,7 +78,7 @@ export const siteConfig: SiteConfig = {
     x: "https://x.com/yossi_ghinsberg",
   },
   credentialBar: [
-    "The laws of the jungle are the laws of nature — the bigger the dream, the greater the resistance to it",
+    "The universe will not conspire to assist you. It will resist. The bigger the dream, the greater the resistance.",
   ],
   speakerReelId: "LCRjBVnQ5JM",
 } as const satisfies SiteConfig;
