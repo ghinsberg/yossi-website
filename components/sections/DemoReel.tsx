@@ -1,6 +1,3 @@
-import VideoPlayer from "@/components/ui/VideoPlayer";
-import { siteConfig } from "@/data/siteConfig";
-
 export default function DemoReel() {
   return (
     <section id="reel" className="bg-brand-bg py-20 md:py-28">
@@ -15,12 +12,20 @@ export default function DemoReel() {
           </h2>
         </div>
 
-        {/* Video */}
-        <VideoPlayer
-          videoId={siteConfig.speakerReelId}
-          size="large"
-          poster="/images/stage/krakow.jpg"
-        />
+        {/* Placeholder image */}
+        <div className="relative w-full rounded-2xl overflow-hidden">
+          <img
+            src="/images/stage/krakow.jpg"
+            alt="Yossi Ghinsberg on stage"
+            className="w-full object-cover"
+            style={{ maxHeight: "540px" }}
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <p className="text-white/60 text-xs uppercase tracking-[0.3em] font-medium">
+              Reel coming soon
+            </p>
+          </div>
+        </div>
 
         {/* Social proof strip below video */}
         <div className="mt-8 flex flex-wrap justify-center gap-8 text-center">
