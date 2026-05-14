@@ -8,7 +8,7 @@ export default function KeynotesPreview() {
     <section className="bg-brand-bg py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeading
-          title="Three Keynotes. One Extraordinary Life."
+          title="He has never left a room the way he found it."
           align="center"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

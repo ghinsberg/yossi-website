@@ -26,7 +26,7 @@ export interface Keynote {
 export const keynotes: Keynote[] = [
   {
     slug: "be-brave-in-a-new-world",
-    title: "Be Brave in a New World",
+    title: "The Power to Survive",
     subtitle:
       "How to lead with clarity, courage, and creativity when the map runs out",
     flagship: true,
@@ -72,9 +72,9 @@ export const keynotes: Keynote[] = [
   },
   {
     slug: "made-not-broken",
-    title: "Made, Not Broken",
+    title: "The Laws of the Jungle",
     subtitle:
-      "What human beings are truly capable of when everything is stripped away",
+      "Nature's principles for leadership, culture, and the legacy that outlasts you",
     flagship: false,
     description:
       "The signature keynote. 21 days alone in the Amazon becomes a masterclass in what human beings are actually capable of when everything is stripped away. Audiences of 10,000 have sat in absolute silence. C-suite leaders have wept. Teams have walked out permanently changed. This is not a talk about the jungle. It is a talk about you. About the moment you stop waiting to be rescued and start making yourself useful. About the difference between pain and suffering. About what happens on the other side of the thing you were sure would break you.",
