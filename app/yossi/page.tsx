@@ -257,26 +257,74 @@ export default function YossiPage() {
       </section>
 
       {/* 5. Lino Cambi */}
-      <section className="py-20 md:py-28 border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Current Project</p>
-            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug">
-              Lino Cambi. A sanctuary being built.
-            </h2>
-            <div className="text-white/55 text-base leading-relaxed space-y-4">
-              <p>
-                {/* PLACEHOLDER — Yossi to describe Lino Cambi */}
-                Lino Cambi is Yossi&apos;s current project: a sanctuary in [location — Yossi to confirm] being designed and built as a place of healing, creativity, and reconnection with nature.
-              </p>
-              <p>
-                It is part retreat, part architectural statement, part continuation of everything the Amazon taught him. More details coming soon.
-              </p>
+      <section className="border-t border-white/5">
+
+        {/* Hero render — full width */}
+        <div className="relative w-full overflow-hidden" style={{ maxHeight: "520px" }}>
+          <img
+            src="/images/yossi/lino-cambi/summer-evening.png"
+            alt="Lino Cambi — an evening on the terrace, South Crete"
+            className="w-full object-cover object-center"
+            style={{ maxHeight: "520px" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/70 via-transparent to-transparent" />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 py-20 md:py-28">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+
+            <div>
+              <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Lino Cambi · South Crete</p>
+              <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
+                Nothing shouts. Everything softly whispers.
+              </h2>
+              <div className="text-white/55 text-base leading-relaxed space-y-5">
+                <p>
+                  Lino Cambi is the dream Yossi shares with his brother, Paul Templer. Together, they are building a sanctuary for transformation in the heart of South Crete.
+                </p>
+                <p>
+                  Isolated enough to feel like a world apart. Close enough to be reached by those who are called to it.
+                </p>
+                <p>
+                  It is a premium facility created for respite, longevity, alignment, and transformation. Not a pampered vacation. A commitment to growth, to a deeper way of being.
+                </p>
+                <p>
+                  Lino Cambi is not architect-led, designer-led, or shaped by outside formulas. It is the manifestation of their dream, built on 15,000 square meters purchased from Agapitos and Dimitra Zeakis, who also passed down the name, carried through generations.
+                </p>
+                <p>
+                  Yossi and Paul see themselves as custodians of this land. They are giving it their own DNA. And though a team of Greek craftsmen is helping them build the facilities, what they are creating is as unique and inimitable as themselves.
+                </p>
+                <p className="text-white/80 italic">
+                  Subtle yet deep, the experience of Lino Cambi is transformational.
+                </p>
+              </div>
+              <a
+                href="https://linocambi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand-gold text-xs uppercase tracking-widest font-semibold mt-8 hover:opacity-70 transition-opacity"
+              >
+                Visit linocambi.com →
+              </a>
             </div>
-          </div>
-          {/* Placeholder image */}
-          <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center">
-            <p className="text-white/20 text-xs uppercase tracking-widest">Lino Cambi render coming</p>
+
+            {/* Two renders stacked */}
+            <div className="flex flex-col gap-4">
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/yossi/lino-cambi/suite-daylight.png"
+                  alt="Lino Cambi suite — daylight"
+                  className="w-full object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/yossi/lino-cambi/spa-hero.png"
+                  alt="Lino Cambi — the spa, cliff above the Libyan Sea"
+                  className="w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
