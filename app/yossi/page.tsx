@@ -104,9 +104,12 @@ export default function YossiPage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
 
-            {/* Image placeholder — swap when photo arrives */}
-            <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center order-2 md:order-1">
-              <p className="text-white/20 text-xs uppercase tracking-widest">Photo coming</p>
+            <div className="rounded-xl overflow-hidden order-2 md:order-1">
+              <img
+                src="/images/yossi/buy-one-give-one.jpg"
+                alt="Yossi Ghinsberg with youth of El Salvador after his keynote gift"
+                className="w-full object-cover"
+              />
             </div>
 
             <div className="order-1 md:order-2">
