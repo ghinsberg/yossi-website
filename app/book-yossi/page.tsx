@@ -38,6 +38,9 @@ export default function BookYossiPage() {
       {/* Header */}
       <section className="py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto px-6">
+          <p className="text-xs uppercase tracking-widest text-brand-gold/70 mb-6">
+            Trusted by leaders who know that growth begins where comfort ends.
+          </p>
           <h1 className="text-4xl md:text-5xl font-heading font-bold">
             Let&apos;s talk about your audience.
           </h1>

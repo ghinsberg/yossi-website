@@ -70,6 +70,9 @@ export default function KeynotesPage() {
             but genuinely shifted. Something has moved. Every keynote is tailored
             to your audience, your theme, and the outcome you need.
           </p>
+          <p className="text-center text-brand-gold/60 text-xs uppercase tracking-widest mt-8">
+            For organisations that dare to move their people beyond performance into purpose.
+          </p>
         </div>
       </section>
 

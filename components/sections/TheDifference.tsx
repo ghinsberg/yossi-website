@@ -33,7 +33,7 @@ export default function TheDifference() {
             Not another keynote speaker.
           </h2>
           <p className="mt-4 text-brand-text-secondary text-lg max-w-xl mx-auto">
-            Your audience has sat through enough slides and frameworks. Here is what makes Yossi different.
+            For organisations that see their people not as talent to manage, but as potential to unleash.
           </p>
         </div>
 

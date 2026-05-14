@@ -150,6 +150,9 @@ export default function EndorsementsPage() {
     <>
       {/* Hero */}
       <section className="bg-brand-bg py-24 md:py-32 text-center px-6">
+        <p className="text-xs uppercase tracking-widest text-brand-gold/60 mb-6">
+          Trusted by those who know the human spirit is the greatest asset in any enterprise.
+        </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-text">
           What They Say
         </h1>

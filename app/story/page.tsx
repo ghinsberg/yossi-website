@@ -309,7 +309,7 @@ export default function StoryPage() {
       <section className="bg-brand-bg py-14 border-t border-white/5">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-center text-brand-text-secondary text-xs uppercase tracking-widest mb-10">
-            Trusted by organisations that take their people seriously
+            Trusted by organisations that believe people are their greatest frontier.
           </p>
           <div className="flex flex-wrap justify-center items-center gap-10 opacity-50">
             {["google", "apple", "microsoft", "bmw", "ypo", "mdrt"].map((logo) => (
