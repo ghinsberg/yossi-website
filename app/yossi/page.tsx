@@ -11,15 +11,23 @@ export default function YossiPage() {
   return (
     <main className="bg-brand-bg">
 
-      {/* Hero */}
-      <section className="py-24 md:py-36 text-center px-6">
-        <p className="text-brand-gold text-[10px] uppercase tracking-[0.4em] mb-6">Who Yossi is</p>
-        <h1 className="font-heading font-bold text-white text-4xl md:text-6xl leading-none mb-6">
-          Beyond the keynote.
-        </h1>
-        <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-          The story did not end in 1981. Yossi&apos;s relationship with the Amazon is a living one. He gives back. He builds. He leads. Here is the fuller picture.
-        </p>
+      {/* Hero — full-bleed portrait */}
+      <section className="relative min-h-[70vh] flex items-end overflow-hidden">
+        <img
+          src="/images/yossi/yossi-river-portrait.jpg"
+          alt="Yossi Ghinsberg on the Amazon river"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/30 to-transparent" />
+        <div className="relative z-10 max-w-5xl mx-auto px-6 pb-20 md:pb-28">
+          <p className="text-brand-gold text-[10px] uppercase tracking-[0.4em] mb-4">Who Yossi is</p>
+          <h1 className="font-heading font-bold text-white text-4xl md:text-6xl leading-none mb-6 max-w-2xl">
+            Beyond the keynote.
+          </h1>
+          <p className="text-white/55 text-lg max-w-xl leading-relaxed">
+            The story did not end in 1981. Yossi&apos;s relationship with the Amazon is a living one. He gives back. He builds. He leads. Here is the fuller picture.
+          </p>
+        </div>
       </section>
 
       {/* 1. Transformational Workshops */}
@@ -164,8 +172,8 @@ export default function YossiPage() {
           </div>
           <div className="rounded-xl overflow-hidden">
             <img
-              src="/images/yossi/ambassador.jpg"
-              alt="Yossi Ghinsberg as Ambassador of the Uchupiamona Nation"
+              src="/images/yossi/yossi-uchupiamona.jpg"
+              alt="Yossi Ghinsberg with the Uchupiamona people"
               className="w-full object-cover"
             />
           </div>
@@ -189,13 +197,22 @@ export default function YossiPage() {
         <div className="max-w-5xl mx-auto px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-start">
 
-            {/* Lake image */}
-            <div className="rounded-xl overflow-hidden">
-              <img
-                src="/images/yossi/chalalan/chalalan-lake.jpg"
-                alt="Lake Chalalan, Madidi National Park"
-                className="w-full object-cover"
-              />
+            {/* Images stacked */}
+            <div className="flex flex-col gap-4">
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/yossi/chalalan/chalalan-lake.jpg"
+                  alt="Lake Chalalan, Madidi National Park"
+                  className="w-full object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/yossi/chalalan/yossi-with-elder.jpg"
+                  alt="Yossi Ghinsberg with an Uchupiamona elder"
+                  className="w-full object-cover"
+                />
+              </div>
             </div>
 
             <div>
@@ -265,22 +282,35 @@ export default function YossiPage() {
       </section>
 
       {/* 6. Amazon relationship */}
-      <section className="py-20 md:py-28 bg-brand-surface border-t border-white/5">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-6">The Amazon</p>
-          <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
-            Not a place he survived. A place he belongs.
-          </h2>
-          <div className="text-white/55 text-base leading-relaxed space-y-4 text-left max-w-2xl mx-auto">
-            <p>
-              Most people who have a near-death experience want to put distance between themselves and the thing that almost killed them. Yossi went back. Then again. Then again.
-            </p>
-            <p>
-              The Amazon is not his past. It is his reference point, his community, his ongoing project. The Laws of the Jungle were not written in an office. They were lived, over decades, in the jungle and at home in it.
-            </p>
-            <p>
-              {/* PLACEHOLDER — Yossi to add any additional context about current Amazon work */}
-            </p>
+      <section className="border-t border-white/5">
+        {/* Full-bleed river photo */}
+        <div className="relative w-full overflow-hidden" style={{ maxHeight: "460px" }}>
+          <img
+            src="/images/yossi/yossi-amazon-river.jpg"
+            alt="Yossi Ghinsberg on the Amazon river"
+            className="w-full object-cover object-center"
+            style={{ maxHeight: "460px" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 via-transparent to-transparent" />
+        </div>
+
+        <div className="py-20 md:py-28 bg-brand-surface">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-6">The Amazon</p>
+            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
+              Not a place he survived. A place he belongs.
+            </h2>
+            <div className="text-white/55 text-base leading-relaxed space-y-4 text-left max-w-2xl mx-auto">
+              <p>
+                Most people who have a near-death experience want to put distance between themselves and the thing that almost killed them. Yossi went back. Then again. Then again.
+              </p>
+              <p>
+                The Amazon is not his past. It is his reference point, his community, his ongoing project. The Laws of the Jungle were not written in an office. They were lived, over decades, in the jungle and at home in it.
+              </p>
+              <p>
+                He is the lifetime director of Chalalan. He is the Ambassador of the Uchupiamona Nation. He founded the Guardians of the Madidi. He travels there as often as he can, for the community, and for his own nourishment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
