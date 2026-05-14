@@ -24,25 +24,77 @@ export default function YossiPage() {
 
       {/* 1. Transformational Workshops */}
       <section className="py-20 md:py-28 border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Workshops</p>
-            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug">
+        <div className="max-w-5xl mx-auto px-6">
+
+          {/* Header */}
+          <div className="mb-14">
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Awakening the Beast · The Adventure</p>
+            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug max-w-2xl">
               Even the smallest change of course is a shift of destiny.
             </h2>
-            <div className="text-white/55 text-base leading-relaxed space-y-4">
+            <div className="text-white/55 text-base leading-relaxed space-y-4 max-w-2xl">
               <p>
-                {/* PLACEHOLDER — Yossi to provide workshop description */}
-                Yossi leads immersive transformational workshops that go deeper than any keynote can. Participants do not sit and listen. They are moved, challenged, and asked to make one decision they have been avoiding.
+                Yossi leads immersive transformational workshops that go deep. Participants do not sit and listen. They are moved, challenged, and invited to choose one meaningful goal for their growth and fulfillment, and to make the one decision they have been avoiding.
               </p>
               <p>
-                These sessions have been run for C-suite leaders, high-performance teams, and community groups across five continents. The format changes. The result does not.
+                The preparation breaks open every faculty. Ice bath. Fire-walking. Ecstatic dance. Laughter yoga. Holotropic breathwork. Not as spectacle. As initiation.
+              </p>
+              <p>
+                When the preparation is complete, each person commits. Not to a vague intention. To a specific goal, a daily structure, accountability to the group, and a direct channel with Yossi and his team.
+              </p>
+              <p>
+                Every day of the process carries a theme. Wednesdays are Holy Wednesdays: say thank you for everything, to everyone, whatever happens. There are weeks with no complaining, regardless of circumstances. A tougher challenge than it sounds. Morning self-love rituals. 25 minutes of guided meditation before the day begins.
+              </p>
+              <p>
+                Yossi does every task he gives. He is always part of the group.
               </p>
             </div>
           </div>
-          {/* Placeholder image — replace with workshop photo */}
-          <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center">
-            <p className="text-white/20 text-xs uppercase tracking-widest">Workshop photo coming</p>
+
+          {/* Two images + timeframe strip */}
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="rounded-xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/images/yossi/workshops/workshop-fire-circle.jpg"
+                alt="Awakening the Beast workshop — fire circle gathering"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-xl overflow-hidden aspect-[4/3]">
+              <img
+                src="/images/yossi/workshops/workshop-night.jpg"
+                alt="The Adventure workshop — night ceremony"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Timeframe strip */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 border-t border-white/10 pt-10">
+            {[
+              { duration: "9 months", label: "Long-form group journey" },
+              { duration: "3 months", label: "Focused cohort" },
+              { duration: "3 weeks", label: "Intensive immersion" },
+              { duration: "3 days", label: "Deep-dive retreat" },
+              { duration: "3 hours", label: "One-on-one session" },
+            ].map(({ duration, label }) => (
+              <div key={duration} className="text-center">
+                <p className="text-brand-gold font-heading font-bold text-xl mb-1">{duration}</p>
+                <p className="text-white/30 text-[10px] uppercase tracking-wider">{label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-white/40 text-sm mb-6">
+              People remain in touch with Yossi for life. They describe the process as a turning point, a permanent and positive shift.
+            </p>
+            <a
+              href="/book-yossi"
+              className="inline-flex items-center gap-2 border border-brand-gold/50 text-brand-gold text-xs uppercase tracking-widest font-semibold px-6 py-3 hover:bg-brand-gold/10 transition-colors"
+            >
+              Enquire about a workshop
+            </a>
           </div>
         </div>
       </section>
