@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import VideoPlayer from "@/components/ui/VideoPlayer";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import BookingForm from "@/components/sections/BookingForm";
 import { siteConfig } from "@/data/siteConfig";
@@ -47,11 +46,6 @@ export default function BookYossiPage() {
             event and we&apos;ll be in touch within 24 hours.
           </p>
         </div>
-      </section>
-
-      {/* Demo Reel */}
-      <section className="max-w-4xl mx-auto px-6 mb-16">
-        <VideoPlayer videoId={siteConfig.speakerReelId} size="large" />
       </section>
 
       {/* Form + Sidebar */}
