@@ -221,6 +221,14 @@ export const testimonials: Testimonial[] = [
 
   // Event Organizers
   {
+    quote: "You didn't just speak. You shifted the room. The feedback has been phenomenal, and many attendees shared how your story stayed with them long after the event.",
+    author: "Jakub Bejnarowicz",
+    title: "CFO Summit, Warsaw", // TODO: confirm exact title from Jakub
+    company: "AICPA & CIMA",
+    category: "event",
+    resultLabel: "Shifted the room",
+  },
+  {
     quote: "Delegate feedback was fantastic, captivating — they didn't want him to stop. I give my unreserved recommendation.",
     author: "Kerry McWhinnie",
     title: "Event Organizer",

@@ -3,7 +3,7 @@ import { testimonials } from "@/data/testimonials";
 
 export default function FeaturedTestimonial() {
   const featured = testimonials.find(
-    (t) => t.author === "Rachel McVinish"
+    (t) => t.author === "Jakub Bejnarowicz"
   );
 
   if (!featured) return null;
