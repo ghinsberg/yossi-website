@@ -88,6 +88,19 @@ function LawCard({ law, index }: { law: (typeof laws)[0]; index: number }) {
           &ldquo;{law.passages[activePassage].text}&rdquo;
         </blockquote>
 
+        {/* Video embed (when available) */}
+        {law.videoId && (
+          <div className="mb-8 w-full max-w-lg rounded-xl overflow-hidden aspect-video">
+            <iframe
+              src={`https://www.youtube.com/embed/${law.videoId}?rel=0&modestbranding=1`}
+              title={law.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+        )}
+
         {/* Audio player */}
         <div
           className={`flex items-center gap-4 ${

@@ -9,6 +9,7 @@ export interface Law {
   audioSrc: string;
   intro: string;
   passages: LawPassage[];
+  videoId?: string;
 }
 
 export const laws: Law[] = [
@@ -209,6 +210,7 @@ export const laws: Law[] = [
     title: "The Purpose of Life Is Death",
     musicTitle: "The Purpose of Life Is Death",
     audioSrc: "/audio/laws/09-purpose-of-life-is-death.mp3",
+    videoId: "t6C09HhI6wU",
     intro: "This life is not the beginning. Death is not the end.",
     passages: [
       {
