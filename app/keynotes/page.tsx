@@ -60,12 +60,12 @@ export default function KeynotesPage() {
             One hour that changes the room.
           </h1>
           <p className="text-xl text-brand-text-secondary text-center max-w-3xl mx-auto mt-6">
-            Three keynotes. Every one built on the most extraordinary biography
+            Two keynotes. Every one built on the most extraordinary biography
             in the speaking industry.
           </p>
           <p className="max-w-3xl mx-auto text-center mt-8 text-brand-text-secondary text-lg leading-relaxed">
             Yossi doesn&apos;t give speeches. He creates felt experiences. His
-            keynotes are visceral &mdash; they bypass the analytical mind and
+            keynotes are visceral. They bypass the analytical mind and
             land somewhere deeper. Audiences leave not just informed or inspired,
             but genuinely shifted. Something has moved. Every keynote is tailored
             to your audience, your theme, and the outcome you need.
