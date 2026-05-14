@@ -101,25 +101,42 @@ export default function YossiPage() {
 
       {/* 2. Buy One Give One */}
       <section className="py-20 md:py-28 bg-brand-surface border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* Placeholder image */}
-          <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center order-2 md:order-1">
-            <p className="text-white/20 text-xs uppercase tracking-widest">Community photo coming</p>
-          </div>
-          <div className="order-1 md:order-2">
-            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One Give One</p>
-            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug">
-              Every ticket sold sends a child to school.
-            </h2>
-            <div className="text-white/55 text-base leading-relaxed space-y-4">
-              <p>
-                {/* PLACEHOLDER — Yossi to describe the Buy One Give One programme */}
-                For every keynote booking, a portion goes directly to educational initiatives in indigenous and underserved communities. It is not a corporate responsibility gesture. It is a personal commitment.
-              </p>
-              <p>
-                {/* PLACEHOLDER — add specific numbers, communities, outcomes */}
-                To date, the programme has supported [communities / children / schools — Yossi to confirm numbers].
-              </p>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+
+            {/* Image placeholder — swap when photo arrives */}
+            <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center order-2 md:order-1">
+              <p className="text-white/20 text-xs uppercase tracking-widest">Photo coming</p>
+            </div>
+
+            <div className="order-1 md:order-2">
+              <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One, Give One Free</p>
+              <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
+                A lit candle loses nothing when it lights another.
+              </h2>
+              <div className="text-white/55 text-base leading-relaxed space-y-5">
+                <p>
+                  I started this movement from a simple desire to give something back to the community.
+                </p>
+                <p>
+                  Most of my work happens in corporate environments. The work takes me all over the world, and I began to think: while I am already here, why not give one more talk to the community?
+                </p>
+                <p>
+                  It could be in the cinema of Hermosillo, Mexico, with the whole town invited. It could be a youth initiative in El Salvador for young people from disadvantaged circumstances. A private school in Switzerland. A senior citizens&apos; home in Tel Aviv. It matters not.
+                </p>
+                <p>
+                  I am already there. I can give more.
+                </p>
+                <p>
+                  The corporation that invites me is also invited to gift me to any community purpose they choose. And often, corporations that accept this challenge take so much pride in the event they gift that it becomes as meaningful as the keynote itself.
+                </p>
+                <p>
+                  It becomes a double gift. I gift the corporation. They gift the community. And in return, I too receive a gift.
+                </p>
+                <p className="text-white/80 italic">
+                  That random gift has the power to transform a life.
+                </p>
+              </div>
             </div>
           </div>
         </div>
