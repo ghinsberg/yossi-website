@@ -243,7 +243,7 @@ export default function StoryPage() {
                     <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V4h-4z" />
                   </svg>
                 ),
-                label: "Hollywood Film — Daniel Radcliffe",
+                label: "Hollywood Film, starring Daniel Radcliffe",
               },
               {
                 icon: (
@@ -251,7 +251,7 @@ export default function StoryPage() {
                     <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
                   </svg>
                 ),
-                label: "MDRT Main Stage 2025 — 6,000 Attendees",
+                label: "MDRT Main Stage 2025, 6,000 Attendees",
               },
               {
                 icon: (
@@ -324,6 +324,91 @@ export default function StoryPage() {
           <p className="text-center text-brand-text-secondary/50 text-xs mt-10">
             Google · Apple · Microsoft · BMW · YPO · MDRT · Coca-Cola · IBM · American Express · Cunard
           </p>
+        </div>
+      </section>
+
+      {/* Books & Film */}
+      <section className="bg-brand-bg py-20 md:py-28 border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold text-center mb-3">The story beyond the stage</p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text text-center mb-14">
+            The book. The sequel. The film.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+            {/* Book 1: Jungle */}
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
+                <img
+                  src="/images/books/jungle-book.jpg"
+                  alt="Jungle by Yossi Ghinsberg"
+                  className="w-full"
+                />
+              </div>
+              <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Book</p>
+              <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Jungle</h3>
+              <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
+                The survival memoir. Over one million copies sold in 20 languages. The story that started everything.
+              </p>
+              <a
+                href="https://www.amazon.com/Jungle-Harrowing-Adventure-Danger-Survival/dp/1849538824"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs uppercase tracking-widest font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 hover:bg-brand-gold/10 transition-colors"
+              >
+                Buy on Amazon
+              </a>
+            </div>
+
+            {/* Book 2: Laws of the Jungle */}
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
+                <img
+                  src="/images/books/laws-of-the-jungle-book.jpg"
+                  alt="Laws of the Jungle by Yossi Ghinsberg"
+                  className="w-full"
+                />
+              </div>
+              <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Book</p>
+              <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Laws of the Jungle</h3>
+              <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
+                Nine revelations from the Amazon. Jaguars don&apos;t need self-help books. Neither should you.
+              </p>
+              <a
+                href="https://www.amazon.com/Laws-Jungle-Jaguars-Self-help-Books/dp/0977171914"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs uppercase tracking-widest font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 hover:bg-brand-gold/10 transition-colors"
+              >
+                Buy on Amazon
+              </a>
+            </div>
+
+            {/* Film */}
+            <div className="flex flex-col items-center text-center group">
+              <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
+                <img
+                  src="/images/books/jungle-book-usa.jpg"
+                  alt="Jungle — the film starring Daniel Radcliffe"
+                  className="w-full"
+                />
+              </div>
+              <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Film</p>
+              <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Jungle</h3>
+              <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
+                Starring Daniel Radcliffe as Yossi. Directed by Greg McLean. A harrowing true story of adventure, danger and survival.
+              </p>
+              <a
+                href="https://www.amazon.com/Jungle-Daniel-Radcliffe/dp/B076HD7XQY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs uppercase tracking-widest font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 hover:bg-brand-gold/10 transition-colors"
+              >
+                Watch on Amazon
+              </a>
+            </div>
+
+          </div>
         </div>
       </section>
 
