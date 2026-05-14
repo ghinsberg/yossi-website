@@ -13,9 +13,6 @@ export default function DemoReel() {
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-brand-text mb-4">
             See it for yourself.
           </h2>
-          <p className="text-brand-text-secondary text-lg max-w-xl mx-auto">
-            On their feet. Every time. Two minutes.
-          </p>
         </div>
 
         {/* Video */}
