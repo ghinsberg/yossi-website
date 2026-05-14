@@ -60,8 +60,7 @@ export default function KeynotesPage() {
             One hour that changes the room.
           </h1>
           <p className="text-xl text-brand-text-secondary text-center max-w-3xl mx-auto mt-6">
-            Two keynotes. Every one built on the most extraordinary biography
-            in the speaking industry.
+            Two keynotes. Every one built on one of the most extraordinary true adventure stories, in recent times.
           </p>
           <p className="max-w-3xl mx-auto text-center mt-8 text-brand-text-secondary text-lg leading-relaxed">
             Yossi doesn&apos;t give speeches. He creates felt experiences. His
