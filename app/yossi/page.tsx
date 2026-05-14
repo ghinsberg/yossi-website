@@ -173,24 +173,67 @@ export default function YossiPage() {
       </section>
 
       {/* 4. Chalalan */}
-      <section className="py-20 md:py-28 bg-brand-surface border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* Placeholder image */}
-          <div className="aspect-[4/3] bg-white/5 rounded-xl border border-white/10 flex items-center justify-center order-2 md:order-1">
-            <p className="text-white/20 text-xs uppercase tracking-widest">Chalalan photo coming</p>
-          </div>
-          <div className="order-1 md:order-2">
-            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Chalalan Ecolodge</p>
-            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug">
-              A community. An ecosystem. A model for the world.
-            </h2>
-            <div className="text-white/55 text-base leading-relaxed space-y-4">
-              <p>
-                Chalalan Ecolodge sits at the edge of Madidi National Park, deep in the Bolivian Amazon. It was built by the Uchupiamona people, owned by the Uchupiamona people, and run by the Uchupiamona people. It is one of the most successful models of indigenous-led eco-tourism anywhere in the world.
-              </p>
-              <p>
-                Yossi was instrumental in making it happen. He is still involved. Chalalan is not a past project. It is a living relationship.
-              </p>
+      <section className="bg-brand-surface border-t border-white/5">
+
+        {/* Hero image — full width */}
+        <div className="relative w-full" style={{ maxHeight: "520px", overflow: "hidden" }}>
+          <img
+            src="/images/yossi/chalalan/yossi-canoe.jpg"
+            alt="Yossi Ghinsberg paddling on Lake Chalalan, Bolivian Amazon"
+            className="w-full object-cover object-center"
+            style={{ maxHeight: "520px" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-surface/80 via-transparent to-transparent" />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-6 py-20 md:py-28">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+
+            {/* Lake image */}
+            <div className="rounded-xl overflow-hidden">
+              <img
+                src="/images/yossi/chalalan/chalalan-lake.jpg"
+                alt="Lake Chalalan, Madidi National Park"
+                className="w-full object-cover"
+              />
+            </div>
+
+            <div>
+              <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Chalalan Ecolodge · Madidi</p>
+              <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
+                The naiveté of those who do not know what is impossible.
+              </h2>
+              <div className="text-white/55 text-base leading-relaxed space-y-5">
+                <p>
+                  Ten years after the ordeal in the Amazon, Yossi returned to the place that had nearly taken his life. He went upriver to the village of the Uchupiamona people, to thank them for saving him.
+                </p>
+                <p>
+                  When he thanked them for saving his life, they asked if he would help them save theirs. Their village was dying. The young people were leaving and not coming back. Their dream was to build a lodge for tourists on a small, hidden gem of a lake called Chalalan.
+                </p>
+                <p>
+                  There was no money. The location was six hours upriver, deep in the jungle.
+                </p>
+                <p className="text-white/80 font-medium">
+                  He could not say no. So he said yes.
+                </p>
+                <p>
+                  For three years he lived with them and they built Chalalan together. Against all odds. The Madidi was declared a protected national park. 140 Amazonian indigenous communities were inspired to stop waiting to be saved and take action themselves. The poorest, most remote village received $1.25 million from the Inter-American Development Bank and became the largest resort in the region.
+                </p>
+                <p>
+                  Chalalan changed the lives of tens of thousands of people.
+                </p>
+                <p>
+                  Thirty years later, Chalalan is still alive. Still the biggest and most important eco-lodge in the Madidi. Yossi is its lifetime director, and he travels there as often as he can.
+                </p>
+                <a
+                  href="https://www.chalalan.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-brand-gold text-xs uppercase tracking-widest font-semibold hover:opacity-70 transition-opacity"
+                >
+                  Visit chalalan.com →
+                </a>
+              </div>
             </div>
           </div>
         </div>
