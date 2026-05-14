@@ -15,7 +15,7 @@ export default function DemoReel() {
         {/* Placeholder image */}
         <div className="relative w-full rounded-2xl overflow-hidden">
           <img
-            src="/images/stage/krakow.jpg"
+            src="/images/stage/reel-placeholder.jpg"
             alt="Yossi Ghinsberg on stage"
             className="w-full object-cover"
             style={{ maxHeight: "540px" }}
