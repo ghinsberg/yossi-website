@@ -117,49 +117,4 @@ export const keynotes: Keynote[] = [
       company: "DOC-Events",
     },
   },
-  {
-    slug: "laws-of-the-jungle",
-    title: "Laws of the Jungle",
-    subtitle:
-      "Nature's principles for leadership, culture, and the legacy that outlasts you",
-    flagship: false,
-    description:
-      "There is no HR department in the Amazon. No management consultant. No performance review. Nature has had four billion years to work out what it takes to survive, adapt, and lead. It has no interest in theory. In this keynote, Yossi draws directly from his book Laws of the Jungle to reveal the principles that govern not just survival, but the deeper principles of leadership, culture, and significance.",
-    takeaways: [
-      {
-        title: "Lead a Life of Legacy, Relevance & Influence",
-        description: "The shift from managing to truly leading",
-      },
-      {
-        title: "The Power of a Dream",
-        description:
-          "Why vision is not sentimental, but the most practical tool a leader has",
-      },
-      {
-        title: "You Are the Author of Your Own Story",
-        description:
-          "How leaders who understand this build cultures that outlast any strategy",
-      },
-    ],
-    bestFor:
-      "C-suite, senior leadership teams, HR & L&D, YPO, EO, CEO summits",
-    solves: [
-      "Ineffective leadership",
-      "Poor culture",
-      "Low team performance",
-      "Lack of purpose & engagement",
-    ],
-    outcomes: [
-      "Senior leaders leave with a sharper sense of their own legacy",
-      "Culture shifts from compliance to ownership",
-      "Teams align around purpose, not just process",
-    ],
-    testimonial: {
-      quote:
-        "Very appreciate for your sharing. Yossi's story and sharing will be our chicken soup for the souls of our business, family, society and whole life.",
-      author: "Mark Wang",
-      title: "President North America & China",
-      company: "Jeunesse Global",
-    },
-  },
 ];
