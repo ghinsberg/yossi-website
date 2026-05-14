@@ -17,7 +17,7 @@ export default function DemoReel() {
           <img
             src="/images/stage/reel-placeholder.jpg"
             alt="Yossi Ghinsberg on stage"
-            className="w-full object-cover"
+            className="w-full object-cover object-top"
             style={{ maxHeight: "540px" }}
           />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
