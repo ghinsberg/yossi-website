@@ -22,7 +22,7 @@ export default function DemoReel() {
         <VideoPlayer
           videoId={siteConfig.speakerReelId}
           size="large"
-          poster="/images/stage/carousel-5.jpg"
+          poster="/images/stage/krakow.jpg"
         />
 
         {/* Social proof strip below video */}

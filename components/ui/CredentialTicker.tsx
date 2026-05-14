@@ -6,7 +6,6 @@ const audienceItems = [
   { number: "5,000", event: "Amway", city: "Melbourne" },
   { number: "5,000", event: "Jeunesse", city: "Bangkok" },
   { number: "3,500", event: "YPO Edge", city: "Singapore" },
-  { number: "1M+", event: "Books Sold", city: "20 Languages" },
 ];
 
 const stageNames = [
@@ -47,6 +46,15 @@ function TickerContent() {
           {bigDot}
         </span>
       ))}
+
+      {/* Books stat — no attendees label */}
+      <span className="inline-flex items-baseline gap-2">
+        <span className="text-brand-bg font-heading font-black text-base tracking-tight">1M+</span>
+        <span className="text-brand-bg/80 font-semibold text-xs uppercase tracking-widest">Books Sold</span>
+        {dot}
+        <span className="text-brand-bg/60 text-xs uppercase tracking-widest">20 Languages</span>
+        {bigDot}
+      </span>
 
       {/* Divider label */}
       <span className="inline-flex items-center mr-6">
