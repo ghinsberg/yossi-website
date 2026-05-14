@@ -119,20 +119,24 @@ export default function BookingForm() {
     }
     setStatus("submitting");
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: "c5b8701a-7559-422d-928e-19bd5cb47d01",
+          subject: `Booking Enquiry — ${formData.name}, ${formData.organisation}`,
+          from_name: formData.name,
+          ...formData,
+        }),
       });
-      if (response.ok) {
+      const data = await response.json();
+      if (data.success) {
         setStatus("success");
       } else {
-        // API returned an error — fall back to mailto
         window.location.href = buildMailtoFallback();
         setStatus("error");
       }
     } catch {
-      // Network error — fall back to mailto
       window.location.href = buildMailtoFallback();
       setStatus("error");
     }
