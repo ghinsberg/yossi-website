@@ -192,7 +192,7 @@ export default function MediaPage() {
             {/* Video embed */}
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-gray-900">
               <iframe
-                src="https://www.youtube.com/embed/jS_QLBLKPMU"
+                src="https://www.youtube.com/embed/Zlztb8QXGTg"
                 title="Jungle (2017) Official Trailer"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
