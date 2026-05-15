@@ -238,7 +238,7 @@ export default function MediaPage() {
               &ldquo;I Shouldn&apos;t Be Alive&rdquo;
             </h3>
             <p className="text-brand-text-secondary text-sm mb-6">
-              Season 1, Episode 6 &mdash; &ldquo;Escape from the
+              Season 1, Episode 3 &mdash; &ldquo;Escape from the
               Amazon&rdquo; (2005)
             </p>
             <p className="text-brand-text-secondary leading-relaxed max-w-2xl mx-auto mb-8">
