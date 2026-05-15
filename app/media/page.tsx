@@ -237,16 +237,56 @@ export default function MediaPage() {
               &ldquo;I Shouldn&apos;t Be Alive&rdquo;
             </h3>
             <p className="text-brand-text-secondary text-sm mb-6">
-              Season 1, Episode 6 &mdash; &ldquo;Escape from the
+              Season 1, Episode 3 &mdash; &ldquo;Escape from the
               Amazon&rdquo; (2005)
             </p>
-            <p className="text-brand-text-secondary leading-relaxed max-w-2xl mx-auto">
+            <p className="text-brand-text-secondary leading-relaxed max-w-2xl mx-auto mb-8">
               Yossi&apos;s survival story was dramatised for the hit Discovery
               Channel series that chronicles real-life tales of people who
               narrowly escaped death. The episode takes viewers deep into the
               Bolivian Amazon, recreating the 21 days that would change
               Yossi&apos;s life forever.
             </p>
+
+            {/* Full episode embed */}
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl mb-8 max-w-3xl mx-auto">
+              <iframe
+                src="https://www.youtube.com/embed/KtY-Q4hUdm4"
+                title="I Shouldn't Be Alive — Escape from the Amazon (Full Episode)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Streaming links */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://tubitv.com/tv-shows/540753/s01-e03-escape-from-the-amazon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-brand-gold/20 transition-colors"
+              >
+                Watch Free on Tubi
+              </a>
+              <a
+                href="https://www.primevideo.com/detail/0MQBI5Y0ZM4LQ4P0UD5KKPLQZB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-brand-text-secondary text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-white/10 transition-colors"
+              >
+                Amazon Prime Video
+              </a>
+              <a
+                href="https://tv.apple.com/us/show/i-shouldnt-be-alive/umc.cmc.198vh3o8m0352lj4f33whq4f"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-brand-text-secondary text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-white/10 transition-colors"
+              >
+                Apple TV
+              </a>
+            </div>
           </div>
         </div>
       </section>
