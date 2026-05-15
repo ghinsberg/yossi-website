@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import Button from "@/components/ui/Button";
 
 interface FormData {
@@ -49,6 +49,12 @@ export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<Status>("idle");
+
+  useEffect(() => {
+    if (status === "success") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [status]);
 
   function validate(): FormErrors {
     const errs: FormErrors = {};
