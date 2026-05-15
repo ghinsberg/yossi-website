@@ -237,7 +237,7 @@ export default function MediaPage() {
               &ldquo;I Shouldn&apos;t Be Alive&rdquo;
             </h3>
             <p className="text-brand-text-secondary text-sm mb-6">
-              Season 1, Episode 3 &mdash; &ldquo;Escape from the
+              Season 1, Episode 6 &mdash; &ldquo;Escape from the
               Amazon&rdquo; (2005)
             </p>
             <p className="text-brand-text-secondary leading-relaxed max-w-2xl mx-auto mb-8">
@@ -279,7 +279,7 @@ export default function MediaPage() {
                 Amazon Prime Video
               </a>
               <a
-                href="https://tv.apple.com/us/show/i-shouldnt-be-alive/umc.cmc.198vh3o8m0352lj4f33whq4f"
+                href="https://tv.apple.com/show/i-shouldnt-be-alive/umc.cmc.198vh3o8m0352lj4f33whq4f"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/5 border border-white/10 text-brand-text-secondary text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-white/10 transition-colors"
