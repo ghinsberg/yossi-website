@@ -143,21 +143,28 @@ export default function StoryPage() {
           </h2>
           <div className="text-brand-text-secondary text-lg md:text-xl leading-relaxed">
             <p>
-              The Amazon was not the only frontier Yossi explored before anyone
-              else got there.
+              Yossi does not only speak about courage. He attempts it.
             </p>
             <p className="mt-8">
-              Between 2013 and 2017, he was in Silicon Valley, building AI
-              companies when artificial intelligence was still an academic
-              conversation. His ventures, Blinq and Headbox, were built around
-              the concept of Digital Entities: intelligent representations of
-              individuals that could assess genuine affinity through a
-              three-question framework of identity, reputation, and conduct.
-              Blinq was acquired and covered by TechCrunch. Headbox pioneered a
-              person-centric, platform-agnostic model of digital identity.
+              Between 2013 and 2017, he found himself in Silicon Valley, drawn
+              by a vision he could not yet fully articulate. He tried to build
+              companies around AI and digital identity before either concept
+              had a mainstream name. Two ventures, Blinq and Headbox, were
+              attempts to explore what it might mean to represent a human being
+              honestly in a digital world.
             </p>
             <p className="mt-8">
-              He was a decade early. He has always been a decade early.
+              He was not a tech founder in the conventional sense. He was a
+              curious man with a big idea, surrounded by people far more
+              experienced than he was, trying to apply what the jungle had
+              taught him: that the ones who survive are not always the most
+              qualified. Sometimes they are just the ones who showed up.
+            </p>
+            <p className="mt-8">
+              The ventures did not change the world. But they changed him. And
+              when he stands on stage today and speaks about being brave in a
+              new world, he is not reading from a script. He has the bruises
+              to prove it.
             </p>
           </div>
         </div>
