@@ -3,24 +3,24 @@ import Button from "@/components/ui/Button";
 export const metadata = {
   title: "The Story of Yossi Ghinsberg",
   description:
-    "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+    "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building. The biography behind one of the world's most unforgettable speakers.",
   openGraph: {
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+      "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
   },
   twitter: {
     card: "summary_large_image",
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Amazon to Silicon Valley AI pioneer. The biography behind the world's most unforgettable keynote speaker.",
+      "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
   },
 };
 
 export default function StoryPage() {
   return (
     <>
-      {/* 1. Hero */}
+      {/* ── HERO ── */}
       <section className="bg-brand-bg py-24 md:py-32 text-center px-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-text">
           Three weeks alone in the Amazon.
@@ -31,26 +31,24 @@ export default function StoryPage() {
         <div className="w-16 h-0.5 bg-brand-gold mx-auto mt-8" />
       </section>
 
-      {/* 2. The Beginning */}
-      <section className="bg-brand-bg py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-          <p>
-            It was 1981. Yossi Ghinsberg was 22 years old, fresh from the
-            Israeli Navy, studying philosophy in Tel Aviv, restless in the way
-            only the young and alive can be. He wanted to see the world. Not the
-            parts on the tourist map. The parts beyond the edge of it.
-          </p>
-          <p className="mt-8">
-            He found his way to Bolivia. And then, following a man who claimed to
-            know of hidden gold and uncharted land, he walked into the Bolivian
-            Amazon. No roads. No trails. No signal. Just four young men and the
-            jungle.
+      {/* ── 1981. THE EDGE OF THE MAP. ── */}
+      <section className="bg-brand-bg py-14 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            1981. Tel Aviv. The edge of the map.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            Yossi Ghinsberg was 22, fresh from the Israeli Navy, studying
+            philosophy at Tel Aviv University. He found his way to Bolivia.
+            A stranger claimed to know of hidden gold and uncharted land.
+            Yossi walked into the Bolivian Amazon with four men and no way
+            back.
           </p>
         </div>
       </section>
 
-      {/* 3. Bolivia canoe image */}
-      <section className="py-8 bg-brand-bg">
+      {/* Bolivia canoe image */}
+      <section className="py-6 bg-brand-bg">
         <img
           src="/images/adventure/bolivia-canoe.jpg"
           alt="Yossi Ghinsberg in the Bolivian Amazon"
@@ -58,49 +56,47 @@ export default function StoryPage() {
         />
       </section>
 
-      {/* 4. The Fracture */}
-      <section className="bg-brand-bg py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-          <p>
-            The group fell apart in the way that groups do. Slowly, then
-            catastrophically. Disagreements. Fear. A guide who may have been
-            leading them nowhere. One by one, they went their separate ways, deep
-            in territory no map had charted.
-          </p>
-          <p className="mt-8">
-            Yossi&apos;s raft hit a waterfall. He was thrown into the river. When
-            the water released him, he was alone. No companion. No one within
-            days of walking in any direction. The jungle closed around him.
+      {/* ── THE GROUP COLLAPSED. ── */}
+      <section className="bg-brand-bg py-14 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            The group collapsed. The raft hit a waterfall. He was alone.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            Fear. Disagreements. A guide who may have been leading them
+            nowhere. One by one, they separated. Then Yossi&apos;s raft hit
+            a waterfall. When the river released him, there was no one within
+            days of walking in any direction.
           </p>
         </div>
       </section>
 
-      {/* 5. Twenty-One Days */}
-      <section className="bg-brand-bg py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-          <p>
-            He had no food. No shelter he didn&apos;t build himself. Around him:
-            floods, fever, insects burrowing into his flesh, animals that circled
-            in the night. On the sixth day, he woke to find a jaguar watching
-            him. He grabbed a can of mosquito repellent and a lighter, created a
-            flamethrower, and drove it back.
+      {/* ── DAY 6. A JAGUAR. ── */}
+      <section className="bg-brand-bg py-14 md:py-20 border-t border-white/5">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            Day 6. A jaguar watched him sleep.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            No food. No shelter he didn&apos;t build. Floods, fever, insects
+            burrowing into his flesh. He woke to find a jaguar watching him.
+            He grabbed mosquito repellent and a lighter, made a flamethrower,
+            and drove it back.
           </p>
-          <p className="mt-8">
-            He kept moving. Not because he had a plan. Because stopping meant
-            death. He ate what he could find. He built fires against the dark. He
-            hallucinated. He prayed. He bargained with whatever was listening. He
-            made it to the river.
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
+            He kept moving. Stopping meant death. He ate what he could find,
+            built fires against the dark, hallucinated, prayed, and made it
+            to the river.
           </p>
-          <p className="mt-8">
-            Three weeks after he was declared missing, a search party found him:
-            his friend Kevin, and indigenous villagers who had refused to stop
-            looking. He spent three months in hospital recovering.
+          <p className="text-brand-gold font-semibold text-lg mt-8">
+            Twenty-one days. Kevin Gale and indigenous villagers who refused
+            to stop searching found him alive.
           </p>
         </div>
       </section>
 
-      {/* 6. Rescue photo */}
-      <section className="bg-brand-bg py-8">
+      {/* Rescue photo */}
+      <section className="bg-brand-bg py-6">
         <div className="max-w-md mx-auto px-6">
           <img
             src="/images/adventure/rescue-1981.jpg"
@@ -108,70 +104,261 @@ export default function StoryPage() {
             className="w-full rounded-xl"
           />
           <p className="text-sm text-brand-text-secondary text-center mt-3 italic">
-            Yossi after rescue, Bolivia, 1981
+            After rescue, Bolivia, 1981
           </p>
         </div>
       </section>
 
-      {/* 7. The Transformation — Light background */}
+      {/* ── THE BOOK. THE FILM. ── */}
       <section className="bg-brand-light-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-2xl md:text-3xl font-heading font-bold text-brand-bg mb-6">
-            The jungle did not break Yossi Ghinsberg. It made him.
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-bg mb-5">
+            He wrote it down. A million people read it.
+          </h2>
+          <p className="text-brand-bg/80 text-lg leading-relaxed">
+            The original Hebrew edition appeared in 1985:{" "}
+            <em className="not-italic font-semibold">Back from Tuichi</em>.
+            The English title became{" "}
+            <em className="not-italic font-semibold">Jungle</em>. A second book
+            followed:{" "}
+            <em className="not-italic font-semibold">Laws of the Jungle</em>,
+            applying what the Amazon taught him to leadership.
           </p>
-          <div className="text-brand-bg/80 text-lg md:text-xl leading-relaxed">
-            <p>
-              What he brought back was not a survival technique or a motivational
-              framework. It was a lived understanding of what human beings are
-              actually capable of when everything is stripped away. When there is
-              no performance, no comfort, no audience. When it is just you and
-              the next decision.
-            </p>
-            <p className="mt-8">
-              That understanding became <em className="not-italic font-semibold text-brand-bg">Jungle</em>, a book that has sold over a million copies in more than 20 languages. It became a Hollywood film starring Daniel Radcliffe. Years later, he distilled everything he had learned about leadership and nature into a second book, <em className="not-italic font-semibold text-brand-bg">Laws of the Jungle</em>. Then came two decades of keynotes on the world&apos;s biggest stages.
-            </p>
-            <p className="mt-8">His TEDxMelbourne talk brought the Amazon story to a new generation.</p>
+          <p className="text-brand-bg/80 text-lg leading-relaxed mt-5">
+            In 2017, director Greg McLean made it into a film starring Daniel
+            Radcliffe. It premiered as the opening night gala at the Melbourne
+            International Film Festival. The movie tie-in edition carries a
+            foreword by Radcliffe himself.
+          </p>
+        </div>
+
+        {/* Book stat strip */}
+        <div className="max-w-3xl mx-auto px-6 mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { number: "1M+", label: "Copies sold" },
+              { number: "20", label: "Languages" },
+              { number: "2017", label: "Hollywood film" },
+              { number: "MIFF", label: "Opening night gala" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-brand-bg/10 rounded-xl p-5 text-center"
+              >
+                <p className="text-2xl font-heading font-bold text-brand-bg">
+                  {stat.number}
+                </p>
+                <p className="text-brand-bg/60 text-sm mt-1">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. The Silicon Valley Chapter */}
+      {/* ── THE JUNGLE HE GAVE BACK ── */}
       <section className="bg-brand-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-gold mb-8">
-            The Silicon Valley Chapter
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            The jungle he gave back.
           </h2>
-          <div className="text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-            <p>
-              Yossi does not only speak about courage. He attempts it.
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            He returned to the Amazon. Not to relive. To do something with it.
+          </p>
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
+            He was instrumental in founding the Chalalan Ecolodge in
+            Bolivia&apos;s Madidi National Park and helped establish the park
+            itself. The lodge is owned and run entirely by the Uchupiamona
+            people of San Jos&eacute; de Uchupiamonas.
+          </p>
+        </div>
+
+        {/* Achievement grid */}
+        <div className="max-w-3xl mx-auto px-6 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              {
+                label: "National Geographic Traveler, 2002",
+                value:
+                  "Named one of the 20 most important tourist destinations in the world.",
+              },
+              {
+                label: "Equator Prize, UNDP, 2008",
+                value:
+                  "The world's leading recognition for indigenous-led conservation.",
+              },
+              {
+                label: "Community impact",
+                value:
+                  "~40 local jobs. Health services and schools for 750 people.",
+              },
+              {
+                label: "Notable guests",
+                value:
+                  "Brad Pitt, Harrison Ford, Leonardo DiCaprio, and the King of Sweden. They came because the community built something worth coming to.",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="bg-white/5 border border-white/10 rounded-xl p-5"
+              >
+                <p className="text-brand-gold text-xs uppercase tracking-wider font-semibold mb-2">
+                  {item.label}
+                </p>
+                <p className="text-brand-text-secondary text-sm leading-relaxed">
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Ambassador callout */}
+        <div className="max-w-3xl mx-auto px-6 mt-6">
+          <div className="border-l-4 border-brand-gold pl-6 py-2">
+            <p className="text-brand-text font-semibold text-lg leading-snug">
+              Ambassador of the Uchupiamona Nation to the World.
             </p>
-            <p className="mt-8">
-              Between 2013 and 2017, he found himself in Silicon Valley, drawn
-              by a vision he could not yet fully articulate. He tried to build
-              companies around AI and digital identity before either concept
-              had a mainstream name. Two ventures, Blinq and Headbox, were
-              attempts to explore what it might mean to represent a human being
-              honestly in a digital world.
+            <p className="text-brand-text-secondary text-sm mt-2">
+              Appointed by Magna Asamblea. Signed by the community president,
+              the territorial corregidor, and the sub-alcalde. Not an honorary
+              title. A charge.
             </p>
-            <p className="mt-8">
-              He was not a tech founder in the conventional sense. He was a
-              curious man with a big idea, surrounded by people far more
-              experienced than he was, trying to apply what the jungle had
-              taught him: that the ones who survive are not always the most
-              qualified. Sometimes they are just the ones who showed up.
-            </p>
-            <p className="mt-8">
-              The ventures did not change the world. But they changed him. And
-              when he stands on stage today and speaks about being brave in a
-              new world, he is not reading from a script. He has the bruises
-              to prove it.
-            </p>
+          </div>
+        </div>
+
+        {/* CITA */}
+        <div className="max-w-3xl mx-auto px-6 mt-10">
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            He also served as Vice President of CITA &mdash; the Center for
+            Research and Treatment of Addiction &mdash; helping establish
+            twelve clinics in twelve cities around the world. Work that rarely
+            appears in the speaker biography. It is part of the story
+            regardless.
+          </p>
+        </div>
+      </section>
+
+      {/* ── FORTY YEARS. THE STORY STILL TRAVELS. ── */}
+      <section className="bg-brand-surface py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-text mb-5">
+            Forty years. The story still travels.
+          </h2>
+          <div className="grid md:grid-cols-2 gap-5 mt-8">
+            {/* Discovery Channel — links to full episode on YouTube */}
+            <a
+              href="https://www.youtube.com/watch?v=myPx-zAA_1Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-bg/50 rounded-xl p-6 border border-white/10 hover:border-brand-gold/40 hover:bg-brand-bg/80 transition-all group block"
+            >
+              <p className="text-brand-gold text-xs uppercase tracking-wider font-semibold mb-3">
+                Discovery Channel, 2005
+              </p>
+              <p className="text-brand-text font-semibold mb-2">
+                I Shouldn&apos;t Be Alive
+              </p>
+              <p className="text-brand-text-secondary text-sm leading-relaxed mb-4">
+                Season 1, Episode 3. The 21 days dramatised for television.
+                Twenty-four years after the rescue.
+              </p>
+              <span className="text-brand-gold text-xs font-semibold uppercase tracking-wider group-hover:underline">
+                Watch full episode →
+              </span>
+            </a>
+
+            {/* Wondery — links to Season 32 on Wondery */}
+            <a
+              href="https://wondery.com/shows/against-the-odds/season/32/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-bg/50 rounded-xl p-6 border border-white/10 hover:border-brand-gold/40 hover:bg-brand-bg/80 transition-all group block"
+            >
+              <p className="text-brand-gold text-xs uppercase tracking-wider font-semibold mb-3">
+                Wondery / Amazon Podcasts, 2023
+              </p>
+              <p className="text-brand-text font-semibold mb-2">
+                Against The Odds — Season 32
+              </p>
+              <p className="text-brand-text-secondary text-sm leading-relaxed mb-4">
+                &ldquo;Lost in the Rainforest&rdquo; — a four-episode narrative
+                series. Forty-two years after the rescue.
+              </p>
+              <span className="text-brand-gold text-xs font-semibold uppercase tracking-wider group-hover:underline">
+                Listen on Wondery →
+              </span>
+            </a>
+          </div>
+          <p className="text-brand-text-secondary text-lg mt-10 italic">
+            Stories that are true don&apos;t expire.
+          </p>
+        </div>
+      </section>
+
+      {/* ── MR SLEEP AND THE FLYING GREEN TOAD ── */}
+      <section className="bg-brand-bg py-14 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            Mr Sleep and the Flying Green Toad.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            In 2008, Yossi released an album of world music and global fusion
+            with musicians Avishai Barnatan and Amir Paiss. Thirteen tracks.
+            Every lyric written by him.
+          </p>
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-4">
+            &ldquo;A musical journey that will enchant children and adults alike.&rdquo;
+            A completely different side of the same man. Available on Spotify
+            and Apple Music.
+          </p>
+          <div className="flex flex-wrap gap-4 mt-7">
+            <a
+              href="https://open.spotify.com/track/5itX3vGLG1W2Ym8kEbisEB"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 rounded-full hover:bg-brand-gold/10 transition-colors"
+            >
+              Listen on Spotify
+            </a>
+            <a
+              href="https://music.apple.com/au/album/mr-sleep-and-the-flying-green-toad/275222572"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-text-secondary border border-white/10 px-5 py-2.5 rounded-full hover:bg-white/5 transition-colors"
+            >
+              Apple Music
+            </a>
           </div>
         </div>
       </section>
 
-      {/* 8b. Stage photo */}
-      <section className="py-8 bg-brand-bg">
+      {/* ── THE SILICON VALLEY CHAPTER ── */}
+      <section className="bg-brand-bg py-14 md:py-20 border-t border-white/5">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+            He doesn&apos;t only speak about courage. He attempts it.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            Between 2013 and 2017, he found himself in Silicon Valley,
+            building companies around AI and digital identity before either
+            concept had a mainstream name. Two ventures: Blinq and Headbox.
+          </p>
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
+            Not a conventional tech founder. A curious man who showed up,
+            surrounded by people far more experienced, applying what the jungle
+            taught him: the ones who survive are not always the most qualified.
+            Sometimes they are just the ones who showed up.
+          </p>
+          <p className="text-brand-text text-lg mt-5 font-medium">
+            The ventures did not change the world. He has the bruises to prove
+            he tried. That is why, when he speaks about being brave in a new
+            world, it lands.
+          </p>
+        </div>
+      </section>
+
+      {/* Stage photo */}
+      <section className="py-6 bg-brand-bg">
         <div className="max-w-4xl mx-auto px-6">
           <img
             src="/images/stage/on-stage.jpg"
@@ -184,47 +371,88 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* 9. The Life After */}
-      <section className="bg-brand-bg py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-          <p>
-            He went back to the Amazon. Not to relive the ordeal, but to give
-            something back. He was instrumental in creating the Chalalan
-            Ecolodge, a model for indigenous-led eco-tourism run by the
-            Uchupiamona people. In 2025, the Uchupiamona Nation officially
-            appointed him their Ambassador to the World, a recognition of
-            decades of partnership. He helped establish Madidi National Park. He
-            worked for seven years in addiction rehabilitation across multiple
-            countries. He built businesses. He crossed continents. He kept living
-            at the edge.
+      {/* ── ON STAGE ── */}
+      <section className="bg-brand-light-bg py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-bg mb-5">
+            On stage. Still the room.
+          </h2>
+          <p className="text-brand-bg/80 text-lg leading-relaxed">
+            He speaks to audiences of 10,000. He speaks to boardrooms of
+            twelve. One story. Whoever is in the room.
           </p>
+        </div>
+
+        {/* Stage stat grid */}
+        <div className="max-w-3xl mx-auto px-6 mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { number: "6.6 / 7.0", label: "CoreNet Global rating" },
+              { number: "6,000", label: "MDRT 2025, Miami Beach" },
+              { number: "#1", label: "Most Unforgettable Speaker" },
+              { number: "Clinton · Branson · Taleb", label: "Same programmes" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-brand-bg/10 rounded-xl p-5 text-center"
+              >
+                <p className="text-lg font-heading font-bold text-brand-bg leading-tight">
+                  {stat.number}
+                </p>
+                <p className="text-brand-bg/60 text-xs mt-2 leading-snug">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 10. Closing */}
-      <section className="bg-brand-surface py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed">
-            In 2025, he delivered the keynote at MDRT&apos;s Global Conference
-            to 6,000 financial professionals. He has been voted Most
-            Unforgettable Speaker. His books have sold over one million copies
-            in 20 languages. He speaks to audiences of 10,000 and leaves them
-            permanently changed.
+      {/* ── LINO CAMBI ── */}
+      <section className="bg-brand-bg py-16 md:py-28">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-brand-gold text-xs uppercase tracking-[0.2em] font-semibold mb-4">
+            The next chapter
           </p>
-          <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed mt-8">
-            Some call him the real most interesting man in the world.
+          <h2 className="text-2xl md:text-4xl font-heading font-bold text-brand-text mb-8 leading-tight">
+            He doesn&apos;t stop at the edge.<br className="hidden md:block" /> He builds there.
+          </h2>
+          <p className="text-brand-text-secondary text-lg leading-relaxed">
+            In May 2024, Yossi and Paul Templer signed the deed on a piece of
+            land in South Crete. Ten thousand square metres overlooking the
+            Libyan Sea.
           </p>
-          <p className="text-brand-text-secondary text-lg md:text-xl leading-relaxed mt-8 italic">
-            He just calls it living.
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
+            Paul Templer is a Zimbabwean adventurer who, in 1996, was swallowed
+            by a hippopotamus on the Zambezi River and survived. Two men who
+            should not be alive, building something together.
           </p>
-          <p className="text-2xl md:text-3xl font-heading font-bold text-brand-gold mt-8">
-            Be Brave.
+          <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
+            They are calling it Lino Cambi &mdash; a boutique resort and
+            longevity spa. Six to eight suites. Blue Zone cuisine. Overlooking
+            the Libyan Sea. Opening June 2026. Not a retirement. A place where
+            people who are done with noise can come to remember what matters.
           </p>
+          <blockquote className="mt-10 border-l-4 border-brand-gold pl-6 py-1">
+            <p className="text-xl md:text-2xl text-brand-text-secondary italic leading-relaxed">
+              &ldquo;Nothing shouts. Everything softly whispers.&rdquo;
+            </p>
+          </blockquote>
+          <div className="mt-8">
+            <a
+              href="https://linocambi.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 rounded-full hover:bg-brand-gold/10 transition-colors"
+            >
+              Visit linocambi.com
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Credential Stack */}
-      <section className="bg-brand-bg py-16 md:py-24">
+      {/* ── CREDENTIAL STACK ── */}
+      <section className="bg-brand-bg py-14 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
@@ -242,7 +470,7 @@ export default function StoryPage() {
                     <path d="M21 4H3a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1zM12 16c-1.1 0-2-.45-2-1h-1v-2h1c0-.55.9-1 2-1s2 .45 2 1h1v2h-1c0 .55-.9 1-2 1zm-8-2V8h4v1H5v4h3v1H4zm16 0h-4v-1h3V9h-3V8h4v6z" />
                   </svg>
                 ),
-                label: "1M+ Books Sold in 20+ Languages",
+                label: "1M+ Books Sold in 20 Languages",
               },
               {
                 icon: (
@@ -250,7 +478,7 @@ export default function StoryPage() {
                     <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V4h-4z" />
                   </svg>
                 ),
-                label: "Hollywood Film, starring Daniel Radcliffe",
+                label: "Hollywood Film, Starring Daniel Radcliffe",
               },
               {
                 icon: (
@@ -263,10 +491,10 @@ export default function StoryPage() {
               {
                 icon: (
                   <svg className="w-7 h-7 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                    <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
                   </svg>
                 ),
-                label: "TEDxMelbourne — The Amazon Survival Story",
+                label: "Equator Prize — UNDP, 2008",
               },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center">
@@ -282,7 +510,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* What audiences leave with */}
+      {/* ── WHAT AUDIENCES LEAVE WITH ── */}
       <section className="bg-brand-light-bg py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-bg mb-12 text-center">
@@ -292,27 +520,31 @@ export default function StoryPage() {
             {[
               {
                 title: "A new frame for fear",
-                body: "Yossi doesn't teach people to eliminate fear. He shows them — through lived example — that fear is information, not a verdict. Audiences leave with a different relationship to uncertainty.",
+                body: "Not a technique. A lived example. Fear is information, not a verdict. They leave with a different relationship to uncertainty.",
               },
               {
                 title: "Permission to aim higher",
-                body: "The Amazon story works because it is real, not theoretical. When a room of 5,000 people hears what one human being survived on instinct alone, the bar for what is possible shifts permanently.",
+                body: "When a room of 5,000 hears what one person survived on instinct alone, the bar for what is possible shifts permanently.",
               },
               {
                 title: "One decision they won't put off",
-                body: "Every talk ends with the same challenge: what are you waiting for? Not as a slogan. As a direct question. Audiences consistently report that they acted on something within 48 hours of the talk.",
+                body: "Every talk ends the same way: what are you waiting for? Not a slogan. A direct question. Audiences act on something within 48 hours.",
               },
             ].map((item) => (
               <div key={item.title} className="border-t-2 border-brand-gold/30 pt-6">
-                <h3 className="font-heading font-bold text-brand-bg text-lg mb-3">{item.title}</h3>
-                <p className="text-brand-bg/70 text-sm leading-relaxed">{item.body}</p>
+                <h3 className="font-heading font-bold text-brand-bg text-lg mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-brand-bg/70 text-sm leading-relaxed">
+                  {item.body}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Trusted by */}
+      {/* ── TRUSTED BY ── */}
       <section className="bg-brand-bg py-14 border-t border-white/5">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-center text-brand-text-secondary text-xs uppercase tracking-widest mb-10">
@@ -334,17 +566,18 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Books & Film */}
+      {/* ── BOOKS & FILM ── */}
       <section className="bg-brand-bg py-20 md:py-28 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold text-center mb-3">The story beyond the stage</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-brand-gold text-center mb-3">
+            The story beyond the stage
+          </p>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text text-center mb-14">
             The book. The sequel. The film.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
 
-            {/* Book 1: Jungle */}
-            <div className="flex flex-col items-center text-center group">
+            <div className="flex flex-col items-center text-center">
               <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
                 <img
                   src="/images/books/jungle-book.jpg"
@@ -355,7 +588,7 @@ export default function StoryPage() {
               <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Book</p>
               <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Jungle</h3>
               <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
-                The survival memoir. Over one million copies sold in 20 languages. The story that started everything.
+                The survival memoir. Over one million copies. 20 languages.
               </p>
               <a
                 href="https://www.amazon.com/Jungle-Harrowing-Adventure-Danger-Survival/dp/1849538824"
@@ -367,8 +600,7 @@ export default function StoryPage() {
               </a>
             </div>
 
-            {/* Book 2: Laws of the Jungle */}
-            <div className="flex flex-col items-center text-center group">
+            <div className="flex flex-col items-center text-center">
               <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
                 <img
                   src="/images/books/laws-of-the-jungle-book.jpg"
@@ -379,7 +611,8 @@ export default function StoryPage() {
               <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Book</p>
               <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Laws of the Jungle</h3>
               <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
-                Nine revelations from the Amazon. Jaguars don&apos;t need self-help books. Neither should you.
+                Nine revelations from the Amazon. Jaguars don&apos;t need
+                self-help books. Neither should you.
               </p>
               <a
                 href="https://www.amazon.com/Laws-Jungle-Jaguars-Self-help-Books/dp/0977171914"
@@ -391,8 +624,7 @@ export default function StoryPage() {
               </a>
             </div>
 
-            {/* Film */}
-            <div className="flex flex-col items-center text-center group">
+            <div className="flex flex-col items-center text-center">
               <div className="w-44 shadow-2xl shadow-black/60 mb-6 rounded overflow-hidden">
                 <img
                   src="/images/books/jungle-book-usa.jpg"
@@ -403,7 +635,8 @@ export default function StoryPage() {
               <p className="text-brand-gold text-[10px] uppercase tracking-widest mb-1">Film</p>
               <h3 className="font-heading font-bold text-brand-text text-lg mb-2">Jungle</h3>
               <p className="text-brand-text-secondary text-sm leading-relaxed mb-5">
-                Starring Daniel Radcliffe as Yossi. Directed by Greg McLean. A harrowing true story of adventure, danger and survival.
+                Starring Daniel Radcliffe. Directed by Greg McLean. A
+                harrowing true story of adventure, danger and survival.
               </p>
               <a
                 href="https://www.amazon.com/Jungle-Daniel-Radcliffe/dp/B076HD7XQY"
@@ -419,10 +652,11 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* 11. CTA */}
-      <section className="bg-brand-bg py-16 text-center px-6">
+      {/* ── CTA ── */}
+      <section className="bg-brand-bg py-16 text-center px-6 border-t border-white/5">
         <p className="text-brand-text-secondary text-base mb-6 max-w-md mx-auto">
-          If you are looking for a speaker your audience will still talk about a year from now, this is the conversation to start.
+          If you are looking for a speaker your audience will still talk about
+          a year from now, this is the conversation to start.
         </p>
         <Button variant="gold" href="/book-yossi" size="lg">
           Book Yossi to Speak
