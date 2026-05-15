@@ -84,16 +84,11 @@ export default function MediaPage() {
           {/* Jungle */}
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20">
             <div className="flex justify-center">
-              <div className="w-56 md:w-64 aspect-[2/3] bg-gray-900 rounded-lg shadow-2xl flex flex-col items-center justify-center p-8 text-center">
-                <span className="text-brand-gold text-xs uppercase tracking-[0.2em] mb-2">
-                  International Bestseller
-                </span>
-                <h3 className="text-3xl md:text-4xl font-heading font-bold text-white">
-                  Jungle
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">Yossi Ghinsberg</p>
-                <div className="w-8 h-0.5 bg-brand-gold mt-4" />
-              </div>
+              <img
+                src="/images/books/jungle-book.jpg"
+                alt="Jungle by Yossi Ghinsberg"
+                className="w-56 md:w-64 rounded-lg shadow-2xl"
+              />
             </div>
             <div>
               <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900">
@@ -123,7 +118,7 @@ export default function MediaPage() {
                   Available as Audible audiobook, narrated by Yossi
                 </li>
               </ul>
-              <Button variant="gold" href="#">
+              <Button variant="gold" href="https://www.amazon.com/Jungle-Harrowing-Adventure-Danger-Survival/dp/1849538824">
                 Buy on Amazon &rarr;
               </Button>
             </div>
@@ -158,21 +153,16 @@ export default function MediaPage() {
                   Nature&apos;s principles applied to leadership
                 </li>
               </ul>
-              <Button variant="teal" href="#">
+              <Button variant="teal" href="https://www.amazon.com/Laws-Jungle-Jaguars-Self-help-Books/dp/0977171914">
                 Buy on Amazon &rarr;
               </Button>
             </div>
             <div className="flex justify-center order-1 md:order-2">
-              <div className="w-56 md:w-64 aspect-[2/3] bg-brand-surface rounded-lg shadow-2xl flex flex-col items-center justify-center p-8 text-center">
-                <span className="text-brand-teal text-xs uppercase tracking-[0.2em] mb-2">
-                  Leadership
-                </span>
-                <h3 className="text-2xl md:text-3xl font-heading font-bold text-white leading-tight">
-                  Laws of the Jungle
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">Yossi Ghinsberg</p>
-                <div className="w-8 h-0.5 bg-brand-teal mt-4" />
-              </div>
+              <img
+                src="/images/books/laws-of-the-jungle-book.jpg"
+                alt="Laws of the Jungle by Yossi Ghinsberg"
+                className="w-56 md:w-64 rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
