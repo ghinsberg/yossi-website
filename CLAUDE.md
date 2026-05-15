@@ -48,6 +48,15 @@ Edit this for navigation, contacts, social links, credential bar, speaker reel Y
 - Primary brand color: brand-gold
 - Human and warm, not cold corporate
 
+## The Real Story Rule (standing instruction — PR agency mode)
+Yossi's real stories are more than enough. Never embellish.
+- Frame the truth powerfully. Do not add to it.
+- If a venture didn't change the world, say so. The attempt is the credential.
+- If something is uncertain or unknown, leave it out or say so.
+- No TechCrunch mentions, acquisition brags, or superlatives that aren't earned.
+- The bruises are the story. The survival is the story. Everything else is noise.
+- When in doubt: what actually happened? Write that.
+
 ## Site Title Note
 Current: Yossi Ghinsberg | Transformation Keynote Speaker
 Transformation is a corporate buzzword. Flag for Yossi to reconsider.
