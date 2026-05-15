@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import YoutubeEmbed from "@/components/ui/YoutubeEmbed";
 import { mediaLogos } from "@/data/clients";
 
 import type { Metadata } from "next";
@@ -248,15 +249,11 @@ export default function MediaPage() {
               Yossi&apos;s life forever.
             </p>
 
-            {/* Full episode embed */}
+            {/* Full episode — click to play */}
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl mb-8 max-w-3xl mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/KtY-Q4hUdm4"
+              <YoutubeEmbed
+                videoId="KtY-Q4hUdm4"
                 title="I Shouldn't Be Alive — Escape from the Amazon (Full Episode)"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
               />
             </div>
 
