@@ -8,10 +8,12 @@ import FeaturedTestimonial from "@/components/sections/FeaturedTestimonial";
 import TheDifference from "@/components/sections/TheDifference";
 import MediaLogos from "@/components/sections/MediaLogos";
 import FooterCTA from "@/components/sections/FooterCTA";
+import KineticIntro from "@/components/ui/KineticIntro";
 
 export default function Home() {
   return (
     <>
+      <KineticIntro />
       <Hero />
       <CredentialTicker />
       <DemoReel />
