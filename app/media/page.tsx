@@ -252,7 +252,7 @@ export default function MediaPage() {
             {/* Full episode — click to play */}
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl mb-8 max-w-3xl mx-auto">
               <YoutubeEmbed
-                videoId="KtY-Q4hUdm4"
+                videoId="myPx-zAA_1Q"
                 title="I Shouldn't Be Alive — Escape from the Amazon (Full Episode)"
               />
             </div>
