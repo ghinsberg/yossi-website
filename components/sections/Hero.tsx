@@ -49,10 +49,10 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="font-heading font-bold leading-none mb-2">
             <span className="block text-white text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
-              What We Can Be
+              What You Can Be
             </span>
             <span className="block text-brand-gold text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
-              We Must Be
+              You Must Be
             </span>
           </h1>
 
