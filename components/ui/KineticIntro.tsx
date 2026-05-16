@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 
 const LINES = [
-  { text: "What can you be?", gold: false },
-  { text: "In this one life.", gold: false },
-  { text: "You already know.", gold: false },
+  { text: "Against all odds.", gold: false },
+  { text: "Lost. Alone in the Amazon.", gold: false },
+  { text: "He found himself.", gold: false },
   { text: "What you can be —", gold: false },
   { text: "you must be.", gold: true },
 ];
 
 // How long each line is held visible (ms), after its fade-in
-const HOLD = [900, 800, 1000, 900, 1800];
+const HOLD = [900, 1000, 1200, 900, 1800];
 const FADE = 400; // ms — must match transition class duration below
 const GAP  = 150; // pause between lines
 
