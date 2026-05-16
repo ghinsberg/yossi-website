@@ -132,6 +132,7 @@ export default function BookingForm() {
           access_key: "c5b8701a-7559-422d-928e-19bd5cb47d01",
           subject: `Booking Enquiry — ${formData.name}, ${formData.organisation}`,
           from_name: formData.name,
+          to: "ghinsberg@gmail.com",
           ...formData,
         }),
       });
