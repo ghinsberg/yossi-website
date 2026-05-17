@@ -31,7 +31,7 @@ export const keynotes: Keynote[] = [
       "How to lead with clarity, courage, and creativity when the map runs out",
     flagship: true,
     description:
-      "The map has run out. Every organisation is navigating terrain that didn't exist five years ago: AI disruption, geopolitical volatility, the collapse of certainty as a management tool. And here is something extraordinary: Yossi Ghinsberg has been here twice. In 1981, he navigated 21 days alone in the Amazon with no map, no support, and no certainty of survival. Between 2013 and 2017, he was in Silicon Valley building AI companies before most of the world knew what AI was. He is not a jungle speaker who pivoted to AI to stay relevant. He is a man who has always been a decade ahead, and who now helps leaders navigate a world those systems are reshaping.",
+      "The map has run out. Every organisation is navigating terrain that didn't exist five years ago: disruption, volatility, the quiet collapse of certainty as a management tool.\n\nIn 1981, Yossi Ghinsberg spent 21 days alone in the Bolivian Amazon. No map. No food. No rescue coming. He did not have a framework. He had instinct, will, and the refusal to stop moving. He came out the other side with something no course teaches.\n\nThat is what this keynote offers. Not theory. Not optimism. A way of thinking that works when nothing is certain. Leaders leave making faster decisions and trusting their own judgment. Teams stop waiting for the map to reappear and start navigating the terrain in front of them.",
     takeaways: [
       {
         title: "Redefining Stress",
@@ -77,7 +77,7 @@ export const keynotes: Keynote[] = [
       "Nature's principles for leadership, culture, and the legacy that outlasts you",
     flagship: false,
     description:
-      "The signature keynote. 21 days alone in the Amazon becomes a masterclass in what human beings are actually capable of when everything is stripped away. Audiences of 10,000 have sat in absolute silence. C-suite leaders have wept. Teams have walked out permanently changed. This is not a talk about the jungle. It is a talk about you. About the moment you stop waiting to be rescued and start making yourself useful. About the difference between pain and suffering. About what happens on the other side of the thing you were sure would break you.",
+      "21 days alone in the Amazon. No food. No rescue. No certainty of survival. What happened in those three weeks became a book, a film, and 25 years of standing in front of people who needed to hear it.\n\nThis is not a talk about the jungle. It is a talk about you. About the moment you stop waiting to be rescued and start making yourself useful. About the difference between pain and suffering. About what is still possible on the other side of the thing you were sure would break you.\n\nTeams walk out of this room changed. Not inspired for a day. Changed.",
     takeaways: [
       {
         title: "The Bigger Your Goal, The More Resistance You Face",
