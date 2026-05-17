@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yossi Ghinsberg — Speaker One Sheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold:  #C9A84C;
+    --dark:  #0d0d0d;
+    --text:  #1a1a1a;
+    --muted: #6b6b6b;
+    --light: #f7f5f0;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: white;
+    overflow: hidden;
+  }
+
+  @page { size: A4 portrait; margin: 0; }
+  @media print { html, body { width: 210mm; height: 297mm; } }
+
+  /* ── PAGE GRID ── */
+  .page {
+    width: 210mm;
+    height: 297mm;
+    display: grid;
+    grid-template-rows: 8.5mm 1fr 15.5mm;
+    grid-template-columns: 62mm 1fr 58mm;
+    overflow: hidden;
+  }
+
+  /* ══════════════════════════════════════════
+     TOP BAR — full width credential strip
+  ══════════════════════════════════════════ */
+  .top-bar {
+    grid-column: 1 / -1;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5mm;
+    padding: 0 8mm;
+    overflow: hidden;
+  }
+  .tb-item {
+    font-size: 5.6pt;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(10,8,2,0.82);
+    white-space: nowrap;
+  }
+  .tb-dot {
+    width: 2.5px; height: 2.5px;
+    background: rgba(10,8,2,0.35);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════════════════
+     LEFT COLUMN — Yossi portrait (Zone A anchor)
+  ══════════════════════════════════════════ */
+  .photo-col {
+    grid-row: 2;
+    grid-column: 1;
+    position: relative;
+    overflow: hidden;
+    background: #0a0804;
+  }
+  .photo-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+    display: block;
+    opacity: 0.88;
+  }
+  /* gradient: transparent → dark */
+  .photo-col::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 35%,
+      rgba(8,6,2,0.5) 62%,
+      rgba(8,6,2,0.94) 100%
+    );
+  }
+
+  /* name + role overlay */
+  .photo-name {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 3.5mm 4.5mm 5mm;
+    z-index: 2;
+  }
+  .p-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 19pt;
+    font-weight: 900;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+  }
+  .p-role {
+    font-size: 4pt;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 2mm;
+    white-space: nowrap;
+  }
+
+  /* stat pills — single horizontal row, clear of name block */
+  .photo-stats {
+    position: absolute;
+    bottom: 28mm;
+    left: 0; right: 0;
+    padding: 0 3.5mm;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 1mm;
+  }
+  .ps {
+    flex: 1;
+    background: rgba(10,8,2,0.65);
+    border: 0.4pt solid rgba(201,168,76,0.4);
+    border-radius: 3px;
+    padding: 1.8mm 1mm;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    overflow: hidden;
+  }
+  .ps-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 7pt;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .ps-lbl {
+    display: block;
+    font-size: 3.4pt;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 0.5mm;
+    white-space: nowrap;
+  }
+
+  /* ══════════════════════════════════════════
+     CENTER COLUMN — all credibility content
+  ══════════════════════════════════════════ */
+  .content-col {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 5.5mm 6mm 4mm 6.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: white;
+  }
+
+  /* section eyebrow label */
+  .s-label {
+    display: block;
+    font-size: 4.8pt;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5mm;
+  }
+
+  /* horizontal rule */
+  .rule {
+    height: 0.4pt;
+    background: rgba(201,168,76,0.22);
+    flex-shrink: 0;
+    margin: 0.5mm 0;
+  }
+
+  /* Bio */
+  .bio {
+    font-size: 7pt;
+    line-height: 1.72;
+    color: var(--text);
+  }
+  .bio strong { font-weight: 700; color: var(--dark); }
+
+  /* ─── Keynotes ─── */
+  .keynote {
+    background: var(--light);
+    border-radius: 4px;
+    border-left: 2pt solid var(--gold);
+    padding: 3mm 3mm 2.5mm;
+    margin-bottom: 2.5mm;
+  }
+  .keynote:last-child { margin-bottom: 0; }
+  .kn-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2mm;
+    margin-bottom: 0.8mm;
+  }
+  .kn-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+  .flagship {
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 3.8pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.7mm 1.8mm;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 0.5mm;
+  }
+  .kn-sub {
+    font-size: 5.5pt;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.35;
+    margin-bottom: 1.8mm;
+  }
+  .kn-outcomes { list-style: none; }
+  .kn-outcomes li {
+    font-size: 5.8pt;
+    color: var(--text);
+    padding-left: 3mm;
+    position: relative;
+    line-height: 1.4;
+    margin-bottom: 0.7mm;
+  }
+  .kn-outcomes li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 5pt;
+    top: 0.4mm;
+  }
+  .kn-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2mm;
+    margin-top: 2mm;
+  }
+  .ktag {
+    font-size: 4.2pt;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: white;
+    border: 0.4pt solid #d5d0c5;
+    padding: 0.5mm 1.8mm;
+    border-radius: 10px;
+  }
+
+  /* ─── Testimonials ─── */
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5mm;
+  }
+  .testi {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 3mm;
+  }
+  .testi-q {
+    font-size: 5.8pt;
+    color: rgba(255,255,255,0.82);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2mm;
+  }
+  .testi-q::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    color: var(--gold);
+    line-height: 0;
+    vertical-align: -3pt;
+    margin-right: 0.3mm;
+  }
+  .testi-name {
+    font-size: 5.2pt;
+    font-weight: 700;
+    color: white;
+    display: block;
+  }
+  .testi-role {
+    font-size: 4.5pt;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-top: 0.4mm;
+    line-height: 1.4;
+  }
+
+  /* ─── Stage shared with ─── */
+  .stage-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    flex-wrap: wrap;
+  }
+  .stage-ey {
+    font-size: 4.5pt;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .stage-names {
+    font-size: 5.5pt;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ─── Client logos ─── */
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+    flex-wrap: nowrap;
+  }
+  .logo-row img {
+    height: 4.5mm;
+    width: auto;
+    max-width: 13mm;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
+  /* ══════════════════════════════════════════
+     RIGHT COLUMN — JUNGLE poster (Zone A cinematic hook)
+  ══════════════════════════════════════════ */
+  .poster-col {
+    grid-row: 2;
+    grid-column: 3;
+    position: relative;
+    overflow: hidden;
+    background: #0a0804;
+  }
+  .poster-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  /* subtle vignette edges */
+  .poster-col::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 12mm rgba(0,0,0,0.45);
+    z-index: 1;
+  }
+  /* bottom overlay for badge */
+  .poster-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(5,4,2,0.92) 55%);
+    padding: 8mm 4mm 4mm;
+    z-index: 2;
+  }
+  .award-chip {
+    background: var(--gold);
+    border-radius: 3px;
+    padding: 2mm 2.5mm;
+    margin-bottom: 2.5mm;
+    text-align: center;
+  }
+  .award-top {
+    font-size: 4.5pt;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--dark);
+    display: block;
+    margin-bottom: 0.5mm;
+  }
+  .award-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 7.5pt;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1.2;
+    display: block;
+  }
+  .award-sub {
+    font-size: 4pt;
+    color: rgba(10,8,2,0.65);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 0.4mm;
+  }
+  .poster-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 6pt;
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+    margin-bottom: 1.5mm;
+    padding-left: 2mm;
+    border-left: 1.5pt solid var(--gold);
+  }
+  .poster-quote-attr {
+    font-size: 4.5pt;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+  }
+
+  /* ══════════════════════════════════════════
+     AGENTS BAR — full width action zone
+  ══════════════════════════════════════════ */
+  .agents-bar {
+    grid-column: 1 / -1;
+    background: var(--dark);
+    display: grid;
+    grid-template-columns: 1fr 0.5px 1fr 0.5px 1fr auto;
+    align-items: center;
+    padding: 0 5mm;
+    gap: 1.5mm;
+    overflow: hidden;
+  }
+  .a-rule {
+    width: 0.5px; height: 7mm;
+    background: rgba(255,255,255,0.1);
+    justify-self: center;
+  }
+  .agent { padding: 0 1mm; }
+  .a-region {
+    font-size: 3.8pt;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5mm;
+  }
+  .a-bureau {
+    font-size: 4pt;
+    color: rgba(255,255,255,0.32);
+    margin-bottom: 0.4mm;
+  }
+  .a-name {
+    font-size: 5.8pt;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.3mm;
+  }
+  .a-contact {
+    font-size: 4.3pt;
+    color: rgba(255,255,255,0.46);
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5mm;
+  }
+  .cta-url {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  .cta-btn {
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 5pt;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 1.5mm 3mm;
+    border-radius: 2px;
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── TOP BAR ── -->
+  <div class="top-bar">
+    <span class="tb-item">🏆 Voted #1 Most Unforgettable Speaker</span>
+    <div class="tb-dot"></div>
+    <span class="tb-item">MDRT Main Stage 2025 &middot; 6,000 Audience</span>
+    <div class="tb-dot"></div>
+    <span class="tb-item">1M+ Books &middot; 20 Languages</span>
+    <div class="tb-dot"></div>
+    <span class="tb-item">Hollywood Film &middot; Daniel Radcliffe</span>
+    <div class="tb-dot"></div>
+    <span class="tb-item">25 Years &middot; 55+ Countries</span>
+  </div>
+
+  <!-- ── LEFT: YOSSI PORTRAIT ── -->
+  <div class="photo-col">
+    <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/headshots/yossi-headshot-2.jpg"
+         alt="Yossi Ghinsberg">
+
+    <!-- stat pills over gradient -->
+    <div class="photo-stats">
+      <div class="ps">
+        <span class="ps-num">1M+</span>
+        <span class="ps-lbl">Books Sold</span>
+      </div>
+      <div class="ps">
+        <span class="ps-num">25</span>
+        <span class="ps-lbl">Years</span>
+      </div>
+      <div class="ps">
+        <span class="ps-num">55+</span>
+        <span class="ps-lbl">Countries</span>
+      </div>
+      <div class="ps">
+        <span class="ps-num">8,000</span>
+        <span class="ps-lbl">Audience</span>
+      </div>
+    </div>
+
+    <!-- name + role -->
+    <div class="photo-name">
+      <div class="p-name">YOSSI<br>GHINSBERG</div>
+      <div class="p-role">Keynote Speaker &nbsp;&middot;&nbsp; Author &nbsp;&middot;&nbsp; Adventurer</div>
+    </div>
+  </div>
+
+  <!-- ── CENTER: CONTENT ── -->
+  <div class="content-col">
+
+    <!-- BIO -->
+    <div>
+      <span class="s-label">The Story That Started It All</span>
+      <p class="bio">
+        In 1981, Yossi Ghinsberg was 22 years old — swept over a waterfall deep in the uncharted Bolivian Amazon and left completely alone. For three weeks he survived on instinct, will, and the refusal to give up. That story became the bestseller <strong>Jungle</strong>, a Hollywood film, and 25 years on the world's main stages. <strong>Google. Microsoft. MDRT. YPO. The All Blacks.</strong> Audiences of 8,000 have sat in absolute silence. He has been called the most unforgettable speaker they have ever seen. He simply tries to be honest.
+      </p>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- KEYNOTES -->
+    <div>
+      <span class="s-label">Signature Keynotes</span>
+
+      <div class="keynote">
+        <div class="kn-head">
+          <div class="kn-title">The Power to Survive</div>
+          <span class="flagship">Flagship</span>
+        </div>
+        <div class="kn-sub">How to lead with clarity, courage, and creativity when the map runs out</div>
+        <ul class="kn-outcomes">
+          <li>Leaders make faster, bolder decisions under uncertainty</li>
+          <li>Teams shift from reactive to adaptive</li>
+          <li>Creative confidence returns to risk-averse cultures</li>
+        </ul>
+        <div class="kn-tags">
+          <span class="ktag">Leadership &amp; Disruption</span>
+          <span class="ktag">Decision-Making</span>
+          <span class="ktag">Technology &middot; Financial Services</span>
+        </div>
+      </div>
+
+      <div class="keynote">
+        <div class="kn-head">
+          <div class="kn-title">The Laws of the Jungle</div>
+        </div>
+        <div class="kn-sub">Nature's most efficient principles for leadership, resilience, and the legacy that outlasts you</div>
+        <ul class="kn-outcomes">
+          <li>Burned-out teams rediscover purpose and drive</li>
+          <li>Resilience becomes a skill, not a personality trait</li>
+          <li>Hard conversations stop being avoided</li>
+        </ul>
+        <div class="kn-tags">
+          <span class="ktag">Resilience &amp; Purpose</span>
+          <span class="ktag">Peak Performance</span>
+          <span class="ktag">All Corporate Audiences</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- TESTIMONIALS -->
+    <div>
+      <span class="s-label">What Leaders Say After the Room Clears</span>
+      <div class="testimonials">
+        <div class="testi">
+          <p class="testi-q">Max scores in every evaluation category. The highest-impact session in our chapter's history.</p>
+          <span class="testi-name">Juan Federico Salaverria Q.</span>
+          <span class="testi-role">Education Chair &middot; YPO El Salvador</span>
+        </div>
+        <div class="testi">
+          <p class="testi-q">We were so impressed we invited Yossi back for a second presentation the following day — unprecedented.</p>
+          <span class="testi-name">Elmo de Alwis</span>
+          <span class="testi-role">CEO &amp; Managing Director &middot; Sigma Pharmaceuticals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- SHARED STAGE -->
+    <div class="stage-row">
+      <span class="stage-ey">Shared the stage with</span>
+      <span class="stage-names">Bill Clinton &nbsp;&middot;&nbsp; Richard Branson &nbsp;&middot;&nbsp; Queen Rania &nbsp;&middot;&nbsp; Wayne Dyer &nbsp;&middot;&nbsp; Steve Ballmer &nbsp;&middot;&nbsp; Nassim Taleb &nbsp;&middot;&nbsp; John Cleese &nbsp;&middot;&nbsp; PM Lee Hsien Loong &nbsp;&middot;&nbsp; Billie Jean King</span>
+    </div>
+
+    <!-- CLIENT LOGOS -->
+    <div>
+      <span class="s-label">Notable Clients</span>
+      <div class="logo-row">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/google.png"      alt="Google">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/microsoft.png"  alt="Microsoft">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/apple.png"      alt="Apple">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/bmw.png"        alt="BMW">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/mdrt.png"       alt="MDRT">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/coca-cola.png"  alt="Coca-Cola">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/all-blacks.png" alt="All Blacks">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/jeunesse.png"   alt="Jeunesse">
+        <img src="file:///Users/yossighinsberg/New Website With Claude/public/images/clients/fuji-xerox.png" alt="Fuji Xerox">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── RIGHT: JUNGLE POSTER ── -->
+  <div class="poster-col">
+    <img src="file:///Users/yossighinsberg/Downloads/movie poster.jpg"
+         alt="JUNGLE — starring Daniel Radcliffe">
+
+    <div class="poster-overlay">
+      <div class="award-chip">
+        <span class="award-top">🏆 Voted</span>
+        <span class="award-main">#1 Most Unforgettable<br>Speaker</span>
+        <span class="award-sub">MDRT Main Stage 2025</span>
+      </div>
+      <p class="poster-quote">"He invites you into a world where survival becomes transformation. His words don't feel rehearsed; they feel remembered."</p>
+      <span class="poster-quote-attr">Regina Bedoya &middot; Past President, MDRT</span>
+    </div>
+  </div>
+
+  <!-- ── AGENTS BAR ── -->
+  <div class="agents-bar">
+    <div class="agent">
+      <div class="a-region">North America</div>
+      <div class="a-bureau">Carter Global Speakers</div>
+      <div class="a-name">Michelle Carter</div>
+      <div class="a-contact">Michelle@carterglobalspeakers.com &nbsp;&middot;&nbsp; +1 703 819 2511</div>
+    </div>
+    <div class="a-rule"></div>
+    <div class="agent">
+      <div class="a-region">Europe &amp; Australasia</div>
+      <div class="a-bureau">Encore Speakers</div>
+      <div class="a-name">Michael Arnot</div>
+      <div class="a-contact">michael@encorespeakers.com &nbsp;&middot;&nbsp; +61 (0)422 002 685</div>
+    </div>
+    <div class="a-rule"></div>
+    <div class="agent">
+      <div class="a-region">Latin America</div>
+      <div class="a-bureau">Smart Speakers</div>
+      <div class="a-name">Juanita Cortes Cleves</div>
+      <div class="a-contact">juanita.cortes@smartspeakers.co &nbsp;&middot;&nbsp; +57 (313) 898-5266</div>
+    </div>
+    <div class="cta-wrap">
+      <span class="cta-url">ghinsberg.com</span>
+      <a class="cta-btn" href="https://ghinsberg.com/book-yossi">Book a Call →</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
