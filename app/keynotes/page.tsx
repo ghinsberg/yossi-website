@@ -8,17 +8,17 @@ import TestimonialCard from "@/components/ui/TestimonialCard";
 export const metadata = {
   title: "Keynote Programs",
   description:
-    "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+    "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   openGraph: {
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
 };
 
@@ -50,7 +50,7 @@ export default function KeynotesPage() {
             One hour that changes the room.
           </h1>
           <p className="text-xl text-brand-text-secondary text-center max-w-3xl mx-auto mt-6">
-            Two keynotes. Every one built on one of the most extraordinary true adventure stories, in recent times.
+            Three keynotes. Every one built on one of the most extraordinary true adventure stories, in recent times.
           </p>
           <p className="max-w-3xl mx-auto text-center mt-8 text-brand-text-secondary text-lg leading-relaxed">
             Yossi doesn&apos;t give speeches. He creates felt experiences. His

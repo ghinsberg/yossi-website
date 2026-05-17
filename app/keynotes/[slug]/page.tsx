@@ -17,9 +17,7 @@ export async function generateMetadata({
   if (!keynote) return {};
   return {
     title: keynote.title,
-    description:
-      keynote.subtitle +
-      " | Transformation keynote by Yossi Ghinsberg.",
+    description: keynote.subtitle,
   };
 }
 
@@ -118,24 +116,20 @@ export default async function KeynotePage({
                   Main-stage plenary for audiences of 50 to 10,000+.
                 </p>
               </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <a
+                href="/keynotes#workshop"
+                className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-brand-gold/50 transition-colors block"
+              >
                 <h3 className="text-lg font-heading font-semibold text-brand-text">
-                  Half-Day Workshop
+                  Full-Day Workshop
                 </h3>
                 <p className="text-brand-text-secondary mt-2">
-                  Deep-dive experience built around the Laws of the Jungle
-                  framework.
+                  When a keynote isn&apos;t enough, Yossi designs and leads a full day. Shape, length, and location decided with you.
                 </p>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-lg font-heading font-semibold text-brand-text">
-                  Full-Day Intensive
-                </h3>
-                <p className="text-brand-text-secondary mt-2">
-                  The complete transformation experience for senior leadership
-                  teams.
+                <p className="text-brand-gold text-xs uppercase tracking-widest mt-3">
+                  See the workshop →
                 </p>
-              </div>
+              </a>
               <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                 <h3 className="text-lg font-heading font-semibold text-brand-text">
                   Pre-Event Briefing

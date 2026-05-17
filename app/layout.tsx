@@ -13,7 +13,7 @@ import Contentsquare from "@/components/Contentsquare";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossi-website.vercel.app";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 const DESCRIPTION =
-  "Survival wisdom for an uncertain world. Yossi Ghinsberg is a transformation keynote speaker — jungle survivor, bestselling author (1M+ copies), Hollywood film. Trusted by Google, Apple, Microsoft, BMW and more.";
+  "Yossi Ghinsberg survived 21 days alone in the Amazon. His book sold over a million copies and became a Hollywood film. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more. He speaks to audiences of 10,000 and leaves them permanently changed.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "keynote speaker",
-    "transformation keynote",
+    "survival speaker",
     "leadership speaker",
     "resilience speaker",
     "survival wisdom",

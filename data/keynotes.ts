@@ -117,4 +117,51 @@ export const keynotes: Keynote[] = [
       company: "DOC-Events",
     },
   },
+  {
+    slug: "real-vs-imaginary-survival",
+    title: "Real Survival vs Imaginary Survival",
+    subtitle:
+      "A survivor's perspective on chronic stress, and the path back to optimal performance",
+    flagship: false,
+    description:
+      "Most stress keynotes are delivered by experts. This one is delivered by a survivor. In 1981, Yossi Ghinsberg spent 21 days alone in the Amazon. He knows real survival. He also knows that most people, teams, and organisations are not running on real survival. They are running on something else entirely.\n\nReal survival is not the enemy. Real danger calls out the best in us. Senses sharpen. Decisions speed up. Courage shows up. When it is real, it is an invitation. What most of us actually experience is imaginary survival. No bear. No olympic race. Just the grind of the mundane and its mundane pressure. The body cannot tell the difference. The survival system fires anyway. We call it stress. It is the malady of our time, the biggest modern killer, the precursor to disease of body, mind, and spirit.\n\nThis keynote gives audiences the tools to switch the system off. Not through the mind, which is too slow. Through the body, through sensorial practices that act on the organism directly, moving people from sympathetic to parasympathetic in real time. Peaks are for peaks. The rest of the time we are meant to operate at optimal performance. People leave with the discernment between real and imaginary survival, and the practices to use it at work and at home. Life changing. Sometimes life saving.",
+    takeaways: [
+      {
+        title: "Real Survival Is Not The Enemy",
+        description:
+          "Why real crisis calls out the best in us, and why imaginary crisis quietly grinds us down",
+      },
+      {
+        title: "Peak Is For Peaks",
+        description:
+          "Why optimal performance, not peak, is the sustainable goal for leaders and teams",
+      },
+      {
+        title: "The Switch Is In The Body",
+        description:
+          "How to move from sympathetic to parasympathetic through sensorial practices, not through the mind",
+      },
+    ],
+    bestFor:
+      "All corporate audiences. Especially leadership teams, sales organisations, healthcare professionals, and any group running too hot for too long.",
+    solves: [
+      "Burnout",
+      "Chronic stress",
+      "Anxiety and overwhelm",
+      "Teams running on empty",
+      "Disengagement",
+    ],
+    outcomes: [
+      "People leave with practical tools to switch off the stress response, on demand",
+      "Leaders ease the load on their teams without sacrificing performance",
+      "Organisations gain a shared language for what stress actually is, and how to manage it",
+    ],
+    testimonial: {
+      quote:
+        "Yossi's keynote was a breath of fresh air and an injection of much needed oxygen for our sales and management teams.",
+      author: "Bert Wong",
+      title: "CEO",
+      company: "Fuji Xerox",
+    },
+  },
 ];
