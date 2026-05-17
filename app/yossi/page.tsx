@@ -16,7 +16,8 @@ export default function YossiPage() {
         <img
           src="/images/stage/reel-placeholder.jpg"
           alt="Yossi Ghinsberg in the Andes"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center 25%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-bg/60 via-brand-bg/10 to-transparent" />
