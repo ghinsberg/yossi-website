@@ -8,17 +8,17 @@ import TestimonialCard from "@/components/ui/TestimonialCard";
 export const metadata = {
   title: "Keynote Programs",
   description:
-    "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+    "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   openGraph: {
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three transformation keynotes: Be Brave in a New World (AI/leadership), Made, Not Broken (resilience), Laws of the Jungle (culture). $35K–$50K tier.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
 };
 
@@ -32,16 +32,6 @@ const formatOptions = [
     name: "Keynote + Fireside Chat",
     description:
       "Keynote followed by a 20-30 minute moderated conversation.",
-  },
-  {
-    name: "Half-Day Jungle Leadership Experience",
-    description:
-      "A deep-dive workshop built around the Laws of the Jungle framework.",
-  },
-  {
-    name: "Full-Day Transformation Intensive",
-    description:
-      "The complete experience for senior leadership teams.",
   },
 ];
 
@@ -60,7 +50,7 @@ export default function KeynotesPage() {
             One hour that changes the room.
           </h1>
           <p className="text-xl text-brand-text-secondary text-center max-w-3xl mx-auto mt-6">
-            Two keynotes. Every one built on one of the most extraordinary true adventure stories, in recent times.
+            Three keynotes. Every one built on one of the most extraordinary true adventure stories, in recent times.
           </p>
           <p className="max-w-3xl mx-auto text-center mt-8 text-brand-text-secondary text-lg leading-relaxed">
             Yossi doesn&apos;t give speeches. He creates felt experiences. His
@@ -171,6 +161,90 @@ export default function KeynotesPage() {
               Hybrid &nbsp;|&nbsp; Languages: English, Hebrew &nbsp;|&nbsp;
               Audience: 50 to 10,000+
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Full-Day Workshop */}
+      <section id="workshop" className="border-t border-white/10 py-20 md:py-28 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">
+            When a keynote isn&apos;t enough
+          </p>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 max-w-3xl">
+            The full-day workshop.
+          </h2>
+          <div className="text-brand-text-secondary text-lg leading-relaxed space-y-4 max-w-3xl">
+            <p>
+              A keynote moves a room for an hour. A full day moves people through something they don&apos;t forget.
+            </p>
+            <p>
+              For organisations that want more than a talk, Yossi designs and leads a workshop built around the outcome you are after. On premises or off-site. The length, the location, and the shape are decided with you, after a deep brief.
+            </p>
+          </div>
+
+          {/* How it works */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <p className="text-brand-gold font-heading font-bold text-2xl mb-3">1</p>
+              <h3 className="text-brand-text font-semibold mb-2">A deep brief</h3>
+              <p className="text-brand-text-secondary">
+                We talk about what you are trying to shift, what is in the way, and what your people actually need.
+              </p>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <p className="text-brand-gold font-heading font-bold text-2xl mb-3">2</p>
+              <h3 className="text-brand-text font-semibold mb-2">You and Yossi shape the day</h3>
+              <p className="text-brand-text-secondary">
+                Length, location, on-site or off, the questions the day must answer. Decided together.
+              </p>
+            </div>
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <p className="text-brand-gold font-heading font-bold text-2xl mb-3">3</p>
+              <h3 className="text-brand-text font-semibold mb-2">Yossi curates the team</h3>
+              <p className="text-brand-text-secondary">
+                Top facilitators for the modules that fit. Yossi runs the entire program and executes a few modules, such as breathwork and power meditation, himself.
+              </p>
+            </div>
+          </div>
+
+          {/* Principle pull quote */}
+          <div className="mt-14 border-l-2 border-brand-gold pl-6 max-w-3xl">
+            <p className="text-xl md:text-2xl font-heading text-brand-text leading-snug">
+              Only when things shake, a shift is possible. The day is built to shake the system, with care.
+            </p>
+            <p className="text-brand-text-secondary text-sm mt-3 uppercase tracking-widest">
+              — Yossi
+            </p>
+          </div>
+
+          {/* Body of work */}
+          <div className="mt-14 max-w-3xl">
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-3">
+              The body of work behind it
+            </p>
+            <p className="text-brand-text-secondary text-lg leading-relaxed">
+              Two decades of leading groups through long-form journeys. Hundreds of people, across cohorts, retreats, and intensives. The shapes have changed; the principle has not. Yossi does every practice he gives. He is part of the group, not separate from it.
+            </p>
+          </div>
+
+          {/* Best fits */}
+          <div className="mt-12 bg-brand-surface rounded-xl p-6 max-w-3xl border border-white/10">
+            <p className="text-sm uppercase tracking-wider text-brand-gold mb-3">Best for:</p>
+            <ul className="text-brand-text-secondary space-y-2">
+              <li>Leadership offsites that need to count.</li>
+              <li>Sales kickoffs that need a real shift, not a pep talk.</li>
+              <li>Culture work for teams going through change.</li>
+              <li>Executive teams at an inflection point.</li>
+              <li>Executive teams ready to ask what comes next.</li>
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12">
+            <Button variant="gold" href="/book-yossi" size="lg">
+              Start with the brief
+            </Button>
           </div>
         </div>
       </section>

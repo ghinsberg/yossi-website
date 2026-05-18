@@ -14,11 +14,13 @@ export default function YossiPage() {
       {/* Hero — full-bleed portrait */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden">
         <img
-          src="/images/yossi/yossi-river-portrait.jpg"
-          alt="Yossi Ghinsberg on the Amazon river"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          src="/images/stage/reel-placeholder.jpg"
+          alt="Yossi Ghinsberg in the Andes"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center 25%" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-bg/60 via-brand-bg/10 to-transparent" />
         <div className="relative z-10 max-w-5xl mx-auto px-6 pb-20 md:pb-28">
           <p className="text-brand-gold text-[10px] uppercase tracking-[0.4em] mb-4">Who Yossi is</p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-6xl leading-none mb-6 max-w-2xl">
@@ -30,78 +32,56 @@ export default function YossiPage() {
         </div>
       </section>
 
-      {/* 1. Transformational Workshops */}
+      {/* 1. The Workshop — one facet, body of work */}
       <section className="py-20 md:py-28 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Header */}
           <div className="mb-14">
-            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Awakening the Beast · The Adventure</p>
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">One of the rooms</p>
             <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-6 leading-snug max-w-2xl">
-              Even the smallest change of course is a shift of destiny.
+              Two decades leading groups through deep work.
             </h2>
             <div className="text-white/55 text-base leading-relaxed space-y-4 max-w-2xl">
               <p>
-                Yossi leads immersive transformational workshops that go deep. Participants do not sit and listen. They are moved, challenged, and invited to choose one meaningful goal for their growth and fulfillment, and to make the one decision they have been avoiding.
+                Hundreds of people, across long-form cohorts, retreats, and intensives. The shapes have changed over the years. The principle has not. Only when things shake, a shift is possible.
               </p>
               <p>
-                The preparation breaks open every faculty. Ice bath. Fire-walking. Ecstatic dance. Laughter yoga. Holotropic breathwork. Not as spectacle. As initiation.
+                Today, that body of work lives inside the full-day workshop Yossi designs for organisations. Same craft, scaled to a corporate room, curated to the outcome the client is after. He runs the entire program and executes a few modules, such as breathwork and power meditation, himself. Top facilitators cover the rest.
               </p>
               <p>
-                When the preparation is complete, each person commits. Not to a vague intention. To a specific goal, a daily structure, accountability to the group, and a direct channel with Yossi and his team.
-              </p>
-              <p>
-                Every day of the process carries a theme. Wednesdays are Holy Wednesdays: say thank you for everything, to everyone, whatever happens. There are weeks with no complaining, regardless of circumstances. A tougher challenge than it sounds. Morning self-love rituals. 25 minutes of guided meditation before the day begins.
-              </p>
-              <p>
-                Yossi does every task he gives. He is always part of the group.
+                Yossi does every practice he gives. He is part of the group, not separate from it.
               </p>
             </div>
           </div>
 
-          {/* Two images + timeframe strip */}
+          {/* Workshop images */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-fire-circle.jpg"
-                alt="Awakening the Beast workshop — fire circle gathering"
+                src="/images/yossi/workshops/workshop-didgeridoos.jpg"
+                alt="Didgeridoos at a workshop, gathered group beyond"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-night.jpg"
-                alt="The Adventure workshop — night ceremony"
+                src="/images/yossi/workshops/workshop-fire-circle-night.jpg"
+                alt="Workshop fire circle at night"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Timeframe strip */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 border-t border-white/10 pt-10">
-            {[
-              { duration: "9 months", label: "Long-form group journey" },
-              { duration: "3 months", label: "Focused cohort" },
-              { duration: "3 weeks", label: "Intensive immersion" },
-              { duration: "3 days", label: "Deep-dive retreat" },
-              { duration: "3 hours", label: "One-on-one session" },
-            ].map(({ duration, label }) => (
-              <div key={duration} className="text-center">
-                <p className="text-brand-gold font-heading font-bold text-xl mb-1">{duration}</p>
-                <p className="text-white/30 text-[10px] uppercase tracking-wider">{label}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <p className="text-white/40 text-sm mb-6">
-              People remain in touch with Yossi for life. They describe the process as a turning point, a permanent and positive shift.
-            </p>
+          <div className="mt-10">
             <a
-              href="/book-yossi"
+              href="/keynotes#workshop"
               className="inline-flex items-center gap-2 border border-brand-gold/50 text-brand-gold text-xs uppercase tracking-widest font-semibold px-6 py-3 hover:bg-brand-gold/10 transition-colors"
             >
-              Enquire about a workshop
+              The full-day workshop
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
         </div>
@@ -109,46 +89,48 @@ export default function YossiPage() {
 
       {/* 2. Buy One Give One */}
       <section className="py-20 md:py-28 bg-brand-surface border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-6">
 
-            <div className="rounded-xl overflow-hidden order-2 md:order-1">
-              <img
-                src="/images/yossi/buy-one-give-one.jpg"
-                alt="Yossi Ghinsberg with youth of El Salvador after his keynote gift"
-                className="w-full object-cover"
-              />
-            </div>
+          {/* Eyebrow + heading */}
+          <div className="max-w-3xl mb-12">
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One, Give One Free</p>
+            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl leading-snug">
+              A lit candle loses nothing when it lights another.
+            </h2>
+          </div>
 
-            <div className="order-1 md:order-2">
-              <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One, Give One Free</p>
-              <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
-                A lit candle loses nothing when it lights another.
-              </h2>
-              <div className="text-white/55 text-base leading-relaxed space-y-5">
-                <p>
-                  I started this movement from a simple desire to give something back to the community.
-                </p>
-                <p>
-                  Most of my work happens in corporate environments. The work takes me all over the world, and I began to think: while I am already here, why not give one more talk to the community?
-                </p>
-                <p>
-                  It could be in the cinema of Hermosillo, Mexico, with the whole town invited. It could be a youth initiative in El Salvador for young people from disadvantaged circumstances. A private school in Switzerland. A senior citizens&apos; home in Tel Aviv. It matters not.
-                </p>
-                <p>
-                  I am already there. I can give more.
-                </p>
-                <p>
-                  The corporation that invites me is also invited to gift me to any community purpose they choose. And often, corporations that accept this challenge take so much pride in the event they gift that it becomes as meaningful as the keynote itself.
-                </p>
-                <p>
-                  It becomes a double gift. I gift the corporation. They gift the community. And in return, I too receive a gift.
-                </p>
-                <p className="text-white/80 italic">
-                  That random gift has the power to transform a life.
-                </p>
-              </div>
-            </div>
+          {/* Full-width image */}
+          <div className="rounded-xl overflow-hidden mb-14">
+            <img
+              src="/images/yossi/buy-one-give-one.jpg"
+              alt="Yossi Ghinsberg with youth of El Salvador after his keynote gift"
+              className="w-full"
+            />
+          </div>
+
+          {/* Body */}
+          <div className="max-w-3xl text-white/55 text-base leading-relaxed space-y-5">
+            <p>
+              I started this movement from a simple desire to give something back to the community.
+            </p>
+            <p>
+              Most of my work happens in corporate environments. The work takes me all over the world, and I began to think: while I am already here, why not give one more talk to the community?
+            </p>
+            <p>
+              It could be in the cinema of Hermosillo, Mexico, with the whole town invited. It could be a youth initiative in El Salvador for young people from disadvantaged circumstances. A private school in Switzerland. A senior citizens&apos; home in Tel Aviv. It matters not.
+            </p>
+            <p>
+              I am already there. I can give more.
+            </p>
+            <p>
+              The corporation that invites me is also invited to gift me to any community purpose they choose. And often, corporations that accept this challenge take so much pride in the event they gift that it becomes as meaningful as the keynote itself.
+            </p>
+            <p>
+              It becomes a double gift. I gift the corporation. They gift the community. And in return, I too receive a gift.
+            </p>
+            <p className="text-white/80 italic">
+              That random gift has the power to transform a life.
+            </p>
           </div>
         </div>
       </section>
