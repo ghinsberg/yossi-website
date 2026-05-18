@@ -66,8 +66,8 @@ export default function YossiPage() {
             </div>
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-fire-circle-night.jpg"
-                alt="Workshop fire circle at night"
+                src="/images/yossi/workshops/workshop-blessing-bw.jpg"
+                alt="Yossi receiving a blessing during a workshop"
                 className="w-full h-full object-cover"
               />
             </div>
