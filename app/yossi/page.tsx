@@ -55,19 +55,19 @@ export default function YossiPage() {
             </div>
           </div>
 
-          {/* Two images */}
+          {/* Workshop images */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-fire-circle.jpg"
-                alt="Yossi leading a workshop group around a fire circle"
+                src="/images/yossi/workshops/workshop-didgeridoos.jpg"
+                alt="Didgeridoos at a workshop, gathered group beyond"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-night.jpg"
-                alt="Yossi with a workshop group at night"
+                src="/images/yossi/workshops/workshop-fire-circle-night.jpg"
+                alt="Workshop fire circle at night"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -89,46 +89,48 @@ export default function YossiPage() {
 
       {/* 2. Buy One Give One */}
       <section className="py-20 md:py-28 bg-brand-surface border-t border-white/5">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-6">
 
-            <div className="rounded-xl overflow-hidden order-2 md:order-1">
-              <img
-                src="/images/yossi/buy-one-give-one.jpg"
-                alt="Yossi Ghinsberg with youth of El Salvador after his keynote gift"
-                className="w-full object-cover"
-              />
-            </div>
+          {/* Eyebrow + heading */}
+          <div className="max-w-3xl mb-12">
+            <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One, Give One Free</p>
+            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl leading-snug">
+              A lit candle loses nothing when it lights another.
+            </h2>
+          </div>
 
-            <div className="order-1 md:order-2">
-              <p className="text-brand-gold text-[10px] uppercase tracking-[0.35em] mb-4">Buy One, Give One Free</p>
-              <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-8 leading-snug">
-                A lit candle loses nothing when it lights another.
-              </h2>
-              <div className="text-white/55 text-base leading-relaxed space-y-5">
-                <p>
-                  I started this movement from a simple desire to give something back to the community.
-                </p>
-                <p>
-                  Most of my work happens in corporate environments. The work takes me all over the world, and I began to think: while I am already here, why not give one more talk to the community?
-                </p>
-                <p>
-                  It could be in the cinema of Hermosillo, Mexico, with the whole town invited. It could be a youth initiative in El Salvador for young people from disadvantaged circumstances. A private school in Switzerland. A senior citizens&apos; home in Tel Aviv. It matters not.
-                </p>
-                <p>
-                  I am already there. I can give more.
-                </p>
-                <p>
-                  The corporation that invites me is also invited to gift me to any community purpose they choose. And often, corporations that accept this challenge take so much pride in the event they gift that it becomes as meaningful as the keynote itself.
-                </p>
-                <p>
-                  It becomes a double gift. I gift the corporation. They gift the community. And in return, I too receive a gift.
-                </p>
-                <p className="text-white/80 italic">
-                  That random gift has the power to transform a life.
-                </p>
-              </div>
-            </div>
+          {/* Full-width image */}
+          <div className="rounded-xl overflow-hidden mb-14">
+            <img
+              src="/images/yossi/buy-one-give-one.jpg"
+              alt="Yossi Ghinsberg with youth of El Salvador after his keynote gift"
+              className="w-full"
+            />
+          </div>
+
+          {/* Body */}
+          <div className="max-w-3xl text-white/55 text-base leading-relaxed space-y-5">
+            <p>
+              I started this movement from a simple desire to give something back to the community.
+            </p>
+            <p>
+              Most of my work happens in corporate environments. The work takes me all over the world, and I began to think: while I am already here, why not give one more talk to the community?
+            </p>
+            <p>
+              It could be in the cinema of Hermosillo, Mexico, with the whole town invited. It could be a youth initiative in El Salvador for young people from disadvantaged circumstances. A private school in Switzerland. A senior citizens&apos; home in Tel Aviv. It matters not.
+            </p>
+            <p>
+              I am already there. I can give more.
+            </p>
+            <p>
+              The corporation that invites me is also invited to gift me to any community purpose they choose. And often, corporations that accept this challenge take so much pride in the event they gift that it becomes as meaningful as the keynote itself.
+            </p>
+            <p>
+              It becomes a double gift. I gift the corporation. They gift the community. And in return, I too receive a gift.
+            </p>
+            <p className="text-white/80 italic">
+              That random gift has the power to transform a life.
+            </p>
           </div>
         </div>
       </section>
