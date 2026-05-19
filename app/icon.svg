@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="goldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8e7a1"/>
+      <stop offset="18%" stop-color="#e9cc73"/>
+      <stop offset="50%" stop-color="#b7862f"/>
+      <stop offset="78%" stop-color="#d8ae53"/>
+      <stop offset="100%" stop-color="#7f5717"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff2bc"/>
+      <stop offset="100%" stop-color="#6d470f"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="#0A0A0A"/>
+  <path d="M 7 7 L 13 7 L 16 13 L 19 7 L 25 7 L 18.5 17 L 18.5 25 L 13.5 25 L 13.5 17 Z"
+        fill="url(#goldFill)"
+        stroke="url(#goldStroke)"
+        stroke-width="0.4"
+        stroke-linejoin="round"/>
+</svg>
