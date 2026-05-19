@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
   navigation: [
     { label: "Keynotes", href: "/keynotes" },
     { label: "Story", href: "/story" },
-    { label: "Laws of the Jungle", href: "/laws" },
+    { label: "The Laws", href: "/laws" },
     { label: "Yossi", href: "/yossi" },
     { label: "Endorsements", href: "/endorsements" },
     { label: "Videos", href: "/videos" },

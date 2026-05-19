@@ -41,16 +41,16 @@ export default function Header() {
       >
         <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Wordmark */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 md:translate-y-3 xl:translate-y-3.5">
             <img
               src="/images/yossi-ghinsberg-logo.svg"
               alt="Yossi Ghinsberg"
-              className="h-16 md:h-24 w-auto"
+              className="h-16 md:h-20 xl:h-24 w-auto"
             />
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-5 lg:gap-6 xl:gap-8">
             {siteConfig.navigation.map((item) => (
               <Link
                 key={item.href}
