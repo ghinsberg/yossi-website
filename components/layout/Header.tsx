@@ -41,7 +41,7 @@ export default function Header() {
       >
         <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Wordmark */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 md:translate-y-3 xl:translate-y-3.5">
             <img
               src="/images/yossi-ghinsberg-logo.svg"
               alt="Yossi Ghinsberg"
