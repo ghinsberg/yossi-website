@@ -408,8 +408,8 @@ export default function BookingForm() {
             className={selectStyles}
           >
             <option value="Not sure yet">Not sure yet</option>
-            <option value="The Power to Survive">
-              The Power to Survive
+            <option value="From Survival to Legacy">
+              From Survival to Legacy
             </option>
             <option value="The Laws of the Jungle">
               The Laws of the Jungle
