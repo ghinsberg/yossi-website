@@ -26,7 +26,7 @@ export interface Keynote {
 export const keynotes: Keynote[] = [
   {
     slug: "be-brave-in-a-new-world",
-    title: "The Power to Survive",
+    title: "From Survival to Legacy",
     subtitle:
       "How to lead with clarity, courage, and creativity when the map runs out",
     flagship: true,
