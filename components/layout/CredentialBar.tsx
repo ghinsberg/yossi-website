@@ -22,7 +22,7 @@ export default function CredentialBar() {
     <div className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-brand-gold py-3 overflow-hidden">
       <div
         className="flex"
-        style={{ animation: "marquee 60s linear infinite" }}
+        style={{ animation: "marquee 48s linear infinite" }}
       >
         <Track />
         {/* Duplicate track ensures seamless loop when first track scrolls off */}
