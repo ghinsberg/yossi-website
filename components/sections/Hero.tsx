@@ -56,11 +56,6 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-white/60 text-xs md:text-sm mt-4 mb-8 uppercase tracking-[0.2em] font-medium">
-            Yossi Ghinsberg&apos;s Laws of the Jungle
-          </p>
-
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mb-6">
             <Button variant="gold" href="/book-yossi">
