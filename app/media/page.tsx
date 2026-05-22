@@ -288,7 +288,50 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* 6. Press Kit */}
+      {/* 6. Album */}
+      <section className="bg-brand-bg py-20 md:py-28 border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text text-center mb-4">
+            Music
+          </h2>
+          <div className="w-16 h-0.5 bg-brand-gold mx-auto mb-12" />
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-gold mb-5">
+              Mr Sleep and the Flying Green Toad
+            </h3>
+            <p className="text-brand-text-secondary text-lg leading-relaxed">
+              In 2008, Yossi released an album of world music and global fusion
+              with musicians Avishai Barnatan and Amir Paiss. Thirteen tracks.
+              Every lyric written by him.
+            </p>
+            <p className="text-brand-text-secondary text-lg leading-relaxed mt-4">
+              &ldquo;A musical journey that will enchant children and adults alike.&rdquo;
+              A completely different side of the same man. Available on Spotify
+              and Apple Music.
+            </p>
+            <div className="flex flex-wrap gap-4 mt-7">
+              <a
+                href="https://open.spotify.com/track/5itX3vGLG1W2Ym8kEbisEB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-gold border border-brand-gold/40 px-5 py-2.5 rounded-full hover:bg-brand-gold/10 transition-colors"
+              >
+                Listen on Spotify
+              </a>
+              <a
+                href="https://music.apple.com/au/album/mr-sleep-and-the-flying-green-toad/275222572"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-text-secondary border border-white/10 px-5 py-2.5 rounded-full hover:bg-white/5 transition-colors"
+              >
+                Apple Music
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Press Kit */}
       <section className="bg-brand-bg py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-4">
