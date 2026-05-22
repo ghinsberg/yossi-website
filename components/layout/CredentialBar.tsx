@@ -1,33 +1,45 @@
-const QUOTE =
-  "The universe will not conspire to assist you. It will resist. The bigger the dream, the greater the resistance. It is not personal. It’s a law. All you have to do is stay the course.";
+"use client";
+import { useEffect, useState } from "react";
 
-const SEPARATOR = "   —   ";
+const PARTS = [
+  "The universe will not conspire to assist you. The universe will resist you.",
+  "The size of your dream will raise the size of the resistance to it.",
+  "The resistance is not personal — it’s the law!",
+  "All you have to do is stay the course.",
+];
 
-// Six repetitions per half-track so the ticker fills any screen without gaps
-function Track() {
-  return (
-    <div className="flex-shrink-0 flex items-center whitespace-nowrap">
-      {Array.from({ length: 6 }).map((_, i) => (
-        <span key={i} className="text-black text-sm font-bold italic tracking-wide">
-          {QUOTE}
-          <span className="opacity-50 not-italic">{SEPARATOR}</span>
-        </span>
-      ))}
-    </div>
-  );
-}
+const DISPLAY_MS = 4000;   // how long each card is fully visible
+const FADE_MS   = 500;     // fade out / fade in duration
 
 export default function CredentialBar() {
+  const [index, setIndex]     = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const cycle = setInterval(() => {
+      // Fade out
+      setVisible(false);
+      setTimeout(() => {
+        setIndex(i => (i + 1) % PARTS.length);
+        // Fade in
+        setVisible(true);
+      }, FADE_MS);
+    }, DISPLAY_MS + FADE_MS);
+
+    return () => clearInterval(cycle);
+  }, []);
+
   return (
-    <div className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-brand-gold py-3 overflow-hidden">
-      <div
-        className="flex"
-        style={{ animation: "marquee 38s linear infinite" }}
+    <div className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-brand-gold py-3">
+      <p
+        className="text-black text-sm font-bold italic tracking-wide text-center"
+        style={{
+          opacity:    visible ? 1 : 0,
+          transition: `opacity ${FADE_MS}ms ease-in-out`,
+        }}
       >
-        <Track />
-        {/* Duplicate track ensures seamless loop when first track scrolls off */}
-        <Track />
-      </div>
+        {PARTS[index]}
+      </p>
     </div>
   );
 }
