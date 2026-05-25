@@ -349,21 +349,34 @@ export default function ChatbotMount() {
                   type="button"
                   onClick={toggleListening}
                   disabled={isLoading}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all shrink-0 ${
+                  className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shrink-0 shadow-md ${
                     isListening
-                      ? "bg-red-500 hover:bg-red-600 animate-pulse"
-                      : "bg-brand-surface hover:bg-brand-gold/20 text-brand-text-secondary hover:text-brand-gold"
+                      ? "bg-brand-gold ring-4 ring-brand-gold/30"
+                      : "bg-[#1a2f25] hover:bg-brand-gold/20 hover:ring-2 hover:ring-brand-gold/40"
                   }`}
                   aria-label={isListening ? "Stop recording" : "Speak your question"}
                   title={isListening ? "Listening… click to stop" : "Speak your question"}
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                  {/* Waveform bars */}
+                  <svg viewBox="0 0 24 24" className={`w-5 h-5 ${isListening ? "text-black" : "text-brand-gold"}`} fill="currentColor">
                     {isListening ? (
-                      // Stop / waveform icon while listening
-                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                      // Animated-style bars when listening
+                      <>
+                        <rect x="3" y="9" width="2.5" height="6" rx="1.25"/>
+                        <rect x="7" y="5" width="2.5" height="14" rx="1.25"/>
+                        <rect x="11" y="7" width="2.5" height="10" rx="1.25"/>
+                        <rect x="15" y="4" width="2.5" height="16" rx="1.25"/>
+                        <rect x="19" y="9" width="2.5" height="6" rx="1.25"/>
+                      </>
                     ) : (
-                      // Mic icon
-                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 1.93c-3.95-.49-7-3.85-7-7.93H2c0 4.42 2.72 8.22 6.72 9.6V21h2v-3.47c-.24-.03-.48-.07-.72-.1zM12 16c-.35 0-.69-.04-1.03-.1l-1.07 1.07A9.01 9.01 0 0 0 11 17.93V21h2v-3.07c1.81-.47 3.35-1.56 4.4-3.01l-1.43-1.43C15.19 14.66 13.71 16 12 16zm5.5-4c0 3.03-2.47 5.5-5.5 5.5v2c4.14 0 7.5-3.36 7.5-7.5h-2z" />
+                      // Static waveform bars at rest
+                      <>
+                        <rect x="3" y="10" width="2.5" height="4" rx="1.25"/>
+                        <rect x="7" y="7" width="2.5" height="10" rx="1.25"/>
+                        <rect x="11" y="9" width="2.5" height="6" rx="1.25"/>
+                        <rect x="15" y="6" width="2.5" height="12" rx="1.25"/>
+                        <rect x="19" y="10" width="2.5" height="4" rx="1.25"/>
+                      </>
                     )}
                   </svg>
                 </button>
