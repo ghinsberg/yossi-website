@@ -135,9 +135,13 @@ function SpeakerButton({ text }: { text: string }) {
     <button
       onClick={handleSpeak}
       disabled={state === "loading"}
-      className="mt-1.5 ml-1 flex items-center gap-1 text-brand-text-secondary/40 hover:text-brand-gold transition-colors disabled:opacity-30"
-      aria-label={state === "playing" ? "Stop audio" : "Play response aloud"}
-      title={state === "playing" ? "Stop" : "Hear this"}
+      className={`mt-2 ml-1 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+        state === "playing"
+          ? "bg-brand-gold text-black"
+          : "bg-brand-surface/60 text-brand-text-secondary/50 hover:bg-brand-gold/20 hover:text-brand-gold"
+      } disabled:opacity-30`}
+      aria-label={state === "playing" ? "Stop audio" : "Hear Yossi's voice"}
+      title={state === "playing" ? "Stop" : "Hear Yossi's voice"}
     >
       {state === "loading" && (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 animate-spin">
@@ -145,13 +149,19 @@ function SpeakerButton({ text }: { text: string }) {
         </svg>
       )}
       {state === "playing" && (
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-brand-gold">
+        /* Stop bars */
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
           <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
         </svg>
       )}
       {state === "idle" && (
+        /* Waveform bars */
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
-          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+          <rect x="2"  y="9"  width="2.5" height="6"  rx="1.25"/>
+          <rect x="6"  y="6"  width="2.5" height="12" rx="1.25"/>
+          <rect x="10" y="8"  width="2.5" height="8"  rx="1.25"/>
+          <rect x="14" y="5"  width="2.5" height="14" rx="1.25"/>
+          <rect x="18" y="9"  width="2.5" height="6"  rx="1.25"/>
         </svg>
       )}
     </button>
