@@ -37,6 +37,7 @@ export default function Footer() {
                 { label: "Videos", href: "/videos" },
                 { label: "Endorsements", href: "/endorsements" },
                 { label: "Media & Books", href: "/media" },
+                { label: "FAQ", href: "/faq" },
                 { label: "Book Yossi", href: "/book-yossi" },
               ].map((link) => (
                 <li key={link.href}>
