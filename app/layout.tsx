@@ -18,7 +18,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Yossi Ghinsberg | Keynote Speaker",
+    default: "Yossi Ghinsberg | The Most Unforgettable Speaker",
     template: "%s | Yossi Ghinsberg",
   },
   description: DESCRIPTION,
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Yossi Ghinsberg",
     url: BASE_URL,
-    title: "Yossi Ghinsberg | Keynote Speaker",
+    title: "Yossi Ghinsberg | The Most Unforgettable Speaker",
     description: DESCRIPTION,
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg — Keynote Speaker" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg — The Most Unforgettable Speaker" }],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yossi Ghinsberg | Keynote Speaker",
+    title: "Yossi Ghinsberg | The Most Unforgettable Speaker",
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },

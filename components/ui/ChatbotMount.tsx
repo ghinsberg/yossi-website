@@ -36,7 +36,7 @@ const API_URL = process.env.NEXT_PUBLIC_YOSSI_AI_URL || "https://yossi-ai-produc
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Welcome to my homesite, let me be your host, I am Yossi's extension, you can ask me anything you want to know about my work as a keynote speaker.",
+    "Hey, so nice to see you. I'd offer you a cup of tea if I could. Since I can't — let's talk. What brings you here?",
 };
 
 // Fix 3 — Availability/calendar guardrail (checked first)

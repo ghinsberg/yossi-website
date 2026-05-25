@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-3 text-brand-text-secondary text-sm">
-              Transformation Keynote Speaker
+              The most unforgettable speaker your audience will ever hear.
             </p>
             <p className="text-brand-gold text-lg font-heading font-bold mt-4 tracking-wider">
               Be Brave.
