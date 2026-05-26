@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import CredentialBar from "@/components/layout/CredentialBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileCTA from "@/components/layout/MobileCTA";
@@ -74,7 +73,6 @@ export default function RootLayout({
         <Analytics />
         <Contentsquare />
         <StructuredData />
-        <CredentialBar />
         <Header />
         <main className="pb-16 md:pb-0">{children}</main>
         <MobileCTA />

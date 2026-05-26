@@ -33,7 +33,7 @@ export default function Header() {
     <>
       {/* Sticky header — offset below CredentialBar on desktop */}
       <header
-        className={`sticky top-0 md:top-[30px] z-40 h-[70px] flex items-center transition-colors duration-300 ${
+        className={`sticky top-0 z-40 h-[70px] flex items-center transition-colors duration-300 ${
           scrolled
             ? "bg-brand-bg/95 backdrop-blur-md"
             : "bg-transparent"

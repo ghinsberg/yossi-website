@@ -34,11 +34,11 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "Keynotes", href: "/keynotes" },
                 { label: "Story", href: "/story" },
+                { label: "Laws of the Jungle", href: "/laws" },
                 { label: "Videos", href: "/videos" },
                 { label: "Endorsements", href: "/endorsements" },
                 { label: "Media & Books", href: "/media" },
                 { label: "FAQ", href: "/faq" },
-                { label: "Book Yossi", href: "/book-yossi" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
