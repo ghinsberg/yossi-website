@@ -23,7 +23,6 @@ declare global {
   interface Window {
     SpeechRecognition: ISpeechRecognitionConstructor;
     webkitSpeechRecognition: ISpeechRecognitionConstructor;
-    webkitAudioContext: typeof AudioContext;
   }
 }
 
@@ -97,51 +96,40 @@ function isOffTopicQuestion(text: string): boolean {
   return !RELEVANT_KEYWORDS.some((k) => lower.includes(k));
 }
 
+// Minimal silent WAV (0 samples, 22 050 Hz, 16-bit mono).
+// Used to "unlock" an Audio element on iOS Safari within the user gesture,
+// so that the real play() call after the async fetch is allowed.
+const SILENT_WAV =
+  "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=";
+
 // Speaker icon — shown next to each Yossi response
-// Uses Web Audio API so iOS Safari doesn't block playback after async fetch
 function SpeakerButton({ text }: { text: string }) {
   const [state, setState] = useState<"idle" | "loading" | "playing">("idle");
-  const sourceRef = useRef<AudioBufferSourceNode | null>(null);
-  const ctxRef = useRef<AudioContext | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const blobUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
     return () => {
-      // Clean up on unmount
-      try { sourceRef.current?.stop(); } catch { /* already stopped */ }
-      ctxRef.current?.close();
+      audioRef.current?.pause();
+      if (blobUrlRef.current) URL.revokeObjectURL(blobUrlRef.current);
     };
   }, []);
 
   async function handleSpeak() {
-    // If already playing, stop it
-    if (state === "playing") {
-      try { sourceRef.current?.stop(); } catch { /* already stopped */ }
-      sourceRef.current = null;
-      ctxRef.current?.close();
-      ctxRef.current = null;
+    if (state === "playing" && audioRef.current) {
+      audioRef.current.pause();
       setState("idle");
       return;
     }
 
     setState("loading");
 
-    // iOS Safari requires audio to be triggered synchronously within a user gesture.
-    // Creating the AudioContext and immediately playing a 1-sample silent buffer
-    // puts it in "running" state BEFORE the async fetch, so source.start(0) later
-    // is treated as a continuation of the same gesture — not a new autoplay attempt.
-    const AudioCtx = window.AudioContext ?? window.webkitAudioContext;
-    if (!AudioCtx) { setState("idle"); return; }
-    const ctx = new AudioCtx();
-    ctxRef.current = ctx;
-
-    // Synchronous unlock: play 1-sample silence now, while we still have the gesture
-    try {
-      const silentBuf = ctx.createBuffer(1, 1, ctx.sampleRate);
-      const silentSrc = ctx.createBufferSource();
-      silentSrc.buffer = silentBuf;
-      silentSrc.connect(ctx.destination);
-      silentSrc.start(0);
-    } catch { /* ignore — just an unlock attempt */ }
+    // iOS Safari unlock: calling play() on an Audio element synchronously within
+    // a user-gesture handler marks that element as "trusted" for all future play()
+    // calls — including ones that happen after an async fetch.
+    const audio = new Audio(SILENT_WAV);
+    audioRef.current = audio;
+    audio.play().catch(() => {}); // ignore rejection — we only want the unlock
 
     try {
       const res = await fetch(`${API_URL}/speak`, {
@@ -152,27 +140,32 @@ function SpeakerButton({ text }: { text: string }) {
 
       if (!res.ok) throw new Error(`TTS error: ${res.status}`);
 
-      const arrayBuffer = await res.arrayBuffer();
-      const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
+      const blob = await res.blob();
+      if (blobUrlRef.current) URL.revokeObjectURL(blobUrlRef.current);
+      const url = URL.createObjectURL(blob);
+      blobUrlRef.current = url;
 
-      const source = ctx.createBufferSource();
-      source.buffer = audioBuffer;
-      source.connect(ctx.destination);
-      sourceRef.current = source;
+      // Stop the silent audio and load the real one into the same element
+      audio.pause();
+      audio.src = url;
+      audio.load();
 
-      source.onended = () => {
+      audio.onended = () => {
         setState("idle");
-        sourceRef.current = null;
-        ctx.close();
-        ctxRef.current = null;
+        URL.revokeObjectURL(url);
+        blobUrlRef.current = null;
+        audioRef.current = null;
+      };
+      audio.onerror = () => {
+        setState("idle");
+        audioRef.current = null;
       };
 
       setState("playing");
-      source.start(0);
+      await audio.play();
     } catch {
       setState("idle");
-      ctx.close();
-      ctxRef.current = null;
+      audioRef.current = null;
     }
   }
 
