@@ -125,12 +125,23 @@ function SpeakerButton({ text }: { text: string }) {
 
     setState("loading");
 
-    // iOS Safari fix: create AudioContext synchronously inside the user-gesture
-    // handler so it starts in "running" state — it stays unlocked through the
-    // subsequent async fetch and decodeAudioData calls.
+    // iOS Safari requires audio to be triggered synchronously within a user gesture.
+    // Creating the AudioContext and immediately playing a 1-sample silent buffer
+    // puts it in "running" state BEFORE the async fetch, so source.start(0) later
+    // is treated as a continuation of the same gesture — not a new autoplay attempt.
     const AudioCtx = window.AudioContext ?? window.webkitAudioContext;
+    if (!AudioCtx) { setState("idle"); return; }
     const ctx = new AudioCtx();
     ctxRef.current = ctx;
+
+    // Synchronous unlock: play 1-sample silence now, while we still have the gesture
+    try {
+      const silentBuf = ctx.createBuffer(1, 1, ctx.sampleRate);
+      const silentSrc = ctx.createBufferSource();
+      silentSrc.buffer = silentBuf;
+      silentSrc.connect(ctx.destination);
+      silentSrc.start(0);
+    } catch { /* ignore — just an unlock attempt */ }
 
     try {
       const res = await fetch(`${API_URL}/speak`, {
