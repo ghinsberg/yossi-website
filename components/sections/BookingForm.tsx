@@ -125,19 +125,13 @@ export default function BookingForm() {
     }
     setStatus("submitting");
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: "c5b8701a-7559-422d-928e-19bd5cb47d01",
-          subject: `Booking Enquiry — ${formData.name}, ${formData.organisation}`,
-          from_name: formData.name,
-          to: "ghinsberg@gmail.com",
-          ...formData,
-        }),
+        body: JSON.stringify(formData),
       });
       const data = await response.json();
-      if (data.success) {
+      if (response.ok && data.success) {
         setStatus("success");
       } else {
         window.location.href = buildMailtoFallback();
