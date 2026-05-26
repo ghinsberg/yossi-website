@@ -341,17 +341,16 @@ export default function MediaPage() {
             Need materials for your event? High-resolution photos, bios, and
             speaker one-sheets are available on request.
           </p>
-          <div className="relative inline-block group">
-            <button
-              disabled
-              className="rounded-full px-6 py-3 text-sm border border-brand-gold/40 text-brand-gold/40 font-semibold cursor-not-allowed"
-            >
-              Download Press Kit
-            </button>
-            <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-              Coming Soon
-            </span>
-          </div>
+          <a
+            href="/yossi-ghinsberg-speaker-onesheet.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm border border-brand-gold text-brand-gold font-semibold hover:bg-brand-gold hover:text-black transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
+            </svg>
+            Download Speaker One-Sheet
+          </a>
           <p className="text-brand-text-secondary text-sm mt-8">
             For press inquiries, contact{" "}
             <a

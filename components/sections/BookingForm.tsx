@@ -113,7 +113,7 @@ export default function BookingForm() {
         `Referral: ${formData.referral || "N/A"}`,
       ].join("\n")
     );
-    return `mailto:michael@encorespeakers.com?subject=${subject}&body=${body}`;
+    return `mailto:ghinsberg@gmail.com?subject=${subject}&body=${body}`;
   }
 
   async function handleSubmit(e: FormEvent) {
