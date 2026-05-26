@@ -23,6 +23,7 @@ declare global {
   interface Window {
     SpeechRecognition: ISpeechRecognitionConstructor;
     webkitSpeechRecognition: ISpeechRecognitionConstructor;
+    webkitAudioContext: typeof AudioContext;
   }
 }
 
@@ -50,6 +51,7 @@ const AVAILABILITY_KEYWORDS = [
 
 // Fix 1 — On-topic whitelist (keynotes, speaking, survival, booking, events)
 const RELEVANT_KEYWORDS = [
+  // Core topics
   "keynote", "keynotes", "speak", "speaking", "speaker", "talk", "presentation",
   "survival", "survive", "amazon", "jungle", "laws", "philosophy", "wisdom",
   "book", "booking", "hire", "event", "conference", "fee", "cost", "price",
@@ -58,21 +60,27 @@ const RELEVANT_KEYWORDS = [
   "resilience", "mindset", "topic", "topics", "program", "programs",
   "who are you", "what do you do", "your work", "your message", "tell me",
   "about you", "your keynote", "what you do", "how you", "your talk",
+  // Social / small talk — let through to AI so it can respond warmly
+  "hi", "hey", "hello", "how are", "how is", "how's", "what's up", "sup",
+  "good morning", "good evening", "good afternoon", "nice to", "great to",
+  "thanks", "thank you", "cheers", "wow", "interesting", "cool", "nice",
+  "who", "what", "where", "when", "why", "how",
 ];
 
 const AVAILABILITY_RESPONSE =
   "I don't have access to my calendar here — my team handles all scheduling. You can check availability and reach us directly at https://yossi-ghinsberg.vercel.app/book-yossi.";
 
 const OFF_TOPIC_RESPONSE =
-  "That's a conversation for another time. Right now I'm here to talk about what I do on stage. What brings you here today?";
+  "Ha — I like that question, but I'm probably not the best AI for it. I know Yossi's world well: the jungle, the keynotes, the philosophy. What would you like to know?";
 
 // Fix 2 — System prompt injected on every API call
 const SYSTEM_PROMPT =
   "You are Yossi Ghinsberg's digital twin on his keynote speaker website. " +
-  "Only discuss Yossi's keynotes, speaking topics, survival philosophy, the Laws of the Jungle, booking, and events. " +
+  "You speak in Yossi's voice — warm, direct, specific, a little playful. No corporate language. Short sentences. " +
+  "Your focus is Yossi's keynotes, survival philosophy, the Laws of the Jungle, booking, and events. " +
+  "Brief social exchanges and small talk are fine — respond warmly and naturally, then gently steer back to what you know. " +
   "Every response must be 150 words or less. Answer only what was asked. " +
-  "One follow-up question maximum at the end if appropriate. " +
-  "Never add unrequested information about the Amazon, keynote content, or philosophy unless directly asked.";
+  "One follow-up question maximum at the end if appropriate.";
 
 function isAvailabilityQuestion(text: string): boolean {
   const lower = text.toLowerCase();
@@ -85,20 +93,39 @@ function isOffTopicQuestion(text: string): boolean {
 }
 
 // Speaker icon — shown next to each Yossi response
+// Uses Web Audio API so iOS Safari doesn't block playback after async fetch
 function SpeakerButton({ text }: { text: string }) {
   const [state, setState] = useState<"idle" | "loading" | "playing">("idle");
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const sourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const ctxRef = useRef<AudioContext | null>(null);
+
+  useEffect(() => {
+    return () => {
+      // Clean up on unmount
+      try { sourceRef.current?.stop(); } catch { /* already stopped */ }
+      ctxRef.current?.close();
+    };
+  }, []);
 
   async function handleSpeak() {
     // If already playing, stop it
-    if (state === "playing" && audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current = null;
+    if (state === "playing") {
+      try { sourceRef.current?.stop(); } catch { /* already stopped */ }
+      sourceRef.current = null;
+      ctxRef.current?.close();
+      ctxRef.current = null;
       setState("idle");
       return;
     }
 
     setState("loading");
+
+    // iOS Safari fix: create AudioContext synchronously inside the user-gesture
+    // handler so it starts in "running" state — it stays unlocked through the
+    // subsequent async fetch and decodeAudioData calls.
+    const AudioCtx = window.AudioContext ?? window.webkitAudioContext;
+    const ctx = new AudioCtx();
+    ctxRef.current = ctx;
 
     try {
       const res = await fetch(`${API_URL}/speak`, {
@@ -109,25 +136,27 @@ function SpeakerButton({ text }: { text: string }) {
 
       if (!res.ok) throw new Error(`TTS error: ${res.status}`);
 
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const audio = new Audio(url);
-      audioRef.current = audio;
+      const arrayBuffer = await res.arrayBuffer();
+      const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
 
-      audio.onended = () => {
+      const source = ctx.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(ctx.destination);
+      sourceRef.current = source;
+
+      source.onended = () => {
         setState("idle");
-        URL.revokeObjectURL(url);
-        audioRef.current = null;
-      };
-      audio.onerror = () => {
-        setState("idle");
-        audioRef.current = null;
+        sourceRef.current = null;
+        ctx.close();
+        ctxRef.current = null;
       };
 
       setState("playing");
-      await audio.play();
+      source.start(0);
     } catch {
       setState("idle");
+      ctx.close();
+      ctxRef.current = null;
     }
   }
 
