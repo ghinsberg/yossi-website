@@ -1,6 +1,7 @@
 import { testimonials } from "@/data/testimonials";
 import ClientLogos from "@/components/sections/ClientLogos";
 import Button from "@/components/ui/Button";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 import type { Metadata } from "next";
 
@@ -148,6 +149,7 @@ const restIndustry = industryAndOther.filter(
 export default function EndorsementsPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Endorsements", href: "/endorsements" }]} />
       {/* Hero */}
       <section className="bg-brand-bg py-24 md:py-32 text-center px-6">
         <p className="text-xs uppercase tracking-widest text-brand-gold/60 mb-6">

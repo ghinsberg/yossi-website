@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "FAQ — Booking, Topics & Speaking Info",
   description:
     "Answers to the most common questions about booking Yossi Ghinsberg for a keynote, his speaking topics, audiences, and how to get in touch.",
 };
-
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossi-website.vercel.app";
 
 const faqs = [
   {
@@ -68,6 +66,7 @@ const schema = {
 export default function FAQPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "FAQ", href: "/faq" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

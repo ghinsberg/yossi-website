@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Yossi Ghinsberg | Beyond the Keynote",
   description:
-    "Transformational workshops, the Uchupiamona Nation, Chalalan, Lino Cambi, and a living relationship with the Amazon. The full picture of who Yossi is.",
+    "Workshops, the Uchupiamona Nation, Chalalan Ecolodge, Lino Cambi, and a four-decade relationship with the Amazon. The full picture of who Yossi Ghinsberg is.",
 };
 
 export default function YossiPage() {

@@ -2,6 +2,20 @@ import { notFound } from "next/navigation";
 import { keynotes } from "@/data/keynotes";
 import Button from "@/components/ui/Button";
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
+const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
+
+// Per-keynote meta descriptions — keyword-optimised, 150–160 chars
+const metaDescriptions: Record<string, string> = {
+  "be-brave-in-a-new-world":
+    "How to lead with clarity, courage, and creativity when the map runs out. Yossi Ghinsberg's flagship keynote — drawn from 21 days alone in the Bolivian Amazon.",
+  "made-not-broken":
+    "Resilience, purpose, and the difference between pain and suffering. Yossi Ghinsberg's keynote for teams facing burnout, extreme pressure, and the need to recover.",
+  "real-vs-imaginary-survival":
+    "A survivor's perspective on chronic stress. Yossi Ghinsberg teaches leaders how to distinguish real danger from imaginary pressure — and return to peak performance.",
+};
 
 export function generateStaticParams() {
   return keynotes.map((k) => ({ slug: k.slug }));
@@ -15,9 +29,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const keynote = keynotes.find((k) => k.slug === slug);
   if (!keynote) return {};
+
+  const description = metaDescriptions[slug] ?? keynote.subtitle;
+
   return {
     title: keynote.title,
-    description: keynote.subtitle,
+    description,
+    openGraph: {
+      title: `${keynote.title} | Yossi Ghinsberg`,
+      description,
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg — Keynote Speaker" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${keynote.title} | Yossi Ghinsberg`,
+      description,
+      images: [OG_IMAGE],
+    },
+    alternates: {
+      canonical: `${BASE_URL}/keynotes/${slug}`,
+    },
   };
 }
 
@@ -33,8 +64,48 @@ export default async function KeynotePage({
     notFound();
   }
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: keynote.title,
+    alternateName: keynote.subtitle,
+    description: keynote.description.replace(/\n/g, " ").trim(),
+    serviceType: "Keynote Speaking",
+    provider: {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#person`,
+      name: "Yossi Ghinsberg",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    url: `${BASE_URL}/keynotes/${slug}`,
+    offers: {
+      "@type": "Offer",
+      url: `${BASE_URL}/book-yossi`,
+      description: "Inquire about booking this keynote",
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType: keynote.bestFor,
+    },
+  };
+
   return (
     <main>
+      {/* JSON-LD */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Keynotes", href: "/keynotes" },
+          { name: keynote.title, href: `/keynotes/${keynote.slug}` },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       {/* Hero */}
       <section className="py-20 md:py-28 bg-brand-bg">
         <div className="max-w-7xl mx-auto px-6">

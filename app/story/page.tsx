@@ -1,4 +1,8 @@
 import Button from "@/components/ui/Button";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
+const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 export const metadata = {
   title: "The Story of Yossi Ghinsberg",
@@ -8,18 +12,72 @@ export const metadata = {
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
       "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg" }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary_large_image" as const,
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
       "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
+    images: [OG_IMAGE],
   },
+  alternates: {
+    canonical: `${BASE_URL}/story`,
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "The Story of Yossi Ghinsberg — 21 Days Alone in the Amazon",
+  description:
+    "From 21 days alone in the Bolivian Amazon in 1981 to a bestselling memoir, a Hollywood film, and four decades of building. The biography of Yossi Ghinsberg.",
+  url: `${BASE_URL}/story`,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${BASE_URL}/story`,
+  },
+  author: {
+    "@type": "Person",
+    "@id": `${BASE_URL}/#person`,
+    name: "Yossi Ghinsberg",
+  },
+  publisher: {
+    "@type": "Person",
+    "@id": `${BASE_URL}/#person`,
+    name: "Yossi Ghinsberg",
+  },
+  about: {
+    "@type": "Person",
+    "@id": `${BASE_URL}/#person`,
+  },
+  image: OG_IMAGE,
+  datePublished: "2024-01-01",
+  dateModified: "2025-01-01",
+  keywords: [
+    "Yossi Ghinsberg",
+    "Amazon survival",
+    "Bolivian Amazon 1981",
+    "jungle survival story",
+    "keynote speaker biography",
+    "Jungle book",
+    "Chalalan Ecolodge",
+    "survival story",
+    "resilience",
+    "leadership speaker",
+  ],
 };
 
 export default function StoryPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Yossi's Story", href: "/story" }]} />
+      {/* Article JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* ── HERO ── */}
       <section className="bg-brand-bg py-24 md:py-32 text-center px-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-text">

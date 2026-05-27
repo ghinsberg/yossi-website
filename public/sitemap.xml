@@ -28,12 +28,17 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yossighinsberg.com/yossi</loc>
-    <priority>0.7</priority>
+    <loc>https://yossighinsberg.com/faq</loc>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://yossighinsberg.com/endorsements</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/yossi</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -45,11 +50,6 @@
   <url>
     <loc>https://yossighinsberg.com/media</loc>
     <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://yossighinsberg.com/faq</loc>
-    <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
@@ -65,13 +65,228 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yossighinsberg.com/keynotes/laws-of-the-jungle</loc>
+    <loc>https://yossighinsberg.com/keynotes/real-vs-imaginary-survival</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://yossighinsberg.com/blog</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/how-to-choose-a-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/survival-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/amazon-survival-leadership-lessons</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/resilience-speaker-what-to-look-for</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/laws-of-the-jungle-leadership</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Keynote Speaker location pages (Zipper Matrix) -->
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://yossighinsberg.com/keynotes/real-vs-imaginary-survival</loc>
+    <loc>https://yossighinsberg.com/keynote-speaker/sydney</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/melbourne</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/brisbane</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/auckland</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/singapore</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/dubai</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/london</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/amsterdam</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/new-york</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/chicago</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/los-angeles</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/toronto</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/johannesburg</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/cape-town</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/tel-aviv</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker/hong-kong</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Topic hub pages -->
+  <url>
+    <loc>https://yossighinsberg.com/resilience-keynote-speaker</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/leadership-keynote-speaker</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/survival-keynote-speaker</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/motivational-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/stress-management-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Industry vertical pages -->
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker-financial-services</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker-technology</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker-insurance</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker-mdrt</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blog posts (new) -->
+  <url>
+    <loc>https://yossighinsberg.com/blog/keynote-speaker-financial-services</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/best-keynote-speakers-australia</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/keynote-speaker-fees-what-to-expect</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/mdrt-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/leadership-under-uncertainty</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/conference-speaker-vs-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/amazon-rainforest-survival-story</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/virtual-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/stress-management-keynote</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/adventure-keynote-speaker</loc>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
