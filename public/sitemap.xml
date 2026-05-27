@@ -216,6 +216,33 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Additional topic pages -->
+  <url>
+    <loc>https://yossighinsberg.com/amazon-survival-speaker</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/keynote-speaker-overcoming-adversity</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/power-to-survive</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/survival-skills-for-business</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/adaptability-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <!-- Industry vertical pages -->
   <url>
     <loc>https://yossighinsberg.com/keynote-speaker-financial-services</loc>
@@ -286,6 +313,11 @@
   </url>
   <url>
     <loc>https://yossighinsberg.com/blog/adventure-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/why-im-building-a-retreat-in-south-crete</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>

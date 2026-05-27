@@ -7,18 +7,27 @@ const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 export const metadata = {
   title: "The Story of Yossi Ghinsberg",
   description:
-    "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building. The biography behind one of the world's most unforgettable speakers.",
+    "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography behind one of the world's most unforgettable speakers.",
+  keywords: [
+    "yossi ghinsberg jungle",
+    "yossi ghinsberg book jungle",
+    "jungle book yossi ghinsberg",
+    "yossi ghinsberg daniel radcliffe",
+    "yossi ghinsberg jungle film",
+    "bolivian amazon survival",
+    "yossi ghinsberg biography",
+  ],
   openGraph: {
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
+      "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg" }],
   },
   twitter: {
     card: "summary_large_image" as const,
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Bolivian Amazon to a life of service, storytelling, and building.",
+      "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
     images: [OG_IMAGE],
   },
   alternates: {

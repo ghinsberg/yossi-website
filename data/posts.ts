@@ -827,6 +827,53 @@ A speaker who can answer that question precisely has thought about it. A speaker
 Yossi Ghinsberg speaks on Real versus Imaginary Survival for corporate audiences, leadership events, and wellbeing conferences globally. To enquire about this keynote for your event, contact this office or his bureau representatives.`,
   },
   {
+    slug: "why-im-building-a-retreat-in-south-crete",
+    title: "Why I'm Building a Retreat on the Wild Coast of South Crete",
+    date: "2025-05-26",
+    readTime: "5 min read",
+    category: "Personal",
+    excerpt:
+      "After forty years in the Amazon, I found a different kind of wild. This is why I'm building something on the southern coast of Crete.",
+    keywords: [
+      "south crete retreat",
+      "lino cambi crete",
+      "wellness retreat south crete",
+      "yossi ghinsberg retreat",
+      "south crete luxury retreat",
+    ],
+    content: `WHY I'M BUILDING A RETREAT ON THE WILD COAST OF SOUTH CRETE
+
+The first time I drove south across the Lasithi plateau and came down the other side toward the Libyan Sea, I understood something I hadn't expected to understand. I had been in many places. I had spent weeks in jungles, months in the Australian bush, years moving between continents and stages and cities. But there was a quality to the southern coast of Crete that stopped me.
+
+It wasn't beauty. The world has beautiful places. It was something harder to name. A kind of realness. The rock is white and old and the sea comes in without apology. The villages are small and not performing anything. The land has been farmed for four thousand years and it shows in the best way, in the terraces and the olive groves that were old when I was born. There is no pretence down there. That coast doesn't care whether you appreciate it.
+
+That is exactly what the Amazon felt like in 1981.
+
+I don't say that lightly. The Amazon is one of the most complex living systems on Earth. South Crete is a peninsula in the Mediterranean. But both places have a quality that most of the modern world has lost, which is that they are simply, completely themselves. When you are in them, you cannot pretend to be somewhere else. The environment won't let you.
+
+Most of the world we live in now is designed to let you stay comfortable, distracted, and performing some version of yourself that you would like other people to accept. The jungle stripped that away in about three days in 1981. The southern coast of Crete does something similar, more slowly and more gently, but with the same result: you stop performing and start noticing what's actually there.
+
+That is what Lino Cambi is.
+
+Lino Cambi is a boutique wellness retreat I am building on the southern coast of Crete, near the village of Agios Nikolaos on the Libyan Sea. It is not a luxury product. It is a real place, built with the same intention as Chalalan, the ecotourism lodge I helped develop in the Bolivian Amazon years ago: a place that belongs to its landscape and its people, that doesn't impose itself but grows from what was already there.
+
+The name Lino Cambi comes from two words in the local dialect, words that are harder to translate precisely than they are to feel when you arrive.
+
+Who is it for? People who have been running too long. Leaders, creators, artists, anyone who has built something meaningful and feels the weight of maintaining it. People who are honest enough with themselves to admit that they need more than a hotel room with good towels and a spa menu. People who want to stop optimising and start listening. The guests I am imagining are not looking for a retreat because they are broken. They are looking because they know something is missing and they haven't been able to name it yet.
+
+The structure of the experience will be small. Eight to twelve people at a time, no more. The design is drawn from the landscape, local stone, open air, the long light of the southern coast. The days will be simple in form and demanding in a way that is hard to prepare for, because the demand is not physical. It is the demand of presence.
+
+We are also creating what I am calling a Founding Guest program. The first people who come to Lino Cambi won't just be guests. They will be part of the story. The retreat is being built, and the early conversations are happening now. If you are someone who recognises what I am describing, and you want to be part of how this place comes into existence rather than arriving after it's already been decided, the Founding Guest path is for you.
+
+You can follow along and apply to be a Founding Guest at linocambi.com.
+
+I keep coming back to the same thought when I try to explain why I am doing this. In 1981, I walked into the Amazon at 22 years old and discovered that the map runs out. That everything I thought I knew about who I was became useless in about 72 hours. And that what emerged from that, slowly, painfully, was something more real than what had gone in.
+
+The southern coast of Crete is a different kind of wild. Older and quieter and without the density of the jungle. But when you stand on the rocks above the Libyan Sea with no phone signal and nothing to manage, the question comes back: what do you do when the map runs out?
+
+Forty years later I am still working on the answer. Lino Cambi is the latest version of that work.`,
+  },
+  {
     slug: "adventure-keynote-speaker",
     title: "Adventure Keynote Speakers: Spectacle vs. Substance",
     date: "2025-08-07",

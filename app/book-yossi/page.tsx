@@ -7,17 +7,23 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "Book Yossi Ghinsberg",
   description:
-    "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+    "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+  keywords: [
+    "hire yossi ghinsberg",
+    "yossi ghinsberg booking fee",
+    "book yossi ghinsberg",
+    "yossi ghinsberg speaker fee",
+  ],
   openGraph: {
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+      "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
   twitter: {
     card: "summary_large_image",
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+      "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
 };
 
