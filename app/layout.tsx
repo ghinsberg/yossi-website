@@ -50,6 +50,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Yossi Ghinsberg" }],
   creator: "Yossi Ghinsberg",
+  verification: {
+    google: "P1gjmWm4Ox5Z6k0WL1aI8PnU-M9dt1HhsjYGhjFEm6A",
+  },
   robots: {
     index: true,
     follow: true,
