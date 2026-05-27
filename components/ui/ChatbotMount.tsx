@@ -145,11 +145,10 @@ function SpeakerButton({ text }: { text: string }) {
       const url = URL.createObjectURL(blob);
       blobUrlRef.current = url;
 
-      // Stop the silent audio and load the real one into the same element
-      audio.pause();
-      audio.src = url;
-      audio.load();
-
+      // iOS Safari fix: do NOT call pause() or load() — both reset the
+      // trusted state established by the silent WAV play() above.
+      // Assigning audio.src triggers an automatic reload while preserving
+      // the element's trusted status, so the async play() below is allowed.
       audio.onended = () => {
         setState("idle");
         URL.revokeObjectURL(url);
@@ -161,6 +160,7 @@ function SpeakerButton({ text }: { text: string }) {
         audioRef.current = null;
       };
 
+      audio.src = url; // auto-reloads; keeps trusted state on iOS
       setState("playing");
       await audio.play();
     } catch {
