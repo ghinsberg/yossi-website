@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 
 const FRAMES = [
-  "Sometimes one needs to get lost…",
-  "to find oneself…",
+  "Sometimes you need to get lost,",
+  "to find yourself",
 ];
 
 const TYPE_SPEED      = 90;   // ms per character — slow, deliberate
