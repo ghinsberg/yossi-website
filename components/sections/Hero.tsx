@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="relative z-20 w-full pb-8">
         <div className="max-w-sm md:max-w-md px-8 md:px-14">
           {/* Headline */}
-          <h1 className="font-heading font-bold leading-none mb-2">
+          <h1 className="font-heading font-bold leading-none mb-14">
             <span className="block text-white text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
               What You Can Be
             </span>
