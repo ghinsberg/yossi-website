@@ -203,7 +203,7 @@ export default function KeynotesPage() {
               <p className="text-brand-gold font-heading font-bold text-2xl mb-3">3</p>
               <h3 className="text-brand-text font-semibold mb-2">Yossi curates the team</h3>
               <p className="text-brand-text-secondary">
-                Top facilitators for the modules that fit. Yossi runs the entire program and executes a few modules, such as breathwork and power meditation, himself.
+                Top facilitators for the modules that fit. Yossi runs the entire program and personally delivers the two signature techniques — full sensory activation and the snake breath — that he teaches nowhere else.
               </p>
             </div>
           </div>

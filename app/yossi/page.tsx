@@ -47,7 +47,7 @@ export default function YossiPage() {
                 Hundreds of people, across long-form cohorts, retreats, and intensives. The shapes have changed over the years. The principle has not. Only when things shake, a shift is possible.
               </p>
               <p>
-                Today, that body of work lives inside the full-day workshop Yossi designs for organisations. Same craft, scaled to a corporate room, curated to the outcome the client is after. He runs the entire program and executes a few modules, such as breathwork and power meditation, himself. Top facilitators cover the rest.
+                Today, that body of work lives inside the full-day workshop Yossi designs for organisations. Same craft, scaled to a corporate room, curated to the outcome the client is after. He personally delivers the two signature techniques — full sensory activation and the snake breath — that he teaches nowhere else. Top facilitators cover the rest.
               </p>
               <p>
                 Yossi does every practice he gives. He is part of the group, not separate from it.
