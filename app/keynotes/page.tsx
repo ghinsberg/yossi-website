@@ -203,7 +203,10 @@ export default function KeynotesPage() {
               <p className="text-brand-gold font-heading font-bold text-2xl mb-3">3</p>
               <h3 className="text-brand-text font-semibold mb-2">Yossi curates the team</h3>
               <p className="text-brand-text-secondary">
-                Top facilitators for the modules that fit. Yossi runs the entire program and personally delivers the two signature techniques — full sensory activation and the snake breath — that he teaches nowhere else.
+                Top facilitators for the modules that fit. Yossi runs the entire program and personally delivers the two signature techniques — full sensory activation and the snake breath — that he teaches nowhere else.{" "}
+                <Link href="/the-two-techniques" className="text-brand-gold hover:underline text-sm font-semibold">
+                  Learn what they are →
+                </Link>
               </p>
             </div>
           </div>

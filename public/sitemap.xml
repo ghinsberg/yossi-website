@@ -216,6 +216,13 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Signature techniques page -->
+  <url>
+    <loc>https://yossighinsberg.com/the-two-techniques</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <!-- Additional topic pages -->
   <url>
     <loc>https://yossighinsberg.com/amazon-survival-speaker</loc>
