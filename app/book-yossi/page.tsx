@@ -57,6 +57,51 @@ export default function BookYossiPage() {
         </div>
       </section>
 
+      {/* Bureau Partners — dedicated section */}
+      <section className="bg-brand-surface border-y border-white/10 py-10 mb-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-start gap-8">
+            <div className="md:w-64 shrink-0">
+              <p className="text-xs uppercase tracking-widest text-brand-gold/70 mb-2">
+                Working through a bureau?
+              </p>
+              <h2 className="text-xl font-heading font-bold text-brand-text leading-snug">
+                Contact your regional rep directly
+              </h2>
+              <p className="text-brand-text-secondary text-sm mt-3 leading-relaxed">
+                All bureau enquiries receive a tailored proposal within 48 hours. No exceptions.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+              {siteConfig.contacts.map((agent) => (
+                <div
+                  key={agent.name}
+                  className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-brand-gold/30 transition-colors"
+                >
+                  <p className="text-brand-gold text-[10px] uppercase tracking-widest font-semibold mb-3">
+                    {agent.region}
+                  </p>
+                  <p className="font-semibold text-brand-text text-sm">{agent.name}</p>
+                  <p className="text-brand-text-secondary text-xs mt-0.5">{agent.company}</p>
+                  <a
+                    href={`mailto:${agent.email}`}
+                    className="text-brand-gold text-xs block mt-3 hover:underline break-all"
+                  >
+                    {agent.email}
+                  </a>
+                  <a
+                    href={`tel:${agent.phone.replace(/\s/g, "")}`}
+                    className="text-brand-text-secondary text-xs block mt-1 hover:underline"
+                  >
+                    {agent.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Form + Sidebar */}
       <section className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

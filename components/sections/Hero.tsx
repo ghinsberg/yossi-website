@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="relative z-20 w-full pb-8">
         <div className="max-w-sm md:max-w-md px-8 md:px-14">
           {/* Headline */}
-          <h1 className="font-heading font-bold leading-none mb-14">
+          <h1 className="font-heading font-bold leading-none mb-5">
             <span className="block text-white text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight">
               What You Can Be
             </span>
@@ -55,6 +55,14 @@ export default function Hero() {
               You Must Be
             </span>
           </h1>
+
+          {/* Bureau credential — most visible differentiator */}
+          <div className="flex items-center gap-3 mb-10">
+            <div className="h-px bg-brand-gold/50 w-6 shrink-0" />
+            <p className="text-brand-gold/80 text-xs uppercase tracking-[0.18em] font-semibold leading-snug">
+              Voted Most Unforgettable Speaker — The Sweeney Agency
+            </p>
+          </div>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 mb-6">

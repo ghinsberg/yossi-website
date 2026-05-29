@@ -337,8 +337,11 @@ export default function EndorsementsPage() {
       {/* Bottom CTA */}
       <section className="bg-brand-gold py-16 md:py-20 px-6 text-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-black max-w-3xl mx-auto">
-          Ready to bring transformation to your stage?
+          Your audience will still talk about it a year from now.
         </h2>
+        <p className="text-black/60 text-lg mt-4 max-w-xl mx-auto">
+          Check availability and get a proposal within 48 hours.
+        </p>
         <div className="mt-8">
           <Button
             variant="outline"
@@ -346,7 +349,7 @@ export default function EndorsementsPage() {
             href="/book-yossi"
             className="border-black text-black hover:bg-black hover:text-brand-gold"
           >
-            Book a Call
+            Book Yossi to Speak
           </Button>
         </div>
       </section>

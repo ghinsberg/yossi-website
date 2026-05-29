@@ -475,6 +475,17 @@ export default function StoryPage() {
         </div>
       </section>
 
+      {/* ── MID-PAGE CTA ── */}
+      <section className="bg-brand-surface border-y border-white/10 py-14 px-6 text-center">
+        <p className="text-brand-text-secondary text-lg max-w-xl mx-auto mb-6">
+          The story you just read is what he brings to your stage.
+          Every keynote is built on what actually happened.
+        </p>
+        <Button variant="gold" href="/book-yossi" size="lg">
+          Check Availability
+        </Button>
+      </section>
+
       {/* ── LINO CAMBI ── */}
       <section className="bg-brand-bg py-16 md:py-28">
         <div className="max-w-3xl mx-auto px-6">
