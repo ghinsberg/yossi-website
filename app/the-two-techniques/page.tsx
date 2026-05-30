@@ -285,7 +285,7 @@ export default function TheTwoTechniquesPage() {
               The switch flips. The alarm steps down.
             </p>
             <p className="text-brand-text font-semibold leading-relaxed mt-4">
-              You cannot worry your way to safety. But you can breathe your way there.
+              You cannot worry your way to harmony. But you can breathe your way there.
             </p>
           </div>
         </div>
