@@ -618,7 +618,7 @@ export default function StoryPage() {
                 body: "When a room of 5,000 hears what one person survived on instinct alone, the bar for what is possible shifts permanently.",
               },
               {
-                title: "One decision they won't put off",
+                title: "Decision they won't put off",
                 body: "Every talk ends the same way: what are you waiting for? Not a slogan. A direct question. Audiences act on something within 48 hours.",
               },
             ].map((item) => (
