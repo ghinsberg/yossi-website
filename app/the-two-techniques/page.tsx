@@ -263,15 +263,7 @@ export default function TheTwoTechniquesPage() {
             <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[0.2em] select-none">
               hissss sssssssssssss
             </p>
-            <p className="text-brand-text-secondary text-sm mt-5 tracking-widest uppercase">
-              exhale through the teeth — until the very last drop of air
-            </p>
           </div>
-
-          <p className="text-brand-text-secondary text-lg leading-relaxed max-w-3xl">
-            With practice — a matter of days — the exhale extends beyond one full minute.
-            That is not a metaphor. One minute. Timed.
-          </p>
 
           <div className="mt-8 bg-brand-surface border border-white/10 rounded-2xl p-8 md:p-10 max-w-3xl">
             <h3 className="font-heading font-bold text-brand-text text-xl mb-4">
