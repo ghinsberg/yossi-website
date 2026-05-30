@@ -152,12 +152,14 @@ export default function StoryPage() {
           </p>
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
             He kept moving. Stopping meant death. He ate what he could find,
-            built fires against the dark, hallucinated, prayed, and made it
-            to the river.
+            not much. No gun, no knife, no fire, the horror came at night,
+            and hallucinations were the only respite. He didn&apos;t give up;
+            against all odds, he made it to the riverbank.
           </p>
           <p className="text-brand-gold font-semibold text-lg mt-8">
-            Twenty-one days. Kevin Gale and indigenous villagers who refused
-            to stop searching found him alive.
+            Twenty days alone amidst the worst rainy season in decades. Kevin
+            Gale, who refused to stop searching, and the indigenous Uchupiamona
+            hunters that accompanied him, found him alive.
           </p>
         </div>
       </section>
