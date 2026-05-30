@@ -510,7 +510,7 @@ export default function StoryPage() {
               href="https://www.amazon.com/Marked-Life-Finding-Grace-Expect-ebook/dp/B0BG63WWGQ/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1669091818&sr=8-1"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-gold hover:underline"
+              className="text-brand-gold underline underline-offset-2 decoration-brand-gold/50 hover:decoration-brand-gold transition-colors"
             >
               author
             </a>
