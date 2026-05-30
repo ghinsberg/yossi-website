@@ -258,11 +258,6 @@ export default function TheTwoTechniquesPage() {
             </div>
           </div>
 
-          <p className="text-brand-text-secondary text-lg leading-relaxed max-w-3xl">
-            The snake breath is named for its sound. You exhale through your teeth.
-            Slowly. The sound is this:
-          </p>
-
           {/* The sound */}
           <div className="my-10 text-center">
             <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[0.2em] select-none">
