@@ -85,7 +85,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-brand-text-secondary">
-            &copy; 2026 Yossi Ghinsberg.
+            &copy; 2026 Yossi Ghinsberg. Copy to all the right people.
           </p>
 
           {/* Social links */}
