@@ -503,9 +503,11 @@ export default function StoryPage() {
             Libyan Sea.
           </p>
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
-            Paul Templer is a Zimbabwean adventurer who, in 1996, was swallowed
-            by a hippopotamus on the Zambezi River and survived. Two men who
-            should not be alive, building something together.
+            Paul Templer is a Zimbabwean-born adventurer who, in 1996, while
+            leading an expedition on the Zambezi River, fought a hippopotamus
+            for eight minutes and won. Today, he is a respected author,
+            entrepreneur, and philanthropist. The two men who should not be
+            alive have connected and decided to build a dream together.
           </p>
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
             They are calling it Lino Cambi &mdash; a boutique resort and
