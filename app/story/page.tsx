@@ -117,8 +117,8 @@ export default function StoryPage() {
       {/* Bolivia canoe image */}
       <section className="py-6 bg-brand-bg">
         <img
-          src="/images/adventure/bolivia-canoe.jpg"
-          alt="Yossi Ghinsberg in the Bolivian Amazon"
+          src="/images/adventure/community-house-sjdu.jpg"
+          alt="Meeting at the community house, San José de Uchupiamona"
           className="w-full rounded-none md:max-w-5xl md:mx-auto md:rounded-2xl"
         />
       </section>
