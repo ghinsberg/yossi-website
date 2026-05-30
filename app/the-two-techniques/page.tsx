@@ -217,9 +217,25 @@ export default function TheTwoTechniquesPage() {
                 Technique Two
               </p>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text leading-tight">
-                The Snake Breath
+                The Snake Breath — The Switch
               </h2>
             </div>
+          </div>
+
+          {/* The Switch concept */}
+          <div className="max-w-3xl mb-12">
+            <p className="text-brand-text text-xl md:text-2xl font-heading font-bold leading-snug mb-6">
+              Imagine you knew how to reach a switch — and just flip your nervous system
+              from sympathetic to parasympathetic. Instantly.
+            </p>
+            <p className="text-brand-text-secondary text-lg leading-relaxed">
+              From <span className="text-white font-semibold">&ldquo;I am being attacked&rdquo;</span> to{" "}
+              <span className="text-brand-gold font-semibold">&ldquo;there is absolutely nothing going on.&rdquo;</span>
+            </p>
+            <p className="text-brand-text-secondary text-lg leading-relaxed mt-4">
+              That switch exists. Most people never find it because no one told them where to look.
+              The snake breath gives you direct access to it. All you have to do is learn how to hiss.
+            </p>
           </div>
 
           {/* Lineage */}
@@ -249,11 +265,11 @@ export default function TheTwoTechniquesPage() {
 
           {/* The sound */}
           <div className="my-10 text-center">
-            <p className="text-5xl md:text-7xl font-heading font-bold text-brand-gold/30 tracking-[0.4em] select-none">
-              sssssssss
+            <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold/40 tracking-[0.2em] select-none">
+              hissss sssssssssssss<span className="text-brand-gold/70">T</span>
             </p>
-            <p className="text-brand-text-secondary text-sm mt-4 tracking-widest uppercase">
-              exhale through the teeth
+            <p className="text-brand-text-secondary text-sm mt-5 tracking-widest uppercase">
+              exhale through the teeth — until the very last drop of air
             </p>
           </div>
 
@@ -264,7 +280,7 @@ export default function TheTwoTechniquesPage() {
 
           <div className="mt-8 bg-brand-surface border border-white/10 rounded-2xl p-8 md:p-10 max-w-3xl">
             <h3 className="font-heading font-bold text-brand-text text-xl mb-4">
-              Why it works.
+              Why it flips the switch.
             </h3>
             <p className="text-brand-text-secondary leading-relaxed">
               The organism has one physiological proof of safety: the ability to breathe out slowly.
@@ -273,9 +289,10 @@ export default function TheTwoTechniquesPage() {
             </p>
             <p className="text-brand-text-secondary leading-relaxed mt-4">
               So while the mind keeps screaming — and we let it scream, we do not fight it —
-              the exhale is happening. It is long. It is slow. The reptile brain receives
-              the signal it was designed to trust. Not from words. From the body itself.
-              The alarm begins to step down.
+              the exhale is happening. Long. Slow. Undeniable.
+              The reptile brain receives the signal it was designed to trust.
+              Not from words. From the body itself.
+              The switch flips. The alarm steps down.
             </p>
             <p className="text-brand-text font-semibold leading-relaxed mt-4">
               You cannot worry your way to safety. But you can breathe your way there.
