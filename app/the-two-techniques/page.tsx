@@ -259,9 +259,12 @@ export default function TheTwoTechniquesPage() {
           </div>
 
           {/* The sound */}
-          <div className="my-10 flex flex-col items-center text-center">
+          <div className="my-10 flex flex-col items-center gap-2">
+            <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[1.1em] select-none text-center w-full">
+              hissss
+            </p>
             <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[0.2em] select-none text-center w-full">
-              hissss sssssssssssss
+              sssssssssssss
             </p>
           </div>
 
