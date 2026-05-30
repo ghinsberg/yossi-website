@@ -19,8 +19,8 @@ export default function Footer() {
             <p className="mt-3 text-brand-text-secondary text-sm">
               The most unforgettable speaker your audience will ever hear.
             </p>
-            <p className="text-brand-gold text-lg font-heading font-bold mt-4 tracking-wider">
-              Be Brave.
+            <p className="text-brand-gold text-lg font-heading font-bold mt-4 tracking-widest uppercase">
+              Guaranteed.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-brand-text-secondary">
-            &copy; 2026 Yossi Ghinsberg. All rights reserved.
+            &copy; 2026 Yossi Ghinsberg.
           </p>
 
           {/* Social links */}
