@@ -288,8 +288,8 @@ export default function TheTwoTechniquesPage() {
               The body knows this at a level that predates language.
             </p>
             <p className="text-brand-text-secondary leading-relaxed mt-4">
-              So while the mind keeps screaming — and we let it scream, we do not fight it —
-              the exhale is happening. Long. Slow. Undeniable.
+              The mind keeps screaming. We let it scream. We do not fight it.
+              The exhale is happening. Long. Slow. Undeniable.
               The reptile brain receives the signal it was designed to trust.
               Not from words. From the body itself.
               The switch flips. The alarm steps down.
