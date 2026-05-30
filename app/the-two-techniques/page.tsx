@@ -266,7 +266,7 @@ export default function TheTwoTechniquesPage() {
           {/* The sound */}
           <div className="my-10 text-center">
             <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[0.2em] select-none">
-              hissss sssssssssssss<span className="text-white">T</span>
+              hissss sssssssssssss
             </p>
             <p className="text-brand-text-secondary text-sm mt-5 tracking-widest uppercase">
               exhale through the teeth — until the very last drop of air
