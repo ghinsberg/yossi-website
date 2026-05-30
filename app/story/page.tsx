@@ -182,7 +182,7 @@ export default function StoryPage() {
       <section className="bg-brand-light-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-bg mb-5">
-            He wrote it down. A million people read it.
+            He wrote a book. Millions of people worldwide read it.
           </h2>
           <p className="text-brand-bg/80 text-lg leading-relaxed">
             The original Hebrew edition appeared in 1985:{" "}
