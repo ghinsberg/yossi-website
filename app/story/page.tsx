@@ -505,7 +505,7 @@ export default function StoryPage() {
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
             Paul Templer is a Zimbabwean-born adventurer who, in 1996, while
             leading an expedition on the Zambezi River, fought a hippopotamus
-            for eight minutes and won. Today, he is a respected{" "}
+            for eight minutes and won. Today, he is a respected speaker,{" "}
             <a
               href="https://www.amazon.com/Marked-Life-Finding-Grace-Expect-ebook/dp/B0BG63WWGQ/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1669091818&sr=8-1"
               target="_blank"
