@@ -234,7 +234,7 @@ export default function TheTwoTechniquesPage() {
               <span className="text-white/20 text-lg">›</span>
               <span className="text-brand-text font-semibold">Rom Kest</span>
               <span className="text-brand-gold/40">—</span>
-              <span className="text-brand-text-secondary">Yossi&apos;s teacher</span>
+              <span className="text-brand-text-secondary">master, father of the Kest yoga dynasty in the USA</span>
               <span className="text-white/20 text-lg">›</span>
               <span className="text-brand-text font-semibold">Yossi Ghinsberg</span>
               <span className="text-white/20 text-lg">›</span>
