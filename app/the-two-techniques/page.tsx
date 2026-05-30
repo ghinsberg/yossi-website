@@ -259,12 +259,10 @@ export default function TheTwoTechniquesPage() {
           </div>
 
           {/* The sound */}
-          <div className="my-10 flex flex-col items-center gap-2">
-            <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[1.1em] select-none text-center w-full">
-              hissss
-            </p>
-            <p className="text-4xl md:text-6xl font-heading font-bold text-brand-gold tracking-[0.2em] select-none text-center w-full">
-              sssssssssssss
+          <div className="my-12 text-center">
+            <p className="font-heading font-bold text-brand-gold select-none leading-tight"
+               style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)", letterSpacing: "0.25em" }}>
+              hisssssssssssssssssss
             </p>
           </div>
 
