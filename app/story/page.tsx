@@ -518,10 +518,11 @@ export default function StoryPage() {
             alive have connected and decided to build a dream together.
           </p>
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
-            They are calling it Lino Cambi &mdash; a boutique resort and
-            longevity spa. Six to eight suites. Blue Zone cuisine. Overlooking
-            the Libyan Sea. Opening June 2026. Not a retirement. A place where
-            people who are done with noise can come to remember what matters.
+            The name is Lino Cambi, a hidden sanctuary that awaits only those
+            who hear the calling. Season one has only six lush suites. Blue Zone
+            cuisine. Overlooking the Libyan Sea. Opening June 2027. Not a resort
+            but a place where people who are done with noise can come to remember
+            what matters, rejuvenate, recharge, align, and have great fun doing that.
           </p>
           <blockquote className="mt-10 border-l-4 border-brand-gold pl-6 py-1">
             <p className="text-xl md:text-2xl text-brand-text-secondary italic leading-relaxed">
