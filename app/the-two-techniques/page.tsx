@@ -44,7 +44,7 @@ export default function TheTwoTechniquesPage() {
           Real Survival vs Imaginary Survival
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-brand-text max-w-4xl mx-auto leading-tight">
-          The mind is not the right tool to fix what the mind created.
+          The mind is not the right tool to fix the problem the mind has created.
         </h1>
         <div className="w-16 h-0.5 bg-brand-gold mx-auto mt-10" />
       </section>
