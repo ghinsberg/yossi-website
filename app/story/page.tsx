@@ -518,16 +518,7 @@ export default function StoryPage() {
             alive have connected and decided to build a dream together.
           </p>
           <p className="text-brand-text-secondary text-lg leading-relaxed mt-5">
-            They are calling it{" "}
-            <a
-              href="https://linocambi.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-gold underline underline-offset-2 decoration-brand-gold/50 hover:decoration-brand-gold transition-colors"
-            >
-              Lino Cambi
-            </a>{" "}
-            &mdash; a boutique resort and
+            They are calling it Lino Cambi &mdash; a boutique resort and
             longevity spa. Six to eight suites. Blue Zone cuisine. Overlooking
             the Libyan Sea. Opening June 2026. Not a retirement. A place where
             people who are done with noise can come to remember what matters.
