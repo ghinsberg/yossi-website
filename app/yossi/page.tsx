@@ -316,8 +316,8 @@ export default function YossiPage() {
         {/* Full-bleed river photo */}
         <div className="relative w-full overflow-hidden" style={{ maxHeight: "460px" }}>
           <img
-            src="/images/yossi/yossi-amazon-river.jpg"
-            alt="Yossi Ghinsberg on the Amazon river"
+            src="/images/adventure/bolivia-canoe.jpg"
+            alt="Yossi Ghinsberg in a canoe on the Bolivian Amazon"
             className="w-full object-cover object-center"
             style={{ maxHeight: "460px" }}
           />
