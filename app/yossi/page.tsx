@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Yossi Ghinsberg | Beyond the Keynote",
   description:
-    "Transformational workshops, the Uchupiamona Nation, Chalalan, Lino Cambi, and a living relationship with the Amazon. The full picture of who Yossi is.",
+    "Workshops, the Uchupiamona Nation, Chalalan Ecolodge, Lino Cambi, and a four-decade relationship with the Amazon. The full picture of who Yossi Ghinsberg is.",
 };
 
 export default function YossiPage() {
@@ -59,8 +59,8 @@ export default function YossiPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-didgeridoos.jpg"
-                alt="Didgeridoos at a workshop, gathered group beyond"
+                src="/images/yossi/workshops/workshop-circle-under-tree.jpg"
+                alt="Yossi leading a circle under the tree"
                 className="w-full h-full object-cover"
               />
             </div>
