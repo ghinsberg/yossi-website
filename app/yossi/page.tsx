@@ -59,8 +59,8 @@ export default function YossiPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="rounded-xl overflow-hidden aspect-[4/3]">
               <img
-                src="/images/yossi/workshops/workshop-didgeridoos.jpg"
-                alt="Didgeridoos at a workshop, gathered group beyond"
+                src="/images/yossi/workshops/workshop-circle-under-tree.jpg"
+                alt="Yossi leading a circle under the tree"
                 className="w-full h-full object-cover"
               />
             </div>
