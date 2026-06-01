@@ -7,23 +7,17 @@ import { testimonials } from "@/data/testimonials";
 export const metadata: Metadata = {
   title: "Book Yossi Ghinsberg",
   description:
-    "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
-  keywords: [
-    "hire yossi ghinsberg",
-    "yossi ghinsberg booking fee",
-    "book yossi ghinsberg",
-    "yossi ghinsberg speaker fee",
-  ],
+    "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   openGraph: {
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
   twitter: {
     card: "summary_large_image",
     title: "Book Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "Hire Yossi Ghinsberg for your event. Speaker fee enquiries handled by regional booking agents. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
+      "Inquire about booking Yossi Ghinsberg for your next keynote, conference, or leadership event. Represented by Carter Global Speakers (North America) and Encore Speakers (Europe &amp; Australasia).",
   },
 };
 
@@ -57,48 +51,32 @@ export default function BookYossiPage() {
         </div>
       </section>
 
-      {/* Bureau Partners — dedicated section */}
-      <section className="bg-brand-surface border-y border-white/10 py-10 mb-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-start gap-8">
-            <div className="md:w-64 shrink-0">
-              <p className="text-xs uppercase tracking-widest text-brand-gold/70 mb-2">
-                Working through a bureau?
-              </p>
-              <h2 className="text-xl font-heading font-bold text-brand-text leading-snug">
-                Contact your regional rep directly
-              </h2>
-              <p className="text-brand-text-secondary text-sm mt-3 leading-relaxed">
-                All bureau enquiries receive a tailored proposal within 48 hours. No exceptions.
-              </p>
+      {/* Social proof strip — right above the form */}
+      <section className="max-w-6xl mx-auto px-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            {
+              quote: "Yossi Ghinsberg ranks number one in my experience.",
+              author: "Chris Varelas",
+              role: "Head of National Investment Bank, Citibank",
+            },
+            {
+              quote: "Max scores in every evaluation category. The highest-impact session in the chapter's history.",
+              author: "Juan Federico Salaverria Q.",
+              role: "Education Chair, YPO El Salvador",
+            },
+            {
+              quote: "We were so impressed we invited Yossi back for a second presentation the following day. Unprecedented.",
+              author: "Elmo de Alwis",
+              role: "CEO, Sigma Pharmaceuticals",
+            },
+          ].map((t) => (
+            <div key={t.author} className="bg-white/[0.03] border border-white/10 rounded-xl p-6">
+              <p className="text-brand-text text-sm leading-relaxed mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-brand-gold text-xs font-semibold">{t.author}</p>
+              <p className="text-brand-text-secondary text-xs mt-0.5">{t.role}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
-              {siteConfig.contacts.map((agent) => (
-                <div
-                  key={agent.name}
-                  className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-brand-gold/30 transition-colors"
-                >
-                  <p className="text-brand-gold text-[10px] uppercase tracking-widest font-semibold mb-3">
-                    {agent.region}
-                  </p>
-                  <p className="font-semibold text-brand-text text-sm">{agent.name}</p>
-                  <p className="text-brand-text-secondary text-xs mt-0.5">{agent.company}</p>
-                  <a
-                    href={`mailto:${agent.email}`}
-                    className="text-brand-gold text-xs block mt-3 hover:underline break-all"
-                  >
-                    {agent.email}
-                  </a>
-                  <a
-                    href={`tel:${agent.phone.replace(/\s/g, "")}`}
-                    className="text-brand-text-secondary text-xs block mt-1 hover:underline"
-                  >
-                    {agent.phone}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
