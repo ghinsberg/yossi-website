@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
+import ConversionFire from "@/components/ConversionFire";
 
 export const metadata: Metadata = {
   title: "Enquiry Received",
@@ -12,6 +13,7 @@ export default function ThankYouPage() {
     <section className="min-h-[80vh] flex items-center justify-center bg-brand-bg px-6">
       <div className="max-w-xl mx-auto text-center">
 
+        <ConversionFire />
         {/* Gold check */}
         <div className="w-16 h-16 rounded-full border-2 border-brand-gold flex items-center justify-center mx-auto mb-8">
           <svg className="w-8 h-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -8,6 +8,7 @@ import ChatbotMount from "@/components/ui/ChatbotMount";
 import SocialStrip from "@/components/ui/SocialStrip";
 import Analytics from "@/components/Analytics";
 import Contentsquare from "@/components/Contentsquare";
+import MetaPixel from "@/components/MetaPixel";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
@@ -91,6 +92,7 @@ export default function RootLayout({
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <Analytics />
+        <MetaPixel />
         <Contentsquare />
         <StructuredData />
         <Header />
