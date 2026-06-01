@@ -33,6 +33,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://yossighinsberg.com/faq</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://yossighinsberg.com/endorsements</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>

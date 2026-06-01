@@ -64,7 +64,7 @@ export default function BookingForm() {
       errs.email = "Please enter a valid email";
     if (!formData.organisation.trim())
       errs.organisation = "Organisation is required";
-    if (!formData.eventDate) errs.eventDate = "Event date is required";
+    // Event date is optional — many leads are still at the exploring stage
     if (!formData.eventLocation.trim())
       errs.eventLocation = "Event location is required";
     if (!formData.audienceSize)
@@ -133,6 +133,15 @@ export default function BookingForm() {
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
+        // Fire GA4 conversion event
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag("event", "generate_lead", {
+            event_category: "booking",
+            event_label: "form_submission",
+          });
+        }
+        // Redirect to thank-you page for clean conversion tracking
+        window.location.href = "/thank-you";
       } else {
         window.location.href = buildMailtoFallback();
         setStatus("error");
@@ -255,7 +264,7 @@ export default function BookingForm() {
         <div>
           <label htmlFor="eventDate" className={labelStyles}>
             Event date (approximate)
-            <span className="text-brand-gold ml-1">*</span>
+            <span className="text-brand-text-secondary/50 ml-2 text-xs font-normal">optional</span>
           </label>
           <input
             type="date"

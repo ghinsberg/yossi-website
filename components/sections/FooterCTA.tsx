@@ -3,7 +3,7 @@ export default function FooterCTA() {
     <section className="bg-brand-gold py-16 md:py-20">
       <div className="text-center max-w-3xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-black">
-          Ready to bring transformation to your stage?
+          Your audience will still talk about it a year from now.
         </h2>
         <div className="mt-8">
           <a

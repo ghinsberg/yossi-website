@@ -1,122 +1,143 @@
 import type { Metadata } from "next";
-import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import Button from "@/components/ui/Button";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 
 export const metadata: Metadata = {
-  title: "FAQ — Booking, Topics & Speaking Info",
+  title: "FAQ",
   description:
-    "Answers to the most common questions about booking Yossi Ghinsberg for a keynote, his speaking topics, audiences, and how to get in touch.",
+    "Frequently asked questions about booking Yossi Ghinsberg — speaker fees, formats, availability, and what to expect.",
+  alternates: { canonical: `${BASE_URL}/faq` },
 };
 
 const faqs = [
   {
-    q: "What is Yossi Ghinsberg known for?",
-    a: "Yossi Ghinsberg survived 21 days alone in the Amazon rainforest in 1981 — without food, fire, or companions. He wrote Jungle, a memoir that has sold over a million copies worldwide and was adapted into a Hollywood film starring Daniel Radcliffe. He is also the co-founder of Chalalan Ecolodge in Bolivia, built in partnership with the indigenous Uchupiamona people, and is one of the most sought-after keynote speakers in the world.",
+    category: "Booking",
+    items: [
+      {
+        q: "How do I book Yossi Ghinsberg?",
+        a: "Submit an enquiry at yossighinsberg.com/book-yossi or contact a regional representative directly. North America: Michelle Carter at Carter Global Speakers (Michelle@carterglobalspeakers.com). Europe and Australasia: Michael Arnot at Encore Speakers (michael@encorespeakers.com). Latin America: Smart Speakers. All enquiries receive a response within 24 hours.",
+      },
+      {
+        q: "What is Yossi Ghinsberg's speaker fee?",
+        a: "Speaker fees vary by format, location, and event type. Contact your regional representative for a tailored proposal. All enquiries through this site are reviewed personally and a proposal is returned within 48 hours.",
+      },
+      {
+        q: "How far in advance should I book?",
+        a: "Yossi's calendar is in high demand, particularly for Q1 and Q4 conference seasons. Six to twelve months is ideal for flagship events. That said, contact us regardless — availability sometimes opens at shorter notice.",
+      },
+      {
+        q: "Does Yossi speak virtually?",
+        a: "Yes. Yossi delivers keynotes in-person, virtually, and in hybrid formats. All three formats are tailored to the audience and outcome, not simply recorded presentations.",
+      },
+    ],
   },
   {
-    q: "What topics does Yossi Ghinsberg speak on?",
-    a: "Yossi's keynotes draw directly from his Amazon survival experience and the philosophy he developed in the decades since. His core topics include: survival and resilience under extreme uncertainty, leadership in the face of the unknown, the Laws of the Jungle — his framework for human potential rooted in nature's own principles, navigating change and adversity, and purpose-driven leadership. His signature keynote is 'From Survival to Legacy.'",
+    category: "The Keynotes",
+    items: [
+      {
+        q: "What keynotes does Yossi offer?",
+        a: "Three programs: 'From Survival to Legacy' — the flagship; 'The Laws of the Jungle' — nine principles distilled from the Amazon and four decades of applying them; and 'Real Survival vs Imaginary Survival' — the stress and resilience keynote, which includes two unique somatic techniques taught nowhere else.",
+      },
+      {
+        q: "How long is a keynote?",
+        a: "The standard keynote is 60 minutes. Yossi also delivers a Keynote + Fireside Chat format (60 + 20–30 minutes) and a full-day workshop for organisations that want a deeper experience.",
+      },
+      {
+        q: "Can the keynote be customised?",
+        a: "Yes. Every engagement begins with a pre-event brief. The keynote is shaped around your audience, your theme, and the outcome you need. No two performances are identical.",
+      },
+      {
+        q: "What audience sizes does Yossi speak to?",
+        a: "From 50 to 10,000+. Yossi has delivered to intimate executive gatherings and to main-stage audiences of thousands — including the MDRT Main Stage 2025.",
+      },
+    ],
   },
   {
-    q: "What types of organisations book Yossi?",
-    a: "Yossi speaks at major corporate conferences, financial services events, leadership summits, and industry associations worldwide. Past clients include Google, Apple, Microsoft, BMW, and the MDRT Main Stage (2025). He addresses audiences from a few hundred to 10,000 people.",
+    category: "The Man",
+    items: [
+      {
+        q: "Who is Yossi Ghinsberg?",
+        a: "In 1981, at age 22, Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon — no food, no fire, no rescue. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He has since spoken to hundreds of thousands of people across six continents, been voted Most Unforgettable Speaker, and built conservation and community projects in the Amazon.",
+      },
+      {
+        q: "What companies has Yossi spoken for?",
+        a: "Google, Apple, Microsoft, BMW, American Express, Coca-Cola, Citibank, General Motors, and the Million Dollar Round Table (MDRT), among many others across more than 30 countries.",
+      },
+      {
+        q: "Is there a film about Yossi's story?",
+        a: "Yes. Jungle (2017), directed by Greg McLean and starring Daniel Radcliffe as Yossi Ghinsberg. It is available on major streaming platforms.",
+      },
+    ],
   },
   {
-    q: "How long is Yossi's keynote?",
-    a: "Keynotes typically run 45 to 75 minutes. Yossi also offers extended formats including half-day workshops and masterclasses. The right format depends on your event goals — his team can advise.",
-  },
-  {
-    q: "Does Yossi speak internationally?",
-    a: "Yes. Yossi speaks globally and is represented by speaker bureaus across multiple regions: Carter Global Speakers (North America), Encore Speakers (Europe and Australasia), and Smart Speakers (Latin America).",
-  },
-  {
-    q: "How do I book Yossi Ghinsberg for a keynote or event?",
-    a: "The fastest route is through one of his booking agents. For North America, contact Michelle Carter at Carter Global Speakers (Michelle@carterglobalspeakers.com, +1 703 819 2511). For Europe and Australasia, contact Michael Arnot at Encore Speakers (michael@encorespeakers.com, +61 422 002 685). For Latin America, contact Juanita Cortes Cleves at Smart Speakers. You can also submit an enquiry directly at yossighinsberg.com/book-yossi.",
-  },
-  {
-    q: "What makes Yossi different from other keynote speakers?",
-    a: "Yossi's story is real. There is no metaphor — he actually survived alone in the Amazon for 21 days, lost, without tools, and emerged with a philosophy that has held up across 30 years and thousands of stages. He does not speak about leadership in theory. He speaks about what it takes to keep moving when everything has failed. Audiences consistently describe his talk as the one they remember years later.",
-  },
-  {
-    q: "Has Yossi's story been verified?",
-    a: "Yes. Yossi's survival in the Amazon has been documented in his memoir Jungle, a Discovery Channel docudrama, and a 2017 Hollywood feature film. He has been covered by international media for decades.",
-  },
-  {
-    q: "Does Yossi customise his keynote for specific audiences?",
-    a: "Yes. While the core story is consistent, Yossi adapts the framing and lessons for the specific industry, challenge, or theme of each event. His team works with event organisers ahead of time to understand context and objectives.",
-  },
-  {
-    q: "Where is Yossi Ghinsberg based?",
-    a: "Yossi is based in Byron Bay, Australia, and travels internationally for engagements.",
+    category: "The Two Techniques",
+    items: [
+      {
+        q: "What are the two signature techniques?",
+        a: "Full Sensory Activation and the Snake Breath — two somatic practices that reset the sympathetic nervous system directly through the body, bypassing the mind. They are taught in the 'Real Survival vs Imaginary Survival' keynote and the full-day workshop. Yossi teaches them nowhere else.",
+      },
+      {
+        q: "Can these techniques be learned in a single session?",
+        a: "Yes. Both are learnable in a single session — and immediately applicable. Audiences of 500 have learned and practised both in a single keynote.",
+      },
+    ],
   },
 ];
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map(({ q, a }) => ({
-    "@type": "Question",
-    name: q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: a,
-    },
-  })),
-};
 
 export default function FAQPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "FAQ", href: "/faq" }]} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      {/* Hero */}
+      <section className="bg-brand-bg py-20 md:py-28 px-6 text-center">
+        <p className="text-xs uppercase tracking-[0.3em] text-brand-gold/60 mb-4">
+          Questions
+        </p>
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-brand-text max-w-2xl mx-auto">
+          Everything you need to know.
+        </h1>
+        <p className="text-brand-text-secondary text-lg mt-4 max-w-xl mx-auto">
+          If the answer isn&apos;t here, it&apos;s one message away.
+        </p>
+      </section>
 
-      <div className="bg-brand-bg min-h-screen pt-28 md:pt-36 pb-24">
-        <div className="max-w-3xl mx-auto px-6">
-
-          {/* Header */}
-          <div className="mb-14">
-            <p className="text-brand-gold text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-              Common Questions
-            </p>
-            <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-brand-text-secondary text-lg">
-              Everything you need to know about booking Yossi, his speaking topics, and what to expect.
-            </p>
-          </div>
-
-          {/* FAQ list */}
-          <dl className="space-y-10">
-            {faqs.map(({ q, a }) => (
-              <div key={q} className="border-t border-white/10 pt-8">
-                <dt className="font-heading font-semibold text-lg text-white mb-3">
-                  {q}
-                </dt>
-                <dd className="text-brand-text-secondary leading-relaxed">
-                  {a}
-                </dd>
+      {/* FAQ sections */}
+      <section className="bg-brand-bg pb-20">
+        <div className="max-w-3xl mx-auto px-6 space-y-16">
+          {faqs.map((section) => (
+            <div key={section.category}>
+              <p className="text-brand-gold text-xs uppercase tracking-[0.3em] font-semibold mb-8 pb-4 border-b border-white/10">
+                {section.category}
+              </p>
+              <div className="space-y-8">
+                {section.items.map((item) => (
+                  <div key={item.q}>
+                    <h2 className="text-brand-text font-heading font-semibold text-lg mb-2">
+                      {item.q}
+                    </h2>
+                    <p className="text-brand-text-secondary leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </dl>
-
-          {/* CTA */}
-          <div className="mt-16 pt-10 border-t border-white/10">
-            <p className="text-brand-text-secondary mb-6">
-              Have a question not answered here? Reach out directly.
-            </p>
-            <a
-              href="/book-yossi"
-              className="inline-block bg-brand-gold text-black font-heading font-bold px-8 py-3 rounded-full hover:bg-brand-gold-light transition-colors"
-            >
-              Book a Call
-            </a>
-          </div>
-
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-surface border-t border-white/10 py-16 px-6 text-center">
+        <p className="text-brand-text font-heading font-bold text-2xl md:text-3xl mb-4">
+          Still have a question?
+        </p>
+        <p className="text-brand-text-secondary mb-8">
+          Every enquiry is reviewed personally. You&apos;ll hear back within 24 hours.
+        </p>
+        <Button variant="gold" href="/book-yossi" size="lg">
+          Get in Touch
+        </Button>
+      </section>
     </>
   );
 }
