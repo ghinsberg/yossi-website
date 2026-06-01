@@ -51,6 +51,35 @@ export default function BookYossiPage() {
         </div>
       </section>
 
+      {/* Social proof strip — right above the form */}
+      <section className="max-w-6xl mx-auto px-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            {
+              quote: "Yossi Ghinsberg ranks number one in my experience.",
+              author: "Chris Varelas",
+              role: "Head of National Investment Bank, Citibank",
+            },
+            {
+              quote: "Max scores in every evaluation category. The highest-impact session in the chapter's history.",
+              author: "Juan Federico Salaverria Q.",
+              role: "Education Chair, YPO El Salvador",
+            },
+            {
+              quote: "We were so impressed we invited Yossi back for a second presentation the following day. Unprecedented.",
+              author: "Elmo de Alwis",
+              role: "CEO, Sigma Pharmaceuticals",
+            },
+          ].map((t) => (
+            <div key={t.author} className="bg-white/[0.03] border border-white/10 rounded-xl p-6">
+              <p className="text-brand-text text-sm leading-relaxed mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-brand-gold text-xs font-semibold">{t.author}</p>
+              <p className="text-brand-text-secondary text-xs mt-0.5">{t.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Form + Sidebar */}
       <section className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
