@@ -114,11 +114,11 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Bolivia canoe image */}
+      {/* After the rescue on the Beni */}
       <section className="py-6 bg-brand-bg">
         <img
-          src="/images/adventure/community-house-sjdu.jpg"
-          alt="Meeting at the community house, San José de Uchupiamona"
+          src="/images/adventure/yossi-rescue-beni.jpg"
+          alt="Yossi Ghinsberg after the rescue on the Beni River, Bolivia 1981"
           className="w-full rounded-none md:max-w-5xl md:mx-auto md:rounded-2xl"
         />
       </section>
