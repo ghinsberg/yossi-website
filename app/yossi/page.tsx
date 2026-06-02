@@ -244,7 +244,7 @@ export default function YossiPage() {
         {/* Hero render — full width */}
         <div className="relative w-full overflow-hidden" style={{ maxHeight: "520px" }}>
           <img
-            src="/images/yossi/lino-cambi/summer-evening.png"
+            src="/images/yossi/lino-cambi/summer-evening.jpg"
             alt="Lino Cambi — an evening on the terrace, South Crete"
             className="w-full object-cover object-center"
             style={{ maxHeight: "520px" }}
@@ -294,14 +294,14 @@ export default function YossiPage() {
             <div className="flex flex-col gap-4">
               <div className="rounded-xl overflow-hidden">
                 <img
-                  src="/images/yossi/lino-cambi/suite-daylight.png"
+                  src="/images/yossi/lino-cambi/suite-daylight.jpg"
                   alt="Lino Cambi suite — daylight"
                   className="w-full object-cover"
                 />
               </div>
               <div className="rounded-xl overflow-hidden">
                 <img
-                  src="/images/yossi/lino-cambi/spa-hero.png"
+                  src="/images/yossi/lino-cambi/spa-hero.jpg"
                   alt="Lino Cambi — the spa, cliff above the Libyan Sea"
                   className="w-full object-cover"
                 />
