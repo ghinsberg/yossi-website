@@ -9,6 +9,7 @@ import SocialStrip from "@/components/ui/SocialStrip";
 import Analytics from "@/components/Analytics";
 import Contentsquare from "@/components/Contentsquare";
 import MetaPixel from "@/components/MetaPixel";
+import Preloader from "@/components/Preloader";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
@@ -93,6 +94,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" />
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
+        <Preloader />
         <Analytics />
         <MetaPixel />
         <Contentsquare />
