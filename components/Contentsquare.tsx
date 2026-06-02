@@ -8,7 +8,7 @@ export default function Contentsquare() {
   return (
     <Script
       src={`https://t.contentsquare.net/uxa/${CS_ID}.js`}
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   );
 }

@@ -89,6 +89,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload first hero image to improve LCP */}
+        <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" />
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <Analytics />
