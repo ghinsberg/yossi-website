@@ -114,13 +114,19 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* After the rescue on the Beni */}
+      {/* Jungle Trailer */}
       <section className="py-6 bg-brand-bg">
-        <img
-          src="/images/adventure/yossi-rescue-beni.jpg"
-          alt="Yossi Ghinsberg after the rescue on the Beni River, Bolivia 1981"
-          className="w-full rounded-none md:max-w-5xl md:mx-auto md:rounded-2xl"
-        />
+        <div className="w-full md:max-w-5xl md:mx-auto">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster="/images/adventure/yossi-rescue-beni.jpg"
+            className="w-full rounded-none md:rounded-2xl"
+          >
+            <source src="/videos/jungle-trailer.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
 
       {/* ── THE GROUP COLLAPSED. ── */}
