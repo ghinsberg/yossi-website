@@ -1,67 +1,36 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
   const [done, setDone] = useState(false);
-  const windowLoaded = useRef(false);
-  const barDone = useRef(false);
-
-  const maybeExit = () => {
-    if (windowLoaded.current && barDone.current) {
-      setTimeout(() => {
-        setExiting(true);
-        setTimeout(() => setDone(true), 800);
-      }, 200);
-    }
-  };
 
   useEffect(() => {
-    // Animate progress counter from 0 → 100 over ~1.8s
+    // Animate 0 → 100 over exactly 1.6s — time-based, not load-based.
+    // Waiting for window.load delays LCP measurement and hurts Core Web Vitals.
     let current = 0;
-    const target = 100;
-    const duration = 1800;
-    const stepTime = 16; // ~60fps
+    const duration = 1600;
+    const stepTime = 16;
     const steps = duration / stepTime;
-    const increment = target / steps;
+    const increment = 100 / steps;
 
     const timer = setInterval(() => {
-      current = Math.min(current + increment + Math.random() * 0.5, target);
+      current = Math.min(current + increment + Math.random() * 0.4, 100);
       setProgress(Math.floor(current));
-      if (current >= target) {
+      if (current >= 100) {
         clearInterval(timer);
-        barDone.current = true;
-        maybeExit();
+        // Brief pause at 100%, then fade out
+        setTimeout(() => {
+          setExiting(true);
+          setTimeout(() => setDone(true), 750);
+        }, 150);
       }
     }, stepTime);
 
-    // Window load listener
-    const onLoad = () => {
-      windowLoaded.current = true;
-      maybeExit();
-    };
-
-    if (document.readyState === "complete") {
-      windowLoaded.current = true;
-    } else {
-      window.addEventListener("load", onLoad, { once: true });
-    }
-
-    // Hard fallback — never block user more than 5s
-    const fallback = setTimeout(() => {
-      setProgress(100);
-      setExiting(true);
-      setTimeout(() => setDone(true), 800);
-    }, 5000);
-
-    return () => {
-      clearInterval(timer);
-      clearTimeout(fallback);
-      window.removeEventListener("load", onLoad);
-    };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    return () => clearInterval(timer);
+  }, []);
 
   if (done) return null;
 
