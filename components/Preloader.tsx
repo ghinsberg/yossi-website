@@ -4,24 +4,24 @@ import { useEffect, useState } from "react";
 
 export default function Preloader() {
   const [progress, setProgress] = useState(0);
+  const [visible, setVisible] = useState(false); // starts transparent — LCP fires first
   const [exiting, setExiting] = useState(false);
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    // Animate 0 → 100 over exactly 1.6s — time-based, not load-based.
-    // Waiting for window.load delays LCP measurement and hurts Core Web Vitals.
+    // Fade IN after 300ms — allows LCP element to be measured before the overlay appears
+    const fadeIn = setTimeout(() => setVisible(true), 300);
+
+    // Animate progress 0 → 100 over ~1.6s
     let current = 0;
-    const duration = 1600;
     const stepTime = 16;
-    const steps = duration / stepTime;
-    const increment = 100 / steps;
+    const increment = 100 / (1600 / stepTime);
 
     const timer = setInterval(() => {
       current = Math.min(current + increment + Math.random() * 0.4, 100);
       setProgress(Math.floor(current));
       if (current >= 100) {
         clearInterval(timer);
-        // Brief pause at 100%, then fade out
         setTimeout(() => {
           setExiting(true);
           setTimeout(() => setDone(true), 750);
@@ -29,7 +29,10 @@ export default function Preloader() {
       }
     }, stepTime);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearTimeout(fadeIn);
+      clearInterval(timer);
+    };
   }, []);
 
   if (done) return null;
@@ -46,9 +49,9 @@ export default function Preloader() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        opacity: exiting ? 0 : 1,
-        transition: "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
-        pointerEvents: exiting ? "none" : "all",
+        opacity: exiting ? 0 : visible ? 1 : 0,
+        transition: exiting ? "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)" : "opacity 0.3s ease",
+        pointerEvents: (exiting || !visible) ? "none" : "all",
       }}
     >
       {/* Corner brackets — Bear Grylls-style frame */}

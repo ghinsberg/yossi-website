@@ -28,15 +28,30 @@ export default function Hero() {
 
       {/* Carousel images — crossfade */}
       {images.map((src, i) => (
-        <div
-          key={src}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-          style={{
-            backgroundImage: `url('${src}')`,
-            opacity: i === current ? 1 : 0,
-            zIndex: i === current ? 1 : 0,
-          }}
-        />
+        i === 0 ? (
+          /* First image: real <img> so fetchPriority="high" works and LCP is measurable */
+          <img
+            key={src}
+            src={src}
+            alt=""
+            aria-hidden="true"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000"
+            style={{ opacity: i === current ? 1 : 0, zIndex: i === current ? 1 : 0 }}
+          />
+        ) : (
+          <div
+            key={src}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+            style={{
+              backgroundImage: `url('${src}')`,
+              opacity: i === current ? 1 : 0,
+              zIndex: i === current ? 1 : 0,
+            }}
+          />
+        )
       ))}
 
       {/* Dark overlay */}

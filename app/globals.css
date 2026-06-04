@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
+/* Fonts served via next/font/google in layout.tsx — eliminates render-blocking @import */
 
 @theme {
   --color-brand-bg: #0A0A0A;

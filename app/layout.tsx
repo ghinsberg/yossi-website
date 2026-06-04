@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,6 +11,20 @@ import Analytics from "@/components/Analytics";
 import Contentsquare from "@/components/Contentsquare";
 import MetaPixel from "@/components/MetaPixel";
 import Preloader from "@/components/Preloader";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
@@ -86,12 +101,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${dmSans.variable} ${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload first hero image to improve LCP */}
-        <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" />
+        {/* Preload first hero image with high priority — signals LCP element to browser */}
+        <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" fetchPriority="high" />
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <Preloader />
