@@ -83,6 +83,17 @@ Domain migration is the final step after full QA
 - Confirm NEXT_PUBLIC_YOSSI_AI_URL is set in .env.local
 - Read docs/plans/ before building anything
 
+## Push before reporting done (kaizen — added 2026-06-07)
+
+Every commit must be pushed immediately. Never say "done, check the site" until the push is confirmed.
+
+- After every `git commit`, run `git push origin main` in the same command — not later, not at end of session
+- Before reporting a visual change as live, confirm with `git log origin/main..HEAD` — must be empty
+- When verifying visually, use the live URL (yossighinsberg.com), not localhost — the local dev server may be running a worktree on a different branch
+- If you can't confirm it's live, say so explicitly: "committed but deploy will take ~2 min" not "done"
+
+Real example (2026-06-07): 4 image-positioning commits went unpushed across multiple rounds of fixes. Each time Yossi checked the live site, nothing had changed. The "verification" screenshot came from a stale worktree, not the deployed code. Three wasted exchanges, zero progress on site.
+
 ## Mario Supreme Protocol
 Mario is the lead agent on this site. Before any changes:
 1. Run full audit — Lighthouse, UX, SEO, GEO
