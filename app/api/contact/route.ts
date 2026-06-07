@@ -14,7 +14,8 @@ export async function POST(request: NextRequest) {
     } = body;
 
     // Validate required fields
-    if (!name || !email || !organisation || !eventDate || !eventLocation || !format || !budget) {
+    // eventDate is optional on the form — do not require it here
+    if (!name || !email || !organisation || !eventLocation || !format || !budget) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -47,7 +48,7 @@ export async function POST(request: NextRequest) {
 </div>`;
 
     const { error } = await resend.emails.send({
-      from: "Yossi Website <onboarding@resend.dev>",
+      from: "Yossi Ghinsberg <hello@yossighinsberg.com>",
       to: ["ghinsberg@gmail.com"],
       replyTo: email,
       subject: `Booking Enquiry — ${name}, ${organisation}`,
