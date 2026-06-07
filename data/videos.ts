@@ -5,10 +5,8 @@ export interface Video {
 }
 
 export const videos: Video[] = [
-  // Featured reel
-  { id: "LCRjBVnQ5JM", title: "Speaker Reel", category: "reel" },
-
   // Keynote / speaking clips
+  // Note: bureau-branded reel (LCRjBVnQ5JM) removed — own reel coming soon
   { id: "BDGQx1V1MK0", title: "Stories and Lessons", category: "keynote" },
   { id: "RS3p_8di8WA", title: "Innovation Is Key", category: "keynote" },
   { id: "FINMVryLQmw", title: "Nature Is the Answer", category: "keynote" },
@@ -30,7 +28,8 @@ export const videos: Video[] = [
   { id: "Jc6-JiOZw1Q", title: "Save the Amazon", category: "short" },
 ];
 
-export const featuredReel = videos.find((v) => v.category === "reel")!;
+// featuredReel intentionally undefined until Yossi's own branded reel is ready
+export const featuredReel = videos.find((v) => v.category === "reel") ?? null;
 export const keynoteVideos = videos.filter((v) => v.category === "keynote");
 export const storyVideos = videos.filter((v) => v.category === "story");
 export const shortVideos = videos.filter((v) => v.category === "short");

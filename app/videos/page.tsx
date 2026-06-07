@@ -34,7 +34,7 @@ const videoSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Yossi Ghinsberg — Speaker Videos",
-  description: "Speaker reel, TEDx talk, and keynote highlights from Yossi Ghinsberg.",
+  description: "Keynote highlights and story videos from Yossi Ghinsberg.",
   url: `${BASE_URL}/videos`,
   itemListElement: [
     {
@@ -42,13 +42,13 @@ const videoSchema = {
       position: 1,
       item: {
         "@type": "VideoObject",
-        name: "Yossi Ghinsberg — Speaker Reel",
+        name: "Yossi Ghinsberg — Surviving the Impossible",
         description:
-          "Official speaker reel for Yossi Ghinsberg — survival keynote speaker, bestselling author, and subject of the 2017 Daniel Radcliffe film Jungle. Trusted by Google, Apple, Microsoft, and BMW.",
+          "Yossi Ghinsberg recounts surviving 21 days alone in the Bolivian Amazon — keynote speaker, bestselling author, subject of the 2017 Daniel Radcliffe film Jungle.",
         thumbnailUrl: `${BASE_URL}/images/stage/carousel-1.jpg`,
-        uploadDate: "2024-01-01",
-        embedUrl: "https://www.youtube.com/embed/LCRjBVnQ5JM",
-        contentUrl: "https://www.youtube.com/watch?v=LCRjBVnQ5JM",
+        uploadDate: "2023-01-01",
+        embedUrl: "https://www.youtube.com/embed/hZqjdbmyJKI",
+        contentUrl: "https://www.youtube.com/watch?v=hZqjdbmyJKI",
         author: {
           "@type": "Person",
           "@id": `${BASE_URL}/#person`,

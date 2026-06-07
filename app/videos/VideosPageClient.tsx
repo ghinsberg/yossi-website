@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { featuredReel, keynoteVideos, storyVideos, shortVideos, Video } from "@/data/videos";
+import { keynoteVideos, storyVideos, shortVideos, Video } from "@/data/videos";
 
 function VideoThumbnail({ video }: { video: Video }) {
   const [playing, setPlaying] = useState(false);
@@ -71,20 +71,20 @@ export default function VideosPageClient() {
         </div>
       </section>
 
-      {/* Featured Reel */}
+      {/* Speaker Reel — coming soon */}
       <section className="max-w-4xl mx-auto px-6 mb-20">
-        <div className="aspect-video w-full rounded-2xl overflow-hidden">
-          <iframe
-            src={`https://www.youtube.com/embed/${featuredReel.id}`}
-            title={featuredReel.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
+        <div className="aspect-video w-full rounded-2xl overflow-hidden relative bg-black/40 border border-white/10 flex items-center justify-center">
+          <img
+            src="/images/stage/reel-placeholder.jpg"
+            alt="Yossi Ghinsberg on stage"
+            className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
+          <div className="relative z-10 text-center px-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-brand-gold/70 mb-3">Speaker Reel</p>
+            <p className="text-2xl md:text-3xl font-heading font-bold text-white">Coming Soon</p>
+            <p className="text-brand-text-secondary text-sm mt-2">New reel in production</p>
+          </div>
         </div>
-        <p className="text-center text-brand-text-secondary text-sm mt-4 uppercase tracking-widest">
-          Speaker Reel
-        </p>
       </section>
 
       {/* Keynote Clips */}
