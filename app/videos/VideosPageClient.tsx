@@ -73,17 +73,19 @@ export default function VideosPageClient() {
 
       {/* Speaker Reel — coming soon */}
       <section className="max-w-4xl mx-auto px-6 mb-20">
-        <div className="aspect-video w-full rounded-2xl overflow-hidden relative bg-black/40 border border-white/10 flex items-center justify-center">
+        <div className="relative w-full rounded-2xl overflow-hidden">
           <img
             src="/images/stage/reel-placeholder.jpg"
             alt="Yossi Ghinsberg on stage"
-            className="absolute inset-0 w-full h-full object-cover object-top opacity-30"
-            style={{ transform: "translateY(70px)" }}
+            className="w-full object-cover object-top"
+            style={{ maxHeight: "504px" }}
           />
-          <div className="relative z-10 text-center px-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-brand-gold/70 mb-3">Speaker Reel</p>
-            <p className="text-2xl md:text-3xl font-heading font-bold text-white">Coming Soon</p>
-            <p className="text-brand-text-secondary text-sm mt-2">New reel in production</p>
+          <div className="absolute inset-0 bg-black/40 border border-white/10 flex items-center justify-center">
+            <div className="text-center px-6">
+              <p className="text-xs uppercase tracking-[0.3em] text-brand-gold/70 mb-3">Speaker Reel</p>
+              <p className="text-2xl md:text-3xl font-heading font-bold text-white">Coming Soon</p>
+              <p className="text-brand-text-secondary text-sm mt-2">New reel in production</p>
+            </div>
           </div>
         </div>
       </section>
