@@ -77,8 +77,8 @@ export default function VideosPageClient() {
           <img
             src="/images/stage/reel-placeholder.jpg"
             alt="Yossi Ghinsberg on stage"
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-            style={{ objectPosition: "50% 20%" }}
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-30"
+            style={{ transform: "translateY(70px)" }}
           />
           <div className="relative z-10 text-center px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-brand-gold/70 mb-3">Speaker Reel</p>
