@@ -323,9 +323,17 @@ export default function ChatbotMount() {
         <div className="bg-brand-bg border border-brand-gold/20 rounded-2xl shadow-2xl mb-4 w-80 sm:w-96 flex flex-col overflow-hidden max-h-[32rem]">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-brand-gold/20">
-            <h3 className="text-brand-gold font-heading font-bold text-lg">
-              Yossi.ai
-            </h3>
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/yossi/yossi-ai-avatar.png"
+                alt="Yossi Ghinsberg"
+                className="w-9 h-9 rounded-full object-cover"
+              />
+              <div>
+                <p className="text-brand-gold font-heading font-bold text-sm leading-none">Yossi Ghinsberg</p>
+                <p className="text-brand-text-secondary text-[10px] mt-0.5">Digital twin · Ask me anything</p>
+              </div>
+            </div>
             <button
               onClick={() => setIsOpen(false)}
               className="text-brand-text-secondary hover:text-brand-text transition-colors"
@@ -448,19 +456,33 @@ export default function ChatbotMount() {
         </div>
       )}
 
-      {/* Floating button */}
+      {/* Floating portrait button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 rounded-full bg-brand-gold shadow-lg hover:bg-brand-gold-light transition-all hover:scale-110 flex items-center justify-center"
-        aria-label="Open chat"
+        className="relative w-16 h-16 rounded-full focus:outline-none group"
+        aria-label={isOpen ? "Close chat" : "Talk to Yossi"}
       >
-        <svg viewBox="0 0 24 24" fill="black" className="w-6 h-6">
-          {isOpen ? (
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-          ) : (
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
-          )}
-        </svg>
+        {/* Breathing pulse ring — only when closed */}
+        {!isOpen && (
+          <>
+            <span className="absolute inset-0 rounded-full bg-brand-gold/30 animate-ping" style={{ animationDuration: "2.5s" }} />
+            <span className="absolute inset-[-3px] rounded-full border border-brand-gold/40" />
+          </>
+        )}
+        {/* Portrait */}
+        <img
+          src="/images/yossi/yossi-ai-avatar.png"
+          alt="Talk to Yossi"
+          className="w-16 h-16 rounded-full object-cover shadow-xl transition-transform duration-200 group-hover:scale-105"
+        />
+        {/* Close X overlay when open */}
+        {isOpen && (
+          <span className="absolute inset-0 rounded-full bg-black/60 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5 opacity-80">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+          </span>
+        )}
       </button>
     </div>
   );
