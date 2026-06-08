@@ -1,44 +1,22 @@
 "use client";
 
-import { useState } from "react";
-
 export default function FilmSection() {
-  const [playing, setPlaying] = useState(false);
-
   return (
     <section className="bg-brand-surface py-20 md:py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Photo — becomes the player on click */}
-          <div
-            className="relative group cursor-pointer rounded-2xl overflow-hidden aspect-[4/3]"
-            onClick={() => setPlaying(true)}
-          >
-            {playing ? (
-              <iframe
-                src="https://www.youtube.com/embed/_kHiwHqKFls?autoplay=1"
-                title="Jungle — The Ants"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            ) : (
-              <>
-                <img
-                  src="/images/yossi/daniel-and-yossi.jpg"
-                  alt="Yossi Ghinsberg with Daniel Radcliffe on the set of Jungle, 2016"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-brand-gold flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                    <svg className="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-              </>
-            )}
+          {/* Video — poster is the on-set photo, plays inline */}
+          <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/images/yossi/daniel-and-yossi.jpg"
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/the-ants.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* Text */}
