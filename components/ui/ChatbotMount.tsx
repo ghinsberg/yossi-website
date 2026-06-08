@@ -39,50 +39,59 @@ const WELCOME_MESSAGE: Message = {
     "Hey, so nice to see you. I'd offer you a cup of tea if I could. Since I can't — let's talk. What brings you here?",
 };
 
-// Fix 3 — Availability/calendar guardrail (checked first)
+// Booking/availability guardrail (checked first)
 const AVAILABILITY_KEYWORDS = [
   "available", "availability", "schedule", "calendar", "date", "dates",
   "book you", "book yossi", "when can", "are you free", "open date",
+  // Fee / pricing — must route to booking team, never to AI
+  "fee", "fees", "cost", "costs", "price", "pricing", "rate", "rates",
+  "how much", "what do you charge", "budget", "investment",
   "2025", "2026", "2027", "january", "february", "march", "april", "may",
   "june", "july", "august", "september", "october", "november", "december",
   "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
 ];
 
-// Fix 1 — On-topic whitelist (keynotes, speaking, survival, booking, events)
+// On-topic whitelist (keynotes, speaking, survival, booking, events)
 const RELEVANT_KEYWORDS = [
   // Core topics
   "keynote", "keynotes", "speak", "speaking", "speaker", "talk", "presentation",
   "survival", "survive", "amazon", "jungle", "laws", "philosophy", "wisdom",
-  "book", "booking", "hire", "event", "conference", "fee", "cost", "price",
+  "book", "booking", "hire", "event", "conference",
   "yossi", "ghinsberg", "story", "adventure", "inspiration", "inspirational",
   "motivational", "motivation", "stage", "audience", "corporate", "leadership",
   "resilience", "mindset", "topic", "topics", "program", "programs",
   "who are you", "what do you do", "your work", "your message", "tell me",
   "about you", "your keynote", "what you do", "how you", "your talk",
-  // Social / small talk — let through to AI so it can respond warmly
+  // Geography — needed so territory follow-up answers reach the AI
+  "europe", "north america", "south america", "latin america", "australasia",
+  "australia", "uk", "usa", "canada", "asia", "africa", "middle east",
+  "london", "new york", "sydney", "singapore", "dubai", "israel",
+  "germany", "france", "spain", "italy", "netherlands", "switzerland",
+  // Social / small talk
   "hi", "hey", "hello", "how are", "how is", "how's", "what's up", "sup",
   "good morning", "good evening", "good afternoon", "nice to", "great to",
   "thanks", "thank you", "cheers", "wow", "interesting", "cool", "nice",
-  "who", "what", "where", "when", "why", "how",
+  "who", "what", "where", "when", "why", "how", "i am", "i'm", "we are", "we're",
 ];
 
+// Ask which territory — then the AI handles the follow-up with the right rep
 const AVAILABILITY_RESPONSE =
-  "Dates and availability are handled by my booking team — not by me here. Where in the world are you based?\n\nNorth America: Michelle Carter — Michelle@carterglobalspeakers.com — +1 703 819 2511\n\nEurope & Australasia: Michael Arnot — michael@encorespeakers.com — +61 422 002 685\n\nLatin America: Juanita Cortes — juanita.cortes@smartspeakers.co — +57 313 8985266";
+  "Fees and dates go through my booking team, not through me here. Which part of the world is your event in?";
 
 const OFF_TOPIC_RESPONSE =
   "Ha — I like that question, but I'm probably not the best AI for it. I know Yossi's world well: the jungle, the keynotes, the philosophy. What would you like to know?";
 
 // Fix 2 — System prompt injected on every API call
 const SYSTEM_PROMPT =
-  "You are Yossi Ghinsberg's digital twin on his speaker website at yossighinsberg.com. " +
+  "You are Yossi Ghinsberg's digital twin on his speaker website. " +
   "You speak in Yossi's voice — warm, direct, specific, a little playful. No corporate language. Short sentences. " +
   "Your focus is Yossi's keynotes, survival philosophy, the Laws of the Jungle, booking, and events. " +
-  "Brief social exchanges and small talk are fine — respond warmly and naturally, then gently steer back to what you know. " +
-  "If someone asks about booking or fees, ask where they are in the world and give the right contact: " +
+  "Brief social exchanges and small talk are fine — respond warmly, then gently steer back to what you know. " +
+  "If someone names their territory or location in relation to booking, give ONLY the one relevant contact — not all three: " +
   "North America → Michelle Carter, Michelle@carterglobalspeakers.com, +1 703 819 2511. " +
   "Europe & Australasia → Michael Arnot, michael@encorespeakers.com, +61 422 002 685. " +
   "Latin America → Juanita Cortes, juanita.cortes@smartspeakers.co, +57 313 8985266. " +
-  "Never send people to a URL — they are already on the website. " +
+  "CRITICAL: Never mention any URL, link, web address, or page path. Not /book-yossi, not yossighinsberg.com/anything, not any vercel URL. Nothing. They are already on the website. " +
   "Every response must be 150 words or less. Answer only what was asked. " +
   "One follow-up question maximum at the end if appropriate.";
 
