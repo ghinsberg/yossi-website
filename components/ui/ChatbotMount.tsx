@@ -221,9 +221,15 @@ export default function ChatbotMount() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<ISpeechRecognition | null>(null);
+
+  useEffect(() => {
+    // Detect speech support client-side only — avoids Next.js hydration mismatch
+    setSpeechSupported(!!(window.SpeechRecognition || window.webkitSpeechRecognition));
+  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -258,7 +264,16 @@ export default function ChatbotMount() {
       }, 400);
     };
 
-    recognition.onerror = () => setIsListening(false);
+    recognition.onerror = (event: Event) => {
+      setIsListening(false);
+      const err = (event as unknown as { error?: string }).error;
+      if (err === "not-allowed" || err === "service-not-allowed") {
+        setMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: "Microphone access was blocked. Please allow it in your browser settings and try again." },
+        ]);
+      }
+    };
     recognition.onend = () => setIsListening(false);
 
     recognitionRef.current = recognition;
@@ -403,13 +418,12 @@ export default function ChatbotMount() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder={isListening ? "Listening…" : "Type or speak to Yossi…"}
+                placeholder={isListening ? "Listening…" : "Ask Yossi anything…"}
                 disabled={isLoading}
                 className="flex-1 bg-brand-surface text-brand-text text-sm rounded-full px-4 py-2.5 outline-none focus:ring-2 focus:ring-brand-gold/50 placeholder:text-brand-text-secondary/50 disabled:opacity-50"
               />
               {/* Mic button — only renders if browser supports Web Speech API */}
-              {typeof window !== "undefined" &&
-                (window.SpeechRecognition || window.webkitSpeechRecognition) && (
+              {speechSupported && (
                 <button
                   type="button"
                   onClick={toggleListening}
