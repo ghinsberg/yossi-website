@@ -56,6 +56,15 @@ function TickerContent() {
         {bigDot}
       </span>
 
+      {/* Hollywood film */}
+      <span className="inline-flex items-baseline gap-2">
+        <span className="text-brand-bg font-heading font-black text-base tracking-tight">Jungle</span>
+        <span className="text-brand-bg/80 font-semibold text-xs uppercase tracking-widest">Hollywood Film</span>
+        {dot}
+        <span className="text-brand-bg/60 text-xs uppercase tracking-widest">Starring Daniel Radcliffe</span>
+        {bigDot}
+      </span>
+
       {/* Divider label */}
       <span className="inline-flex items-center mr-6">
         <span className="text-brand-bg/50 text-[10px] uppercase tracking-[0.3em] font-semibold mr-5">

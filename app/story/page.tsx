@@ -230,6 +230,20 @@ export default function StoryPage() {
         </div>
       </section>
 
+      {/* Daniel and Yossi on set */}
+      <section className="bg-brand-light-bg pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <img
+            src="/images/yossi/daniel-and-yossi.jpg"
+            alt="Yossi Ghinsberg with Daniel Radcliffe on the set of Jungle, 2016"
+            className="w-full rounded-2xl"
+          />
+          <p className="text-brand-bg/50 text-xs text-center mt-3 uppercase tracking-widest">
+            On set, 2016 — Yossi with Daniel Radcliffe
+          </p>
+        </div>
+      </section>
+
       {/* ── THE JUNGLE HE GAVE BACK ── */}
       <section className="bg-brand-bg py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
