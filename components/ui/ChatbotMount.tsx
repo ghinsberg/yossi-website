@@ -173,28 +173,37 @@ function SpeakerButton({ text }: { text: string }) {
     <button
       onClick={handleSpeak}
       disabled={state === "loading"}
-      className={`mt-2 ml-1 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+      className={`mt-2 ml-1 flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest transition-all ${
         state === "playing"
           ? "bg-brand-gold text-black"
-          : "bg-brand-surface/60 text-brand-text-secondary/50 hover:bg-brand-gold/20 hover:text-brand-gold"
+          : "bg-brand-surface/80 text-brand-gold/60 border border-brand-gold/20 hover:border-brand-gold/50 hover:text-brand-gold"
       } disabled:opacity-30`}
       aria-label={state === "playing" ? "Stop audio" : "Hear Yossi's voice"}
-      title={state === "playing" ? "Stop" : "Hear Yossi's voice"}
     >
       {state === "loading" && (
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 animate-spin">
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 animate-spin shrink-0">
           <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
         </svg>
       )}
       {state === "playing" && (
-        /* Stop bars */
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 shrink-0">
           <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
         </svg>
       )}
       {state === "idle" && (
-        /* Waveform bars */
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
+        /* Speaker / volume icon */
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 shrink-0">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+          {/* second wave — drawn inline */}
+          <path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/>
+        </svg>
+      )}
+      <span>
+        {state === "loading" ? "Loading…" : state === "playing" ? "Stop" : "Hear Yossi"}
+      </span>
+      {state === "idle" && (
+        /* Waveform bars — hidden, kept for structure */
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 hidden">
           <rect x="2"  y="9"  width="2.5" height="6"  rx="1.25"/>
           <rect x="6"  y="6"  width="2.5" height="12" rx="1.25"/>
           <rect x="10" y="8"  width="2.5" height="8"  rx="1.25"/>
@@ -394,7 +403,7 @@ export default function ChatbotMount() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask Yossi anything..."
+                placeholder={isListening ? "Listening…" : "Type or speak to Yossi…"}
                 disabled={isLoading}
                 className="flex-1 bg-brand-surface text-brand-text text-sm rounded-full px-4 py-2.5 outline-none focus:ring-2 focus:ring-brand-gold/50 placeholder:text-brand-text-secondary/50 disabled:opacity-50"
               />
@@ -405,35 +414,21 @@ export default function ChatbotMount() {
                   type="button"
                   onClick={toggleListening}
                   disabled={isLoading}
-                  className={`w-12 h-12 rounded-full flex items-center justify-center transition-all shrink-0 shadow-md ${
-                    isListening
-                      ? "bg-brand-gold ring-4 ring-brand-gold/30"
-                      : "bg-[#1a2f25] hover:bg-brand-gold/20 hover:ring-2 hover:ring-brand-gold/40"
-                  }`}
-                  aria-label={isListening ? "Stop recording" : "Speak your question"}
-                  title={isListening ? "Listening… click to stop" : "Speak your question"}
+                  className="relative w-12 h-12 rounded-full flex items-center justify-center transition-all shrink-0 disabled:opacity-40"
+                  style={{ background: isListening ? "#B8860B" : "#111" }}
+                  aria-label={isListening ? "Stop listening" : "Speak your question"}
+                  title={isListening ? "Listening — tap to stop" : "Tap to speak"}
                 >
-                  {/* Waveform bars */}
-                  <svg viewBox="0 0 24 24" className={`w-5 h-5 ${isListening ? "text-black" : "text-brand-gold"}`} fill="currentColor">
-                    {isListening ? (
-                      // Animated-style bars when listening
-                      <>
-                        <rect x="3" y="9" width="2.5" height="6" rx="1.25"/>
-                        <rect x="7" y="5" width="2.5" height="14" rx="1.25"/>
-                        <rect x="11" y="7" width="2.5" height="10" rx="1.25"/>
-                        <rect x="15" y="4" width="2.5" height="16" rx="1.25"/>
-                        <rect x="19" y="9" width="2.5" height="6" rx="1.25"/>
-                      </>
-                    ) : (
-                      // Static waveform bars at rest
-                      <>
-                        <rect x="3" y="10" width="2.5" height="4" rx="1.25"/>
-                        <rect x="7" y="7" width="2.5" height="10" rx="1.25"/>
-                        <rect x="11" y="9" width="2.5" height="6" rx="1.25"/>
-                        <rect x="15" y="6" width="2.5" height="12" rx="1.25"/>
-                        <rect x="19" y="10" width="2.5" height="4" rx="1.25"/>
-                      </>
-                    )}
+                  {/* Ripple rings when listening */}
+                  {isListening && (
+                    <>
+                      <span className="absolute inset-0 rounded-full bg-brand-gold/40 animate-ping" style={{ animationDuration: "1s" }} />
+                      <span className="absolute inset-[-6px] rounded-full bg-brand-gold/20 animate-ping" style={{ animationDuration: "1.4s", animationDelay: "0.2s" }} />
+                    </>
+                  )}
+                  {/* Microphone icon */}
+                  <svg viewBox="0 0 24 24" fill="currentColor" className={`w-5 h-5 relative z-10 ${isListening ? "text-black" : "text-brand-gold"}`}>
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z"/>
                   </svg>
                 </button>
               )}
