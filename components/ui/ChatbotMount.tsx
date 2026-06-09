@@ -387,11 +387,39 @@ const CONTACTS: Record<ContactKey, { name: string; territory: string; email: str
   },
 };
 
-function detectContact(text: string): ContactKey | null {
+// Detect from agent response (contact name mentioned)
+function detectContactByName(text: string): ContactKey | null {
   const t = text.toLowerCase();
   if (t.includes("michelle") || t.includes("carter")) return "michelle";
   if (t.includes("michael") || t.includes("arnot")) return "michael";
   if (t.includes("juanita") || t.includes("cortes")) return "juanita";
+  return null;
+}
+
+// Detect from user's message (territory/city mentioned)
+function detectContactByTerritory(text: string): ContactKey | null {
+  const t = text.toLowerCase();
+  if (
+    t.includes("colombia") || t.includes("bogota") || t.includes("medellin") ||
+    t.includes("mexico") || t.includes("brazil") || t.includes("brasil") ||
+    t.includes("argentina") || t.includes("peru") || t.includes("chile") ||
+    t.includes("venezuela") || t.includes("ecuador") || t.includes("bolivia") ||
+    t.includes("latin america") || t.includes("south america")
+  ) return "juanita";
+  if (
+    t.includes("europe") || t.includes(" uk") || t.includes("london") ||
+    t.includes("germany") || t.includes("france") || t.includes("spain") ||
+    t.includes("italy") || t.includes("netherlands") || t.includes("switzerland") ||
+    t.includes("australia") || t.includes("sydney") || t.includes("melbourne") ||
+    t.includes("new zealand") || t.includes("singapore") || t.includes("dubai") ||
+    t.includes("israel") || t.includes("amsterdam") || t.includes("berlin")
+  ) return "michael";
+  if (
+    t.includes("usa") || t.includes("united states") || t.includes("america") ||
+    t.includes("canada") || t.includes("new york") || t.includes("chicago") ||
+    t.includes("los angeles") || t.includes("toronto") || t.includes("miami") ||
+    t.includes("north america")
+  ) return "michelle";
   return null;
 }
 
@@ -438,9 +466,13 @@ function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
     onConnect: () => setError(null),
     onError: (msg) => setError(typeof msg === "string" ? msg : "Connection error. Please try again."),
     onMessage: ({ message, source }) => {
-      if (source !== "ai") return;
-      const detected = detectContact(message);
-      if (detected) setContactCard(detected);
+      if (source === "user") {
+        const detected = detectContactByTerritory(message);
+        if (detected) setContactCard(detected);
+      } else if (source === "ai") {
+        const detected = detectContactByName(message) || detectContactByTerritory(message);
+        if (detected) setContactCard(detected);
+      }
     },
   });
 
