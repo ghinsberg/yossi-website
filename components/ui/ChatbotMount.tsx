@@ -270,15 +270,8 @@ function TextMode({ onSwitchToVoice }: { onSwitchToVoice: () => void }) {
           </span>
           <span className="text-white/20 text-[10px]">· Text</span>
         </div>
-        <button
-          onClick={onSwitchToVoice}
-          className="text-white/30 text-[10px] uppercase tracking-widest hover:text-brand-gold/60 transition-colors flex items-center gap-1"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
-            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z" />
-          </svg>
-          Voice
-        </button>
+        {/* Voice button hidden until voice clone is ready */}
+        <span />
       </div>
 
       {/* Messages */}
@@ -587,7 +580,7 @@ function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
 // ─── Root component ───────────────────────────────────────────────────────────
 function ChatbotInner() {
   const [isOpen, setIsOpen] = useState(false);
-  const [mode, setMode] = useState<"voice" | "text">("voice");
+  const [mode, setMode] = useState<"voice" | "text">("text");
 
   const handleClose = useCallback(() => {
     setIsOpen(false);
@@ -613,11 +606,8 @@ function ChatbotInner() {
             </button>
           </div>
 
-          {mode === "voice" ? (
-            <VoiceMode onSwitchToText={() => setMode("text")} />
-          ) : (
-            <TextMode onSwitchToVoice={() => setMode("voice")} />
-          )}
+          {/* Voice mode temporarily disabled — text only until voice clone is ready */}
+          <TextMode onSwitchToVoice={() => {}} />
         </div>
       )}
 
