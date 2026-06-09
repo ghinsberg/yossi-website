@@ -13,7 +13,7 @@ export default function StructuredData() {
         image: `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`,
         jobTitle: "Keynote Speaker",
         description:
-          "Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon in 1981. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He is a bestselling author, conservation pioneer, and one of the world's most sought-after keynote speakers, trusted by Google, Apple, Microsoft, BMW, and the MDRT. Voted Most Unforgettable Speaker. Equator Prize winner, UNDP 2008.",
+          "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon in 1981. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He is a bestselling author, conservation pioneer, and one of the world's most sought-after keynote speakers, trusted by Google, Apple, Microsoft, BMW, and the MDRT. Voted Most Unforgettable Speaker. Equator Prize winner, UNDP 2008.",
         knowsAbout: [
           "Leadership",
           "Resilience",
@@ -278,7 +278,7 @@ export default function StructuredData() {
           "@id": `${BASE_URL}/#person`,
         },
         description:
-          "The memoir of Yossi Ghinsberg's 21 days alone in the Bolivian Amazon in 1981. Over one million copies sold in 20 languages. Adapted into a 2017 Hollywood film starring Daniel Radcliffe.",
+          "The memoir of Yossi Ghinsberg's 20 days alone in the Bolivian Amazon in 1981. Over one million copies sold in 20 languages. Adapted into a 2017 Hollywood film starring Daniel Radcliffe.",
         isbn: "9781849538824",
         url: "https://www.amazon.com/Jungle-Harrowing-Adventure-Danger-Survival/dp/1849538824",
         inLanguage: "en",

@@ -10,7 +10,7 @@ const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 // Per-keynote meta descriptions — keyword-optimised, 150–160 chars
 const metaDescriptions: Record<string, string> = {
   "be-brave-in-a-new-world":
-    "How to lead with clarity, courage, and creativity when the map runs out. Yossi Ghinsberg's flagship keynote — drawn from 21 days alone in the Bolivian Amazon.",
+    "How to lead with clarity, courage, and creativity when the map runs out. Yossi Ghinsberg's flagship keynote — drawn from 20 days alone in the Bolivian Amazon.",
   "made-not-broken":
     "Resilience, purpose, and the difference between pain and suffering. Yossi Ghinsberg's keynote for teams facing burnout, extreme pressure, and the need to recover.",
   "real-vs-imaginary-survival":

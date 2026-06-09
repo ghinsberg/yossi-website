@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 const comparisons = [
   {
     generic: "A polished talk about resilience theory",
-    yossi: "21 days alone in the Amazon. No food, no map, no rescue.",
+    yossi: "20 days alone in the Amazon. No food, no map, no rescue.",
   },
   {
     generic: "Frameworks borrowed from business books",

@@ -6,7 +6,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -15,7 +15,7 @@ const credentials = [
 export const metadata = {
   title: "Keynote Speaker on Overcoming Adversity | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
+    "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
   keywords: [
     "keynote speaker overcoming adversity",
     "overcoming adversity speaker",
@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: "Keynote Speaker on Overcoming Adversity | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
+      "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
     images: [
       {
         url: OG_IMAGE,
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Keynote Speaker on Overcoming Adversity | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
+      "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -82,7 +82,7 @@ export default function KeynoteSpeakerOvercomingAdversityPage() {
           </h1>
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
             There is a difference between a speaker who studied adversity and
-            one who survived it. Yossi Ghinsberg spent 21 days alone in the
+            one who survived it. Yossi Ghinsberg spent 20 days alone in the
             Bolivian Amazon with no food, no shelter, and no guarantee of
             rescue. He is not speaking from theory.
           </p>
@@ -112,7 +112,7 @@ export default function KeynoteSpeakerOvercomingAdversityPage() {
             <p>
               Overcoming adversity is a phrase that means almost nothing until
               it refers to something specific. Yossi&apos;s specific is 1981,
-              the Bolivian Amazon, and 21 days without food, without rescue,
+              the Bolivian Amazon, and 20 days without food, without rescue,
               and without certainty. Not a hardship story. A working model for
               what the human mind does when the situation becomes genuinely
               critical.

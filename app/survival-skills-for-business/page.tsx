@@ -6,7 +6,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -53,7 +53,7 @@ const skills = [
 export const metadata = {
   title: "Survival Skills for Business — Keynote by Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg translates 21 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
+    "Yossi Ghinsberg translates 20 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
   keywords: [
     "survival skills for business keynote",
     "survival skills leadership",
@@ -63,7 +63,7 @@ export const metadata = {
   openGraph: {
     title: "Survival Skills for Business — Keynote by Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg translates 21 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
+      "Yossi Ghinsberg translates 20 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
     images: [
       {
         url: OG_IMAGE,
@@ -77,7 +77,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Survival Skills for Business — Keynote by Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg translates 21 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
+      "Yossi Ghinsberg translates 20 days of Amazon survival into practical leadership skills for business. A keynote that reframes how teams think about pressure, uncertainty, and decision-making.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -98,7 +98,7 @@ export default function SurvivalSkillsForBusinessPage() {
             Survival Skills for Business
           </h1>
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
-            Yossi Ghinsberg spent 21 days alone in the Bolivian Amazon in 1981.
+            Yossi Ghinsberg spent 20 days alone in the Bolivian Amazon in 1981.
             No food. No map. No rescue coming. What kept him alive are the same
             skills that keep organisations performing under pressure. This
             keynote makes that translation explicit.
@@ -128,7 +128,7 @@ export default function SurvivalSkillsForBusinessPage() {
           <div className="max-w-3xl space-y-6 text-brand-text-secondary text-lg leading-relaxed">
             <p>
               Every survival story contains a set of decisions. Yossi made
-              hundreds of them over 21 days. Some were right. A few were nearly
+              hundreds of them over 20 days. Some were right. A few were nearly
               fatal. The ones that kept him alive were not random. They follow
               patterns. Patterns that appear in every organisation navigating
               genuine pressure.

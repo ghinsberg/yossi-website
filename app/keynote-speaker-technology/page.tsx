@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Keynote Speaker for Technology Conferences | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 21 days alone in the Amazon. A story no product launch panel can match.",
+    "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 20 days alone in the Amazon. A story no product launch panel can match.",
   openGraph: {
     title: "Keynote Speaker for Technology Conferences | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 21 days alone in the Amazon. A story no product launch panel can match.",
+      "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 20 days alone in the Amazon. A story no product launch panel can match.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Keynote Speaker for Technology Conferences | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 21 days alone in the Amazon. A story no product launch panel can match.",
+      "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 20 days alone in the Amazon. A story no product launch panel can match.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Keynote Speaker for Technology Conferences",
   description:
-    "Yossi Ghinsberg delivers keynotes for technology conferences. He has keynoted for Google, Apple, and Microsoft. Grounded in 21 days of survival alone in the Bolivian Amazon, his talks bring human context to the technological moment.",
+    "Yossi Ghinsberg delivers keynotes for technology conferences. He has keynoted for Google, Apple, and Microsoft. Grounded in 20 days of survival alone in the Bolivian Amazon, his talks bring human context to the technological moment.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",

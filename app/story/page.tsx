@@ -7,7 +7,7 @@ const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 export const metadata = {
   title: "The Story of Yossi Ghinsberg",
   description:
-    "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography behind one of the world's most unforgettable speakers.",
+    "From 20 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography behind one of the world's most unforgettable speakers.",
   keywords: [
     "yossi ghinsberg jungle",
     "yossi ghinsberg book jungle",
@@ -20,14 +20,14 @@ export const metadata = {
   openGraph: {
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
+      "From 20 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Yossi Ghinsberg" }],
   },
   twitter: {
     card: "summary_large_image" as const,
     title: "The Story of Yossi Ghinsberg | Yossi Ghinsberg",
     description:
-      "From 21 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
+      "From 20 days alone in the Bolivian Amazon to a bestselling jungle memoir and the Daniel Radcliffe film — the biography of Yossi Ghinsberg.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -40,7 +40,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "The Story of Yossi Ghinsberg — 21 Days Alone in the Amazon",
   description:
-    "From 21 days alone in the Bolivian Amazon in 1981 to a bestselling memoir, a Hollywood film, and four decades of building. The biography of Yossi Ghinsberg.",
+    "From 20 days alone in the Bolivian Amazon in 1981 to a bestselling memoir, a Hollywood film, and four decades of building. The biography of Yossi Ghinsberg.",
   url: `${BASE_URL}/story`,
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -348,7 +348,7 @@ export default function StoryPage() {
                 I Shouldn&apos;t Be Alive
               </p>
               <p className="text-brand-text-secondary text-sm leading-relaxed mb-4">
-                Season 1, Episode 3. The 21 days dramatised for television.
+                Season 1, Episode 3. The 20 days dramatised for television.
                 Twenty-four years after the rescue.
               </p>
               <span className="text-brand-gold text-xs font-semibold uppercase tracking-wider group-hover:underline">

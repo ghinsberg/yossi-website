@@ -44,7 +44,7 @@ const videoSchema = {
         "@type": "VideoObject",
         name: "Yossi Ghinsberg — Surviving the Impossible",
         description:
-          "Yossi Ghinsberg recounts surviving 21 days alone in the Bolivian Amazon — keynote speaker, bestselling author, subject of the 2017 Daniel Radcliffe film Jungle.",
+          "Yossi Ghinsberg recounts surviving 20 days alone in the Bolivian Amazon — keynote speaker, bestselling author, subject of the 2017 Daniel Radcliffe film Jungle.",
         thumbnailUrl: `${BASE_URL}/images/stage/carousel-1.jpg`,
         uploadDate: "2023-01-01",
         embedUrl: "https://www.youtube.com/embed/hZqjdbmyJKI",

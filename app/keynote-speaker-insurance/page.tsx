@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -116,7 +116,7 @@ export default function KeynoteSpeakerInsurancePage() {
               people make when the outcome is genuinely uncertain.
             </p>
             <p>
-              Yossi Ghinsberg spent 21 days alone in the Bolivian Amazon with
+              Yossi Ghinsberg spent 20 days alone in the Bolivian Amazon with
               no food and no rescue. He had no framework. He had no safety net.
               He had nothing except his own judgment and the refusal to stop
               moving. When he tells that story to an insurance audience, the

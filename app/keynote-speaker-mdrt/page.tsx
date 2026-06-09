@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "MDRT Keynote Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
+    "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
   openGraph: {
     title: "MDRT Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
+      "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "MDRT Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
+      "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "MDRT Keynote Speaker",
   description:
-    "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. He is available for MDRT events globally. Grounded in 21 days of survival alone in the Bolivian Amazon and trusted by major financial institutions worldwide.",
+    "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. He is available for MDRT events globally. Grounded in 20 days of survival alone in the Bolivian Amazon and trusted by major financial institutions worldwide.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -117,7 +117,7 @@ export default function KeynoteSpeakerMDRTPage() {
             </p>
             <p>
               His story is not a financial services story. That is exactly why
-              it works for MDRT audiences. He survived 21 days alone in the
+              it works for MDRT audiences. He survived 20 days alone in the
               Bolivian Amazon with no food and no rescue coming. He built a
               career, wrote a book that sold over a million copies, and spent
               decades turning what he learned into content that financial

@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Keynote Speaker for Financial Services | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 21 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
+    "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 20 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
   openGraph: {
     title: "Keynote Speaker for Financial Services | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 21 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
+      "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 20 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Keynote Speaker for Financial Services | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 21 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
+      "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 20 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Keynote Speaker for Financial Services",
   description:
-    "Yossi Ghinsberg delivers keynotes for financial services conferences, including MDRT Main Stage 2025. Grounded in 21 days of survival alone in the Bolivian Amazon. Trusted by major financial institutions across Asia Pacific, North America, and Europe.",
+    "Yossi Ghinsberg delivers keynotes for financial services conferences, including MDRT Main Stage 2025. Grounded in 20 days of survival alone in the Bolivian Amazon. Trusted by major financial institutions across Asia Pacific, North America, and Europe.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -112,7 +112,7 @@ export default function KeynoteSpeakerFinancialServicesPage() {
               skeptical, and they have heard a lot of speakers. What Yossi brings
               is not technique or theory. He brings a story that makes a room go
               quiet. In 1981, at 22 years old, he got lost in the Bolivian Amazon
-              for 21 days. No food. No map. No certainty of rescue. He came out
+              for 20 days. No food. No map. No certainty of rescue. He came out
               the other side and has spent decades turning what he learned into
               one of the most requested keynotes on the international circuit.
             </p>

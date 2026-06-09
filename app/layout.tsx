@@ -29,7 +29,7 @@ const inter = Inter({
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 const DESCRIPTION =
-  "Yossi Ghinsberg survived 21 days alone in the Amazon. His book sold over a million copies and became a Hollywood film. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more. He speaks to audiences of 10,000 and leaves them permanently changed.";
+  "Yossi Ghinsberg survived 20 days alone in the Amazon. His book sold over a million copies and became a Hollywood film. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more. He speaks to audiences of 10,000 and leaves them permanently changed.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

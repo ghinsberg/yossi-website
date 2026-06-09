@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -116,7 +116,7 @@ export default function StressManagementSpeakerPage() {
               to disease of body, mind, and spirit.
             </p>
             <p>
-              Yossi knows real survival. In 1981, he spent 21 days alone in the
+              Yossi knows real survival. In 1981, he spent 20 days alone in the
               Bolivian Amazon with no food and no rescue coming. He knows what
               the survival system feels like when the threat is real, and he
               knows the exact distinction between that and the chronic low-grade

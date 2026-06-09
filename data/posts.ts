@@ -70,7 +70,7 @@ WHAT A GREAT SPEAKER LOOKS LIKE
 
 They have a story that is genuinely theirs. They can tell you specifically how it connects to what your audience is facing. They ask questions about your people before they talk about their content. They make it easy on you logistically. They show up early, stay late if you need them to, and leave the room in better shape than they found it.
 
-Yossi Ghinsberg survived 21 days alone in the Amazon with no food, no rescue, and no way out. He has been briefing his talk for four decades and still asks every organiser the same question: what do your people actually need to hear right now? That is the starting point. The rest follows from the answer.
+Yossi Ghinsberg survived 20 days alone in the Amazon with no food, no rescue, and no way out. He has been briefing his talk for four decades and still asks every organiser the same question: what do your people actually need to hear right now? That is the starting point. The rest follows from the answer.
 
 For a full overview of Yossi's keynote programs, visit yossighinsberg.com/keynotes.`,
   },
@@ -98,7 +98,7 @@ WHY THE BODY RESPONDS DIFFERENTLY
 
 When you hear someone describe a spreadsheet strategy for resilience, your brain processes it as information. You might take notes. You might nod. Some of it might stick.
 
-When you hear someone describe being alone in the Amazon for 21 days with no food, no shelter they did not build themselves, and no knowledge that anyone was looking for them, something different happens. Your nervous system engages. Your breath changes. The room goes quiet in a particular way — not because people are bored, but because they are somewhere else entirely.
+When you hear someone describe being alone in the Amazon for 20 days with no food, no shelter they did not build themselves, and no knowledge that anyone was looking for them, something different happens. Your nervous system engages. Your breath changes. The room goes quiet in a particular way — not because people are bored, but because they are somewhere else entirely.
 
 That is not theatre. It is physiology. Real stories activate a different part of the brain from frameworks and models. The memory they create is not the same kind of memory. It does not fade the same way.
 
@@ -108,7 +108,7 @@ THE AMAZON. THE 21 DAYS. WHAT IT PRODUCED.
 
 In 1981, Yossi Ghinsberg walked into the Bolivian Amazon with three other men. The group separated. The guide disappeared. When the raft hit a waterfall on the Tuichi River, Yossi and his companion Kevin Gale were split apart. Kevin made it out. Yossi did not know that. He was alone, on the wrong side of an impassable waterfall, in a rainforest with no trail and no way to signal for help.
 
-He spent 21 days alone. He lost 18 kilograms. He hallucinated. He built shelters from leaves and branches. He ate what he could find. He woke one night to find a jaguar watching him — and drove it back with a mosquito repellent flamethrower. He kept moving because he understood that stopping meant accepting he would not be found.
+He spent 20 days alone. He lost 18 kilograms. He hallucinated. He built shelters from leaves and branches. He ate what he could find. He woke one night to find a jaguar watching him — and drove it back with a mosquito repellent flamethrower. He kept moving because he understood that stopping meant accepting he would not be found.
 
 He was found. Kevin and a group of local villagers, who refused to abandon the search, pulled him from the bank of the river on day 21.
 
@@ -131,7 +131,7 @@ Learn more about Yossi's survival story at yossighinsberg.com/story.`,
     readTime: "8 min read",
     category: "Leadership",
     excerpt:
-      "In 1981 I spent 21 days alone in the Bolivian Amazon. No food. No rescue coming. What kept me alive still shapes everything I say on stage.",
+      "In 1981 I spent 20 days alone in the Bolivian Amazon. No food. No rescue coming. What kept me alive still shapes everything I say on stage.",
     keywords: [
       "amazon survival story",
       "survival leadership lessons",
@@ -262,7 +262,7 @@ The Amazon rainforest is approximately four billion years old. In that time, it 
 
 Organisations pay consulting firms significant amounts of money to solve problems the Amazon solved before humans existed.
 
-After my 21 days alone in the Bolivian Amazon in 1981, I spent years thinking about what had kept me alive. Eventually I wrote a book about it: Laws of the Jungle. Nine principles drawn from how the jungle actually operates. Not metaphors. Not analogies stretched thin. Observations from an ecosystem that has figured things out.
+After my 20 days alone in the Bolivian Amazon in 1981, I spent years thinking about what had kept me alive. Eventually I wrote a book about it: Laws of the Jungle. Nine principles drawn from how the jungle actually operates. Not metaphors. Not analogies stretched thin. Observations from an ecosystem that has figured things out.
 
 Here are four of the nine, and what they mean for the people who lead teams, organisations, and cultures.
 
@@ -333,7 +333,7 @@ Financial professionals spend their working lives evaluating risk. Not as an abs
 
 What lands with this audience is a speaker who has faced risk with no safety net, no hedge, and no theoretical framework, and can articulate specifically what happened, what the decision process was, and what the outcome cost. That is a conversation they understand.
 
-When Yossi Ghinsberg talks about being alone in the Amazon for 21 days with no rescue planned and no food supply, he is not speaking metaphorically about risk. He is describing 21 days of decision-making under conditions where every decision had a physical consequence. That is a language financial professionals recognise immediately. The resonance is not because they face physical survival situations. It is because they understand, better than most, what it means when the cost of a wrong decision is not theoretical.
+When Yossi Ghinsberg talks about being alone in the Amazon for 20 days with no rescue planned and no food supply, he is not speaking metaphorically about risk. He is describing 20 days of decision-making under conditions where every decision had a physical consequence. That is a language financial professionals recognise immediately. The resonance is not because they face physical survival situations. It is because they understand, better than most, what it means when the cost of a wrong decision is not theoretical.
 
 WHAT FINANCIAL SERVICES CONFERENCES ACTUALLY NEED FROM A KEYNOTE
 
@@ -496,7 +496,7 @@ The main stage at MDRT has held up to 10,000 attendees. That number does not pre
 
 The first time I stood on a stage of that scale, what I noticed was not nerves but calibration. Everything needs to land differently at that scale. The pauses are longer. The silence between sentences does the work. A story that moves 300 people will move 10,000 differently, not more or less, but differently, with a particular collective quality that you can feel from the stage.
 
-When I told the Amazon story in 2025, the separation on the river, the 21 days, the decision on day eleven when I almost stopped, the room went to a place that I have come to recognise after decades of telling this story. Not silence as absence. Silence as presence. The audience is somewhere else for a period of time, and then they come back, and what they bring back with them is the thing that makes this work meaningful.
+When I told the Amazon story in 2025, the separation on the river, the 20 days, the decision on day eleven when I almost stopped, the room went to a place that I have come to recognise after decades of telling this story. Not silence as absence. Silence as presence. The audience is somewhere else for a period of time, and then they come back, and what they bring back with them is the thing that makes this work meaningful.
 
 WHY THIS STORY CONNECTS WITH THIS AUDIENCE
 
@@ -534,9 +534,9 @@ Yossi Ghinsberg has spoken at MDRT and at major financial services conferences g
 
 October 1981. The Tuichi River, Bolivia. The raft went over a waterfall. When Yossi Ghinsberg surfaced, he was alone on the wrong side, in a jungle with no trail, no food, and no way to signal for help.
 
-What followed was 21 days of decision-making under conditions that removed every scaffold we usually rely on: information, advisors, feedback loops, precedent. Every decision was made with incomplete data, in real time, with physical consequences that could not be reversed.
+What followed was 20 days of decision-making under conditions that removed every scaffold we usually rely on: information, advisors, feedback loops, precedent. Every decision was made with incomplete data, in real time, with physical consequences that could not be reversed.
 
-Those 21 days produced three observations about leading under uncertainty that have not changed in 40 years of being tested against boardrooms, strategy sessions, and crisis conversations.
+Those 20 days produced three observations about leading under uncertainty that have not changed in 40 years of being tested against boardrooms, strategy sessions, and crisis conversations.
 
 OBSERVATION ONE: THE COST OF WAITING COMPOUNDS
 
@@ -653,7 +653,7 @@ Yossi Ghinsberg speaks exclusively in keynote format: opening or closing plenary
     readTime: "8 min read",
     category: "Leadership",
     excerpt:
-      "In 1981, Yossi Ghinsberg walked into the Bolivian Amazon with three other men. He spent 21 days alone. What happened next took four decades to fully understand.",
+      "In 1981, Yossi Ghinsberg walked into the Bolivian Amazon with three other men. He spent 20 days alone. What happened next took four decades to fully understand.",
     keywords: [
       "amazon rainforest survival story",
       "Yossi Ghinsberg amazon",
@@ -662,7 +662,7 @@ Yossi Ghinsberg speaks exclusively in keynote format: opening or closing plenary
     ],
     content: `THE AMAZON SURVIVAL STORY THAT BECAME A HOLLYWOOD FILM
 
-In October 1981, a 22-year-old Israeli traveller named Yossi Ghinsberg walked into the Bolivian Amazon with three companions. He came out alone, six weeks later, having spent 21 days without food, shelter, or any knowledge that anyone was looking for him. He weighed 18 kilograms less than when he had entered. He was alive, which had not seemed likely for most of those 21 days.
+In October 1981, a 22-year-old Israeli traveller named Yossi Ghinsberg walked into the Bolivian Amazon with three companions. He came out alone, six weeks later, having spent 20 days without food, shelter, or any knowledge that anyone was looking for him. He weighed 18 kilograms less than when he had entered. He was alive, which had not seemed likely for most of those 20 days.
 
 That story became a book, published in Hebrew in 1985 and eventually translated into more than 30 languages. It became a Hollywood film in 2017, Jungle, directed by Greg McLean and starring Daniel Radcliffe as Yossi. And it became the foundation of a speaking career that has taken Yossi to more than 70 countries and to the main stages of some of the largest conferences in the world.
 
@@ -684,7 +684,7 @@ There is no map in existence that shows the waterfall Yossi and Kevin found on t
 
 He was alone. He had no food. He had a mosquito repellent, a lighter, a small bag of personal items. He had no way of knowing whether Kevin had survived, no way of signalling for help, and no knowledge of how far he was from any human settlement.
 
-What followed were 21 days that have since been described in his book and depicted in the film with varying degrees of accuracy. The real account is available in the book. The film captures the spirit of it while compressing and dramatising the timeline as films do.
+What followed were 20 days that have since been described in his book and depicted in the film with varying degrees of accuracy. The real account is available in the book. The film captures the spirit of it while compressing and dramatising the timeline as films do.
 
 The facts that matter: Yossi lost nearly 20 kilograms. He ate what he could find, which was not enough. He built shelters each night from branches and leaves. He followed the river because he understood that rivers lead to people. He hallucinated during the worst of the fever. He drove a jaguar back from his campsite using mosquito repellent as a makeshift flamethrower, a real incident, not a creative embellishment. And he came close, on at least one occasion, to accepting that he would not be found.
 
@@ -804,7 +804,7 @@ In 1981, in the Bolivian jungle, Yossi Ghinsberg encountered genuine threats. A 
 
 His nervous system activated appropriately. The cortisol was warranted. The redirected blood flow was the right response. The fear was accurate.
 
-What he also encountered, through 21 days of that environment, was the capacity to distinguish between the threats that required immediate physical response and the fears that did not. That distinction is not taught by tips. It is developed through a relationship with the body that comes from being forced to listen to it carefully.
+What he also encountered, through 20 days of that environment, was the capacity to distinguish between the threats that required immediate physical response and the fears that did not. That distinction is not taught by tips. It is developed through a relationship with the body that comes from being forced to listen to it carefully.
 
 When Yossi speaks about what he calls Real versus Imaginary Survival, the core of the talk is not advice. It is a reframe. The question is not "how do you manage stress?" The question is "what is your body actually responding to, and is that response accurate?" Once an audience can sit with that question specifically, applied to their own daily experience of perceived threat, something begins to shift.
 
@@ -917,7 +917,7 @@ This is the distinction that matters. Not what happened. What was done with it.
 
 THE AMAZON WAS NOT THE POINT
 
-Yossi Ghinsberg spent 21 days alone in the Bolivian Amazon in 1981. That story is extraordinary. It became a book. It became a film. It has been told on main stages at MDRT, at global insurance conferences, at leadership summits, at technology companies and banks and health systems. The story travels.
+Yossi Ghinsberg spent 20 days alone in the Bolivian Amazon in 1981. That story is extraordinary. It became a book. It became a film. It has been told on main stages at MDRT, at global insurance conferences, at leadership summits, at technology companies and banks and health systems. The story travels.
 
 But the Amazon is not the point of Yossi's speaking. It is the context. The point is what 40 years of examining that experience, in conversation with audiences from every background and industry, has produced in terms of specific, transferable observations about how human beings behave under genuine pressure.
 

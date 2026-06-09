@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Leadership Keynote Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+    "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {
     title: "Leadership Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Leadership Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a leadership keynote speaker who led under real uncertainty. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Leadership Keynote Speaker",
   description:
-    "Yossi Ghinsberg delivers leadership keynotes grounded in 21 days of survival alone in the Bolivian Amazon. Decision-making under uncertainty. Navigation without a map. Real leadership content from a real situation.",
+    "Yossi Ghinsberg delivers leadership keynotes grounded in 20 days of survival alone in the Bolivian Amazon. Decision-making under uncertainty. Navigation without a map. Real leadership content from a real situation.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -113,7 +113,7 @@ export default function LeadershipKeynoteSpeakerPage() {
               or someone else's organisation. Yossi's are drawn from the moment
               the map ran out. In 1981, he was 22 years old and lost in the
               Bolivian Amazon. No guide. No radio. No way to know which
-              direction was out. The decisions he made in those three weeks
+              direction was out. The decisions he made in those 20 days
               are the same decisions leaders face in disruption: when to move,
               when to stop, how to stay clear-headed when clarity is the one
               thing in short supply.

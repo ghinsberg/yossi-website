@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Survival Keynote Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+    "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {
     title: "Survival Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Survival Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a survival keynote speaker who got lost, not just adventurous. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Survival Keynote Speaker",
   description:
-    "Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon with no food and no rescue. As a survival keynote speaker, he brings the raw reality of that experience and translates it into content that changes how audiences face their own challenges.",
+    "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon with no food and no rescue. As a survival keynote speaker, he brings the raw reality of that experience and translates it into content that changes how audiences face their own challenges.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -81,7 +81,7 @@ export default function SurvivalKeynoteSpeakerPage() {
           </h1>
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
             Most survival speakers did an expedition. Yossi Ghinsberg got lost.
-            21 days alone in the Bolivian Amazon with no food and no rescue
+            20 days alone in the Bolivian Amazon with no food and no rescue
             coming. That distinction is what makes audiences lean forward.
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function SurvivalKeynoteSpeakerPage() {
               An expedition has a plan. Yossi's story had none. In 1981, he was
               22 years old, trekking in the Bolivian Amazon when the group
               split up and the river took him somewhere with no path back. No
-              food. No map. No one who knew exactly where he was. For 21 days
+              food. No map. No one who knew exactly where he was. For 20 days
               he kept moving, kept choosing, kept finding reasons to take the
               next step. Eventually, a search party found him.
             </p>
@@ -119,7 +119,7 @@ export default function SurvivalKeynoteSpeakerPage() {
               The difference between a planned expedition and an unplanned
               survival is the same difference audiences feel when they hear
               him speak. There was no exit strategy. No support crew. No way to
-              tap out. What Yossi learned in those three weeks, he learned
+              tap out. What Yossi learned in those 20 days, he learned
               because the alternative was not learning it. That is what lands
               in the room. Not inspiration. Proof.
             </p>

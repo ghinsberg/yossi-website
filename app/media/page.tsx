@@ -100,7 +100,7 @@ export default function MediaPage() {
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 The gripping true story of survival that captivated readers
-                worldwide. Lost and alone in the Bolivian Amazon for 21 days,
+                worldwide. Lost and alone in the Bolivian Amazon for 20 days,
                 Yossi faced starvation, predators, and the limits of human
                 endurance &mdash; and emerged with a story that changed millions
                 of lives.
@@ -245,7 +245,7 @@ export default function MediaPage() {
               Yossi&apos;s survival story was dramatised for the hit Discovery
               Channel series that chronicles real-life tales of people who
               narrowly escaped death. The episode takes viewers deep into the
-              Bolivian Amazon, recreating the 21 days that would change
+              Bolivian Amazon, recreating the 20 days that would change
               Yossi&apos;s life forever.
             </p>
 

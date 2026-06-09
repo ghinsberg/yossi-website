@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,7 +16,7 @@ const credentials = [
 export const metadata = {
   title: "Amazon Survival Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
+    "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
   keywords: [
     "amazon survival speaker",
     "amazon jungle survival story speaker",
@@ -27,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: "Amazon Survival Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
+      "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
     images: [
       {
         url: OG_IMAGE,
@@ -41,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Amazon Survival Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
+      "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -54,7 +54,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Amazon Survival Keynote Speaker",
   description:
-    "Yossi Ghinsberg delivers keynotes grounded in 21 days of real survival alone in the Bolivian Amazon in 1981. Not a story about adventure in general. The Tuichi River. The waterfall. Twenty-one days before rescue.",
+    "Yossi Ghinsberg delivers keynotes grounded in 20 days of real survival alone in the Bolivian Amazon in 1981. Not a story about adventure in general. The Tuichi River. The waterfall. Twenty-one days before rescue.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -89,7 +89,7 @@ export default function AmazonSurvivalSpeakerPage() {
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
             In 1981, Yossi Ghinsberg was separated from his companions in the
             Bolivian Amazon. No food. No shelter. No rescue coming. He survived
-            21 days alone before a search party found him. That is the story he
+            20 days alone before a search party found him. That is the story he
             brings to corporate audiences worldwide.
           </p>
         </div>
@@ -124,7 +124,7 @@ export default function AmazonSurvivalSpeakerPage() {
               waterfall. When the river released him, he was alone.
             </p>
             <p>
-              What followed was 21 days without food, without contact, and
+              What followed was 20 days without food, without contact, and
               without any certainty he would be found. He built fires. He ate
               what he could. He hallucinated. He moved when moving was all he
               had. On day 21, Kevin Gale and a group of indigenous villagers

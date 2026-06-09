@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -63,7 +63,7 @@ export default function AdaptabilityKeynoteSpeakerPage() {
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
             Adaptability is not a personality trait. It is a skill. You develop
             it under pressure, or you don&apos;t. In 1981, Yossi Ghinsberg had
-            21 days alone in the Bolivian Amazon to develop it. What he learned
+            20 days alone in the Bolivian Amazon to develop it. What he learned
             is what he brings to organisations navigating rapid change.
           </p>
         </div>

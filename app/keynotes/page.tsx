@@ -8,17 +8,17 @@ import TestimonialCard from "@/components/ui/TestimonialCard";
 export const metadata = {
   title: "Keynote Programs",
   description:
-    "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
+    "Three keynotes from Yossi Ghinsberg, survivor of 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   openGraph: {
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Keynote Programs | Yossi Ghinsberg",
     description:
-      "Three keynotes from Yossi Ghinsberg, survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
+      "Three keynotes from Yossi Ghinsberg, survivor of 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, BMW, and more.",
   },
 };
 

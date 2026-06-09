@@ -6,7 +6,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -33,7 +33,7 @@ const principles = [
 export const metadata = {
   title: "Power to Survive — Yossi Ghinsberg",
   description:
-    "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 21 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
+    "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 20 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
   keywords: [
     "power to survive keynote",
     "power to survive yossi ghinsberg",
@@ -42,7 +42,7 @@ export const metadata = {
   openGraph: {
     title: "Power to Survive — Yossi Ghinsberg",
     description:
-      "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 21 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
+      "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 20 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
     images: [
       {
         url: OG_IMAGE,
@@ -56,7 +56,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Power to Survive — Yossi Ghinsberg",
     description:
-      "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 21 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
+      "Power to Survive is Yossi Ghinsberg's proprietary keynote framework — drawn from 20 days alone in the Amazon. The survival principles that apply directly to leadership and business.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -109,7 +109,7 @@ export default function PowerToSurvivePage() {
               Power to Survive is Yossi Ghinsberg&apos;s proprietary keynote
               concept, developed over four decades of speaking to leaders,
               teams, and organisations under pressure. It is not a framework
-              invented in a conference room. It was extracted from 21 days
+              invented in a conference room. It was extracted from 20 days
               of actual survival in the Bolivian Amazon and refined through
               thousands of hours on stage.
             </p>

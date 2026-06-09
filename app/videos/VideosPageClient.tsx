@@ -104,7 +104,7 @@ export default function VideosPageClient() {
       <section className="max-w-6xl mx-auto px-6 mb-20">
         <h2 className="text-2xl font-heading font-bold mb-2">The Story</h2>
         <p className="text-brand-text-secondary mb-8">
-          21 days alone in the Amazon. A bestselling book. A Hollywood film starring Daniel Radcliffe.
+          20 days alone in the Amazon. A bestselling book. A Hollywood film starring Daniel Radcliffe.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {storyVideos.map((v) => (

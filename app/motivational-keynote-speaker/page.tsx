@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Motivational Keynote Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+    "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {
     title: "Motivational Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Motivational Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 21 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Motivational Keynote Speaker",
   description:
-    "Yossi Ghinsberg delivers motivational keynotes that produce perspective shifts, not short-lived feelings. Grounded in 21 days of real survival alone in the Bolivian Amazon.",
+    "Yossi Ghinsberg delivers motivational keynotes that produce perspective shifts, not short-lived feelings. Grounded in 20 days of real survival alone in the Bolivian Amazon.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -111,7 +111,7 @@ export default function MotivationalKeynoteSpeakerPage() {
               The problem with most motivational keynotes is not the speaker.
               It is what a motivation that doesn't come from anything real can
               actually change. Yossi's motivation is not performed. It comes
-              from a specific place: 21 days alone in the Bolivian Amazon, no
+              from a specific place: 20 days alone in the Bolivian Amazon, no
               food, no rescue, no certainty about whether he would make it out.
               He did. That is where the content comes from.
             </p>

@@ -105,7 +105,7 @@ export const speakerLocations: SpeakerLocation[] = [
     region: "North America",
     agent: "carter",
     intro:
-      "Los Angeles has no shortage of storytellers. Yossi's is the one that actually happened, 21 days alone in the Amazon, with no rescue coming.",
+      "Los Angeles has no shortage of storytellers. Yossi's is the one that actually happened, 20 days alone in the Amazon, with no rescue coming.",
   },
   {
     slug: "toronto",

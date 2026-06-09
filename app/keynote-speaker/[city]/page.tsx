@@ -31,7 +31,7 @@ const agentDetails = {
 };
 
 const credentials = [
-  "Survived 21 days alone in the Amazon",
+  "Survived 20 days alone in the Amazon",
   "Book sold 1M+ copies worldwide",
   "Voted Most Unforgettable Speaker",
   "Trusted by Google, Apple, Microsoft, BMW",
@@ -51,7 +51,7 @@ export async function generateMetadata({
   if (!location) return {};
 
   const title = `Keynote Speaker ${location.city} | Yossi Ghinsberg`;
-  const description = `Yossi Ghinsberg, keynote speaker in ${location.city}. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.`.slice(
+  const description = `Yossi Ghinsberg, keynote speaker in ${location.city}. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.`.slice(
     0,
     155
   );
@@ -101,7 +101,7 @@ export default async function CityKeynotePage({
     "@context": "https://schema.org",
     "@type": "Service",
     name: `Keynote Speaker ${location.city}`,
-    description: `Yossi Ghinsberg, keynote speaker available in ${location.city}, ${location.country}. Survivor of 21 days alone in the Amazon. Voted Most Unforgettable Speaker.`,
+    description: `Yossi Ghinsberg, keynote speaker available in ${location.city}, ${location.country}. Survivor of 20 days alone in the Amazon. Voted Most Unforgettable Speaker.`,
     serviceType: "Keynote Speaking",
     provider: {
       "@type": "Person",
@@ -218,13 +218,13 @@ export default async function CityKeynotePage({
               The story behind every keynote
             </p>
             <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">
-              A keynote built from 21 days alone in the Amazon.
+              A keynote built from 20 days alone in the Amazon.
             </h2>
             <div className="space-y-4 text-brand-text-secondary text-lg leading-relaxed">
               <p>
                 In 1981, Yossi Ghinsberg was 22 years old. He got lost in the
                 Bolivian Amazon with no food, no map, and no rescue coming. He
-                survived 21 days alone before being found.
+                survived 20 days alone before being found.
               </p>
               <p>
                 His book about that experience has sold over a million copies.

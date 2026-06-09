@@ -7,7 +7,7 @@ const BASE_URL =
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
 
 const credentials = [
-  "21 days alone in the Amazon",
+  "20 days alone in the Amazon",
   "1M+ books sold",
   "Voted Most Unforgettable Speaker",
   "Google / Apple / Microsoft / BMW",
@@ -16,11 +16,11 @@ const credentials = [
 export const metadata = {
   title: "Resilience Keynote Speaker | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is a resilience keynote speaker who lived it. 21 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
+    "Yossi Ghinsberg is a resilience keynote speaker who lived it. 20 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {
     title: "Resilience Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a resilience keynote speaker who lived it. 21 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a resilience keynote speaker who lived it. 20 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [
       {
         url: OG_IMAGE,
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Resilience Keynote Speaker | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is a resilience keynote speaker who lived it. 21 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is a resilience keynote speaker who lived it. 20 days alone in the Amazon, no food, no rescue. Trusted by Google, Apple, Microsoft, and BMW.",
     images: [OG_IMAGE],
   },
   alternates: {
@@ -47,7 +47,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Resilience Keynote Speaker",
   description:
-    "Yossi Ghinsberg delivers resilience keynotes grounded in 21 days of real survival alone in the Bolivian Amazon. Not a framework. A lived experience that reframes how audiences see their own challenges.",
+    "Yossi Ghinsberg delivers resilience keynotes grounded in 20 days of real survival alone in the Bolivian Amazon. Not a framework. A lived experience that reframes how audiences see their own challenges.",
   serviceType: "Keynote Speaking",
   provider: {
     "@type": "Person",
@@ -81,7 +81,7 @@ export default function ResilienceKeynoteSpeakerPage() {
           </h1>
           <p className="text-xl text-brand-text-secondary mt-6 max-w-3xl leading-relaxed">
             Most resilience keynotes are frameworks. Yossi Ghinsberg's is lived
-            experience. He spent 21 days alone in the Bolivian Amazon with no
+            experience. He spent 20 days alone in the Bolivian Amazon with no
             food, no map, and no rescue coming. That is where the content comes
             from.
           </p>
@@ -114,7 +114,7 @@ export default function ResilienceKeynoteSpeakerPage() {
               you are not sure you will make it. Yossi knows the second kind.
               In 1981, he got lost in the Bolivian Amazon. No food. No contact
               with the outside world. No guarantee he would be found. He
-              survived 21 days alone before a search party reached him.
+              survived 20 days alone before a search party reached him.
             </p>
             <p>
               That experience is not the speech. It is the proof behind the

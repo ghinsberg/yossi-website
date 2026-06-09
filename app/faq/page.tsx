@@ -58,7 +58,7 @@ const faqs = [
     items: [
       {
         q: "Who is Yossi Ghinsberg?",
-        a: "In 1981, at age 22, Yossi Ghinsberg survived 21 days alone in the Bolivian Amazon — no food, no fire, no rescue. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He has since spoken to hundreds of thousands of people across six continents, been voted Most Unforgettable Speaker, and built conservation and community projects in the Amazon.",
+        a: "In 1981, at age 22, Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon — no food, no fire, no rescue. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He has since spoken to hundreds of thousands of people across six continents, been voted Most Unforgettable Speaker, and built conservation and community projects in the Amazon.",
       },
       {
         q: "What companies has Yossi spoken for?",

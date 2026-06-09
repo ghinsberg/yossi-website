@@ -8,17 +8,17 @@ const BASE_URL =
 export const metadata = {
   title: "Keynote Speaker — International | Yossi Ghinsberg",
   description:
-    "Yossi Ghinsberg is available to speak internationally. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
+    "Yossi Ghinsberg is available to speak internationally. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {
     title: "Keynote Speaker — International | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is available to speak internationally. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is available to speak internationally. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Keynote Speaker — International | Yossi Ghinsberg",
     description:
-      "Yossi Ghinsberg is available to speak internationally. Survived 21 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
+      "Yossi Ghinsberg is available to speak internationally. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
   },
   alternates: {
     canonical: `${BASE_URL}/keynote-speaker`,
@@ -64,7 +64,7 @@ export default function KeynoteSpeakerHubPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "Survived 21 days alone in the Amazon",
+              "Survived 20 days alone in the Amazon",
               "Book sold 1M+ copies worldwide",
               "Voted Most Unforgettable Speaker",
               "Trusted by Google, Apple, Microsoft, BMW",
