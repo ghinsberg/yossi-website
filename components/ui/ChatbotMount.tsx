@@ -360,13 +360,88 @@ function TextMode({ onSwitchToVoice }: { onSwitchToVoice: () => void }) {
   );
 }
 
+// ─── Booking contacts ─────────────────────────────────────────────────────────
+type ContactKey = "michelle" | "michael" | "juanita";
+
+const CONTACTS: Record<ContactKey, { name: string; territory: string; email: string; phone: string; phoneRaw: string }> = {
+  michelle: {
+    name: "Michelle Carter",
+    territory: "North America",
+    email: "Michelle@carterglobalspeakers.com",
+    phone: "+1 703 819 2511",
+    phoneRaw: "+17038192511",
+  },
+  michael: {
+    name: "Michael Arnot",
+    territory: "Europe & Australasia",
+    email: "michael@encorespeakers.com",
+    phone: "+61 422 002 685",
+    phoneRaw: "+61422002685",
+  },
+  juanita: {
+    name: "Juanita Cortes Cleves",
+    territory: "Latin America",
+    email: "juanita.cortes@smartspeakers.co",
+    phone: "+57 313 898 5266",
+    phoneRaw: "+573138985266",
+  },
+};
+
+function detectContact(text: string): ContactKey | null {
+  const t = text.toLowerCase();
+  if (t.includes("michelle") || t.includes("carter")) return "michelle";
+  if (t.includes("michael") || t.includes("arnot")) return "michael";
+  if (t.includes("juanita") || t.includes("cortes")) return "juanita";
+  return null;
+}
+
+// ─── Contact card ─────────────────────────────────────────────────────────────
+function ContactCard({ contactKey, onDismiss }: { contactKey: ContactKey; onDismiss: () => void }) {
+  const c = CONTACTS[contactKey];
+  return (
+    <div className="w-full bg-white/5 border border-brand-gold/25 rounded-2xl px-4 py-3 relative">
+      <button
+        onClick={onDismiss}
+        className="absolute top-2 right-2 w-5 h-5 flex items-center justify-center text-white/25 hover:text-white/50"
+        aria-label="Dismiss"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+        </svg>
+      </button>
+      <p className="text-[9px] uppercase tracking-[0.3em] text-brand-gold/60 mb-0.5">{c.territory}</p>
+      <p className="text-white font-semibold text-sm mb-3">{c.name}</p>
+      <div className="flex gap-2">
+        <a
+          href={`mailto:${c.email}`}
+          className="flex-1 bg-brand-gold text-black text-[11px] font-bold rounded-full py-2 text-center hover:bg-brand-gold/90 transition-colors"
+        >
+          Email
+        </a>
+        <a
+          href={`tel:${c.phoneRaw}`}
+          className="flex-1 bg-white/10 text-white text-[11px] font-semibold rounded-full py-2 text-center hover:bg-white/15 transition-colors"
+        >
+          Call
+        </a>
+      </div>
+    </div>
+  );
+}
+
 // ─── Voice mode ───────────────────────────────────────────────────────────────
 function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
   const [error, setError] = useState<string | null>(null);
+  const [contactCard, setContactCard] = useState<ContactKey | null>(null);
 
   const { startSession, endSession, status, isSpeaking } = useConversation({
     onConnect: () => setError(null),
     onError: (msg) => setError(typeof msg === "string" ? msg : "Connection error. Please try again."),
+    onMessage: ({ message, source }) => {
+      if (source !== "ai") return;
+      const detected = detectContact(message);
+      if (detected) setContactCard(detected);
+    },
   });
 
   const isDisconnected = status === "disconnected";
@@ -433,6 +508,11 @@ function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
           {statusSub && <p className="text-white/35 text-xs mt-1">{statusSub}</p>}
           {error && <p className="text-red-400 text-xs mt-2 max-w-[220px] leading-relaxed mx-auto">{error}</p>}
         </div>
+
+        {/* Contact card — appears when agent mentions a rep */}
+        {contactCard && (
+          <ContactCard contactKey={contactCard} onDismiss={() => setContactCard(null)} />
+        )}
 
         {/* Action button */}
         {isDisconnected && (
