@@ -2,6 +2,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import Button from "@/components/ui/Button";
+import { captureAndGetUTM, clearUTM, type UTMData } from "@/lib/utm";
 
 interface FormData {
   name: string;
@@ -49,6 +50,14 @@ export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<Status>("idle");
+  const [utm, setUtm] = useState<UTMData | null>(null);
+
+  // Capture UTM on mount — pulls from current URL params if present, falls
+  // back to whatever was stored in sessionStorage from a prior page in the
+  // same tab session. See lib/utm.ts for the persistence rules.
+  useEffect(() => {
+    setUtm(captureAndGetUTM());
+  }, []);
 
   useEffect(() => {
     if (status === "success") {
@@ -125,21 +134,29 @@ export default function BookingForm() {
     }
     setStatus("submitting");
     try {
+      const payload = { ...formData, ...(utm || {}) };
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
       const data = await response.json();
       if (response.ok && data.success) {
         setStatus("success");
-        // Fire GA4 conversion event
+        // Fire GA4 conversion event — pass UTM source through so GA4 tracks
+        // which channel generated the lead, in addition to the email body
+        // already carrying it for Yossi's manual review.
         if (typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag("event", "generate_lead", {
             event_category: "booking",
             event_label: "form_submission",
+            utm_source: utm?.utm_source || "direct",
+            utm_campaign: utm?.utm_campaign || "",
           });
         }
+        // Clear stored UTM so a follow-up form submission from the same tab
+        // doesn't inherit a stale attribution.
+        clearUTM();
         // Redirect to thank-you page for clean conversion tracking
         window.location.href = "/thank-you";
       } else {

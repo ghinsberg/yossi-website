@@ -11,6 +11,8 @@ export async function POST(request: NextRequest) {
       name, email, organisation, phone,
       eventDate, eventLocation, audienceSize,
       format, budget, keynote, message, referral,
+      utm_source, utm_medium, utm_campaign, utm_content, utm_term,
+      referrer, landing_path,
     } = body;
 
     // Validate required fields
@@ -22,6 +24,28 @@ export async function POST(request: NextRequest) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
+
+    // Subject-line attribution prefix — makes Yossi's inbox sortable by channel
+    // at a glance. LinkedIn is the priority channel right now per STRATEGY_v1.
+    const channelTag = utm_source
+      ? `[${(utm_source as string).toUpperCase()}] `
+      : "";
+
+    // Build a UTM section for the email body — only show if there's a real
+    // capture, otherwise the email is the same as before for direct visitors.
+    const utmBlock = utm_source
+      ? `
+  <table style="width:100%; border-collapse: collapse; margin-top: 20px; background: #fff8e1; padding: 8px;">
+    <tr><td colspan="2" style="padding: 8px; color: #B8860B; font-weight: 600; border-bottom: 1px solid #f0e0a0;">📍 Attribution (where they came from)</td></tr>
+    <tr><td style="padding: 8px 0 8px 12px; width: 40%; color: #666;">Source</td><td style="padding: 8px 0; font-weight: 600;">${utm_source}</td></tr>
+    ${utm_medium ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Medium</td><td style="padding: 8px 0;">${utm_medium}</td></tr>` : ""}
+    ${utm_campaign ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Campaign</td><td style="padding: 8px 0;">${utm_campaign}</td></tr>` : ""}
+    ${utm_content ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Content variant</td><td style="padding: 8px 0;">${utm_content}</td></tr>` : ""}
+    ${utm_term ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Term</td><td style="padding: 8px 0;">${utm_term}</td></tr>` : ""}
+    ${referrer ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Referrer</td><td style="padding: 8px 0; font-size: 12px; color: #888;">${referrer}</td></tr>` : ""}
+    ${landing_path ? `<tr><td style="padding: 8px 0 8px 12px; color: #666;">Landed on</td><td style="padding: 8px 0; font-size: 12px;">${landing_path}</td></tr>` : ""}
+  </table>`
+      : "";
 
     const html = `
 <div style="font-family: sans-serif; max-width: 600px; color: #222;">
@@ -39,8 +63,10 @@ export async function POST(request: NextRequest) {
     <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666;">Format</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${format}</td></tr>
     <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666;">Budget</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${budget}</td></tr>
     <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666;">Keynote Interest</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${keynote || "—"}</td></tr>
-    <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666;">Referral</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${referral || "—"}</td></tr>
+    <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666;">Referral (self-reported)</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${referral || "—"}</td></tr>
   </table>
+
+  ${utmBlock}
 
   ${message ? `<div style="margin-top: 20px;"><p style="color: #666; margin-bottom: 6px;">Message</p><p style="background: #f9f9f9; padding: 12px; border-radius: 6px; margin: 0;">${message}</p></div>` : ""}
 
@@ -51,7 +77,7 @@ export async function POST(request: NextRequest) {
       from: "Yossi Ghinsberg <hello@yossighinsberg.com>",
       to: ["ghinsberg@gmail.com"],
       replyTo: email,
-      subject: `Booking Enquiry — ${name}, ${organisation}`,
+      subject: `${channelTag}Booking Enquiry — ${name}, ${organisation}`,
       html,
     });
 
