@@ -440,18 +440,18 @@ function ContactCard({ contactKey, onDismiss }: { contactKey: ContactKey; onDism
       <p className="text-[9px] uppercase tracking-[0.3em] text-brand-gold/60 mb-0.5">{c.territory}</p>
       <p className="text-white font-semibold text-sm mb-3">{c.name}</p>
       <div className="flex gap-2">
-        <a
-          href={`mailto:${c.email}`}
-          className="flex-1 bg-brand-gold text-black text-[11px] font-bold rounded-full py-2 text-center hover:bg-brand-gold/90 transition-colors"
+        <button
+          onClick={() => window.open(`mailto:${c.email}`, "_self")}
+          className="flex-1 bg-white/10 text-white text-[11px] font-semibold rounded-full py-2 text-center hover:bg-white/15 active:scale-95 transition-all"
         >
           Email
-        </a>
-        <a
-          href={`tel:${c.phoneRaw}`}
-          className="flex-1 bg-white/10 text-white text-[11px] font-semibold rounded-full py-2 text-center hover:bg-white/15 transition-colors"
+        </button>
+        <button
+          onClick={() => { window.location.href = "/book-yossi"; }}
+          className="flex-1 bg-brand-gold text-black text-[11px] font-bold rounded-full py-2 text-center hover:bg-brand-gold/90 active:scale-95 transition-all"
         >
-          Call
-        </a>
+          Book a Call
+        </button>
       </div>
     </div>
   );
