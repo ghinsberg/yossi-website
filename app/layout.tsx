@@ -105,6 +105,10 @@ export default function RootLayout({
       <head>
         {/* Preload first hero image with high priority — signals LCP element to browser */}
         <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" fetchPriority="high" />
+        {/* Plausible analytics — UTM-aware, no cookies, no consent banner needed.
+            Tracks LinkedIn campaign attribution via ?utm_source=linkedin etc.
+            Activates when Yossi's Plausible account adds yossighinsberg.com as a tracked site. */}
+        <script defer data-domain="yossighinsberg.com" src="https://plausible.io/js/script.js"></script>
       </head>
       <body className="bg-brand-bg text-brand-text font-body antialiased">
         <Preloader />
