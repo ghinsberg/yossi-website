@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { ConversationProvider, useConversation } from "@elevenlabs/react";
 
-const AGENT_ID = "3nZywGjvzEUCKmZkBMpW";
+const AGENT_ID = "agent_2201ktvwj7qqek8rn5dxnae090e8";
 const API_URL = process.env.NEXT_PUBLIC_YOSSI_AI_URL || "https://yossi-ai-production.up.railway.app";
 
 // ─── Contact card system ──────────────────────────────────────────────────────
