@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { ConversationProvider, useConversation } from "@elevenlabs/react";
 
-const AGENT_ID = "agent_2201ktvwj7qqek8rn5dxnae090e8";
+const AGENT_ID = "3nZywGjvzEUCKmZkBMpW";
 const API_URL = process.env.NEXT_PUBLIC_YOSSI_AI_URL || "https://yossi-ai-production.up.railway.app";
 
 // ─── Contact card system ──────────────────────────────────────────────────────
@@ -479,7 +479,7 @@ function TextMode({ onSwitchToVoice }: { onSwitchToVoice: () => void }) {
 
 function ChatbotInner() {
   const [isOpen, setIsOpen] = useState(false);
-  const [mode, setMode] = useState<"voice" | "text">("text");
+  const [mode, setMode] = useState<"voice" | "text">("voice");
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
