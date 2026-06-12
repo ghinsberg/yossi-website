@@ -480,6 +480,17 @@ function TextMode({ onSwitchToVoice }: { onSwitchToVoice: () => void }) {
 function ChatbotInner() {
   const [isOpen, setIsOpen] = useState(false);
   const [mode, setMode] = useState<"voice" | "text">("voice");
+  const [hasEverOpened, setHasEverOpened] = useState(() =>
+    typeof window !== "undefined" && localStorage.getItem("yossi-chat-opened") === "1"
+  );
+
+  function handleToggle() {
+    if (!isOpen && !hasEverOpened) {
+      setHasEverOpened(true);
+      localStorage.setItem("yossi-chat-opened", "1");
+    }
+    setIsOpen(!isOpen);
+  }
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -516,13 +527,13 @@ function ChatbotInner() {
 
       {/* Floating button — Yossi face with gold ring */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="relative w-16 h-16 rounded-full transition-all hover:scale-110 focus:outline-none"
+        onClick={handleToggle}
+        className="relative w-[52px] h-[52px] rounded-full transition-all hover:scale-110 focus:outline-none"
         aria-label="Open chat"
       >
-        {/* Radiating ring — pulses when closed to invite interaction */}
-        {!isOpen && (
-          <span className="absolute inset-0 rounded-full border-2 border-brand-gold animate-ping opacity-60" style={{ animationDuration: "1.5s" }} />
+        {/* Radiating ring — only on first visit, stops after first open */}
+        {!isOpen && !hasEverOpened && (
+          <span className="absolute inset-0 rounded-full border-2 border-brand-gold animate-ping opacity-60" style={{ animationDuration: "3s" }} />
         )}
         <span className="absolute inset-0 rounded-full border-2 border-brand-gold shadow-lg shadow-brand-gold/40" />
         {isOpen ? (
