@@ -522,7 +522,7 @@ function ChatbotInner() {
       >
         {/* Radiating ring — pulses when closed to invite interaction */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full border-2 border-brand-gold animate-ping opacity-60" />
+          <span className="absolute inset-0 rounded-full border-2 border-brand-gold animate-ping opacity-60" style={{ animationDuration: "1.5s" }} />
         )}
         <span className="absolute inset-0 rounded-full border-2 border-brand-gold shadow-lg shadow-brand-gold/40" />
         {isOpen ? (
