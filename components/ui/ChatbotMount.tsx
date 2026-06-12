@@ -100,10 +100,13 @@ function VoiceMode({ onSwitchToText, onClose }: { onSwitchToText: () => void; on
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const silenceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const endSessionRef = useRef<(() => void) | null>(null);
+  const isEndingRef = useRef(false); // prevents goodbye from resetting the timer and looping
 
   function resetSilenceTimer() {
+    if (isEndingRef.current) return;
     if (silenceTimer.current) clearTimeout(silenceTimer.current);
     silenceTimer.current = setTimeout(() => {
+      isEndingRef.current = true;
       endSessionRef.current?.();
     }, SILENCE_TIMEOUT);
   }
@@ -157,43 +160,35 @@ function VoiceMode({ onSwitchToText, onClose }: { onSwitchToText: () => void; on
       {/* Main voice UI */}
       <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
 
-        {/* Animated orb */}
+        {/* Yossi face with state rings */}
         <div className="relative flex items-center justify-center">
-          {/* Outer pulse rings — only when active */}
           {isConnected && (
             <>
-              <div className={`absolute w-32 h-32 rounded-full border border-brand-gold/20 ${isSpeaking ? "animate-ping" : ""}`} />
-              <div className={`absolute w-24 h-24 rounded-full border border-brand-gold/30 ${mode === "listening" ? "animate-pulse" : ""}`} />
+              <div className={`absolute w-36 h-36 rounded-full border-2 border-brand-gold/25 ${isSpeaking ? "animate-ping" : ""}`} />
+              <div className={`absolute w-28 h-28 rounded-full border border-brand-gold/20 ${mode === "listening" ? "animate-pulse" : ""}`} />
             </>
           )}
-
-          {/* Core button */}
           <button
             onClick={isConnected ? endSession : handleStart}
             disabled={isConnecting}
-            className={`relative w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${
+            className={`relative w-24 h-24 rounded-full overflow-hidden transition-all duration-300 shadow-lg border-2 ${
               isConnected
                 ? isSpeaking
-                  ? "bg-brand-gold scale-110"
-                  : "bg-brand-teal"
+                  ? "border-brand-gold scale-110"
+                  : "border-brand-gold/50"
                 : isConnecting
-                ? "bg-brand-surface opacity-60 cursor-wait"
-                : "bg-brand-gold hover:scale-110"
+                ? "border-brand-surface/40 opacity-70 cursor-wait"
+                : "border-brand-gold/30 hover:scale-110 hover:border-brand-gold"
             }`}
           >
-            {isConnecting ? (
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-brand-text animate-spin">
-                <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
-              </svg>
-            ) : isConnected ? (
-              <svg viewBox="0 0 24 24" fill="black" className="w-8 h-8">
-                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-              </svg>
-            ) : (
-              <svg viewBox="0 0 24 24" fill="black" className="w-8 h-8">
-                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 1.93c-3.95-.49-7-3.85-7-7.93H2c0 4.42 2.72 8.22 6.72 9.6V21h2v-3.47c-.24-.03-.48-.07-.72-.1zM12 16c-.35 0-.69-.04-1.03-.1l-1.07 1.07A9.01 9.01 0 0 0 11 17.93V21h2v-3.07c1.81-.47 3.35-1.56 4.4-3.01l-1.43-1.43C15.19 14.66 13.71 16 12 16zm5.5-4c0 3.03-2.47 5.5-5.5 5.5v2c4.14 0 7.5-3.36 7.5-7.5h-2z" />
-              </svg>
+            {isConnecting && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-10">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-brand-gold animate-spin">
+                  <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
+                </svg>
+              </div>
             )}
+            <img src="/images/yossi/yossi-ai-avatar.png" alt="Yossi" className="w-full h-full object-cover" />
           </button>
         </div>
 
