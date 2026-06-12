@@ -93,7 +93,7 @@ function ContactCard({ contactKey, onDismiss }: { contactKey: ContactKey; onDism
 
 // ─── Voice mode ───────────────────────────────────────────────────────────────
 
-const SILENCE_TIMEOUT = 45_000; // 45 s of no activity → end and close
+const SILENCE_TIMEOUT = 30_000; // 30 s of no activity → end and close
 
 function VoiceMode({ onSwitchToText, onClose }: { onSwitchToText: () => void; onClose: () => void }) {
   const [contactCard, setContactCard] = useState<ContactKey | null>(null);
