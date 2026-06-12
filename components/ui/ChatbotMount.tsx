@@ -93,34 +93,60 @@ function ContactCard({ contactKey, onDismiss }: { contactKey: ContactKey; onDism
 
 // ─── Voice mode ───────────────────────────────────────────────────────────────
 
-function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
+const SILENCE_TIMEOUT = 45_000; // 45 s of no activity → end and close
+
+function VoiceMode({ onSwitchToText, onClose }: { onSwitchToText: () => void; onClose: () => void }) {
   const [contactCard, setContactCard] = useState<ContactKey | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const silenceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const endSessionRef = useRef<(() => void) | null>(null);
+
+  function resetSilenceTimer() {
+    if (silenceTimer.current) clearTimeout(silenceTimer.current);
+    silenceTimer.current = setTimeout(() => {
+      endSessionRef.current?.();
+    }, SILENCE_TIMEOUT);
+  }
 
   const { startSession, endSession, status, isSpeaking, mode, isMuted, setMuted } = useConversation({
     onMessage: ({ message, source }: { message: string; source: "user" | "ai" }) => {
+      resetSilenceTimer();
       const detected = detectContact(message);
       if (detected) setContactCard(detected);
       if (source === "ai") setErrorMsg(null);
+    },
+    onDisconnect: () => {
+      if (silenceTimer.current) clearTimeout(silenceTimer.current);
+      onClose();
     },
     onError: () => {
       setErrorMsg("Connection lost. Try refreshing or switch to text.");
     },
   });
 
+  // Keep ref current so the timer callback always reaches the latest endSession
+  useEffect(() => { endSessionRef.current = endSession; }, [endSession]);
+
+  // Reset silence timer when Yossi speaks
+  useEffect(() => { if (isSpeaking) resetSilenceTimer(); }, [isSpeaking]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const handleStart = useCallback(async () => {
     setErrorMsg(null);
     try {
       await startSession({ agentId: AGENT_ID });
+      resetSilenceTimer();
     } catch {
       setErrorMsg("Couldn't connect. Check your microphone permissions.");
     }
-  }, [startSession]);
+  }, [startSession]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-start the moment the chat opens — user gesture came from the button tap
   useEffect(() => {
     handleStart();
-    return () => { endSession(); };
+    return () => {
+      if (silenceTimer.current) clearTimeout(silenceTimer.current);
+      endSession();
+    };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const isConnected = status === "connected";
@@ -524,7 +550,7 @@ function ChatbotInner() {
           {/* Content */}
           <div className="flex-1 overflow-hidden">
             {mode === "voice"
-              ? <VoiceMode onSwitchToText={() => setMode("text")} />
+              ? <VoiceMode onSwitchToText={() => setMode("text")} onClose={() => setIsOpen(false)} />
               : <TextMode onSwitchToVoice={() => setMode("voice")} />
             }
           </div>
