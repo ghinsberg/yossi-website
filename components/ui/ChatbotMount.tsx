@@ -117,6 +117,12 @@ function VoiceMode({ onSwitchToText }: { onSwitchToText: () => void }) {
     }
   }, [startSession]);
 
+  // Auto-start the moment the chat opens — user gesture came from the button tap
+  useEffect(() => {
+    handleStart();
+    return () => { endSession(); };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const isConnected = status === "connected";
   const isConnecting = status === "connecting";
 
