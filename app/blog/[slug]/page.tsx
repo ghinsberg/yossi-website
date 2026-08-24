@@ -23,7 +23,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Yossi Ghinsberg`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
     openGraph: {

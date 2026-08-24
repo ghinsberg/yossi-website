@@ -13,7 +13,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Keynote Speaker on Overcoming Adversity | Yossi Ghinsberg",
+  title: "Keynote Speaker on Overcoming Adversity",
   description:
     "Yossi Ghinsberg is one of the world's leading keynote speakers on overcoming adversity — drawing from 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, BMW.",
   keywords: [

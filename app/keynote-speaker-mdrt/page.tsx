@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "MDRT Keynote Speaker | Yossi Ghinsberg",
+  title: "MDRT Keynote Speaker",
   description:
     "Yossi Ghinsberg delivered the keynote on the MDRT Main Stage in 2025. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Available for MDRT events worldwide.",
   openGraph: {

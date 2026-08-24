@@ -5,7 +5,7 @@ import { posts } from "@/data/posts";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 
 export const metadata: Metadata = {
-  title: "Insights on Leadership, Resilience & Speaking | Yossi Ghinsberg",
+  title: "Insights on Leadership, Resilience & Speaking",
   description:
     "Articles from Yossi Ghinsberg on leadership, resilience, survival, and what it takes to move an audience.",
   openGraph: {

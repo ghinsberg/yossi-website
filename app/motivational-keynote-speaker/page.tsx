@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Motivational Keynote Speaker | Yossi Ghinsberg",
+  title: "Motivational Keynote Speaker",
   description:
     "Yossi Ghinsberg is a motivational keynote speaker who produces lasting perspective shifts. 20 days alone in the Amazon. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {

@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Keynote Speaker for Insurance Conferences | Yossi Ghinsberg",
+  title: "Keynote Speaker for Insurance Conferences",
   description:
     "Yossi Ghinsberg keynotes for insurance conferences. His Amazon survival story lands with particular force for professionals who spend their careers pricing real uncertainty.",
   openGraph: {

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "Yossi Ghinsberg | Beyond the Keynote",
+  title: "Beyond the Keynote",
   description:
     "Workshops, the Uchupiamona Nation, Chalalan Ecolodge, Lino Cambi, and a four-decade relationship with the Amazon. The full picture of who Yossi Ghinsberg is.",
 };

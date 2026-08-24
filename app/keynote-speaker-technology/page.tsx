@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Keynote Speaker for Technology Conferences | Yossi Ghinsberg",
+  title: "Keynote Speaker for Technology Conferences",
   description:
     "Yossi Ghinsberg keynotes for technology conferences. Keynoted for Google, Apple, and Microsoft. Survived 20 days alone in the Amazon. A story no product launch panel can match.",
   openGraph: {

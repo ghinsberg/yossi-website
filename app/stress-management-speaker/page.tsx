@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Stress Management Speaker | Yossi Ghinsberg",
+  title: "Stress Management Speaker",
   description:
     "Yossi Ghinsberg is a stress management speaker who knows real survival. Real vs imaginary stress, with tools your team can use the next day. Trusted by Google and BMW.",
   openGraph: {

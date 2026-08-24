@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Amazon Survival Speaker | Yossi Ghinsberg",
+  title: "Amazon Survival Speaker",
   description:
     "Yossi Ghinsberg survived 20 days alone in the Bolivian Amazon in 1981. As an amazon survival speaker, he brings the real story of jungle survival to corporate audiences worldwide.",
   keywords: [

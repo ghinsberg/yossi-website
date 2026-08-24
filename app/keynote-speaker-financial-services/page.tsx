@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Keynote Speaker for Financial Services | Yossi Ghinsberg",
+  title: "Keynote Speaker for Financial Services",
   description:
     "Yossi Ghinsberg keynotes for financial services conferences. MDRT Main Stage 2025. Survived 20 days alone in the Amazon. Trusted by major institutions across Asia Pacific and North America.",
   openGraph: {

@@ -6,7 +6,7 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 
 export const metadata = {
-  title: "Keynote Speaker — International | Yossi Ghinsberg",
+  title: "Keynote Speaker — International",
   description:
     "Yossi Ghinsberg is available to speak internationally. Survived 20 days alone in the Amazon. Voted Most Unforgettable Speaker. Trusted by Google, Apple, Microsoft, and BMW.",
   openGraph: {

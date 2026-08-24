@@ -14,7 +14,7 @@ const credentials = [
 ];
 
 export const metadata = {
-  title: "Adaptability Keynote Speaker | Yossi Ghinsberg",
+  title: "Adaptability Keynote Speaker",
   description:
     "Yossi Ghinsberg is a leading keynote speaker on adaptability and change. His message for 2025-2026: adaptability is not a trait, it's a skill — and the Amazon proves it.",
   keywords: [
