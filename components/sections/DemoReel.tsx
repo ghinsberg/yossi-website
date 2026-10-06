@@ -12,19 +12,17 @@ export default function DemoReel() {
           </h2>
         </div>
 
-        {/* Placeholder image */}
-        <div className="relative w-full rounded-2xl overflow-hidden">
-          <img
-            src="/images/stage/reel-placeholder.jpg"
-            alt="Yossi Ghinsberg on stage"
-            className="w-full object-cover object-top"
-            style={{ maxHeight: "540px" }}
-          />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <p className="text-white/60 text-xs uppercase tracking-[0.3em] font-medium">
-              Reel coming soon
-            </p>
-          </div>
+        {/* Speaker reel — self-hosted, same pattern as FilmSection */}
+        <div className="rounded-2xl overflow-hidden aspect-video shadow-2xl">
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster="/images/stage/reel-placeholder.jpg"
+            className="w-full h-full object-cover"
+          >
+            <source src="/videos/speaker-reel.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* Social proof strip below video */}
