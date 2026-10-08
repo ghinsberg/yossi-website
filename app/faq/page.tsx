@@ -16,7 +16,7 @@ const faqs = [
     items: [
       {
         q: "How do I book Yossi Ghinsberg?",
-        a: "Submit an enquiry at yossighinsberg.com/book-yossi or contact a regional representative directly. North America: Michelle Carter at Carter Global Speakers (Michelle@carterglobalspeakers.com). Europe and Australasia: Michael Arnot at Encore Speakers (michael@encorespeakers.com). Latin America: Smart Speakers. All enquiries receive a response within 24 hours.",
+        a: "Submit an enquiry at yossighinsberg.com/book-yossi or contact a regional representative directly. North America: Michelle Carter at Carter Global Speakers (Michelle@carterglobalspeakers.com). Europe and Australasia: Michael Arnot at Encore Speakers (michael@encorespeakers.com). Latin America: Marcela Gutiérrez at Lamarch (marcela@lamarch.co). All enquiries receive a response within 24 hours.",
       },
       {
         q: "What is Yossi Ghinsberg's speaker fee?",

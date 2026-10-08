@@ -8,7 +8,7 @@ const API_URL = process.env.NEXT_PUBLIC_YOSSI_AI_URL || "https://yossi-ai-produc
 
 // ─── Contact card system ──────────────────────────────────────────────────────
 
-type ContactKey = "michelle" | "michael" | "juanita";
+type ContactKey = "michelle" | "michael" | "marcela";
 
 const CONTACTS: Record<ContactKey, { name: string; title: string; region: string; email: string | null }> = {
   michelle: {
@@ -23,11 +23,11 @@ const CONTACTS: Record<ContactKey, { name: string; title: string; region: string
     region: "Europe, Australia, NZ",
     email: "michael@encorespeakers.com",
   },
-  juanita: {
-    name: "Juanita Cortes Cleves",
+  marcela: {
+    name: "Marcela Gutiérrez",
     title: "Speaker Bureau — Latin America",
     region: "Latin America",
-    email: null,
+    email: "marcela@lamarch.co",
   },
 };
 
@@ -38,7 +38,7 @@ function detectContact(text: string): ContactKey | null {
     t.includes("mexico") || t.includes("brazil") || t.includes("argentina") ||
     t.includes("chile") || t.includes("peru") || t.includes("venezuela") ||
     t.includes("south america") || t.includes("central america")
-  ) return "juanita";
+  ) return "marcela";
   if (
     t.includes("europe") || t.includes("australia") || t.includes("new zealand") ||
     t.includes("uk") || t.includes("germany") || t.includes("france") ||

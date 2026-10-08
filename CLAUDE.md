@@ -64,7 +64,7 @@ Transformation is a corporate buzzword. Flag for Yossi to reconsider.
 ## Speaker Bureau Contacts
 - Michelle Carter, North America, Michelle@carterglobalspeakers.com, +1 703 819 2511
 - Michael Arnot, Europe and Australasia, michael@encorespeakers.com, +61 (0)422 002 685
-- Smart Speakers, Latin America, Juanita Cortes Cleves (not yet in siteConfig)
+- Lamarch, Latin America, Marcela Gutiérrez, marcela@lamarch.co, +52 1 81 8028 8224
 
 ## Do Not Touch
 - node_modules
@@ -79,7 +79,6 @@ Domain migration is the final step after full QA
 
 ## Known Issues
 - ChatbotMount needs UI and response quality improvements
-- Smart Speakers contact missing from siteConfig.ts
 - Confirm NEXT_PUBLIC_YOSSI_AI_URL is set in .env.local
 - Read docs/plans/ before building anything
 

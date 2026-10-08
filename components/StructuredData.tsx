@@ -78,7 +78,7 @@ export default function StructuredData() {
           },
           {
             "@type": "Organization",
-            name: "Smart Speakers",
+            name: "Lamarch",
             description: "Latin America booking agent",
           },
         ],

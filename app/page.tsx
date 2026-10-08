@@ -26,7 +26,7 @@ const aioFaqs = [
   },
   {
     q: "How do I book Yossi Ghinsberg?",
-    a: "Yossi Ghinsberg is represented by Carter Global Speakers for North America (Michelle Carter, Michelle@carterglobalspeakers.com, +1 703 819 2511), Encore Speakers for Europe and Australasia (Michael Arnot, michael@encorespeakers.com, +61 422 002 685), and Smart Speakers for Latin America. You can also submit an enquiry at yossighinsberg.com/book-yossi.",
+    a: "Yossi Ghinsberg is represented by Carter Global Speakers for North America (Michelle Carter, Michelle@carterglobalspeakers.com, +1 703 819 2511), Encore Speakers for Europe and Australasia (Michael Arnot, michael@encorespeakers.com, +61 422 002 685), and Lamarch for Latin America (Marcela Gutiérrez, marcela@lamarch.co, +52 1 81 8028 8224). You can also submit an enquiry at yossighinsberg.com/book-yossi.",
   },
 ];
 

@@ -23,10 +23,10 @@ const agentDetails = {
     email: "michael@encorespeakers.com",
   },
   smart: {
-    name: "Juanita Cortes Cleves",
-    company: "Smart Speakers",
+    name: "Marcela Gutiérrez",
+    company: "Lamarch",
     phone: "+57 313 8985266",
-    email: "juanita.cortes@smartspeakers.co",
+    email: "marcela@lamarch.co",
   },
 };
 
