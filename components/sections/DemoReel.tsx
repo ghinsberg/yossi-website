@@ -18,7 +18,7 @@ export default function DemoReel() {
             controls
             playsInline
             preload="metadata"
-            poster="/images/stage/reel-placeholder.jpg"
+            poster="/images/stage/carousel_bkk_for_website.jpg"
             className="w-full h-full object-cover"
           >
             <source src="/videos/speaker-reel.mp4" type="video/mp4" />
