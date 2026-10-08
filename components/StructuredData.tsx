@@ -39,10 +39,6 @@ export default function StructuredData() {
         ],
         nationality: "Israeli",
         birthDate: "1959-04-05",
-        homeLocation: {
-          "@type": "Place",
-          name: "Byron Bay, Australia",
-        },
         hasOccupation: {
           "@type": "Occupation",
           name: "Keynote Speaker",

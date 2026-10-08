@@ -391,9 +391,9 @@ THE LOCAL ADVANTAGE
 
 The Australian market has strong local speaker talent, particularly in the resilience, leadership, and adventure categories. Before going international, be honest about whether the international name delivers materially better content for your specific audience, or whether you are buying the name.
 
-There is also a practical middle ground. Some international speakers are based in Australia and offer the content and profile of a global circuit speaker with none of the intercontinental logistics.
+There is also a practical middle ground. Some international speakers have deep local history and local representation, which removes most of the friction that usually comes with a global name.
 
-Yossi Ghinsberg is based in Byron Bay, New South Wales. He has lived in Australia for many years. This matters practically: he is available on Australian business hours for planning calls, can travel domestically without international logistics, and arrives at Sydney or Melbourne events without crossing 15 time zones. He also knows the Australian corporate audience well, its scepticism, its directness, and its particular discomfort with over-produced American-style keynotes.
+Yossi Ghinsberg lived in Byron Bay, New South Wales for many years, and his Australasian bookings run through an Australian bureau: Michael Arnot at Encore Speakers. That matters practically: planning happens on Australian business hours with someone local, and the speaker who arrives knows the Australian corporate audience well, its scepticism, its directness, and its particular discomfort with over-produced American-style keynotes.
 
 WHAT AUSTRALIAN AUDIENCES RESPOND TO
 

@@ -14,7 +14,7 @@ import KineticIntro from "@/components/ui/KineticIntro";
 const aioFaqs = [
   {
     q: "Who is Yossi Ghinsberg?",
-    a: "Yossi Ghinsberg is an Israeli-born keynote speaker, author, and conservationist. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest without food, fire, or rescue. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He is based in Byron Bay, Australia, and speaks to audiences worldwide.",
+    a: "Yossi Ghinsberg is an Israeli-born keynote speaker, author, and conservationist. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest without food, fire, or rescue. His memoir Jungle has sold over one million copies in 20 languages and was adapted into a 2017 Hollywood film starring Daniel Radcliffe. He speaks to audiences worldwide and travels from California for North American events.",
   },
   {
     q: "What does Yossi Ghinsberg speak about?",
