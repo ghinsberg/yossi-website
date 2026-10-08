@@ -333,5 +333,10 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://yossighinsberg.com/blog/how-to-brief-a-keynote-speaker</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
 </urlset>

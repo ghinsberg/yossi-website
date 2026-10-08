@@ -937,4 +937,139 @@ The adventure speaker market has room for both types. But only one of them is wo
 
 Yossi Ghinsberg has been speaking professionally since the mid-1980s. His content has been developed in active conversation with audiences for four decades. To discuss whether he is right for your event, contact this office or reach out through his bureau representatives.`,
   },
+  {
+    slug: "how-to-brief-a-keynote-speaker",
+    title: "How to Brief a Keynote Speaker So the Talk Fits Your Event",
+    date: "2026-10-08",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A keynote is only as good as the brief behind it. Here is what to tell your speaker, what to ask back, and the mistakes that quietly sink good talks.",
+    keywords: [
+      "how to brief a keynote speaker",
+      "keynote speaker brief template",
+      "preparing a keynote speaker",
+      "event planner speaker checklist",
+    ],
+    content: `HOW TO BRIEF A KEYNOTE SPEAKER SO THE TALK FITS YOUR EVENT
+
+You have chosen the speaker. The contract is signed. The date is in the calendar. Most planners feel the hard part is over.
+
+It is not. The next two weeks decide whether the talk lands or whether it is simply fine. And the difference is almost always the brief.
+
+A keynote speaker does not know your people. They do not know that last quarter was rough, that two leaders left in August, or that the room is half new hires who have never met. If you do not tell them, they will give the talk they gave last Tuesday. It may be a good talk. It will not be your talk.
+
+START WITH WHY THE EVENT EXISTS
+
+Before you write anything about the speaker, write one sentence about the event. Why are these people in one room?
+
+A sales kickoff exists to start a year with energy and a shared plan. A leadership summit exists to give senior people room to think. An annual conference exists to make a spread-out community feel like one. A safety conference exists to change what people do on a Tuesday morning.
+
+Each of those needs a different keynote. If your speaker only knows the date and the headcount, they are guessing at the purpose. Say it plainly. "We want people to leave feeling the team is still intact after a hard year" is a better brief than "we want something inspiring."
+
+DESCRIBE THE ROOM, NOT THE ORG CHART
+
+Speakers need to know who is actually sitting there. Give them:
+
+The size of the audience, and whether it will be standing, seated at rounds, or in theatre rows.
+
+The mix of roles. Executives, front line staff, partners, clients, spouses. A talk that works for a hundred senior leaders can miss badly with a thousand people who sell all day.
+
+The experience level. Veterans hear things differently than people in their first year.
+
+The mood. This is the one planners skip most often. Is the room tired? Nervous about layoffs? Celebrating a record year? A speaker who walks in expecting celebration and finds worry will lose the room in five minutes.
+
+Languages and regions matter too. If half the audience listens through interpretation, the speaker needs to know so they can pace and simplify.
+
+NAME THE CHALLENGE OUT LOUD
+
+This is the part that makes planners nervous, and it is the part that matters most.
+
+If there is a real tension in the organisation, tell the speaker. A merger. A restructure. A product that missed. A culture that has gone quiet. You do not need to share confidential detail. You need to share the shape of it.
+
+A good speaker will not announce your problems from the stage. They will choose which stories to tell, which to cut, and where to pause, based on what they know. A speaker who has been told nothing cannot do that. They will pick safe material, and safe material rarely moves anyone.
+
+AGREE ON WHAT SUCCESS LOOKS LIKE
+
+Ask yourself what you want to be different the day after. Not the hour after. The day after.
+
+Maybe you want people talking about it at lunch. Maybe you want leaders to open the next meeting with a different question. Maybe you simply want the afternoon sessions to start with people paying attention. All of those are fine goals. But they are different goals, and the speaker can only aim at the one they know about.
+
+Write the goal down in one or two sentences and send it over. You will also have something to measure against when the feedback forms come back.
+
+COVER THE LOGISTICS IN WRITING
+
+Do not trust a phone call alone for logistics. Put these in an email and ask for confirmation:
+
+The exact start time, the length of the talk, and whether Q and A is included in that time.
+
+Where the talk sits in the programme. Right after lunch is a different job than the opening slot.
+
+Who speaks before and after. A speaker needs to know if the previous session ran on the same theme.
+
+Stage, screen, microphone type, and slide format. Whether the speaker needs a clicker, a confidence monitor, or a lectern. Whether there is a green room and who meets them on arrival.
+
+Recording and sharing rules. If you plan to film the talk or share clips, say so before the event, not after.
+
+Travel and arrival. Give a named person and a mobile number on the day. When a speaker is stuck at a locked loading dock at 7am, the name and number are worth more than any slide.
+
+ASK THE SPEAKER SOME QUESTIONS BACK
+
+A brief goes both ways. A speaker worth hiring will have questions. Pay attention to which ones.
+
+Good questions sound like: What do you want the room to feel when I finish? What has already been said to them this week? Is there anything I should avoid? Who in the room is hardest to reach?
+
+Weak questions sound like: What is my slot and what is the fee? Those matter, but if they are the only questions, you are working with someone who delivers a fixed product.
+
+If the speaker asks nothing at all, treat that as information.
+
+SHARE THE WORDS YOUR PEOPLE USE
+
+Every organisation has its own language. Product names, internal jokes, a phrase the CEO keeps repeating. Send a short list. A speaker who uses your words correctly shows the room they were listening. A speaker who gets them wrong, or who uses jargon from a different industry, shows the opposite.
+
+Equally, tell them which words to avoid. If a recent change is still sensitive, or a word has become a joke for the wrong reasons, say so.
+
+SET A TIME FOR ONE REAL CONVERSATION
+
+Email is useful for the facts. A call is useful for everything else. Book twenty to thirty minutes with the speaker, and if possible include the person who runs the business area most affected, not only the event team.
+
+Use the call to test the brief. Ask the speaker to tell you, in their own words, what they think the room needs. If their answer matches what you meant, you are set. If it does not, you have just saved yourself an awkward morning.
+
+THE MISTAKES THAT QUIETLY SINK A GOOD TALK
+
+Briefing too late. A week before is not a brief. It is a warning. Give your speaker at least a few weeks when you can.
+
+Briefing only the logistics. A perfect run sheet does not help if the speaker has no idea who they are talking to.
+
+Asking for a theme and a joke. Themes are fine. A speaker should connect to your theme. But forcing a story into a slogan usually weakens it.
+
+Changing the slot at the last minute. Moving a speaker from the opening to the end of a long day changes the energy they will meet. Tell them early.
+
+Hiding the hard thing. The thing you did not mention is the thing the room is thinking about.
+
+WHAT THIS LOOKS LIKE WITH A STORY-BASED KEYNOTE
+
+Yossi Ghinsberg is a good example of why the brief matters. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon with no food, no fire, and no tools. That story does not change. What changes is which part of it matters to the room in front of him.
+
+For a safety audience, the details of decisions under pressure carry the weight. For a leadership team in the middle of change, the story of what happens when the plan falls apart is closer to what they are living. For a sales floor, it may be something else again. His three signature keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are each customized per event, and that customization only works when the organiser tells him what the room is facing.
+
+That is true of any speaker with a story that stands on its own. The story is the constant. Your brief decides how it is told.
+
+A SIMPLE BRIEF YOU CAN COPY
+
+If you want a starting point, send your speaker a single page with these headings:
+
+One sentence on why the event exists.
+Audience size, roles, and experience level.
+The mood in the room right now.
+The one challenge you would like the talk to respect.
+What you want to be different the day after.
+Timing, slot, and what happens before and after.
+Technical set-up and a named contact for the day.
+Words to use and words to avoid.
+
+That is half a page of writing. It will change the talk more than any slide request or theme line.
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote for your event, contact this office or reach out through his bureau representatives.`,
+  },
 ];
