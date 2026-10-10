@@ -30,6 +30,7 @@ export default function DemoReel() {
           {[
             { stat: "1M+", label: "Books sold" },
             { stat: "Most Unforgettable", label: "Speaker, The Sweeney Agency" },
+            { stat: "Top 10", label: "Highest-Rated Inspirational Speakers, The Sweeney Agency" },
             { stat: "Jungle", label: "Film starring Daniel Radcliffe" },
             { stat: "55+", label: "Countries" },
           ].map(({ stat, label }) => (
