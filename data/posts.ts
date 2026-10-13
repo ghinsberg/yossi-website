@@ -1072,4 +1072,157 @@ That is half a page of writing. It will change the talk more than any slide requ
 
 Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote for your event, contact this office or reach out through his bureau representatives.`,
   },
+  {
+    slug: "sales-kickoff-keynote-speaker",
+    title: "How to Choose a Keynote Speaker for a Sales Kickoff",
+    date: "2026-10-13",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A sales kickoff keynote has a different job than a conference keynote. Here is how to pick a speaker your sales team will actually listen to.",
+    keywords: [
+      "sales kickoff keynote speaker",
+      "how to choose a sales kickoff speaker",
+      "sales kickoff speaker ideas",
+      "national sales meeting keynote",
+      "SKO speaker",
+    ],
+    content: `HOW TO CHOOSE A KEYNOTE SPEAKER FOR A SALES KICKOFF
+
+A sales kickoff is not a normal conference. The room is full of people who are paid to be persuasive, who have heard every motivational line, and who are quietly checking their quota while you talk.
+
+That makes the keynote slot harder to get right than almost any other. Here is how to choose well.
+
+START WITH THE JOB THE KEYNOTE HAS TO DO
+
+Most kickoffs run two or three days. Product updates, pipeline reviews, awards, breakouts, a dinner. The keynote is usually one hour of that, and it has to do something the other sessions cannot.
+
+Product sessions inform. Leadership sessions set targets. The keynote is the one place where people are allowed to feel something and think about the work from a different angle.
+
+Decide what you want that to be before you look at a single speaker. Some common jobs:
+
+Opening the event with energy and a shared mood.
+
+Resetting the room after a hard year or a missed number.
+
+Introducing a new strategy or reorganisation without it sounding like another memo.
+
+Giving the team something to talk about at dinner that is not the pipeline.
+
+Each of those points to a different kind of speaker. If you cannot say which one you need, nobody can pick for you.
+
+KNOW THE ROOM YOU ARE BOOKING FOR
+
+Sales teams are not one audience. A room of enterprise account executives behaves differently from a floor of inside sales reps or a mixed group of sellers, engineers and partners.
+
+Ask yourself:
+
+How many people will be there, and how long have most of them been with the company?
+
+Was the last year good, flat, or painful? A speaker who celebrates a record year can sound tone deaf in a room that missed target.
+
+Is there a big change coming? A new product, new territories, new compensation. People will be listening for clues about it.
+
+How much of the room is remote or joining by video? That changes what kind of talk works.
+
+Write the answers down. You will use them in the brief, and they will help you filter speakers in the first five minutes of any conversation.
+
+BE CAREFUL WITH THE SALES MOTIVATOR
+
+The obvious pick for a sales kickoff is a sales trainer or a high-energy motivator. Sometimes that is right. Often it is a mistake, for a simple reason.
+
+Your sellers already know how to sell. They have been through training programmes, read the books, and sat through the playbooks. A speaker who tells them to want it more, call more, and believe harder is repeating things they have heard many times.
+
+A trainer is also competing with your own sales enablement team. If the content overlaps, you create confusion instead of energy.
+
+There are good sales speakers. But ask what the room will take away that they do not already have. If the honest answer is "the same message, louder," keep looking.
+
+CONSIDER A SPEAKER WHOSE STORY IS NOT ABOUT SALES
+
+Many of the most memorable kickoff keynotes come from outside sales entirely. A story from another world, told well, gives people something to hold onto because it does not sound like a pitch.
+
+Look for speakers who have lived through something real: a survival story, an expedition, a crisis, a hard recovery. The value is not the adventure. The value is what the speaker learned about decisions, fear, teamwork and persistence under real pressure, and whether they can connect it to your people without forcing it.
+
+This is where you should be strict. Ask these questions:
+
+Did this actually happen to them, and can they tell it without notes?
+
+Can they explain what it means for a team, in plain language, without jargon?
+
+Do they adapt the talk to the audience, or do they give the same talk everywhere?
+
+A story only works when it is true and when it is shaped for the room. Be wary of any speaker who cannot answer the second and third questions clearly.
+
+CHECK THE FIT WITH REAL PEOPLE
+
+References matter more than reels. A highlight video shows the best ninety seconds. A reference from another event planner tells you how the speaker behaved in the weeks before the event, how they handled the briefing, and what happened when the schedule changed.
+
+Ask for planners who ran something similar to yours, ideally a kickoff or a large internal meeting. Ask them three things:
+
+Was the speaker easy to work with before the event?
+
+Did the talk feel built for your audience?
+
+What did people say a week later?
+
+The last question is the useful one. Applause on the day tells you little. What people repeat afterward tells you everything.
+
+WATCH A FULL TALK, NOT JUST THE REEL
+
+A reel is edited. A full talk shows pacing, honesty, and how the speaker handles quiet moments. If you can, watch twenty minutes of a real keynote, not a demo. Pay attention to when you lose interest. Your sales team will lose interest at the same place.
+
+THINK ABOUT PLACEMENT IN THE PROGRAMME
+
+Where the keynote sits changes who you should book.
+
+Opening slot: you need someone who can set a tone and hold a large, noisy room. People are still arriving, still talking, still on their phones.
+
+After lunch: this is the hardest slot in any event. You need a story that holds attention without needing the room to be fresh.
+
+Closing slot: you want a speaker who can bring everything together and send people out with something to do. This often suits a more reflective talk.
+
+Evening or dinner: a lighter, more personal talk can work well, with room for conversation afterward.
+
+Tell the speaker where they sit and who speaks before and after. If the CEO has just spent forty minutes on targets, the keynote should not repeat that.
+
+DO NOT OVERLOAD THE BRIEF
+
+Planners sometimes ask the speaker to tie in the kickoff theme, the new product name, the year's slogan, and three of the company values. The result is a talk that sounds like a slide deck read out loud.
+
+Pick one or two things you want the audience to carry out of the room. Give the speaker that, plus the honest picture of how the year went. Let them do the rest. A good speaker will find the connection without being handed a script.
+
+AGREE ON THE PRACTICAL DETAILS EARLY
+
+Confirm in writing: length of the talk and whether Q and A is included, stage and screen set-up, microphone type, recording rules, and travel. Name one person and one mobile number for the day itself. Kickoffs run on tight schedules, and a missing contact turns a small problem into a big one.
+
+Also settle fees and what they include. Travel, accommodation and extras vary by speaker and region, and surprises on an invoice help nobody.
+
+HOW YOSSI GHINSBERG FITS
+
+Yossi Ghinsberg is not a sales trainer, and he does not pretend to be. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle sold over 1 million copies in 20 languages and became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+For a sales team, the draw is not selling advice. It is a true story about decisions under pressure, what happens when the plan falls apart, and what keeps a person moving when the situation looks bad. He has spoken to audiences from 500 to 10,000 people for clients including Google, Apple, Microsoft, BMW, IBM and Coca-Cola, and he was voted Most Unforgettable Speaker by The Sweeney Agency.
+
+His three signature keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are customized per event. That customization depends on a good brief, which is why the earlier steps in this guide matter whichever speaker you choose.
+
+A SHORT CHECKLIST
+
+Write down the one job the keynote has to do.
+
+Describe the room honestly, including how the year went.
+
+Be cautious about booking a second sales trainer.
+
+Consider a speaker with a true story from outside sales.
+
+Call two references from similar events.
+
+Watch a full talk, not only a reel.
+
+Match the speaker to the slot in your programme.
+
+Give a short, honest brief, and keep it to one or two messages.
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote for your sales kickoff, contact this office or reach out through his bureau representatives.`,
+  },
 ];
