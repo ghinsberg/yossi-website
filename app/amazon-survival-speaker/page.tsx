@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { keynotes } from "@/data/keynotes";
 import Button from "@/components/ui/Button";
+import BookingFacts from "@/components/sections/BookingFacts";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
@@ -246,6 +247,8 @@ export default function AmazonSurvivalSpeakerPage() {
           </p>
         </div>
       </section>
+
+      <BookingFacts />
 
       {/* CTA */}
       <section className="py-16 md:py-20 border-t border-white/10">

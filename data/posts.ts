@@ -1225,4 +1225,64 @@ Give a short, honest brief, and keep it to one or two messages.
 
 Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote for your sales kickoff, contact this office or reach out through his bureau representatives.`,
   },
+  {
+    slug: "best-survival-keynote-speakers",
+    title: "The Best Survival Keynote Speakers: An Honest Guide",
+    date: "2026-10-17",
+    readTime: "5 min read",
+    category: "Event Planning",
+    excerpt:
+      "Who actually delivers in the survival keynote category, what each speaker is best at, and how to match them to your event. Written from inside the field.",
+    keywords: [
+      "best survival keynote speakers",
+      "survival keynote speaker",
+      "survival speakers for corporate events",
+      "resilience keynote speaker",
+    ],
+    content: `THE BEST SURVIVAL KEYNOTE SPEAKERS: AN HONEST GUIDE
+
+A note before the list. I am one of the people on it. I speak in this category, so read this the way you would read a chef reviewing restaurants. I know the kitchen, and I have opinions, and you should weigh both.
+
+Event planners searching for the best survival keynote speakers usually face the same problem. The category is full of extraordinary people, and the showreels all look spectacular. The real question is not who is impressive. Everyone on this list is impressive. The question is which story fits your room.
+
+Here is the field as I see it, honestly.
+
+BEAR GRYLLS
+
+The most famous name in survival, and deservedly so. Television made him a global figure, but the substance is real: military background, Everest at 23, decades of expeditions. Book Bear when you want star power that fills seats on the name alone. He commands the highest fees in the category, and for a flagship event with a big budget, he delivers an occasion, not just a keynote.
+
+ARON RALSTON
+
+The man behind 127 Hours. Trapped by a boulder in a Utah canyon in 2003, he amputated his own arm to live, and his telling of that decision is as intense as speaking gets. Book Aron for executive audiences wrestling with hard decisions. His story is about the moment of choice, and he takes a room there with full force.
+
+LES STROUD
+
+Survivorman. What sets Les apart is authenticity of method: he filmed himself alone in the wild, no crew, for years. Book Les when your audience values craft and self-reliance, operations teams, engineers, people who respect someone who does the thing itself.
+
+ROBYN BENINCASA
+
+World champion adventure racer and career firefighter. Her material is about teams: how groups win together under brutal conditions. Book Robyn for sales organizations and team-performance events. She is the strongest teamwork story in the category.
+
+PAUL DE GELDER
+
+Australian Navy clearance diver who lost an arm and a leg to a shark attack and rebuilt his life into advocacy and speaking. Book Paul for resilience and wellbeing programs. His recovery story meets audiences going through their own hard seasons.
+
+WHERE I FIT
+
+My story is different in one specific way: it was never supposed to happen. In 1981 I was 22, trekking in the Bolivian Amazon, when the group split and a raft accident left me alone in uncharted rainforest. No training, no equipment, no show, no crew, no plan. 20 days alone. The book I wrote about it sold over a million copies, and it became the film Jungle, with Daniel Radcliffe playing me.
+
+So I am not the survival expert. I am the person it happened to. That distinction shapes everything I teach: not techniques for the wild, but what ordinary people are capable of when everything is stripped away. Audiences leave with practical tools, a breathing technique for acute stress called Snake Breath, and a framework for separating real threats from imaginary ones, because most workplace stress is the second kind.
+
+Book me when your theme is uncertainty, resilience, or leading without a map, and you want the room to feel what is possible rather than be told.
+
+HOW TO CHOOSE BETWEEN US
+
+Match the story to the moment your organization is in. A team grinding through change needs a different keynote than a sales force that needs fire. Ask each speaker's office how the talk will be tailored to your event, and be suspicious of anyone who does not ask you questions back.
+
+Fees across this category run roughly from the low tens of thousands to well past six figures for the biggest television names. Every serious speaker's office will give you a clear proposal quickly. Mine responds within 48 hours.
+
+Whoever you choose from this list, you will be in good hands. It is a category of people who have been somewhere real and came back with something to say.
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To explore a survival keynote for your conference, get in touch through this site or his bureau representatives.`,
+  },
 ];

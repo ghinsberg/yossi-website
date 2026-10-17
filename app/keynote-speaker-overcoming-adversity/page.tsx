@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import BookingFacts from "@/components/sections/BookingFacts";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
@@ -191,6 +192,8 @@ export default function KeynoteSpeakerOvercomingAdversityPage() {
           </div>
         </div>
       </section>
+
+      <BookingFacts />
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-brand-surface border-t border-white/10">

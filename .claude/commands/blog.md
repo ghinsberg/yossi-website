@@ -52,14 +52,7 @@ Generate a complete blog post and append it to `data/posts.ts` as a new entry in
 ### After generating
 
 1. Append the new post to the `posts` array in `data/posts.ts`
-2. Also create the sitemap entry — open `public/sitemap.xml` and add:
-```xml
-<url>
-  <loc>https://yossighinsberg.com/blog/SLUG</loc>
-  <priority>0.7</priority>
-  <changefreq>monthly</changefreq>
-</url>
-```
+2. The sitemap updates itself — `app/sitemap.ts` reads `posts` from `data/posts.ts` (the static `public/sitemap.xml` was removed 2026-10-17; do not recreate it)
 3. Run `npx tsc --noEmit` to confirm no TypeScript errors
 4. Report the post title, slug, word count, and target keyword
 
