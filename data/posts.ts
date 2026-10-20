@@ -1285,4 +1285,139 @@ Whoever you choose from this list, you will be in good hands. It is a category o
 
 Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To explore a survival keynote for your conference, get in touch through this site or his bureau representatives.`,
   },
+  {
+    slug: "fireside-chat-vs-keynote",
+    title: "Fireside Chat vs Keynote: Which Format Fits Your Event?",
+    date: "2026-10-20",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A keynote, a fireside chat, or both? A practical guide for event planners on when each format works, how to run a good conversation on stage, and what to ask a speaker before you decide.",
+    keywords: [
+      "fireside chat vs keynote",
+      "fireside chat speaker",
+      "keynote and fireside chat format",
+      "how to run a fireside chat at a conference",
+      "event speaker formats",
+    ],
+    content: `FIRESIDE CHAT VS KEYNOTE: WHICH FORMAT FITS YOUR EVENT?
+
+Most planners book a keynote by default. Sixty minutes, one speaker, one screen, applause. It works, so nobody questions it.
+
+But there is another option, and sometimes it is the better one. A fireside chat puts the speaker in a conversation instead of behind a lectern. Done well, it feels like the best dinner party the room has ever been invited to. Done badly, it feels like two people reading emails at each other on stage.
+
+Here is how to choose, and how to get it right.
+
+WHAT EACH FORMAT ACTUALLY IS
+
+A keynote is a prepared talk. The speaker controls the pace, builds toward a point, and can take the room through a story with a beginning, a middle, and an end. It is usually 45 to 60 minutes.
+
+A fireside chat is a guided conversation. A host asks questions, the speaker answers, and the direction can shift based on what comes up. It is usually 20 to 45 minutes. The name comes from the idea of sitting by a fire and talking, so the set is often two chairs and a low table rather than a stage and a podium.
+
+Then there is the hybrid: a keynote followed by a short conversation. The speaker tells the story, then a host pulls on the threads the audience cares about most. This is common, and it often gives you the best of both.
+
+WHEN A KEYNOTE IS THE RIGHT CALL
+
+Choose a keynote when you need one clear idea to land with a large room.
+
+You want a shared moment at the start or end of the event.
+
+The audience is big, say several hundred people or more, and a conversation would feel distant from the back rows.
+
+The story needs to be told in order. Some stories only work when they are built carefully, and a stop-start Q and A breaks the spell.
+
+You have a tight run of show and need the timing to be exact.
+
+WHEN A FIRESIDE CHAT IS THE RIGHT CALL
+
+Choose a fireside chat when you want the audience to learn something specific about your people, your industry, or your moment.
+
+The speaker is an executive, founder, or expert, and what matters is their opinion on a topic, not a prepared talk.
+
+You want to tie the conversation to your own agenda: a new strategy, a hard year, a change in leadership. A good host can steer toward it.
+
+The room is small or mid-sized and you want it to feel personal.
+
+You are filling a slot in the middle of a long day, and a change of pace will wake people up.
+
+You have a speaker who is warm and quick in conversation. Some people are better talking than presenting. Know which yours is.
+
+WHY THE HYBRID OFTEN WINS
+
+If you have the time, a keynote plus a short conversation is hard to beat. The keynote gives everyone the same shared story. The conversation lets you connect it to your own people.
+
+A 20 to 30 minute chat after a keynote gives the audience a way back into the material. Questions that would never come up in a prepared talk come up here, usually the real ones. How did you decide? What would you do differently? What did you tell yourself on the worst day?
+
+It also gives your own leadership a chance to tie the story to the company. If your CEO is the one asking the questions, the keynote stops being a guest appearance and starts being part of your event.
+
+THE HOST MATTERS MORE THAN THE SPEAKER
+
+This is the part most planners underestimate. A fireside chat is only as good as the person asking the questions.
+
+A strong host does four things.
+
+They do their homework. They have read the speaker's book, watched the footage, and know the story well enough not to ask what is on the first page of the website.
+
+They listen. The best question in a fireside chat is often the follow-up, not the one on the sheet.
+
+They keep time. Twenty minutes goes fast, and a host who lets one answer run ten minutes ruins the rest.
+
+They know when to stop talking. The host is not the star. The room came for the guest.
+
+Pick your host early. Ideally it is someone from inside your company who the audience trusts, or a professional moderator who has done this before. Avoid choosing someone just because they are senior. Seniority does not make a good interviewer.
+
+HOW TO PREPARE A FIRESIDE CHAT
+
+Do the prep. The best chats look unrehearsed because they were not left to chance.
+
+Ask the speaker's office for a call between host and speaker about two weeks before the event. Thirty minutes is enough.
+
+Agree on five to seven questions, plus a few spares. Share them with the speaker. Good speakers do not want a script, but they do want to know the territory.
+
+Decide the opening and the closing. The first question should be easy and warm. The last should leave the room with something to take away.
+
+Plan for the audience. If you will take questions from the floor, decide how. Live microphones can go wrong. A phone app that lets people submit questions, with the host choosing, is safer.
+
+Check the set. Chairs that are comfortable, microphones that work, and lighting that does not leave one person in shadow. These small things decide whether the chat feels warm or awkward.
+
+QUESTIONS TO ASK A SPEAKER BEFORE YOU DECIDE
+
+Whatever you choose, ask the speaker's office a few direct questions.
+
+Do you do both formats? Some speakers only do keynotes. Others are happy to do either, or both.
+
+How long should the conversation be? Most speakers prefer 20 to 30 minutes after a talk, and 30 to 45 minutes if the chat stands alone.
+
+Can the host and speaker speak ahead of time? If the answer is no, that is a flag.
+
+Will you tailor the content to our event? Ask for specifics, not a yes.
+
+What do you need on stage? Some speakers need a screen. Some want nothing but a chair and a glass of water.
+
+COMMON MISTAKES
+
+Putting a nervous host in a leading role. If your host is anxious, the room will feel it.
+
+Letting the chat run long. If the schedule says 25 minutes, end at 25.
+
+Treating the chat as a way to save money. A fireside chat is not a cheaper keynote. Speakers charge for their time and preparation, and some charge the same for either format.
+
+Forgetting the virtual audience. If people are joining online, the host should speak to the camera at times and read questions from the chat.
+
+Skipping the rehearsal. Even ten minutes on the actual set changes everything.
+
+WHERE YOSSI FITS
+
+Yossi Ghinsberg is a fair example. He is best known for the 1981 expedition in the Bolivian Amazon, where at age 22 he survived 20 days alone with no food, no fire, and no tools. His rescue was led by Kevin Gale. He has spoken to audiences from 500 to 10,000 people and offers several formats: a 60-minute keynote, a keynote with a 20 to 30 minute fireside chat, and half-day or full-day workshops.
+
+The keynote with a fireside chat is the one planners often choose when they want the story told in full and then connected to their own people. The story has a shape that needs to be told in order. The conversation afterward is where it gets personal.
+
+Whether you book him or someone else, the principle holds. Match the format to the job. A big room that needs one shared moment wants a keynote. A smaller room that wants answers wants a conversation. Most events want a bit of both.
+
+THE SHORT VERSION
+
+Use a keynote for scale and a single clear story. Use a fireside chat for a personal, specific conversation. Use the hybrid when you can. Spend more time on your host than you think you need to. And ask the speaker's office what they do best before you decide.
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote or a keynote with a fireside chat for your event, get in touch through this site or his bureau representatives.`,
+  },
 ];
