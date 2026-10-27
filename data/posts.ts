@@ -1420,4 +1420,135 @@ Use a keynote for scale and a single clear story. Use a fireside chat for a pers
 
 Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote or a keynote with a fireside chat for your event, get in touch through this site or his bureau representatives.`,
   },
+  {
+    slug: "how-far-in-advance-to-book-a-keynote-speaker",
+    title: "How Far in Advance Should You Book a Keynote Speaker?",
+    date: "2026-10-27",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "Book too late and your first choice is gone. Book too early and you lock in a speaker before you know what the event needs. Here is a practical timeline for event planners.",
+    keywords: [
+      "how far in advance to book a keynote speaker",
+      "when to book a keynote speaker",
+      "keynote speaker booking timeline",
+      "book a speaker for a conference",
+      "speaker booking checklist",
+    ],
+    content: `HOW FAR IN ADVANCE SHOULD YOU BOOK A KEYNOTE SPEAKER?
+
+Every planner asks this sooner or later. The honest answer is that it depends on the event, but there is a sensible way to work it out. Start from the date of your event and count backward.
+
+This guide gives you a timeline you can adapt, explains why the dates matter, and covers what to do if you are already short on time.
+
+WHY TIMING MATTERS MORE THAN PEOPLE THINK
+
+A good speaker is not just a person who turns up on the day. Behind one keynote there is a diary, a travel plan, a contract, a briefing, and often a bureau or agent in the middle.
+
+Popular speakers fill their calendars. If your event falls in a busy season, such as spring or autumn conference months, the people you want may already be committed. Starting early gives you a real choice instead of whoever happens to be free.
+
+Starting early also helps the talk itself. A speaker who has weeks to prepare can shape the content around your audience. A speaker booked in a rush can only adjust a talk they already have.
+
+A ROUGH TIMELINE
+
+These are guidelines, not rules. Large events with international travel need more time. A small internal meeting needs less.
+
+SIX TO TWELVE MONTHS OUT: DECIDE WHAT YOU NEED
+
+This is the thinking stage. Before you contact anyone, settle the basics.
+
+What is the job of the keynote? Opening energy, a reset after a hard year, a fresh angle on a theme?
+
+Who is in the room, and how many?
+
+What is the budget, including travel?
+
+Which slot in the programme will it fill?
+
+If you are planning a major annual conference, this is also when you should start a shortlist. Big events often book their headline speaker close to a year ahead.
+
+FOUR TO SIX MONTHS OUT: SHORTLIST AND ENQUIRE
+
+Now you contact speakers or their bureaus. Send each one the same short summary: date, location, audience size, format, and rough budget.
+
+Ask three things. Are they available on your date? What do they charge for this format? Can they send a proposal?
+
+Contact several speakers at once. Availability changes quickly, and you do not want to wait on one answer before you ask the next person.
+
+THREE TO FOUR MONTHS OUT: DECIDE AND SIGN
+
+Watch a full talk from your top two or three. Call a reference or two. Then choose.
+
+Once you have chosen, get a written agreement. It should cover the date, the fee, what the fee includes, travel and accommodation, the length of the talk, recording rights, and what happens if either side has to cancel. Read the cancellation terms carefully. Events change, and you want to know where you stand.
+
+TWO MONTHS OUT: BRIEF THE SPEAKER
+
+This is where a good talk becomes a good talk for your audience. Book a call and share the real picture: how the year went, what the audience is worried about, what the leadership team will say before and after the keynote, and what you hope people will remember.
+
+Be honest. A speaker who knows the year was hard can speak to it. A speaker who is only told the cheerful version will walk into the room unprepared.
+
+FOUR WEEKS OUT: LOGISTICS
+
+Confirm flights, hotel, ground transport, stage set-up, microphone type, slides or no slides, and the run of show. Send the speaker a plain document with the venue address, the schedule, and one contact name with a mobile number for the day.
+
+ONE WEEK OUT: FINAL CHECK
+
+Confirm everything once more. Send the final schedule. Check that the speaker has the introduction you want read out, and make sure the person reading it has practised.
+
+WHAT IF YOU ARE SHORT ON TIME?
+
+It happens. A speaker cancels, a budget gets approved late, or a new event comes together in a few weeks. You can still book well, but you need to be quicker and clearer.
+
+Be flexible on the date if you can. A speaker who cannot do Tuesday may be free Wednesday.
+
+Be flexible on format. A shorter talk or a fireside conversation may be easier to fit into a busy diary.
+
+Go to a bureau. A speakers bureau knows who is free and can narrow a list in a day instead of a week.
+
+Be ready to decide fast. If you find a good fit, do not spend two weeks thinking about it. Good dates go.
+
+Accept that the briefing will be tighter. Put your effort into one thorough conversation rather than several short ones.
+
+Last minute does not mean you must settle. It means you must be organised.
+
+FACTORS THAT CHANGE THE TIMELINE
+
+Event size. A 10,000 person conference is planned over a year or more. A 60 person leadership retreat can come together much faster.
+
+Location. International travel means visas, longer flights, and a bigger window around the event. Allow for that in the diary as well as in the budget.
+
+Time of year. Peak conference months fill first. If your event is in a quiet month, you have more room.
+
+Speaker profile. A speaker with a long list of events will be harder to book than someone with a lighter schedule. That is not a quality judgement, only a diary one.
+
+Sign-off. Many planners lose weeks waiting for approval from someone senior. Get your decision-maker involved early, and agree the budget before you approach anyone.
+
+COMMON TIMING MISTAKES
+
+Waiting for the agenda to be perfect. The theme can be loose. Availability will not wait for you.
+
+Contacting one speaker at a time. It feels polite, but it can cost you weeks.
+
+Signing before reading the cancellation terms. Know what happens if the event moves.
+
+Briefing too late. A talk tailored in the last week is rarely as good as one tailored a month earlier.
+
+Forgetting the intro. The way a speaker is introduced sets the tone. Write it early, keep it short, and rehearse it.
+
+Leaving travel to the end. Flights get expensive and complicated close to the date, especially for events in remote locations.
+
+A WORD ON YOSSI GHINSBERG
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+Booking him follows the same path as the timeline above. Enquiries go through regional bureau contacts, and every enquiry receives a tailored proposal within 48 hours. His three keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are customized per event, so the earlier you share your brief, the better the fit. Availability for any specific date is something to ask the bureau directly.
+
+THE SHORT VERSION
+
+Start thinking six to twelve months out for a large event. Shortlist and enquire four to six months out. Sign about three months out. Brief the speaker two months out. Sort logistics a month out. If you are late, move fast, stay flexible, and use a bureau.
+
+The best keynote bookings are not the ones made earliest. They are the ones made with a clear idea of what the talk has to do, and enough time left to make it fit your people.
+
+To discuss a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
+  },
 ];
