@@ -1551,4 +1551,145 @@ The best keynote bookings are not the ones made earliest. They are the ones made
 
 To discuss a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
   },
+  {
+    slug: "how-to-introduce-a-keynote-speaker",
+    title: "How to Introduce a Keynote Speaker: A Practical Guide for Hosts and Planners",
+    date: "2026-11-10",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "The first 90 seconds of a keynote are decided by the person holding the microphone before the speaker walks on. Here is how to write and deliver an introduction that helps the talk instead of delaying it.",
+    keywords: [
+      "how to introduce a keynote speaker",
+      "keynote speaker introduction example",
+      "how to introduce a guest speaker",
+      "speaker introduction script",
+      "emcee tips for keynote speaker",
+    ],
+    content: `HOW TO INTRODUCE A KEYNOTE SPEAKER
+
+Most planners put weeks into choosing a speaker and about ten minutes into the introduction. That is backwards. The introduction is the bridge between a restless room and a keynote. A good one settles people. A bad one makes them check their phones.
+
+This guide covers what an introduction is for, how long it should be, how to write one, and what to avoid. It works for any speaker at any event.
+
+WHAT AN INTRODUCTION IS ACTUALLY FOR
+
+An introduction has three jobs.
+
+First, it tells the audience why this person is worth listening to. Not their whole life. Just enough to earn attention.
+
+Second, it connects the speaker to this room. Why this talk, for these people, today?
+
+Third, it hands over the stage cleanly. The speaker should walk on to applause and a quiet room, not to a half-finished sentence.
+
+That is all. An introduction is not a second keynote. It is not a chance for the host to be funny. It is a short, warm handover.
+
+HOW LONG SHOULD IT BE?
+
+Aim for 60 to 90 seconds when read aloud. That is roughly 150 to 200 words.
+
+Anything over two minutes starts to cost you. The audience came to hear the speaker. Every extra sentence is a sentence they did not come for.
+
+If the speaker is very well known, you can go shorter. Everyone already knows who they are. Say a line about why they are here and bring them on.
+
+START WITH THE SPEAKER'S OWN VERSION
+
+Before you write anything, ask the speaker or their bureau for a prepared introduction. Most professional speakers have one. They wrote it for a reason. It is usually tight, accurate, and built so that the host can read it without stumbling.
+
+Use it as your starting point. Then adjust it for your event.
+
+If you write your own from scratch, you risk getting facts wrong, mispronouncing names, or leaning on the wrong part of the story. A speaker who has spent years refining one paragraph about themselves will not thank you for replacing it with a copy of their LinkedIn page.
+
+A SIMPLE STRUCTURE THAT WORKS
+
+You can build almost any introduction from five short parts.
+
+1. The hook. One line that makes people look up. A fact, a question, or a short moment from the speaker's story.
+
+2. The credibility. Two or three things that matter for this audience. Not every award. Pick the ones that make sense in this room.
+
+3. The link to your event. One sentence on why you chose this speaker for this audience. This is the part only you can write.
+
+4. The name, clearly. Say the full name slowly. Say it twice if it is hard to pronounce.
+
+5. The handover. A clear cue. "Please welcome" followed by the name, then step back and applaud.
+
+That is the whole structure. Read it aloud and time it.
+
+THE LINK TO YOUR EVENT IS THE PART THAT MATTERS
+
+Anyone can read a biography. What makes a host valuable is the connection.
+
+Compare two endings.
+
+"He has spoken in many countries and has written a book."
+
+"This year our teams have been asked to change how they work, again and again. Today's speaker has something to say about what happens when the plan stops working."
+
+The second one tells people why they should care today. It also gives the speaker a place to start. A good keynote speaker will pick up that thread and pull on it.
+
+Write that one sentence for your own event. Everything else can come from the bio.
+
+WHAT TO LEAVE OUT
+
+Do not read the full biography. People can read it in the programme.
+
+Do not list every client, title, and award. Three is plenty.
+
+Do not tell the speaker's best story for them. If you give away the ending, they have to start from behind.
+
+Do not oversell. Phrases like "the best speaker you will ever hear" set a bar no human can clear. Let the talk do the work.
+
+Do not do your own stand-up routine. A joke is fine if it is short and about the occasion. A five minute warm-up is not.
+
+Do not apologise for anything. If the schedule is running late, say nothing about it. Simply move on.
+
+PRACTICAL STEPS BEFORE THE DAY
+
+Get the introduction approved. Send your draft to the speaker or bureau a week before. They can fix a date, a name, or a detail that is slightly off. This takes five minutes and prevents an awkward moment on stage.
+
+Check the pronunciation. Ask how the name is said, and write it out phonetically in your notes. If you can, record the speaker saying it or find a clip.
+
+Print it large. Do not read from a phone. Use big type, short lines, and double spacing. Mark where to pause.
+
+Practise out loud. Twice, at least. Read it standing up, at the speed you will use on stage. Most hosts read too fast when nervous.
+
+Agree the cue. Tell the speaker how you will end, so they know when to walk on. A simple closing line works best, such as "Please welcome" and then the name.
+
+Settle the tech. Confirm who controls the slides, the lights, and the walk-on music, if there is any. Make sure the operator knows the exact cue.
+
+ON THE DAY
+
+Walk to the stage with the paper in your hand. Wait for the room to settle before you start. A quiet pause of three seconds is better than talking over chatter.
+
+Speak slowly. Look at the audience, not at your notes.
+
+Say the name last. It should be the final thing the room hears before the speaker appears.
+
+Then step away. Clap, make eye contact with the speaker as they arrive, and leave the stage. Do not linger, do not make a comment, and do not stand beside them while they begin.
+
+IF THE SPEAKER DOES NOT PROVIDE AN INTRODUCTION
+
+It happens, especially with newer speakers. In that case, ask for three facts: what they are best known for, what they will talk about today, and how their name is said. Build the five parts from that.
+
+A short example, so you can see the shape:
+
+"Good morning. In 1981, a 22 year old set off into the Bolivian Amazon on an expedition. A few weeks later he was alone in the rainforest with no food, no fire, and no tools. He survived 20 days. Our team has spent this year dealing with plans that did not hold. Today's speaker has lived what that feels like, and what comes after. Please welcome Yossi Ghinsberg."
+
+That runs to about 75 words. It has a hook, a fact, a link to the event, and a clean handover. You can stretch it to 150 by adding one more credential, but you do not need to.
+
+A WORD ON YOSSI GHINSBERG
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe. He offers three keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", each customized per event.
+
+If you are booking him, ask the bureau contact for the preferred introduction early. Details about format, such as keynote only or keynote plus a fireside chat, shape what the host says, so agree that first. Booking enquiries go through the regional contacts listed on the booking page, and every enquiry receives a tailored proposal within 48 hours.
+
+THE SHORT VERSION
+
+Keep it to 60 to 90 seconds. Start from the speaker's own prepared introduction. Add one sentence that links the speaker to your event. Leave out the full biography. Check the name, print the script large, practise it twice, and say the name last.
+
+A good introduction is invisible. The audience does not remember it. They only notice that the keynote started well.
+
+To talk about a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
+  },
 ];
