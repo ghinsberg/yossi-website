@@ -1692,4 +1692,123 @@ A good introduction is invisible. The audience does not remember it. They only n
 
 To talk about a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
   },
+  {
+    slug: "leadership-summit-keynote-speaker",
+    title: "Leadership Summit Keynote Speaker: How to Plan the Opening Session",
+    date: "2026-11-17",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A leadership summit audience has heard the leadership talk before. Here is how to plan the keynote slot so it opens the event properly, who to book, and what to ask before you sign.",
+    keywords: [
+      "leadership summit keynote speaker",
+      "leadership conference keynote speaker",
+      "how to plan a leadership summit",
+      "opening keynote for leadership event",
+      "booking a speaker for a leadership summit",
+    ],
+    content: `LEADERSHIP SUMMIT KEYNOTE SPEAKER: HOW TO PLAN THE OPENING SESSION
+
+A leadership summit has a hard audience. The people in the room manage teams, run budgets, and sit through presentations every week. Many have read the same leadership books. Most have heard a talk about vision, trust, and change.
+
+So the keynote has a harder job than it does at most events. It has to say something this room has not already heard, and it has to say it in a way people believe.
+
+This guide covers how to plan that slot. It works for any speaker and any summit.
+
+START WITH WHAT THE ROOM ACTUALLY NEEDS
+
+Before you look at a single speaker, write down what your leaders are facing right now. Not the theme on the banner. The real situation.
+
+Is the company in the middle of a restructure? Did a hard year just end? Are managers being asked to do more with the same people? Is there a new strategy that nobody has fully explained yet?
+
+The answer changes what you book. A team that is tired needs something different from a team that is nervous. A team that is proud needs something different again.
+
+Write two sentences. "Our leaders are feeling X. By the end of the opening session we want them to feel or do Y." Everything else in your search comes from those two sentences.
+
+DECIDE WHAT THE OPENING SESSION IS FOR
+
+An opening keynote usually has one of three jobs.
+
+Set the tone. The talk gives the whole event a mood. It is honest, a little bold, and lets people relax into the days ahead.
+
+Frame the theme. The talk introduces an idea that later sessions pick up. Breakouts and panels refer back to it.
+
+Reset the room. People arrive carrying their inbox and their worries. The talk pulls them into the present.
+
+Most summits need a mix, but pick the main job. A speaker who is brilliant at framing a theme may be the wrong choice if what you really need is to reset a tired room.
+
+THE CASE FOR A LIVED STORY
+
+For a leadership audience, the strongest keynotes tend to come from lived experience rather than from a framework built in a classroom. Leaders can tell the difference quickly.
+
+A framework tells people what to do. A story shows them what it felt like to do it under pressure. Leaders trust the second, because it is harder to fake.
+
+That does not mean every summit needs an adventurer. A former executive who lived through a real failure can do the same job. What matters is that the speaker was there, and can describe what happened without polishing it.
+
+Ask yourself two questions about any speaker. Did this person live what they talk about? Can they tell it plainly?
+
+QUESTIONS TO ASK BEFORE YOU BOOK
+
+How will you adapt the talk to our event? Listen for specifics. A speaker who asks about your audience, your year, and your strategy is doing the work. A speaker who says the talk suits any audience has told you what to expect.
+
+What do you need from us? Good speakers ask for a briefing call, the agenda, and some background on the audience. If nothing is requested, that is a warning sign.
+
+Can I see a full recording? Not a showreel. Ask for a complete keynote, ideally to an audience similar to yours. Watch the room, not just the stage.
+
+Who else is on the programme? An opening keynote has to fit with what follows. Tell the speaker who is speaking after them, so they do not cover the same ground.
+
+What can the speaker do beyond the keynote? Some will join a fireside chat, a leaders-only lunch, or a breakout. These formats often reach a leadership group better than a stage alone.
+
+PLAN THE SLOT, NOT JUST THE SPEAKER
+
+Even the right speaker can struggle in the wrong slot. Think about timing.
+
+Length. Sixty minutes is standard for a keynote. If your audience is tired or the day is long, ask whether 45 will do. A shorter, sharper talk beats a long one.
+
+Time of day. Early morning audiences are fresh but still arriving. Right after lunch is the hardest slot in any conference. Do not put your most important talk there if you can avoid it.
+
+Room set up. Leaders sit better in rounds than in rows, if you can manage it. They will talk to each other afterwards, and the layout makes that easier.
+
+Q&A. Decide whether to include one. A moderated conversation after the talk gives leaders a chance to ask what they really want to ask. Build it into the schedule, or it gets squeezed out.
+
+What happens next. If the keynote opens a topic, give people a way to continue. A discussion in table groups, a breakout, or a short exercise turns a good talk into something that sticks.
+
+SPEAKER FEES AND HOW TO FRAME THE BUDGET
+
+Fees for experienced keynote speakers vary widely, and the number on the page is rarely the full cost. Travel, accommodation, and format all matter. A keynote with a workshop costs more than a keynote alone.
+
+If your budget is firm, say so early. A good bureau or speaker will tell you what is possible. It saves everyone time.
+
+Also think about the cost of getting it wrong. A summit brings together your senior people for several days. The keynote is the first thing they experience. A weak opening costs far more than the difference in fee.
+
+COMMON MISTAKES
+
+Booking the name instead of the fit. A famous speaker is not always the right one for your audience.
+
+Choosing a theme first and a speaker second. The theme often ends up forcing the speaker into a talk they would not normally give. Choose the speaker, then let them shape the talk.
+
+Skipping the briefing call. This one call changes the result more than anything else. Do not skip it.
+
+Overloading the day. A keynote needs room to land. Do not squeeze it between two other sessions with no break.
+
+Forgetting the follow up. The talk ends. The conversation should not. Plan what leaders do with it on Monday.
+
+WHERE YOSSI GHINSBERG FITS
+
+Yossi Ghinsberg is a keynote speaker, author, and survivor. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+For leadership audiences, he speaks on survival, resilience, adaptation, and leadership, drawing on what he lived rather than on theory. His framework, The Laws of the Jungle, takes principles he observed in the Amazon and applies them to business and life. His keynotes include "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", and each is customized per event.
+
+He speaks worldwide and travels from California for North American events. Formats include a 60 minute keynote, a keynote with a 20 to 30 minute fireside chat, and half-day or full-day workshops. Audiences leave with practical tools, including the Snake Breath technique for acute stress and the Real vs Imaginary Survival framework for separating true threats from manufactured stress.
+
+He is one option, not the only one. Whether he suits your summit depends on what your leaders are facing and what you want the opening session to do.
+
+THE SHORT VERSION
+
+Write down what your leaders are facing. Decide what the opening session is for. Look for a speaker who lived what they talk about and can tell it plainly. Ask how they will adapt, ask for a full recording, and book the briefing call. Then plan the slot around the talk, with room for questions and a way to keep the conversation going.
+
+A leadership audience has heard plenty of advice. What it rarely gets is a story that is honest enough to make it think.
+
+To talk about a keynote for your summit, get in touch through this site or contact the regional bureau representatives listed on the booking page. Every enquiry receives a tailored proposal within 48 hours.`,
+  },
 ];
