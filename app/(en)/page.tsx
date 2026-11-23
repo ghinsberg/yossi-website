@@ -10,6 +10,18 @@ import TheDifference from "@/components/sections/TheDifference";
 import MediaLogos from "@/components/sections/MediaLogos";
 import FooterCTA from "@/components/sections/FooterCTA";
 import KineticIntro from "@/components/ui/KineticIntro";
+import type { Metadata } from "next";
+import { EN_BASE_URL, homeAlternates } from "@/lib/seo";
+import { readSiteEnv } from "@/lib/site";
+
+const languages = homeAlternates(readSiteEnv());
+
+// Page-level alternates replace the layout's (shallow merge), so the canonical
+// is restated. With no languages, no metadata is exported and the layout's
+// canonical applies exactly as before.
+export const metadata: Metadata = languages
+  ? { alternates: { canonical: EN_BASE_URL, languages } }
+  : {};
 
 const aioFaqs = [
   {

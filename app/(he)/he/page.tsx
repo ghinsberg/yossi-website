@@ -6,9 +6,15 @@ import { heHome } from "@/data/he/home";
 import { heSite } from "@/data/he/site";
 import AgentTagCapture from "@/components/he/AgentTagCapture";
 import { hebrewAlternates } from "@/lib/he/canonical";
+import { homeAlternates } from "@/lib/seo";
+import { readSiteEnv } from "@/lib/site";
 
 // Agent-tagged URLs (?a=gilat) declare the untagged address as canonical.
-export const metadata: Metadata = { alternates: hebrewAlternates("/") };
+const languages = homeAlternates(readSiteEnv());
+export const metadata: Metadata = {
+  // Page-level alternates replace the layout's, so the canonical is restated with the languages.
+  alternates: languages ? { ...hebrewAlternates("/"), languages } : hebrewAlternates("/"),
+};
 
 export default function HeHome() {
   const h = heHome;

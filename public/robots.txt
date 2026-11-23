@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://yossighinsberg.com/sitemap.xml
