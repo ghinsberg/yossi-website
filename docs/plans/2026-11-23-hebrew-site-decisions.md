@@ -43,3 +43,11 @@ Each line is a call made without asking Yossi, in the order made, with what it c
 - Confirm Vercel's build command is `npm run build`, or the build gate is skipped.
 - A summary line for form errors, and behaviour tests for the mobile menu.
 - Every `HE_*` setting change needs a fresh build, and the domain is attached only after the settings exist. The plan's launch steps should be corrected to say so before they are followed.
+
+## Added 2026-11-24: preview setup and two build fixes
+
+24. **Vercel setting added:** `HE_HOSTS=*` for Preview deployments of the `hebrew-site` branch only. Production has no Hebrew settings. The stable preview address is the branch alias on Vercel, behind the Vercel login.
+25. **Booking route no longer needs the email key just to load.** Previews have no key, and every preview build was failing for that reason. With a key, behaviour is unchanged (the recorded English comparisons still pass). Without one, a submission gets an error, which is what a preview should do.
+26. **Fonts are now hosted inside the site** (`public/fonts/`, declared in `app/fonts-en.css` and `app/fonts-he.css`). Cause: Google intermittently serves a font address shape that breaks builds on Next.js 16.2.1, about one build in five on Vercel. The 14 files are byte-identical to what Google served; all 68 font declarations were verified equivalent by an independent reviewer; headings and paragraphs measure the same to the pixel. Yossi approved this fix on 2026-11-23. *If wrong:* a visual difference nobody measured, for example in a browser other than Chrome.
+27. **A font file must never be overwritten under the same name** (browsers cache them for a year). A test enforces it. A font update gets a new file name.
+28. **Correction on record:** Vandam first told Yossi all preview failures were the font problem. Reading every log showed 16 of 20 were the missing email key. The main site was never blocked by that one.
