@@ -1051,7 +1051,7 @@ WHAT THIS LOOKS LIKE WITH A STORY-BASED KEYNOTE
 
 Yossi Ghinsberg is a good example of why the brief matters. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon with no food, no fire, and no tools. That story does not change. What changes is which part of it matters to the room in front of him.
 
-For a safety audience, the details of decisions under pressure carry the weight. For a leadership team in the middle of change, the story of what happens when the plan falls apart is closer to what they are living. For a sales floor, it may be something else again. His three signature keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are each customized per event, and that customization only works when the organiser tells him what the room is facing.
+For a safety audience, the details of decisions under pressure carry the weight. For a leadership team in the middle of change, the story of what happens when the plan falls apart is closer to what they are living. For a sales floor, it may be something else again. His three signature keynotes, "The Map Has Run Out", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are each customized per event, and that customization only works when the organiser tells him what the room is facing.
 
 That is true of any speaker with a story that stands on its own. The story is the constant. Your brief decides how it is told.
 
@@ -1203,7 +1203,7 @@ Yossi Ghinsberg is not a sales trainer, and he does not pretend to be. In 1981, 
 
 For a sales team, the draw is not selling advice. It is a true story about decisions under pressure, what happens when the plan falls apart, and what keeps a person moving when the situation looks bad. He has spoken to audiences from 500 to 10,000 people for clients including Google, Apple, Microsoft, BMW, IBM and Coca-Cola, and he was voted Most Unforgettable Speaker by The Sweeney Agency.
 
-His three signature keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are customized per event. That customization depends on a good brief, which is why the earlier steps in this guide matter whichever speaker you choose.
+His three signature keynotes, "The Map Has Run Out", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are customized per event. That customization depends on a good brief, which is why the earlier steps in this guide matter whichever speaker you choose.
 
 A SHORT CHECKLIST
 
