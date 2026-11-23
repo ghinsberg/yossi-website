@@ -1,14 +1,62 @@
 import { describe, expect, it } from "vitest";
-import golden from "./__fixtures__/en-sitemap.golden.json";
 import { homeAlternates, robotsFor, sitemapFor, siteForRequest } from "@/lib/seo";
+import { keynotes } from "@/data/keynotes";
+import { posts } from "@/data/posts";
+import { speakerLocations } from "@/data/locations";
 
 const EN = "https://yossighinsberg.com";
 const HE = "https://he.example.co.il";
 
 describe("sitemapFor", () => {
-  // Golden captured from the unmodified app/sitemap.ts before the refactor.
-  it("english output equals today's sitemap exactly", () => {
-    expect(sitemapFor("en", EN)).toEqual(golden);
+  // The English sitemap as it was before the Hebrew work: a fixed list of
+  // static pages, then one entry per keynote, blog post and city, in that
+  // order. Counts and URLs come from the data, so a new post needs no edit here.
+  const STATIC = [
+    "", "/keynotes", "/book-yossi", "/story", "/videos", "/endorsements", "/media", "/faq",
+    "/blog", "/laws", "/yossi", "/power-to-survive", "/the-two-techniques",
+    "/survival-skills-for-business", "/survival-keynote-speaker", "/resilience-keynote-speaker",
+    "/adventure-keynote-speaker", "/adaptability-keynote-speaker", "/amazon-survival-speaker",
+    "/leadership-keynote-speaker", "/motivational-keynote-speaker", "/stress-management-speaker",
+    "/keynote-speaker-financial-services", "/keynote-speaker-insurance", "/keynote-speaker-mdrt",
+    "/keynote-speaker-overcoming-adversity", "/keynote-speaker-technology",
+  ];
+  const en = sitemapFor("en", EN);
+  const groups = {
+    static: en.slice(0, STATIC.length),
+    keynotes: en.slice(STATIC.length, STATIC.length + keynotes.length),
+    posts: en.slice(STATIC.length + keynotes.length, STATIC.length + keynotes.length + posts.length),
+    cities: en.slice(STATIC.length + keynotes.length + posts.length),
+  };
+
+  it("english has exactly the static pages, keynotes, posts and cities", () => {
+    expect(en).toHaveLength(STATIC.length + keynotes.length + posts.length + speakerLocations.length);
+  });
+  it("english static pages: fixed list, weekly, home 1, booking 0.9, others 0.7", () => {
+    expect(groups.static).toEqual(
+      STATIC.map((p) => ({
+        url: `${EN}${p}`,
+        changeFrequency: "weekly",
+        priority: p === "" ? 1 : p === "/book-yossi" ? 0.9 : 0.7,
+      })),
+    );
+  });
+  it("english keynotes: one per keynote, monthly, 0.8", () => {
+    expect(groups.keynotes).toEqual(
+      keynotes.map((k) => ({ url: `${EN}/keynotes/${k.slug}`, changeFrequency: "monthly", priority: 0.8 })),
+    );
+  });
+  it("english posts: one per post, monthly, 0.6", () => {
+    expect(groups.posts).toEqual(
+      posts.map((p) => ({ url: `${EN}/blog/${p.slug}`, changeFrequency: "monthly", priority: 0.6 })),
+    );
+  });
+  it("english cities: one per speaker location, monthly, 0.6", () => {
+    expect(groups.cities).toEqual(
+      speakerLocations.map((l) => ({ url: `${EN}/keynote-speaker/${l.slug}`, changeFrequency: "monthly", priority: 0.6 })),
+    );
+  });
+  it("english never lists a Hebrew path", () => {
+    expect(en.some((e) => /\/he(\/|$)/.test(e.url.slice(EN.length)))).toBe(false);
   });
   it("hebrew lists the ten pages on the Hebrew base and no English path", () => {
     const urls = sitemapFor("he", HE).map((e) => e.url);
