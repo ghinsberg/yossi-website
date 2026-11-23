@@ -27,3 +27,27 @@
   0%, 100% { transform: scaleY(0.4); }
   50%       { transform: scaleY(1); }
 }
+
+/* Hebrew site only (html[lang="he"]); English pages never match. */
+@layer base {
+  /* 8.9:1 against the page background; utilities (e.g. on the gold bar) can override. */
+  html[lang="he"] :focus-visible {
+    outline: 3px solid var(--color-brand-gold-light);
+    outline-offset: 2px;
+  }
+  /* Keep focused fields clear of the fixed mobile booking bar. */
+  html[lang="he"] {
+    scroll-padding-bottom: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[lang="he"] *,
+  html[lang="he"] *::before,
+  html[lang="he"] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -10,7 +10,7 @@ export default function HeMobileCTA() {
       <div className="py-3 px-4">
         <Link
           href={heSite.bookingHref}
-          className="w-full text-center text-black font-semibold py-3 min-h-[44px] flex items-center justify-center"
+          className="w-full text-center text-black font-semibold py-3 min-h-[44px] flex items-center justify-center focus-visible:outline-black focus-visible:-outline-offset-4"
         >
           {heSite.bookingLabel}
         </Link>

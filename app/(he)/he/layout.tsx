@@ -53,7 +53,7 @@ export default function HebrewRootLayout({ children }: Readonly<{ children: Reac
         {/* Needs an absolute origin, so only once the Hebrew canonical host is set. */}
         {canonicalHost ? <HeStructuredData base={`https://${canonicalHost}`} /> : null}
         <HeHeader />
-        <main id="main" className="pb-16 md:pb-0">
+        <main id="main" tabIndex={-1} className="outline-none">
           {children}
         </main>
         <HeMobileCTA />

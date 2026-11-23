@@ -27,7 +27,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ORDER: FieldName[] = ["name", "organisation", "phone", "email", "eventDate", "eventLocation", "audienceSize", "message"];
 
 const inputStyles =
-  "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-brand-text placeholder:text-brand-text-secondary/50 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition";
+  "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-brand-text placeholder:text-brand-text-secondary/70 focus:outline-none focus:border-brand-gold-light focus:ring-2 focus:ring-brand-gold-light transition";
 const labelStyles = "block text-sm font-medium text-brand-text-secondary mb-2";
 
 const subscribeNever = () => () => {};
@@ -88,7 +88,7 @@ export default function HeBookingForm() {
     }
   }
 
-  const field = (name: FieldName, opts: { type?: string; ltr?: boolean; area?: boolean; autoComplete?: string } = {}) => {
+  const field = (name: FieldName, opts: { type?: string; ltr?: boolean; area?: boolean; autoComplete?: string; inputMode?: "tel" | "email" } = {}) => {
     const required = REQUIRED.includes(name);
     const meta = f.fields[name];
     const err = errors[name];
@@ -119,7 +119,7 @@ export default function HeBookingForm() {
         {opts.area ? (
           <textarea {...common} rows={5} className={cls} />
         ) : (
-          <input {...common} type={opts.type ?? "text"} dir={opts.ltr ? "ltr" : undefined} className={cls} />
+          <input {...common} type={opts.type ?? "text"} inputMode={opts.inputMode} dir={opts.ltr ? "ltr" : undefined} className={cls} />
         )}
         {err ? (
           <p id={errId} role="alert" className="text-red-400 text-sm mt-1">
@@ -138,8 +138,8 @@ export default function HeBookingForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {field("name", { autoComplete: "name" })}
           {field("organisation", { autoComplete: "organization" })}
-          {field("phone", { type: "tel", ltr: true, autoComplete: "tel" })}
-          {field("email", { type: "email", ltr: true, autoComplete: "email" })}
+          {field("phone", { type: "tel", ltr: true, autoComplete: "tel", inputMode: "tel" })}
+          {field("email", { type: "email", ltr: true, autoComplete: "email", inputMode: "email" })}
           {field("eventDate")}
           {field("eventLocation")}
           {field("audienceSize")}

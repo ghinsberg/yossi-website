@@ -50,6 +50,9 @@ export const heSite = {
     mainNav: draft("ניווט ראשי"),
     skipToContent: draft("דלג לתוכן"),
     homeLabel: draft("ראשי"),
+    mobileMenu: draft("תפריט"),
+    footerNav: draft("ניווט בתחתית העמוד"),
+    legalNav: draft("מידע משפטי"),
   },
   meta: {
     titleDefault: draft("יוסי גינסברג | הרצאות לארגונים ולכנסים"),

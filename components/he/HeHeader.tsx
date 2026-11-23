@@ -1,15 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { heSite } from "@/data/he/site";
 
 export default function HeHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -19,6 +23,46 @@ export default function HeHeader() {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  // Focus goes into the menu when it opens and back to the toggle when it
+  // closes (not on first render). Escape closes; Tab stays inside while open.
+  useEffect(() => {
+    if (menuOpen) {
+      closeRef.current?.focus();
+    } else if (wasOpen.current) {
+      toggleRef.current?.focus();
+    }
+    wasOpen.current = menuOpen;
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+        return;
+      }
+      if (e.key !== "Tab" || !menuRef.current) return;
+      const items = menuRef.current.querySelectorAll<HTMLElement>("a[href], button");
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    // The menu is for narrow screens only: close it if the window grows to the desktop layout.
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      window.removeEventListener("resize", onResize);
     };
   }, [menuOpen]);
 
@@ -44,26 +88,29 @@ export default function HeHeader() {
             {heSite.name}
           </Link>
 
-          <nav aria-label={heSite.ui.mainNav} className="hidden md:flex items-center gap-5 lg:gap-6 xl:gap-8">
+          <nav aria-label={heSite.ui.mainNav} className="hidden lg:flex items-center gap-5 xl:gap-8">
             {heSite.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-brand-text-secondary hover:text-brand-text transition"
+                className="whitespace-nowrap text-sm font-medium text-brand-text-secondary hover:text-brand-text transition"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={heSite.bookingHref}
-              className="bg-brand-gold text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-brand-gold-light transition"
+              className="whitespace-nowrap bg-brand-gold text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-brand-gold-light transition"
             >
               {heSite.bookingLabel}
             </Link>
           </nav>
 
           <button
-            className="md:hidden flex flex-col justify-center items-center w-11 h-11 gap-1.5"
+            ref={toggleRef}
+            type="button"
+            aria-controls="he-mobile-menu"
+            className="lg:hidden flex flex-col justify-center items-center w-11 h-11 gap-1.5"
             onClick={() => setMenuOpen(true)}
             aria-label={heSite.ui.openMenu}
             aria-expanded={menuOpen}
@@ -76,11 +123,16 @@ export default function HeHeader() {
       </header>
 
       <div
-        className={`fixed inset-0 z-50 bg-brand-bg flex flex-col transition-opacity duration-300 md:hidden ${
+        id="he-mobile-menu"
+        ref={menuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={heSite.ui.mobileMenu}
+        className={`fixed inset-0 z-50 bg-brand-bg flex flex-col transition-opacity duration-300 lg:hidden ${
           menuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!menuOpen}
-        // inert keeps the closed menu out of the tab order
+        // inert keeps the closed menu out of the tab order and the accessibility tree
         {...(menuOpen ? {} : { inert: true })}
       >
         <div className="flex justify-between items-center px-6 pt-6 pb-4">
@@ -92,6 +144,8 @@ export default function HeHeader() {
             {heSite.name}
           </Link>
           <button
+            ref={closeRef}
+            type="button"
             onClick={() => setMenuOpen(false)}
             aria-label={heSite.ui.closeMenu}
             className="text-white w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:bg-white/20"

@@ -5,7 +5,7 @@ import Placeholder from "@/components/he/Placeholder";
 export default function HeFooter() {
   const f = heSite.footer;
   return (
-    <footer className="bg-brand-bg border-t border-brand-gold/20 py-16">
+    <footer className="bg-brand-bg border-t border-brand-gold/20 pt-16 pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
@@ -16,15 +16,17 @@ export default function HeFooter() {
 
           <div>
             <h2 className="text-sm text-brand-text-secondary mb-4">{f.navTitle}</h2>
+            <nav aria-label={heSite.ui.footerNav}>
             <ul className="space-y-3">
               {heSite.nav.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-brand-text-secondary hover:text-brand-text transition">
+                  <Link href={link.href} className="inline-block py-1 text-sm text-brand-text-secondary hover:text-brand-text transition">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
+            </nav>
           </div>
 
           <div>
@@ -34,10 +36,11 @@ export default function HeFooter() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-brand-text-secondary">
+          <nav aria-label={heSite.ui.legalNav}>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {f.legalLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="hover:text-brand-text transition">
+                <Link href={l.href} className="inline-block py-2 hover:text-brand-text transition">
                   {l.label}
                 </Link>
               </li>
@@ -47,12 +50,13 @@ export default function HeFooter() {
                 href={heSite.englishSiteUrl}
                 lang="en"
                 hrefLang="en"
-                className="hover:text-brand-text transition"
+                className="inline-block py-2 hover:text-brand-text transition"
               >
                 {heSite.englishSiteLabel}
               </a>
             </li>
           </ul>
+          </nav>
           <p>{f.rights}</p>
         </div>
       </div>
