@@ -107,3 +107,12 @@ describe("legal shells", () => {
     expect(text).not.toMatch(/@|tel:/);
   });
 });
+
+describe("video embed", () => {
+  it("uses the privacy-enhanced YouTube host", async () => {
+    const { default: Embed } = await import("./HeVideoEmbed");
+    const html = renderToStaticMarkup(<Embed youtubeId="abc" title="t" />);
+    expect(html).toContain('src="https://www.youtube-nocookie.com/embed/abc"');
+    expect(html).not.toContain("www.youtube.com");
+  });
+});

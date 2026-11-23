@@ -3,7 +3,7 @@ export default function HeVideoEmbed({ youtubeId, title }: { youtubeId: string; 
   return (
     <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
       <iframe
-        src={`https://www.youtube.com/embed/${youtubeId}`}
+        src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
         title={title}
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
