@@ -1,18 +1,14 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { decideRoute, readSiteEnv } from "@/lib/site";
+import { decideRoute, readSiteEnv, redirectUrl } from "@/lib/site";
 
 export function middleware(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
   const d = decideRoute(host, req.nextUrl.pathname, readSiteEnv());
-  // Clone keeps the query string; only host and pathname change.
+  // Clone keeps the query string; only the pathname changes.
   const url = req.nextUrl.clone();
   switch (d.action) {
     case "redirect":
-      if (d.host.toLowerCase() !== host.toLowerCase()) url.protocol = "https:";
-      url.host = d.host;
-      if (!d.host.includes(":")) url.port = "";
-      url.pathname = d.pathname;
-      return NextResponse.redirect(url, 308);
+      return NextResponse.redirect(redirectUrl(new URL(url.href), host, d), 308);
     case "rewrite":
       url.pathname = d.pathname;
       return NextResponse.rewrite(url);

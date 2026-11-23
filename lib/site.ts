@@ -23,6 +23,8 @@ export type SiteEnv = {
   heLive?: string;
   /** Canonical Hebrew host; www.<it> redirects to it. */
   heCanonicalHost?: string;
+  /** Vercel's VERCEL_ENV: "production", "preview" or "development". */
+  vercelEnv?: string;
 };
 
 export function readSiteEnv(): SiteEnv {
@@ -30,6 +32,7 @@ export function readSiteEnv(): SiteEnv {
     heHosts: process.env.HE_HOSTS,
     heLive: process.env.HE_LIVE,
     heCanonicalHost: process.env.HE_CANONICAL_HOST,
+    vercelEnv: process.env.VERCEL_ENV,
   };
 }
 
@@ -40,28 +43,43 @@ const SHARED_FILES = new Set([
   "/robots.txt",
   "/favicon.ico",
 ]);
-// Extensions of the files that sit at the top of public/ (svg, txt, html, pdf).
-const PUBLIC_FILE_EXT = /\.(svg|txt|html|pdf|xml|ico)$/i;
 
-/** Paths served the same on every host: assets, API, metadata files. */
+/**
+ * Paths a Hebrew host serves as is: assets, API, metadata files. Everything
+ * else on a Hebrew host is rewritten under /he, so English-only files such as
+ * /llms.txt or the one-sheet never appear on the Hebrew domain.
+ */
 export function isSharedPath(pathname: string): boolean {
-  return (
-    SHARED_PREFIXES.some((p) => pathname.startsWith(p)) ||
-    SHARED_FILES.has(pathname) ||
-    PUBLIC_FILE_EXT.test(pathname)
-  );
+  return SHARED_PREFIXES.some((p) => pathname.startsWith(p)) || SHARED_FILES.has(pathname);
 }
 
 export function isHebrewHost(host: string, env: SiteEnv): boolean {
   const h = host.toLowerCase();
+  const canonical = env.heCanonicalHost?.trim().toLowerCase();
+  if (canonical && (h === canonical || h === `www.${canonical}`)) return true;
   const entries = (env.heHosts ?? "")
     .split(",")
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean);
-  return entries.includes("*") || entries.includes(h);
+  // "*" is for previews and local dev. In Production it would turn the
+  // English site Hebrew, so it is ignored there.
+  const wildcard = entries.includes("*") && env.vercelEnv !== "production";
+  return wildcard || entries.includes(h);
 }
 
-const isHePath = (p: string) => p === "/he" || p.startsWith("/he/");
+// "/he", "/he/...", and Next's suffixed forms ("/he.rsc", "/he.segments/..."),
+// any case. Tested on the decoded path so "/%68e" cannot slip past.
+const HE_PATH = /^\/he(?=$|[/.])/i;
+// Only these map to a page once the prefix is stripped.
+const HE_DIR = /^\/he(?=$|\/)/i;
+
+function decodePath(pathname: string): string | null {
+  try {
+    return decodeURIComponent(pathname);
+  } catch {
+    return null;
+  }
+}
 
 export function decideRoute(
   hostHeader: string,
@@ -69,7 +87,9 @@ export function decideRoute(
   env: SiteEnv,
 ): RouteDecision {
   const host = hostHeader.toLowerCase();
-  const heCanonical = env.heCanonicalHost?.toLowerCase();
+  const heCanonical = env.heCanonicalHost?.trim().toLowerCase();
+  const p = decodePath(pathname);
+  if (p === null) return { action: "notFound" };
 
   if (heCanonical && host === `www.${heCanonical}`) {
     return { action: "redirect", host: heCanonical, pathname };
@@ -77,8 +97,8 @@ export function decideRoute(
 
   if (isHebrewHost(host, env)) {
     if (isSharedPath(pathname)) return { action: "next" };
-    if (isHePath(pathname)) {
-      return { action: "redirect", host, pathname: pathname.slice(3) || "/" };
+    if (HE_DIR.test(p)) {
+      return { action: "redirect", host, pathname: p.slice(3) || "/" };
     }
     return { action: "rewrite", pathname: pathname === "/" ? "/he" : `/he${pathname}` };
   }
@@ -87,11 +107,31 @@ export function decideRoute(
     return { action: "redirect", host: CANONICAL_HOST, pathname };
   }
 
-  if (isHePath(pathname)) {
-    if (env.heLive === "1" && heCanonical) {
-      return { action: "redirect", host: heCanonical, pathname: pathname.slice(3) || "/" };
+  if (HE_PATH.test(p)) {
+    if (env.heLive === "1" && heCanonical && HE_DIR.test(p)) {
+      return { action: "redirect", host: heCanonical, pathname: p.slice(3) || "/" };
     }
     return { action: "notFound" };
   }
   return { action: "next" };
+}
+
+/**
+ * The absolute URL a redirect decision points to. The query string is kept.
+ * Same host: protocol and port stay as requested (local dev on http works).
+ * Another host: always https on the default port.
+ */
+export function redirectUrl(
+  current: URL,
+  requestHost: string,
+  d: { host: string; pathname: string },
+): URL {
+  const url = new URL(current.href);
+  if (d.host.toLowerCase() !== requestHost.toLowerCase()) url.protocol = "https:";
+  // The Host header carries the port when there is one, so a same-host
+  // redirect keeps it; a bare host name means the default port.
+  url.host = d.host;
+  if (!d.host.includes(":")) url.port = "";
+  url.pathname = d.pathname;
+  return url;
 }
