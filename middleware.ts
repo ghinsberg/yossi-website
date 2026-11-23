@@ -1,23 +1,28 @@
 import { NextResponse, type NextRequest } from "next/server";
-
-// The production site must live on exactly one host. The bare Vercel alias
-// serves a full duplicate that Google indexes, splitting search authority.
-const CANONICAL_HOST = "yossighinsberg.com";
-const DUPLICATE_HOSTS = new Set([
-  "yossi-website.vercel.app",
-  "www.yossighinsberg.com",
-]);
+import { decideRoute, readSiteEnv } from "@/lib/site";
 
 export function middleware(req: NextRequest) {
-  const host = req.headers.get("host")?.toLowerCase() ?? "";
-  if (DUPLICATE_HOSTS.has(host)) {
-    const url = req.nextUrl.clone();
-    url.protocol = "https:";
-    url.host = CANONICAL_HOST;
-    url.port = "";
-    return NextResponse.redirect(url, 308);
+  const host = req.headers.get("host") ?? "";
+  const d = decideRoute(host, req.nextUrl.pathname, readSiteEnv());
+  // Clone keeps the query string; only host and pathname change.
+  const url = req.nextUrl.clone();
+  switch (d.action) {
+    case "redirect":
+      if (d.host.toLowerCase() !== host.toLowerCase()) url.protocol = "https:";
+      url.host = d.host;
+      if (!d.host.includes(":")) url.port = "";
+      url.pathname = d.pathname;
+      return NextResponse.redirect(url, 308);
+    case "rewrite":
+      url.pathname = d.pathname;
+      return NextResponse.rewrite(url);
+    case "notFound":
+      // No route matches /__blocked except the English catch-all, which 404s.
+      url.pathname = "/__blocked";
+      return NextResponse.rewrite(url);
+    default:
+      return NextResponse.next();
   }
-  return NextResponse.next();
 }
 
 export const config = {
