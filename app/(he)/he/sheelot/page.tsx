@@ -5,8 +5,13 @@ import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
 import FaqList from "@/components/he/FaqList";
 import { heFaq, heFaqPage as p } from "@/data/he/faq";
 import { heSite } from "@/data/he/site";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/sheelot"),
+};
 
 export default function Page() {
   return (

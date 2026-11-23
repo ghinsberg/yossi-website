@@ -3,6 +3,7 @@ import {
   validateEnquiry,
   recipientsFor,
   subjectFor,
+  HE_SUBJECT_MAX,
   escapeHtml,
   buildHebrewEmailHtml,
   buildEnglishEmailHtml,
@@ -174,6 +175,18 @@ describe("subjectFor, Hebrew", () => {
   it("adds the channel prefix after the agent prefix when utm_source is set", () => {
     const d = ok({ ...heReq, utm_source: "linkedin" }).data;
     expect(subjectFor("he", d, resolveAgent("gilat"))).toMatch(/^\[IL\] \[GILAT\] \[LINKEDIN\] /);
+  });
+  it("separates label and sender with \" | \", no em dash", () => {
+    const s = subjectFor("he", ok(heReq).data, resolveAgent("rafi"));
+    expect(s).toBe(`[IL] [RAFI] ${heBooking.email.subjectLabel} | דנה כהן, אקמה`);
+    expect(s).not.toContain("\u2014");
+  });
+  it("is capped at 200 characters", () => {
+    expect(HE_SUBJECT_MAX).toBe(200);
+    const d = ok({ ...heReq, name: "א".repeat(300), organisation: "ב".repeat(300) }).data;
+    const s = subjectFor("he", d, resolveAgent("gilat"));
+    expect(Array.from(s)).toHaveLength(200);
+    expect(s).toMatch(/^\[IL\] \[GILAT\] /);
   });
 });
 

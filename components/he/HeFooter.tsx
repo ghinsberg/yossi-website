@@ -5,7 +5,7 @@ import Placeholder from "@/components/he/Placeholder";
 export default function HeFooter() {
   const f = heSite.footer;
   return (
-    <footer className="bg-brand-bg border-t border-brand-gold/20 pt-16 pb-[calc(6rem+env(safe-area-inset-bottom))] md:pb-16">
+    <footer className="bg-brand-bg border-t border-brand-gold/20 pt-16 pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
@@ -45,18 +45,18 @@ export default function HeFooter() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={heSite.englishSiteUrl}
-                lang="en"
-                hrefLang="en"
-                className="inline-block py-2 hover:text-brand-text transition"
-              >
-                {heSite.englishSiteLabel}
-              </a>
-            </li>
           </ul>
           </nav>
+          {/* The label is Hebrew, so no lang="en"; hrefLang marks the English target. */}
+          <p>
+            <a
+              href={heSite.englishSiteUrl}
+              hrefLang="en"
+              className="inline-block py-2 hover:text-brand-text transition"
+            >
+              {heSite.englishSiteLabel}
+            </a>
+          </p>
           <p>{f.rights}</p>
         </div>
       </div>

@@ -3,8 +3,13 @@ import PageIntro from "@/components/he/PageIntro";
 import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
 import EndorsementList from "@/components/he/EndorsementList";
 import { heEndorsements, heEndorsementsPage as p } from "@/data/he/endorsements";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/hamlatzot"),
+};
 
 export default function Page() {
   return (

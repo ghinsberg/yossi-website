@@ -4,7 +4,6 @@ import Button from "@/components/ui/Button";
 import Placeholder from "@/components/he/Placeholder";
 import { heHome } from "@/data/he/home";
 import { heSite } from "@/data/he/site";
-import AgentTagCapture from "@/components/he/AgentTagCapture";
 import { hebrewAlternates } from "@/lib/he/canonical";
 import { homeAlternates } from "@/lib/seo";
 import { readSiteEnv } from "@/lib/site";
@@ -20,7 +19,6 @@ export default function HeHome() {
   const h = heHome;
   return (
     <>
-      <AgentTagCapture />
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-surface/40 to-brand-bg">
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-16 md:pt-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">

@@ -55,6 +55,15 @@ describe("layout", () => {
     expect(layoutSrc).toContain('dir="rtl"');
     expect(layoutSrc).toMatch(/<main id="main" tabIndex=\{-1\}/);
   });
+  it("layout captures the agent tag on every page, once", () => {
+    expect(layoutSrc.match(/<AgentTagCapture \/>/g)).toHaveLength(1);
+    expect(readFileSync("app/(he)/he/page.tsx", "utf8")).not.toContain("AgentTagCapture");
+  });
+  it("layout loads Heebo once and binds it to both font variables", () => {
+    expect(layoutSrc.match(/Heebo\(/g)).toHaveLength(1);
+    expect(layoutSrc).toContain('variable: "--font-heading"');
+    expect(layoutSrc).toMatch(/"--font-body": heebo\.style\.fontFamily/);
+  });
 });
 
 describe("header", () => {
@@ -85,9 +94,24 @@ describe("footer and mobile bar", () => {
     expect(html).toContain('href="/negishut"');
     expect(html).toContain('href="/pratiyut"');
   });
-  it("footer leaves room for the fixed mobile bar", () => {
-    expect(renderToStaticMarkup(<HeFooter />)).toContain("pb-[calc(6rem+env(safe-area-inset-bottom))]");
-    expect(renderToStaticMarkup(<HeMobileCTA />)).toContain("fixed bottom-0");
+  it("footer leaves room for the fixed booking bar up to the same breakpoint the bar hides at", () => {
+    const footer = renderToStaticMarkup(<HeFooter />);
+    const bar = renderToStaticMarkup(<HeMobileCTA />);
+    expect(footer).toContain("pb-[calc(6rem+env(safe-area-inset-bottom))]");
+    expect(bar).toContain("fixed bottom-0");
+    // The header shows its booking button from lg, so the bar must stay until lg.
+    expect(bar).toContain("lg:hidden");
+    expect(bar).not.toContain("md:hidden");
+    expect(footer).toContain("lg:pb-16");
+    expect(footer).not.toContain("md:pb-16");
+  });
+  it("links the English site with hrefLang only, outside the legal nav", () => {
+    const html = renderToStaticMarkup(<HeFooter />);
+    const legal = html.match(/<nav aria-label="[^"]*"[^>]*>(?:(?!<\/nav>)[\s\S])*<\/nav>/g)!.pop()!;
+    expect(legal).not.toContain("https://yossighinsberg.com");
+    const link = html.match(/<a[^>]*href="https:\/\/yossighinsberg.com"[^>]*>/)![0];
+    expect(link).toContain('hrefLang="en"');
+    expect(link).not.toMatch(/\slang="en"/);
   });
 });
 

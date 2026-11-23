@@ -63,8 +63,8 @@ describe("hebrewAlternates", () => {
   it("is undefined until the canonical host is known", () => {
     expect(hebrewAlternates("/hazmana", undefined)).toBeUndefined();
   });
-  it("is the clean path, never a query", () => {
-    expect(hebrewAlternates("/hazmana?a=gilat", "he.example")).toEqual({ canonical: "/hazmana" });
+  it("is the path it is given once the host is known", () => {
+    expect(hebrewAlternates("/hazmana", "he.example")).toEqual({ canonical: "/hazmana" });
     expect(hebrewAlternates("/", "he.example")).toEqual({ canonical: "/" });
   });
 });

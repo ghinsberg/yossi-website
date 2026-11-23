@@ -32,7 +32,7 @@ export const heBooking = {
     errors: {
       required: draft("שדה חובה"),
       invalidEmail: draft("כתובת האימייל לא תקינה"),
-      submitFailed: draft("השליחה לא הצליחה. הפרטים ששמתם נשמרו בטופס, אפשר לנסות שוב."),
+      submitFailed: draft("השליחה לא הצליחה. הפרטים שמילאתם עדיין בטופס, אפשר לנסות שוב."),
     },
   },
   email: {

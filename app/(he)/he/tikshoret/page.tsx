@@ -3,8 +3,13 @@ import PageIntro from "@/components/he/PageIntro";
 import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
 import MediaList from "@/components/he/MediaList";
 import { heMedia, heMediaPage as p } from "@/data/he/media";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/tikshoret"),
+};
 
 export default function Page() {
   return (

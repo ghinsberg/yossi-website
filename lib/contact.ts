@@ -40,7 +40,8 @@ export type EnquiryResult =
   | { ok: true; site: Site; data: Enquiry }
   | { ok: false; error: string; status: 400 | 500 };
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/** Shared by the server checks below and the Hebrew form's client check. */
+export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const HE_TEXT_FIELDS = [
   "name", "email", "organisation", "phone", "eventDate", "eventLocation", "audienceSize", "message",
@@ -96,12 +97,17 @@ export function recipientsFor(site: Site, agent: Agent | null): string[] {
 
 const oneLine = (s: unknown) => String(s ?? "").replace(/[\r\n]+/g, " ").trim();
 
+/** Longest Hebrew subject line, in characters. */
+export const HE_SUBJECT_MAX = 200;
+
 export function subjectFor(site: Site, data: Enquiry, agent: Agent | null): string {
   if (site === "he") {
     // Only a resolved agent's own tag reaches the subject, never the raw input.
     const who = resolveAgent(agent?.tag).tag.toUpperCase();
     const channel = data.utm_source ? `[${oneLine(data.utm_source).toUpperCase()}] ` : "";
-    return `[IL] [${who}] ${channel}${heBooking.email.subjectLabel} — ${oneLine(data.name)}, ${oneLine(data.organisation)}`;
+    const subject = `[IL] [${who}] ${channel}${heBooking.email.subjectLabel} | ${oneLine(data.name)}, ${oneLine(data.organisation)}`;
+    // Capped by code point, so a long name cannot split a character.
+    return Array.from(subject).slice(0, HE_SUBJECT_MAX).join("");
   }
   const { utm_source, name, organisation } = data;
   const channelTag = utm_source ? `[${(utm_source as string).toUpperCase()}] ` : "";

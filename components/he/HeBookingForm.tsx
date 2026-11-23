@@ -4,6 +4,7 @@ import { useRef, useState, useSyncExternalStore, type ChangeEvent, type FormEven
 import HeAgentCard from "@/components/he/HeAgentCard";
 import { DEFAULT_AGENT_TAG, resolveAgent } from "@/data/he/agents";
 import { heBooking } from "@/data/he/booking";
+import { EMAIL_RE } from "@/lib/contact";
 import { captureAgentTag } from "@/lib/he/agentTag";
 import { captureAndGetUTM, clearUTM } from "@/lib/utm";
 
@@ -23,7 +24,6 @@ const EMPTY: Values = {
   message: "",
 };
 const REQUIRED: FieldName[] = ["name", "organisation", "phone"];
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ORDER: FieldName[] = ["name", "organisation", "phone", "email", "eventDate", "eventLocation", "audienceSize", "message"];
 
 const inputStyles =

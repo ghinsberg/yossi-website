@@ -48,7 +48,7 @@ export const heSite = {
     openMenu: draft("פתיחת התפריט"),
     closeMenu: draft("סגירת התפריט"),
     mainNav: draft("ניווט ראשי"),
-    skipToContent: draft("דלג לתוכן"),
+    skipToContent: draft("דילוג לתוכן"),
     homeLabel: draft("ראשי"),
     mobileMenu: draft("תפריט"),
     footerNav: draft("ניווט בתחתית העמוד"),

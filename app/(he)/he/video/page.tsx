@@ -3,8 +3,13 @@ import PageIntro from "@/components/he/PageIntro";
 import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
 import VideoList from "@/components/he/VideoList";
 import { heVideos, heVideosPage as p, orderVideos } from "@/data/he/videos";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/video"),
+};
 
 export default function Page() {
   const ordered = orderVideos(heVideos);

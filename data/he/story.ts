@@ -1,7 +1,8 @@
 import { draft, ph } from "./site";
 
 // Story page. Facts only from the approved design: the Amazon, the book, the
-// forty years, the stages, Chalalan by name, ventures that did not all succeed.
+// more than forty years since, that he speaks in Israel and abroad, Chalalan by
+// name, ventures that did not all succeed.
 export const heStory = {
   metaTitle: draft("הסיפור"),
   metaDescription: draft("הספר ומה שבא אחריו."),
@@ -9,20 +10,20 @@ export const heStory = {
   book: {
     title: ph("הספר"),
     body: ph(
-      "כצעיר שרד יוסי לבדו באמזונס. את הסיפור הזה מכירים בישראל מהספר בחזרה מטואיצ'י, ספר שיש לו כאן מעמד של ספר פולחן.",
+      "כשהיה צעיר, יוסי שרד לבדו בג'ונגל של האמזונס. את הסיפור הזה מכירים בישראל מהספר בחזרה מטואיצ'י, שהפך כאן לספר קאלט.",
     ),
   },
   after: {
     title: ph("מאז"),
-    body: ph("מאז עברו בערך ארבעים שנה. הספר נגמר, והחיים המשיכו."),
+    body: ph("מאז עברו יותר מארבעים שנה. הספר נגמר, והחיים המשיכו."),
   },
   stage: {
     title: ph("הבמה"),
-    body: ph("יוסי עומד על במות בישראל ובעולם."),
+    body: ph("יוסי מרצה בארץ ובעולם."),
     placeholder: draft("כאן יבוא הפירוט על הקריירה על הבמה, אחרי שיוסי יאשר אותו"),
   },
   chalalan: {
-    name: draft("Chalalán"),
+    name: draft("צ'לאלן"),
     body: ph("אחד הדברים שיוסי עשה אחרי הספר."),
     placeholder: draft("כאן יבוא התיאור של המקום, אחרי שיוסי יאשר אותו"),
   },

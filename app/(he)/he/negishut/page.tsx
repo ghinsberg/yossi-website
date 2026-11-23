@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import PageIntro from "@/components/he/PageIntro";
 import Placeholder from "@/components/he/Placeholder";
 import { heLegal } from "@/data/he/legal";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
 const p = heLegal.accessibility;
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/negishut"),
+};
 
 export default function Page() {
   return (

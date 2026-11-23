@@ -5,8 +5,13 @@ import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
 import KeynoteList from "@/components/he/KeynoteList";
 import { heKeynotes, heKeynotesPage as p } from "@/data/he/keynotes";
 import { heSite } from "@/data/he/site";
+import { hebrewAlternates } from "@/lib/he/canonical";
 
-export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+export const metadata: Metadata = {
+  title: p.metaTitle,
+  description: p.metaDescription,
+  alternates: hebrewAlternates("/hartzaot"),
+};
 
 export default function Page() {
   return (
