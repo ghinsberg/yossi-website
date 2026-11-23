@@ -3,13 +3,15 @@
 /** Marks draft copy that Yossi has not approved. Launch check lists every use. */
 export const PLACEHOLDER_MARK = "⟦טיוטה⟧";
 
-/** Draft body copy, headline or claim. Carries a visible stamp. */
+/** Draft text that must stand out on the page: claims for Yossi to confirm and
+ *  keynote title proposals. Carries a visible stamp. */
 export function ph(text: string): string {
   return `${PLACEHOLDER_MARK} ${text}`;
 }
 
-/** Draft short interface text where a visible stamp would wreck the layout
- *  (labels, alt text, meta, aria). Returns the text unchanged. */
+/** Draft text without a per-line stamp: body copy, labels, alt text, meta, aria.
+ *  Still counted by the launch gate. While any draft text exists, the layout
+ *  shows one sticky draft banner (components/he/HeDraftBanner) instead. */
 export function draft(text: string): string {
   return text;
 }
@@ -41,7 +43,7 @@ export const heSite = {
     ],
     contactTitle: draft("הזמנת הרצאה"),
     contactPlaceholder: draft("פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם"),
-    rights: ph("כל הזכויות שמורות ליוסי גינסברג"),
+    rights: draft("כל הזכויות שמורות ליוסי גינסברג"),
   },
   ui: {
     homeAria: draft("יוסי גינסברג, לעמוד הראשי"),
@@ -61,13 +63,18 @@ export const heSite = {
     siteName: draft("יוסי גינסברג"),
   },
   notFound: {
-    title: ph("העמוד לא נמצא"),
-    body: ph("הכתובת שחיפשתם לא קיימת, או שהיא עברה למקום אחר."),
+    title: draft("העמוד לא נמצא"),
+    body: draft("הכתובת שחיפשתם לא קיימת, או שהיא עברה למקום אחר."),
     home: draft("חזרה לעמוד הראשי"),
     book: draft("הזמנת הרצאה"),
   },
   placeholder: {
     stub: draft("העמוד הזה עוד לא נכתב"),
+  },
+  /** The sticky banner shown on every page until launch. */
+  draftBanner: {
+    text: draft("גרסת טיוטה לבדיקה. התוכן עוד לא אושר."),
+    label: draft("הודעה על גרסת טיוטה"),
   },
   pageNames: {
     hasipur: draft("הסיפור"),

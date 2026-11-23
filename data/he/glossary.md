@@ -1,6 +1,6 @@
 # Hebrew glossary (recurring terms)
 
-Chosen so far, DRAFT until Yossi approves. Keep wording consistent across pages.
+Chosen so far, DRAFT until Yossi approves. Keep wording consistent across pages. Every Hebrew string on the site is traced in docs/plans/2026-11-24-hebrew-content-sources.md.
 
 | English | Hebrew | Note |
 |---|---|---|
@@ -15,6 +15,14 @@ Chosen so far, DRAFT until Yossi approves. Keep wording consistent across pages.
 | accessibility statement | הצהרת נגישות | |
 | privacy policy | מדיניות פרטיות | |
 | the agents | הנציגים | Names confirmed with each agent before use |
+| The Map Has Run Out (flagship keynote, formerly From Survival to Legacy) | המפה נגמרה | PROPOSAL |
+| The Laws of the Jungle (keynote) | חוקי הג'ונגל | PROPOSAL |
+| Real Survival vs Imaginary Survival (keynote) | הישרדות אמיתית, הישרדות מדומיינת | PROPOSAL |
+| Chalalan | צ'לאלן | |
+| Uchupiamona | אוצ'ופיאמונה | |
+| Madidi National Park | הפארק הלאומי מדידי | |
+| full-day workshop | יום סדנה מלא | |
+| translated from English (endorsement note) | תורגם מאנגלית | |
 
 Never used: Hebrew equivalents of "comeback", "one of the top speakers in the world", "world-class", "transformative", "innovative".
 

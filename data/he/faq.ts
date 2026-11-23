@@ -2,14 +2,61 @@ import { draft, ph } from "./site";
 
 export type HeFaqItem = { q: string; a: string };
 
-// Empty until Yossi supplies real answers. Nothing is invented here.
-export const heFaq: HeFaqItem[] = [];
+// From app/(en)/faq/page.tsx and app/(en)/keynotes/page.tsx, adjusted only as
+// the brief allows: the talk is in Hebrew in Israel, booking goes through the
+// Hebrew booking page, nothing about fees, currency or where he lives. The
+// English FAQ says nothing about technical needs or travel to Israel, so
+// neither is answered here. Source map: docs/plans/2026-11-24-hebrew-content-sources.md
+export const heFaq: HeFaqItem[] = [
+  {
+    q: draft("על מה יוסי מרצה?"),
+    a: draft(
+      "על מנהיגות כשאין ודאות, על חוסן, על הישרדות, על ניהול לחץ ועל הפוטנציאל האנושי. ההרצאות נשענות על מה שעבר בג'ונגל ועל מה שפיתח בעשורים שאחריו. יש שלוש הרצאות, והפירוט בעמוד ההרצאות.",
+    ),
+  },
+  {
+    q: draft("באיזו שפה ההרצאה?"),
+    a: draft("בישראל, בעברית. בחו\"ל יוסי מרצה באנגלית."),
+  },
+  {
+    q: draft("כמה זמן נמשכת הרצאה?"),
+    a: draft(
+      "הרצאה רגילה נמשכת 60 דקות. אפשר גם הרצאה ואחריה שיחה מונחית של 20 עד 30 דקות, ולארגונים שרוצים חוויה עמוקה יותר יש יום סדנה מלא.",
+    ),
+  },
+  {
+    q: draft("אפשר להתאים את ההרצאה לאירוע שלנו?"),
+    a: draft(
+      "כן. כל הזמנה מתחילה בתדריך לפני האירוע, וההרצאה נבנית סביב הקהל שלכם, נושא האירוע והתוצאה שאתם רוצים. אין שתי הרצאות זהות.",
+    ),
+  },
+  {
+    q: draft("ההרצאה רק פרונטלית?"),
+    a: draft("לא. יוסי מרצה באולם, מרחוק, ובשילוב של השניים. כל פורמט מותאם לקהל ולמטרה, ולא מדובר בהרצאה מוקלטת."),
+  },
+  {
+    q: draft("לאיזה גודל קהל?"),
+    a: ph(
+      "מכנסי הנהלה אינטימיים ועד במות ראשיות מול אלפי אנשים, כולל הבמה הראשית של כנס MDRT ב-2025.",
+    ),
+  },
+  {
+    q: draft("מה זה יום הסדנה?"),
+    a: draft(
+      "יום שלם שיוסי מעצב ומוביל סביב התוצאה שהארגון מחפש, במשרדים או מחוץ להם. האורך, המקום והמבנה נקבעים יחד אחרי תדריך מעמיק. יוסי מעביר בעצמו את שתי הטכניקות שהוא מלמד רק שם ובהרצאה על הישרדות אמיתית ומדומיינת, ומנחים מנוסים מעבירים את שאר החלקים.",
+    ),
+  },
+  {
+    q: draft("איך מזמינים?"),
+    a: draft("ממלאים את טופס ההזמנה באתר. הפנייה מגיעה לנציג של יוסי בישראל, והוא חוזר אליכם."),
+  },
+];
 
 export const heFaqPage = {
   metaTitle: draft("שאלות ותשובות"),
-  metaDescription: draft("שאלות שמארגני אירועים שואלים לפני שמזמינים הרצאה."),
-  title: ph("שאלות ותשובות"),
-  intro: ph("מה שמארגנים שואלים לפני שמזמינים הרצאה."),
+  metaDescription: draft("שפה, אורך, פורמטים והתאמה לאירוע: מה שמארגנים שואלים לפני שמזמינים הרצאה של יוסי גינסברג."),
+  title: draft("שאלות ותשובות"),
+  intro: draft("מה שמארגנים שואלים לפני שמזמינים הרצאה."),
   empty: draft("השאלות והתשובות יופיעו כאן, אחרי שיוסי יאשר אותן"),
   bookCta: draft("לא מצאתם תשובה? הזמנת הרצאה"),
 };

@@ -1,12 +1,12 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 
 // Booking page, form, agent card and the notification email (read by Yossi and
 // the agent, in Hebrew). Everything here is draft until Yossi approves it.
 export const heBooking = {
   metaTitle: draft("הזמנת הרצאה"),
   metaDescription: draft("הזמנת הרצאה של יוסי גינסברג, בעברית."),
-  title: ph("הזמנת הרצאה"),
-  intro: ph("ספרו לנו על האירוע ונחזור אליכם."),
+  title: draft("הזמנת הרצאה"),
+  intro: draft("ספרו לנו על האירוע ונחזור אליכם."),
   agentCard: {
     title: draft("הפנייה תטופל על ידי"),
     phoneLabel: draft("טלפון"),
