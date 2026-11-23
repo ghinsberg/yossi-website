@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   robots: live ? { index: true, follow: true } : { index: false, follow: false },
 };
 
-// The same font files the Google font loader preloaded on Hebrew pages, in the
-// same order. preload() emits one <link rel="preload"> each in <head>.
-const FONT_PRELOADS = ["heebo-latin", "dm-sans-latin", "inter-latin", "heebo-hebrew"];
+// Heebo's latin and hebrew subsets render above the fold on every Hebrew page.
+// preload() emits one <link rel="preload"> each in <head>.
+const FONT_PRELOADS = ["heebo-latin", "heebo-hebrew"];
 const FONT_PRELOAD = { as: "font", type: "font/woff2", crossOrigin: "anonymous" } as const;
 
 export default function HebrewRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

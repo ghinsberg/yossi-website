@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 // Self-hosted fonts: the CSS, the preload links and public/fonts must agree,
 // and nothing may fetch fonts from Google at build or run time.
@@ -45,11 +46,27 @@ describe("self-hosted fonts", () => {
     expect(layouts.en).toContain('import "@/app/fonts-en.css";');
     expect(layouts.he).toContain('import "@/app/fonts-he.css";');
   });
-  it("preloads the same files the Google font loader preloaded, all of which exist", () => {
+  it("preloads only each site's above-the-fold files, all of which exist", () => {
     expect(preloadsIn(layouts.en)).toEqual(["dm-sans-latin.woff2", "inter-latin.woff2"]);
-    expect(preloadsIn(layouts.he)).toEqual([
-      "heebo-latin.woff2", "dm-sans-latin.woff2", "inter-latin.woff2", "heebo-hebrew.woff2",
-    ]);
+    expect(preloadsIn(layouts.he)).toEqual(["heebo-latin.woff2", "heebo-hebrew.woff2"]);
     for (const f of [...preloadsIn(layouts.en), ...preloadsIn(layouts.he)]) expect(files).toContain(f);
+  });
+  // /fonts/* is cached as immutable for a year, so a file must never change in place.
+  it("every font file matches its SHA-256 row in public/fonts/README.md, and has one", () => {
+    const readme = readFileSync("public/fonts/README.md", "utf8");
+    const rows = new Map(
+      [...readme.matchAll(/^\| `([^`]+\.woff2)` \|.*\| `([0-9a-f]{64})` \|$/gm)].map((m) => [m[1], m[2]]),
+    );
+    expect([...rows.keys()].sort()).toEqual([...files].sort());
+    for (const f of files) {
+      const sha = createHash("sha256").update(readFileSync(`public/fonts/${f}`)).digest("hex");
+      expect(sha, f).toBe(rows.get(f));
+    }
+  });
+  it("ships the OFL 1.1 text with the three copyright lines, referenced from the README", () => {
+    const ofl = readFileSync("public/fonts/OFL.txt", "utf8");
+    for (const who of ["DM Sans", "Inter", "Heebo"]) expect(ofl).toMatch(new RegExp(`^Copyright \\d{4} The ${who} Project Authors`, "m"));
+    expect(ofl).toContain("SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007");
+    expect(readFileSync("public/fonts/README.md", "utf8")).toContain("(OFL.txt)");
   });
 });

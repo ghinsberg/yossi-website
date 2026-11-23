@@ -4,13 +4,15 @@ These files used to be fetched from Google Fonts by Next's Google font loader at
 
 ## Licence
 
-DM Sans, Inter and Heebo are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The files are unmodified copies of the Google Fonts distribution.
+DM Sans, Inter and Heebo are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). The files are unmodified copies of the Google Fonts distribution. The licence text with each font's copyright line, as published in the google/fonts repository (ofl/dmsans, ofl/inter, ofl/heebo), is in [`OFL.txt`](OFL.txt).
 
 ## Updating a font
 
 Files in `public/` are not content-hashed and `/fonts/*` is served with `Cache-Control: public, max-age=31536000, immutable` (see `next.config.ts`). A changed font must therefore ship under a new file name (for example `inter-latin-v21.woff2`), with the CSS and the preload links in the layouts updated to match. Never overwrite a file in place.
 
 ## Files
+
+`lib/fonts.test.ts` checks every `.woff2` here against the SHA-256 column below, so a file overwritten in place fails the tests.
 
 Each file is byte-identical to the one the Google font loader downloaded for the previous build, fetched with that loader's user agent (Chrome 104 on macOS; other user agents get different binaries).
 
