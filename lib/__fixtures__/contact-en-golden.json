@@ -1,0 +1,121 @@
+{
+  "minimal": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n\n  \n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "full_with_utm": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "[LINKEDIN] Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">+972 50 000 0000</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">2027-03-01</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">200</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">The Map Has Run Out</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">A friend</td></tr>\n  </table>\n\n  \n  <table style=\"width:100%; border-collapse: collapse; margin-top: 20px; background: #fff8e1; padding: 8px;\">\n    <tr><td colspan=\"2\" style=\"padding: 8px; color: #B8860B; font-weight: 600; border-bottom: 1px solid #f0e0a0;\">📍 Attribution (where they came from)</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; width: 40%; color: #666;\">Source</td><td style=\"padding: 8px 0; font-weight: 600;\">linkedin</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Medium</td><td style=\"padding: 8px 0;\">social</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Campaign</td><td style=\"padding: 8px 0;\">launch</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Content variant</td><td style=\"padding: 8px 0;\">variant-a</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Term</td><td style=\"padding: 8px 0;\">keynote</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Referrer</td><td style=\"padding: 8px 0; font-size: 12px; color: #888;\">https://www.linkedin.com/</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; color: #666;\">Landed on</td><td style=\"padding: 8px 0; font-size: 12px;\">/book-yossi</td></tr>\n  </table>\n\n  <div style=\"margin-top: 20px;\"><p style=\"color: #666; margin-bottom: 6px;\">Message</p><p style=\"background: #f9f9f9; padding: 12px; border-radius: 6px; margin: 0;\">Hello there</p></div>\n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "utm_source_only": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "[GOOGLE] Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n  <table style=\"width:100%; border-collapse: collapse; margin-top: 20px; background: #fff8e1; padding: 8px;\">\n    <tr><td colspan=\"2\" style=\"padding: 8px; color: #B8860B; font-weight: 600; border-bottom: 1px solid #f0e0a0;\">📍 Attribution (where they came from)</td></tr>\n    <tr><td style=\"padding: 8px 0 8px 12px; width: 40%; color: #666;\">Source</td><td style=\"padding: 8px 0; font-weight: 600;\">google</td></tr>\n    \n    \n    \n    \n    \n    \n  </table>\n\n  <div style=\"margin-top: 20px;\"><p style=\"color: #666; margin-bottom: 6px;\">Message</p><p style=\"background: #f9f9f9; padding: 12px; border-radius: 6px; margin: 0;\">Hi</p></div>\n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "raw_html_is_not_escaped_today": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "Booking Enquiry — A <b>B</b> & C, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">A <b>B</b> & C</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n\n  <div style=\"margin-top: 20px;\"><p style=\"color: #666; margin-bottom: 6px;\">Message</p><p style=\"background: #f9f9f9; padding: 12px; border-radius: 6px; margin: 0;\"><i>x</i></p></div>\n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "site_en_explicit": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n\n  \n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "unknown_site_is_english": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n\n  \n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  },
+  "hebrew_fields_ignored_on_english": {
+    "status": 200,
+    "json": {
+      "success": true
+    },
+    "sent": [
+      {
+        "from": "Yossi Ghinsberg <hello@yossighinsberg.com>",
+        "to": [
+          "ghinsberg@gmail.com"
+        ],
+        "replyTo": "dana@example.com",
+        "subject": "Booking Enquiry — Dana Cohen, Acme Ltd",
+        "html": "\n<div style=\"font-family: sans-serif; max-width: 600px; color: #222;\">\n  <h2 style=\"color: #B8860B; margin-bottom: 4px;\">New Booking Enquiry</h2>\n  <p style=\"color: #888; margin-top: 0; font-size: 13px;\">Mon, 23 Nov 2026 10:00:00 GMT</p>\n\n  <table style=\"width:100%; border-collapse: collapse; margin-top: 16px;\">\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; width: 40%; color: #666;\">Name</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Dana Cohen</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Email</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\"><a href=\"mailto:dana@example.com\">dana@example.com</a></td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Organisation</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; font-weight: 600;\">Acme Ltd</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Phone</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Event Date</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">undefined</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Location</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Tel Aviv</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Audience Size</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Format</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">Keynote</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Budget</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">$10k-$20k</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Keynote Interest</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n    <tr><td style=\"padding: 8px 0; border-bottom: 1px solid #eee; color: #666;\">Referral (self-reported)</td><td style=\"padding: 8px 0; border-bottom: 1px solid #eee;\">—</td></tr>\n  </table>\n\n  \n\n  \n\n  <p style=\"margin-top: 28px; font-size: 12px; color: #aaa;\">Sent from yossighinsberg.com booking form</p>\n</div>"
+      }
+    ]
+  }
+}

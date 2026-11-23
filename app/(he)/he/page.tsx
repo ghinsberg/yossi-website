@@ -1,13 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Placeholder from "@/components/he/Placeholder";
 import { heHome } from "@/data/he/home";
 import { heSite } from "@/data/he/site";
+import AgentTagCapture from "@/components/he/AgentTagCapture";
+import { hebrewAlternates } from "@/lib/he/canonical";
+
+// Agent-tagged URLs (?a=gilat) declare the untagged address as canonical.
+export const metadata: Metadata = { alternates: hebrewAlternates("/") };
 
 export default function HeHome() {
   const h = heHome;
   return (
     <>
+      <AgentTagCapture />
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-surface/40 to-brand-bg">
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-16 md:pt-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
