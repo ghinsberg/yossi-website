@@ -10,8 +10,6 @@ import {
   validateEnquiry,
 } from "@/lib/contact";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -27,6 +25,10 @@ export async function POST(request: NextRequest) {
     const { site, data } = result;
     const agent = site === "he" ? resolveAgent(data.agentTag) : null;
 
+    // Created per request, not at module load: a build without RESEND_API_KEY
+    // (every Vercel preview) must still be able to import this route. Without a
+    // key the constructor throws here and the catch below answers 500.
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
       from: EMAIL_FROM,
       to: recipientsFor(site, agent),
