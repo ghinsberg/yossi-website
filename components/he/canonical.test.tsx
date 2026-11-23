@@ -15,7 +15,7 @@ describe("Hebrew page canonicals", () => {
   });
 
   it.each(PAGES)("/%s declares /%s as canonical", async (slug) => {
-    const { metadata } = await import(`@/app/(he)/he/${slug}/page`);
+    const { metadata } = await import(`@/app/(he)/he/${slug}/page.tsx`);
     expect(metadata.alternates).toEqual({ canonical: `/${slug}` });
   });
   it("home declares / as canonical", async () => {
