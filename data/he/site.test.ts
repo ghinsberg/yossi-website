@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { heSite, ph } from "./site";
+import { heSite, ph, draft, ok } from "./site";
 
 const root = join(__dirname, "..", "..", "app", "(he)", "he");
 
@@ -23,5 +23,12 @@ describe("heSite", () => {
   });
   it("ph() prefixes the draft marker", () => {
     expect(ph("x").startsWith("⟦טיוטה⟧")).toBe(true);
+  });
+});
+
+describe("wrappers", () => {
+  it("draft() and ok() return the text unchanged", () => {
+    expect(draft("x")).toBe("x");
+    expect(ok("x")).toBe("x");
   });
 });

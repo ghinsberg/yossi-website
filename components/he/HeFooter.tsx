@@ -15,7 +15,7 @@ export default function HeFooter() {
           </div>
 
           <div>
-            <h2 className="text-sm tracking-wider text-brand-text-secondary mb-4">{f.navTitle}</h2>
+            <h2 className="text-sm text-brand-text-secondary mb-4">{f.navTitle}</h2>
             <ul className="space-y-3">
               {heSite.nav.map((link) => (
                 <li key={link.href}>
@@ -28,7 +28,7 @@ export default function HeFooter() {
           </div>
 
           <div>
-            <h2 className="text-sm tracking-wider text-brand-text-secondary mb-4">{f.contactTitle}</h2>
+            <h2 className="text-sm text-brand-text-secondary mb-4">{f.contactTitle}</h2>
             <Placeholder>{f.contactPlaceholder}</Placeholder>
           </div>
         </div>

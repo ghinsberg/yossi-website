@@ -3,71 +3,80 @@
 /** Marks draft copy that Yossi has not approved. Launch check lists every use. */
 export const PLACEHOLDER_MARK = "⟦טיוטה⟧";
 
-/** Wrap any Hebrew body copy, headline or claim that is still a draft. */
+/** Draft body copy, headline or claim. Carries a visible stamp. */
 export function ph(text: string): string {
   return `${PLACEHOLDER_MARK} ${text}`;
 }
 
+/** Draft short interface text where a visible stamp would wreck the layout
+ *  (labels, alt text, meta, aria). Returns the text unchanged. */
+export function draft(text: string): string {
+  return text;
+}
+
+/** Text Yossi has approved. Returns the text unchanged. Nothing uses it yet. */
+export function ok(text: string): string {
+  return text;
+}
+
 export const heSite = {
-  name: "יוסי גינסברג",
+  name: draft("יוסי גינסברג"),
   nav: [
-    { label: "הסיפור", href: "/hasipur" },
-    { label: "הרצאות", href: "/hartzaot" },
-    { label: "סרטונים", href: "/video" },
-    { label: "המלצות", href: "/hamlatzot" },
-    { label: "בתקשורת", href: "/tikshoret" },
-    { label: "שאלות ותשובות", href: "/sheelot" },
+    { label: draft("הסיפור"), href: "/hasipur" },
+    { label: draft("הרצאות"), href: "/hartzaot" },
+    { label: draft("סרטונים"), href: "/video" },
+    { label: draft("המלצות"), href: "/hamlatzot" },
+    { label: draft("בתקשורת"), href: "/tikshoret" },
+    { label: draft("שאלות ותשובות"), href: "/sheelot" },
   ] as { label: string; href: string }[],
   bookingHref: "/hazmana" as const,
-  bookingLabel: "הזמנת הרצאה",
-  englishSiteLabel: "האתר הבינלאומי, באנגלית",
+  bookingLabel: draft("הזמנת הרצאה"),
+  englishSiteLabel: draft("האתר הבינלאומי, באנגלית"),
   englishSiteUrl: "https://yossighinsberg.com" as const,
   footer: {
-    navTitle: "באתר",
+    navTitle: draft("באתר"),
     legalLinks: [
-      { label: "הצהרת נגישות", href: "/negishut" },
-      { label: "מדיניות פרטיות", href: "/pratiyut" },
+      { label: draft("הצהרת נגישות"), href: "/negishut" },
+      { label: draft("מדיניות פרטיות"), href: "/pratiyut" },
     ],
-    contactTitle: "הזמנת הרצאה",
-    contactPlaceholder: "פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם",
-    rights: "כל הזכויות שמורות ליוסי גינסברג",
+    contactTitle: draft("הזמנת הרצאה"),
+    contactPlaceholder: draft("פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם"),
+    rights: ph("כל הזכויות שמורות ליוסי גינסברג"),
   },
   ui: {
-    homeAria: "יוסי גינסברג, לעמוד הראשי",
-    openMenu: "פתיחת התפריט",
-    closeMenu: "סגירת התפריט",
-    mainNav: "ניווט ראשי",
-    skipToContent: "דלג לתוכן",
-    homeLabel: "ראשי",
+    homeAria: draft("יוסי גינסברג, לעמוד הראשי"),
+    openMenu: draft("פתיחת התפריט"),
+    closeMenu: draft("סגירת התפריט"),
+    mainNav: draft("ניווט ראשי"),
+    skipToContent: draft("דלג לתוכן"),
+    homeLabel: draft("ראשי"),
   },
   meta: {
-    titleDefault: "יוסי גינסברג | הרצאות לארגונים ולכנסים",
-    titleTemplate: "%s | יוסי גינסברג",
-    description: ph(
-      "יוסי גינסברג, מרצה על במות בארץ ובעולם. הרצאות בעברית לארגונים, לכנסים ולאירועים.",
-    ),
-    siteName: "יוסי גינסברג",
+    titleDefault: draft("יוסי גינסברג | הרצאות לארגונים ולכנסים"),
+    titleTemplate: draft("%s | יוסי גינסברג"),
+    description: draft("יוסי גינסברג, מרצה על במות בארץ ובעולם. הרצאות בעברית לארגונים, לכנסים ולאירועים."),
+    siteName: draft("יוסי גינסברג"),
   },
   notFound: {
-    title: "העמוד לא נמצא",
-    body: "הכתובת שחיפשתם לא קיימת, או שהיא עברה למקום אחר.",
-    home: "חזרה לעמוד הראשי",
-    book: "הזמנת הרצאה",
+    title: ph("העמוד לא נמצא"),
+    body: ph("הכתובת שחיפשתם לא קיימת, או שהיא עברה למקום אחר."),
+    home: draft("חזרה לעמוד הראשי"),
+    book: draft("הזמנת הרצאה"),
   },
   placeholder: {
-    stub: "העמוד הזה עוד לא נכתב",
+    stub: draft("העמוד הזה עוד לא נכתב"),
   },
   pageNames: {
-    hasipur: "הסיפור",
-    hartzaot: "הרצאות",
-    video: "סרטונים",
-    hamlatzot: "המלצות",
-    tikshoret: "בתקשורת",
-    sheelot: "שאלות ותשובות",
-    hazmana: "הזמנת הרצאה",
-    toda: "תודה",
-    negishut: "הצהרת נגישות",
-    pratiyut: "מדיניות פרטיות",
+    hasipur: draft("הסיפור"),
+    hartzaot: draft("הרצאות"),
+    video: draft("סרטונים"),
+    hamlatzot: draft("המלצות"),
+    tikshoret: draft("בתקשורת"),
+    sheelot: draft("שאלות ותשובות"),
+    hazmana: draft("הזמנת הרצאה"),
+    toda: draft("תודה"),
+    negishut: draft("הצהרת נגישות"),
+    pratiyut: draft("מדיניות פרטיות"),
   } as Record<string, string>,
 };
 
