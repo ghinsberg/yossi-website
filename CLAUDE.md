@@ -1,7 +1,7 @@
 # CLAUDE.md — yossighinsberg.com New Vercel Build
 
 ## What This Is
-The new Next.js website for Yossi Ghinsberg. Replaces the current Wix site at yossighinsberg.com. Built with Next.js 16, TypeScript, Tailwind CSS v4. Deploying to Cloudflare Pages.
+The new Next.js website for Yossi Ghinsberg. Replaces the current Wix site at yossighinsberg.com. Built with Next.js 16, TypeScript, Tailwind CSS v4. Deployed on Vercel.
 
 ## Project Location
 ~/New Website With Claude/
@@ -11,14 +11,18 @@ The new Next.js website for Yossi Ghinsberg. Replaces the current Wix site at yo
 - Language: TypeScript
 - Styling: Tailwind CSS v4
 - React: 19.2.4
-- Deployment target: Cloudflare Pages
+- Hosting: Vercel
 
 ## Run Locally
 cd ~/New\ Website\ With\ Claude && npm run dev
 Opens at http://localhost:3000
 
 ## Structure
-app/ — pages (homepage, book-yossi, endorsements, keynotes, media, story, videos, api)
+app/(en)/ — English pages (homepage, book-yossi, endorsements, keynotes, media, story, videos) and the English root layout
+app/(he)/he/ — Hebrew site (RTL), its own root layout; served on the Hebrew host via middleware.ts and lib/site.ts
+app/api/, app/sitemap.ts, app/robots.ts, app/icon.svg — shared by both sites
+There is no layout at app/ itself: each route group has its own root layout (English and Hebrew need different <html lang dir>). New English pages go in app/(en)/, never directly in app/, or the build fails.
+components/he/, data/he/ — Hebrew components and every Hebrew string
 components/layout/ — Header, Footer, CredentialBar, MobileCTA
 components/sections/ — Hero, BookingForm, ClientLogos, DemoReel, etc.
 components/ui/ — Button, ChatbotMount, VideoPlayer, KeynoteCard, etc.
@@ -72,10 +76,8 @@ Transformation is a corporate buzzword. Flag for Yossi to reconsider.
 - siteUrl in siteConfig.ts until domain migration is complete
 
 ## Deployment
-Target: Cloudflare Pages
-Current live site: yossighinsberg.com on A2 via Wix
-New build replaces Wix once ready
-Domain migration is the final step after full QA
+Host: Vercel
+Current live site: yossighinsberg.com, served by this Next.js build on Vercel
 
 ## Known Issues
 - ChatbotMount needs UI and response quality improvements
