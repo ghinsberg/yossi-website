@@ -4,11 +4,32 @@
     {
       "name": "dev",
       "runtimeExecutable": "/usr/local/node/bin/node",
-      "runtimeArgs": ["/usr/local/node/bin/npm", "run", "dev"],
+      "runtimeArgs": [
+        "/usr/local/node/bin/npm",
+        "run",
+        "dev"
+      ],
       "port": 3000,
       "autoPort": true,
       "env": {
         "PATH": "/usr/local/node/bin:/usr/bin:/bin"
+      }
+    },
+    {
+      "name": "hebrew-dev",
+      "runtimeExecutable": "/usr/local/node/bin/node",
+      "runtimeArgs": [
+        "/usr/local/node/bin/npm",
+        "run",
+        "dev",
+        "--",
+        "-p",
+        "3100"
+      ],
+      "port": 3100,
+      "env": {
+        "PATH": "/usr/local/node/bin:/usr/bin:/bin",
+        "HE_HOSTS": "he.localhost:3100"
       }
     }
   ]
