@@ -1285,4 +1285,530 @@ Whoever you choose from this list, you will be in good hands. It is a category o
 
 Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To explore a survival keynote for your conference, get in touch through this site or his bureau representatives.`,
   },
+  {
+    slug: "fireside-chat-vs-keynote",
+    title: "Fireside Chat vs Keynote: Which Format Fits Your Event?",
+    date: "2026-10-20",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A keynote, a fireside chat, or both? A practical guide for event planners on when each format works, how to run a good conversation on stage, and what to ask a speaker before you decide.",
+    keywords: [
+      "fireside chat vs keynote",
+      "fireside chat speaker",
+      "keynote and fireside chat format",
+      "how to run a fireside chat at a conference",
+      "event speaker formats",
+    ],
+    content: `FIRESIDE CHAT VS KEYNOTE: WHICH FORMAT FITS YOUR EVENT?
+
+Most planners book a keynote by default. Sixty minutes, one speaker, one screen, applause. It works, so nobody questions it.
+
+But there is another option, and sometimes it is the better one. A fireside chat puts the speaker in a conversation instead of behind a lectern. Done well, it feels like the best dinner party the room has ever been invited to. Done badly, it feels like two people reading emails at each other on stage.
+
+Here is how to choose, and how to get it right.
+
+WHAT EACH FORMAT ACTUALLY IS
+
+A keynote is a prepared talk. The speaker controls the pace, builds toward a point, and can take the room through a story with a beginning, a middle, and an end. It is usually 45 to 60 minutes.
+
+A fireside chat is a guided conversation. A host asks questions, the speaker answers, and the direction can shift based on what comes up. It is usually 20 to 45 minutes. The name comes from the idea of sitting by a fire and talking, so the set is often two chairs and a low table rather than a stage and a podium.
+
+Then there is the hybrid: a keynote followed by a short conversation. The speaker tells the story, then a host pulls on the threads the audience cares about most. This is common, and it often gives you the best of both.
+
+WHEN A KEYNOTE IS THE RIGHT CALL
+
+Choose a keynote when you need one clear idea to land with a large room.
+
+You want a shared moment at the start or end of the event.
+
+The audience is big, say several hundred people or more, and a conversation would feel distant from the back rows.
+
+The story needs to be told in order. Some stories only work when they are built carefully, and a stop-start Q and A breaks the spell.
+
+You have a tight run of show and need the timing to be exact.
+
+WHEN A FIRESIDE CHAT IS THE RIGHT CALL
+
+Choose a fireside chat when you want the audience to learn something specific about your people, your industry, or your moment.
+
+The speaker is an executive, founder, or expert, and what matters is their opinion on a topic, not a prepared talk.
+
+You want to tie the conversation to your own agenda: a new strategy, a hard year, a change in leadership. A good host can steer toward it.
+
+The room is small or mid-sized and you want it to feel personal.
+
+You are filling a slot in the middle of a long day, and a change of pace will wake people up.
+
+You have a speaker who is warm and quick in conversation. Some people are better talking than presenting. Know which yours is.
+
+WHY THE HYBRID OFTEN WINS
+
+If you have the time, a keynote plus a short conversation is hard to beat. The keynote gives everyone the same shared story. The conversation lets you connect it to your own people.
+
+A 20 to 30 minute chat after a keynote gives the audience a way back into the material. Questions that would never come up in a prepared talk come up here, usually the real ones. How did you decide? What would you do differently? What did you tell yourself on the worst day?
+
+It also gives your own leadership a chance to tie the story to the company. If your CEO is the one asking the questions, the keynote stops being a guest appearance and starts being part of your event.
+
+THE HOST MATTERS MORE THAN THE SPEAKER
+
+This is the part most planners underestimate. A fireside chat is only as good as the person asking the questions.
+
+A strong host does four things.
+
+They do their homework. They have read the speaker's book, watched the footage, and know the story well enough not to ask what is on the first page of the website.
+
+They listen. The best question in a fireside chat is often the follow-up, not the one on the sheet.
+
+They keep time. Twenty minutes goes fast, and a host who lets one answer run ten minutes ruins the rest.
+
+They know when to stop talking. The host is not the star. The room came for the guest.
+
+Pick your host early. Ideally it is someone from inside your company who the audience trusts, or a professional moderator who has done this before. Avoid choosing someone just because they are senior. Seniority does not make a good interviewer.
+
+HOW TO PREPARE A FIRESIDE CHAT
+
+Do the prep. The best chats look unrehearsed because they were not left to chance.
+
+Ask the speaker's office for a call between host and speaker about two weeks before the event. Thirty minutes is enough.
+
+Agree on five to seven questions, plus a few spares. Share them with the speaker. Good speakers do not want a script, but they do want to know the territory.
+
+Decide the opening and the closing. The first question should be easy and warm. The last should leave the room with something to take away.
+
+Plan for the audience. If you will take questions from the floor, decide how. Live microphones can go wrong. A phone app that lets people submit questions, with the host choosing, is safer.
+
+Check the set. Chairs that are comfortable, microphones that work, and lighting that does not leave one person in shadow. These small things decide whether the chat feels warm or awkward.
+
+QUESTIONS TO ASK A SPEAKER BEFORE YOU DECIDE
+
+Whatever you choose, ask the speaker's office a few direct questions.
+
+Do you do both formats? Some speakers only do keynotes. Others are happy to do either, or both.
+
+How long should the conversation be? Most speakers prefer 20 to 30 minutes after a talk, and 30 to 45 minutes if the chat stands alone.
+
+Can the host and speaker speak ahead of time? If the answer is no, that is a flag.
+
+Will you tailor the content to our event? Ask for specifics, not a yes.
+
+What do you need on stage? Some speakers need a screen. Some want nothing but a chair and a glass of water.
+
+COMMON MISTAKES
+
+Putting a nervous host in a leading role. If your host is anxious, the room will feel it.
+
+Letting the chat run long. If the schedule says 25 minutes, end at 25.
+
+Treating the chat as a way to save money. A fireside chat is not a cheaper keynote. Speakers charge for their time and preparation, and some charge the same for either format.
+
+Forgetting the virtual audience. If people are joining online, the host should speak to the camera at times and read questions from the chat.
+
+Skipping the rehearsal. Even ten minutes on the actual set changes everything.
+
+WHERE YOSSI FITS
+
+Yossi Ghinsberg is a fair example. He is best known for the 1981 expedition in the Bolivian Amazon, where at age 22 he survived 20 days alone with no food, no fire, and no tools. His rescue was led by Kevin Gale. He has spoken to audiences from 500 to 10,000 people and offers several formats: a 60-minute keynote, a keynote with a 20 to 30 minute fireside chat, and half-day or full-day workshops.
+
+The keynote with a fireside chat is the one planners often choose when they want the story told in full and then connected to their own people. The story has a shape that needs to be told in order. The conversation afterward is where it gets personal.
+
+Whether you book him or someone else, the principle holds. Match the format to the job. A big room that needs one shared moment wants a keynote. A smaller room that wants answers wants a conversation. Most events want a bit of both.
+
+THE SHORT VERSION
+
+Use a keynote for scale and a single clear story. Use a fireside chat for a personal, specific conversation. Use the hybrid when you can. Spend more time on your host than you think you need to. And ask the speaker's office what they do best before you decide.
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. To discuss a keynote or a keynote with a fireside chat for your event, get in touch through this site or his bureau representatives.`,
+  },
+  {
+    slug: "how-far-in-advance-to-book-a-keynote-speaker",
+    title: "How Far in Advance Should You Book a Keynote Speaker?",
+    date: "2026-10-27",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "Book too late and your first choice is gone. Book too early and you lock in a speaker before you know what the event needs. Here is a practical timeline for event planners.",
+    keywords: [
+      "how far in advance to book a keynote speaker",
+      "when to book a keynote speaker",
+      "keynote speaker booking timeline",
+      "book a speaker for a conference",
+      "speaker booking checklist",
+    ],
+    content: `HOW FAR IN ADVANCE SHOULD YOU BOOK A KEYNOTE SPEAKER?
+
+Every planner asks this sooner or later. The honest answer is that it depends on the event, but there is a sensible way to work it out. Start from the date of your event and count backward.
+
+This guide gives you a timeline you can adapt, explains why the dates matter, and covers what to do if you are already short on time.
+
+WHY TIMING MATTERS MORE THAN PEOPLE THINK
+
+A good speaker is not just a person who turns up on the day. Behind one keynote there is a diary, a travel plan, a contract, a briefing, and often a bureau or agent in the middle.
+
+Popular speakers fill their calendars. If your event falls in a busy season, such as spring or autumn conference months, the people you want may already be committed. Starting early gives you a real choice instead of whoever happens to be free.
+
+Starting early also helps the talk itself. A speaker who has weeks to prepare can shape the content around your audience. A speaker booked in a rush can only adjust a talk they already have.
+
+A ROUGH TIMELINE
+
+These are guidelines, not rules. Large events with international travel need more time. A small internal meeting needs less.
+
+SIX TO TWELVE MONTHS OUT: DECIDE WHAT YOU NEED
+
+This is the thinking stage. Before you contact anyone, settle the basics.
+
+What is the job of the keynote? Opening energy, a reset after a hard year, a fresh angle on a theme?
+
+Who is in the room, and how many?
+
+What is the budget, including travel?
+
+Which slot in the programme will it fill?
+
+If you are planning a major annual conference, this is also when you should start a shortlist. Big events often book their headline speaker close to a year ahead.
+
+FOUR TO SIX MONTHS OUT: SHORTLIST AND ENQUIRE
+
+Now you contact speakers or their bureaus. Send each one the same short summary: date, location, audience size, format, and rough budget.
+
+Ask three things. Are they available on your date? What do they charge for this format? Can they send a proposal?
+
+Contact several speakers at once. Availability changes quickly, and you do not want to wait on one answer before you ask the next person.
+
+THREE TO FOUR MONTHS OUT: DECIDE AND SIGN
+
+Watch a full talk from your top two or three. Call a reference or two. Then choose.
+
+Once you have chosen, get a written agreement. It should cover the date, the fee, what the fee includes, travel and accommodation, the length of the talk, recording rights, and what happens if either side has to cancel. Read the cancellation terms carefully. Events change, and you want to know where you stand.
+
+TWO MONTHS OUT: BRIEF THE SPEAKER
+
+This is where a good talk becomes a good talk for your audience. Book a call and share the real picture: how the year went, what the audience is worried about, what the leadership team will say before and after the keynote, and what you hope people will remember.
+
+Be honest. A speaker who knows the year was hard can speak to it. A speaker who is only told the cheerful version will walk into the room unprepared.
+
+FOUR WEEKS OUT: LOGISTICS
+
+Confirm flights, hotel, ground transport, stage set-up, microphone type, slides or no slides, and the run of show. Send the speaker a plain document with the venue address, the schedule, and one contact name with a mobile number for the day.
+
+ONE WEEK OUT: FINAL CHECK
+
+Confirm everything once more. Send the final schedule. Check that the speaker has the introduction you want read out, and make sure the person reading it has practised.
+
+WHAT IF YOU ARE SHORT ON TIME?
+
+It happens. A speaker cancels, a budget gets approved late, or a new event comes together in a few weeks. You can still book well, but you need to be quicker and clearer.
+
+Be flexible on the date if you can. A speaker who cannot do Tuesday may be free Wednesday.
+
+Be flexible on format. A shorter talk or a fireside conversation may be easier to fit into a busy diary.
+
+Go to a bureau. A speakers bureau knows who is free and can narrow a list in a day instead of a week.
+
+Be ready to decide fast. If you find a good fit, do not spend two weeks thinking about it. Good dates go.
+
+Accept that the briefing will be tighter. Put your effort into one thorough conversation rather than several short ones.
+
+Last minute does not mean you must settle. It means you must be organised.
+
+FACTORS THAT CHANGE THE TIMELINE
+
+Event size. A 10,000 person conference is planned over a year or more. A 60 person leadership retreat can come together much faster.
+
+Location. International travel means visas, longer flights, and a bigger window around the event. Allow for that in the diary as well as in the budget.
+
+Time of year. Peak conference months fill first. If your event is in a quiet month, you have more room.
+
+Speaker profile. A speaker with a long list of events will be harder to book than someone with a lighter schedule. That is not a quality judgement, only a diary one.
+
+Sign-off. Many planners lose weeks waiting for approval from someone senior. Get your decision-maker involved early, and agree the budget before you approach anyone.
+
+COMMON TIMING MISTAKES
+
+Waiting for the agenda to be perfect. The theme can be loose. Availability will not wait for you.
+
+Contacting one speaker at a time. It feels polite, but it can cost you weeks.
+
+Signing before reading the cancellation terms. Know what happens if the event moves.
+
+Briefing too late. A talk tailored in the last week is rarely as good as one tailored a month earlier.
+
+Forgetting the intro. The way a speaker is introduced sets the tone. Write it early, keep it short, and rehearse it.
+
+Leaving travel to the end. Flights get expensive and complicated close to the date, especially for events in remote locations.
+
+A WORD ON YOSSI GHINSBERG
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+Booking him follows the same path as the timeline above. Enquiries go through regional bureau contacts, and every enquiry receives a tailored proposal within 48 hours. His three keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", are customized per event, so the earlier you share your brief, the better the fit. Availability for any specific date is something to ask the bureau directly.
+
+THE SHORT VERSION
+
+Start thinking six to twelve months out for a large event. Shortlist and enquire four to six months out. Sign about three months out. Brief the speaker two months out. Sort logistics a month out. If you are late, move fast, stay flexible, and use a bureau.
+
+The best keynote bookings are not the ones made earliest. They are the ones made with a clear idea of what the talk has to do, and enough time left to make it fit your people.
+
+To discuss a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
+  },
+  {
+    slug: "how-to-introduce-a-keynote-speaker",
+    title: "How to Introduce a Keynote Speaker: A Practical Guide for Hosts and Planners",
+    date: "2026-11-10",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "The first 90 seconds of a keynote are decided by the person holding the microphone before the speaker walks on. Here is how to write and deliver an introduction that helps the talk instead of delaying it.",
+    keywords: [
+      "how to introduce a keynote speaker",
+      "keynote speaker introduction example",
+      "how to introduce a guest speaker",
+      "speaker introduction script",
+      "emcee tips for keynote speaker",
+    ],
+    content: `HOW TO INTRODUCE A KEYNOTE SPEAKER
+
+Most planners put weeks into choosing a speaker and about ten minutes into the introduction. That is backwards. The introduction is the bridge between a restless room and a keynote. A good one settles people. A bad one makes them check their phones.
+
+This guide covers what an introduction is for, how long it should be, how to write one, and what to avoid. It works for any speaker at any event.
+
+WHAT AN INTRODUCTION IS ACTUALLY FOR
+
+An introduction has three jobs.
+
+First, it tells the audience why this person is worth listening to. Not their whole life. Just enough to earn attention.
+
+Second, it connects the speaker to this room. Why this talk, for these people, today?
+
+Third, it hands over the stage cleanly. The speaker should walk on to applause and a quiet room, not to a half-finished sentence.
+
+That is all. An introduction is not a second keynote. It is not a chance for the host to be funny. It is a short, warm handover.
+
+HOW LONG SHOULD IT BE?
+
+Aim for 60 to 90 seconds when read aloud. That is roughly 150 to 200 words.
+
+Anything over two minutes starts to cost you. The audience came to hear the speaker. Every extra sentence is a sentence they did not come for.
+
+If the speaker is very well known, you can go shorter. Everyone already knows who they are. Say a line about why they are here and bring them on.
+
+START WITH THE SPEAKER'S OWN VERSION
+
+Before you write anything, ask the speaker or their bureau for a prepared introduction. Most professional speakers have one. They wrote it for a reason. It is usually tight, accurate, and built so that the host can read it without stumbling.
+
+Use it as your starting point. Then adjust it for your event.
+
+If you write your own from scratch, you risk getting facts wrong, mispronouncing names, or leaning on the wrong part of the story. A speaker who has spent years refining one paragraph about themselves will not thank you for replacing it with a copy of their LinkedIn page.
+
+A SIMPLE STRUCTURE THAT WORKS
+
+You can build almost any introduction from five short parts.
+
+1. The hook. One line that makes people look up. A fact, a question, or a short moment from the speaker's story.
+
+2. The credibility. Two or three things that matter for this audience. Not every award. Pick the ones that make sense in this room.
+
+3. The link to your event. One sentence on why you chose this speaker for this audience. This is the part only you can write.
+
+4. The name, clearly. Say the full name slowly. Say it twice if it is hard to pronounce.
+
+5. The handover. A clear cue. "Please welcome" followed by the name, then step back and applaud.
+
+That is the whole structure. Read it aloud and time it.
+
+THE LINK TO YOUR EVENT IS THE PART THAT MATTERS
+
+Anyone can read a biography. What makes a host valuable is the connection.
+
+Compare two endings.
+
+"He has spoken in many countries and has written a book."
+
+"This year our teams have been asked to change how they work, again and again. Today's speaker has something to say about what happens when the plan stops working."
+
+The second one tells people why they should care today. It also gives the speaker a place to start. A good keynote speaker will pick up that thread and pull on it.
+
+Write that one sentence for your own event. Everything else can come from the bio.
+
+WHAT TO LEAVE OUT
+
+Do not read the full biography. People can read it in the programme.
+
+Do not list every client, title, and award. Three is plenty.
+
+Do not tell the speaker's best story for them. If you give away the ending, they have to start from behind.
+
+Do not oversell. Phrases like "the best speaker you will ever hear" set a bar no human can clear. Let the talk do the work.
+
+Do not do your own stand-up routine. A joke is fine if it is short and about the occasion. A five minute warm-up is not.
+
+Do not apologise for anything. If the schedule is running late, say nothing about it. Simply move on.
+
+PRACTICAL STEPS BEFORE THE DAY
+
+Get the introduction approved. Send your draft to the speaker or bureau a week before. They can fix a date, a name, or a detail that is slightly off. This takes five minutes and prevents an awkward moment on stage.
+
+Check the pronunciation. Ask how the name is said, and write it out phonetically in your notes. If you can, record the speaker saying it or find a clip.
+
+Print it large. Do not read from a phone. Use big type, short lines, and double spacing. Mark where to pause.
+
+Practise out loud. Twice, at least. Read it standing up, at the speed you will use on stage. Most hosts read too fast when nervous.
+
+Agree the cue. Tell the speaker how you will end, so they know when to walk on. A simple closing line works best, such as "Please welcome" and then the name.
+
+Settle the tech. Confirm who controls the slides, the lights, and the walk-on music, if there is any. Make sure the operator knows the exact cue.
+
+ON THE DAY
+
+Walk to the stage with the paper in your hand. Wait for the room to settle before you start. A quiet pause of three seconds is better than talking over chatter.
+
+Speak slowly. Look at the audience, not at your notes.
+
+Say the name last. It should be the final thing the room hears before the speaker appears.
+
+Then step away. Clap, make eye contact with the speaker as they arrive, and leave the stage. Do not linger, do not make a comment, and do not stand beside them while they begin.
+
+IF THE SPEAKER DOES NOT PROVIDE AN INTRODUCTION
+
+It happens, especially with newer speakers. In that case, ask for three facts: what they are best known for, what they will talk about today, and how their name is said. Build the five parts from that.
+
+A short example, so you can see the shape:
+
+"Good morning. In 1981, a 22 year old set off into the Bolivian Amazon on an expedition. A few weeks later he was alone in the rainforest with no food, no fire, and no tools. He survived 20 days. Our team has spent this year dealing with plans that did not hold. Today's speaker has lived what that feels like, and what comes after. Please welcome Yossi Ghinsberg."
+
+That runs to about 75 words. It has a hook, a fact, a link to the event, and a clean handover. You can stretch it to 150 by adding one more credential, but you do not need to.
+
+A WORD ON YOSSI GHINSBERG
+
+Yossi Ghinsberg speaks to audiences worldwide and travels from California for North American events. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe. He offers three keynotes, "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", each customized per event.
+
+If you are booking him, ask the bureau contact for the preferred introduction early. Details about format, such as keynote only or keynote plus a fireside chat, shape what the host says, so agree that first. Booking enquiries go through the regional contacts listed on the booking page, and every enquiry receives a tailored proposal within 48 hours.
+
+THE SHORT VERSION
+
+Keep it to 60 to 90 seconds. Start from the speaker's own prepared introduction. Add one sentence that links the speaker to your event. Leave out the full biography. Check the name, print the script large, practise it twice, and say the name last.
+
+A good introduction is invisible. The audience does not remember it. They only notice that the keynote started well.
+
+To talk about a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page.`,
+  },
+  {
+    slug: "leadership-summit-keynote-speaker",
+    title: "Leadership Summit Keynote Speaker: How to Plan the Opening Session",
+    date: "2026-11-17",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "A leadership summit audience has heard the leadership talk before. Here is how to plan the keynote slot so it opens the event properly, who to book, and what to ask before you sign.",
+    keywords: [
+      "leadership summit keynote speaker",
+      "leadership conference keynote speaker",
+      "how to plan a leadership summit",
+      "opening keynote for leadership event",
+      "booking a speaker for a leadership summit",
+    ],
+    content: `LEADERSHIP SUMMIT KEYNOTE SPEAKER: HOW TO PLAN THE OPENING SESSION
+
+A leadership summit has a hard audience. The people in the room manage teams, run budgets, and sit through presentations every week. Many have read the same leadership books. Most have heard a talk about vision, trust, and change.
+
+So the keynote has a harder job than it does at most events. It has to say something this room has not already heard, and it has to say it in a way people believe.
+
+This guide covers how to plan that slot. It works for any speaker and any summit.
+
+START WITH WHAT THE ROOM ACTUALLY NEEDS
+
+Before you look at a single speaker, write down what your leaders are facing right now. Not the theme on the banner. The real situation.
+
+Is the company in the middle of a restructure? Did a hard year just end? Are managers being asked to do more with the same people? Is there a new strategy that nobody has fully explained yet?
+
+The answer changes what you book. A team that is tired needs something different from a team that is nervous. A team that is proud needs something different again.
+
+Write two sentences. "Our leaders are feeling X. By the end of the opening session we want them to feel or do Y." Everything else in your search comes from those two sentences.
+
+DECIDE WHAT THE OPENING SESSION IS FOR
+
+An opening keynote usually has one of three jobs.
+
+Set the tone. The talk gives the whole event a mood. It is honest, a little bold, and lets people relax into the days ahead.
+
+Frame the theme. The talk introduces an idea that later sessions pick up. Breakouts and panels refer back to it.
+
+Reset the room. People arrive carrying their inbox and their worries. The talk pulls them into the present.
+
+Most summits need a mix, but pick the main job. A speaker who is brilliant at framing a theme may be the wrong choice if what you really need is to reset a tired room.
+
+THE CASE FOR A LIVED STORY
+
+For a leadership audience, the strongest keynotes tend to come from lived experience rather than from a framework built in a classroom. Leaders can tell the difference quickly.
+
+A framework tells people what to do. A story shows them what it felt like to do it under pressure. Leaders trust the second, because it is harder to fake.
+
+That does not mean every summit needs an adventurer. A former executive who lived through a real failure can do the same job. What matters is that the speaker was there, and can describe what happened without polishing it.
+
+Ask yourself two questions about any speaker. Did this person live what they talk about? Can they tell it plainly?
+
+QUESTIONS TO ASK BEFORE YOU BOOK
+
+How will you adapt the talk to our event? Listen for specifics. A speaker who asks about your audience, your year, and your strategy is doing the work. A speaker who says the talk suits any audience has told you what to expect.
+
+What do you need from us? Good speakers ask for a briefing call, the agenda, and some background on the audience. If nothing is requested, that is a warning sign.
+
+Can I see a full recording? Not a showreel. Ask for a complete keynote, ideally to an audience similar to yours. Watch the room, not just the stage.
+
+Who else is on the programme? An opening keynote has to fit with what follows. Tell the speaker who is speaking after them, so they do not cover the same ground.
+
+What can the speaker do beyond the keynote? Some will join a fireside chat, a leaders-only lunch, or a breakout. These formats often reach a leadership group better than a stage alone.
+
+PLAN THE SLOT, NOT JUST THE SPEAKER
+
+Even the right speaker can struggle in the wrong slot. Think about timing.
+
+Length. Sixty minutes is standard for a keynote. If your audience is tired or the day is long, ask whether 45 will do. A shorter, sharper talk beats a long one.
+
+Time of day. Early morning audiences are fresh but still arriving. Right after lunch is the hardest slot in any conference. Do not put your most important talk there if you can avoid it.
+
+Room set up. Leaders sit better in rounds than in rows, if you can manage it. They will talk to each other afterwards, and the layout makes that easier.
+
+Q&A. Decide whether to include one. A moderated conversation after the talk gives leaders a chance to ask what they really want to ask. Build it into the schedule, or it gets squeezed out.
+
+What happens next. If the keynote opens a topic, give people a way to continue. A discussion in table groups, a breakout, or a short exercise turns a good talk into something that sticks.
+
+SPEAKER FEES AND HOW TO FRAME THE BUDGET
+
+Fees for experienced keynote speakers vary widely, and the number on the page is rarely the full cost. Travel, accommodation, and format all matter. A keynote with a workshop costs more than a keynote alone.
+
+If your budget is firm, say so early. A good bureau or speaker will tell you what is possible. It saves everyone time.
+
+Also think about the cost of getting it wrong. A summit brings together your senior people for several days. The keynote is the first thing they experience. A weak opening costs far more than the difference in fee.
+
+COMMON MISTAKES
+
+Booking the name instead of the fit. A famous speaker is not always the right one for your audience.
+
+Choosing a theme first and a speaker second. The theme often ends up forcing the speaker into a talk they would not normally give. Choose the speaker, then let them shape the talk.
+
+Skipping the briefing call. This one call changes the result more than anything else. Do not skip it.
+
+Overloading the day. A keynote needs room to land. Do not squeeze it between two other sessions with no break.
+
+Forgetting the follow up. The talk ends. The conversation should not. Plan what leaders do with it on Monday.
+
+WHERE YOSSI GHINSBERG FITS
+
+Yossi Ghinsberg is a keynote speaker, author, and survivor. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+For leadership audiences, he speaks on survival, resilience, adaptation, and leadership, drawing on what he lived rather than on theory. His framework, The Laws of the Jungle, takes principles he observed in the Amazon and applies them to business and life. His keynotes include "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", and each is customized per event.
+
+He speaks worldwide and travels from California for North American events. Formats include a 60 minute keynote, a keynote with a 20 to 30 minute fireside chat, and half-day or full-day workshops. Audiences leave with practical tools, including the Snake Breath technique for acute stress and the Real vs Imaginary Survival framework for separating true threats from manufactured stress.
+
+He is one option, not the only one. Whether he suits your summit depends on what your leaders are facing and what you want the opening session to do.
+
+THE SHORT VERSION
+
+Write down what your leaders are facing. Decide what the opening session is for. Look for a speaker who lived what they talk about and can tell it plainly. Ask how they will adapt, ask for a full recording, and book the briefing call. Then plan the slot around the talk, with room for questions and a way to keep the conversation going.
+
+A leadership audience has heard plenty of advice. What it rarely gets is a story that is honest enough to make it think.
+
+To talk about a keynote for your summit, get in touch through this site or contact the regional bureau representatives listed on the booking page. Every enquiry receives a tailored proposal within 48 hours.`,
+  },
 ];
