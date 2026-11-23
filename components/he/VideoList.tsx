@@ -17,6 +17,11 @@ export default function VideoList({
           <h3 className="mt-4 text-xl font-heading font-bold text-brand-text">
             <bdi>{v.title}</bdi>
           </h3>
+          {v.titleEn ? (
+            <p className="mt-1 text-sm text-brand-text-secondary">
+              <bdi lang="en">{v.titleEn}</bdi>
+            </p>
+          ) : null}
           <p className="mt-2 text-brand-text-secondary">{v.context}</p>
         </li>
       ))}

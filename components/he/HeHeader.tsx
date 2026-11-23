@@ -75,7 +75,7 @@ export default function HeHeader() {
         {heSite.ui.skipToContent}
       </a>
       <header
-        className={`sticky top-0 z-40 h-[70px] flex items-center transition-colors duration-300 ${
+        className={`sticky top-[var(--he-banner-h,0px)] z-40 h-[70px] flex items-center transition-colors duration-300 ${
           scrolled || menuOpen ? "bg-brand-bg/95 backdrop-blur-md" : "bg-transparent"
         }`}
       >

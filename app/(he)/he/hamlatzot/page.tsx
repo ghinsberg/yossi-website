@@ -17,7 +17,7 @@ export default function Page() {
       <PageIntro title={p.title} intro={p.intro} />
       <section className="mt-12">
         <ListOrPlaceholder items={heEndorsements} empty={p.empty}>
-          {(items) => <EndorsementList items={items} />}
+          {(items) => <EndorsementList items={items} translatedNote={p.translatedNote} />}
         </ListOrPlaceholder>
       </section>
     </div>

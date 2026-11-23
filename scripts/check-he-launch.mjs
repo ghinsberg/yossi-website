@@ -1,6 +1,6 @@
 // Launch gate for the Hebrew site. Exits non-zero while any of these exist:
 //  a. a call to ph( or draft( under data/he, app/(he), components/he
-//  b. a <Placeholder under app/(he) or components/he
+//  b. a <Placeholder or a <HeDraftBanner under app/(he) or components/he
 //  c. a Hebrew string literal in a data/he .ts or .tsx file (any depth) that is
 //     not the direct argument of ph(, draft( or ok(
 //  d. any Hebrew character in components/he or app/(he) (comments included)
@@ -92,10 +92,10 @@ export function findLaunchBlockers(files) {
         if (HEBREW.test(l)) out.push({ path, line: k + 1, reason: "Hebrew text in a component or app file (move it to data/he)" });
       });
     }
-    // b. placeholders
+    // b. placeholders and the site-wide draft banner
     if (isUi) {
-      for (const m of code.matchAll(/<Placeholder\b/g)) {
-        out.push({ path, line: lineOf(text, m.index), reason: "<Placeholder> still present" });
+      for (const m of code.matchAll(/<(Placeholder|HeDraftBanner)\b/g)) {
+        out.push({ path, line: lineOf(text, m.index), reason: `<${m[1]}> still present` });
       }
     }
     // a. draft calls (definitions excluded)

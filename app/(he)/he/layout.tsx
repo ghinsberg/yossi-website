@@ -7,6 +7,7 @@ import HeFooter from "@/components/he/HeFooter";
 import HeMobileCTA from "@/components/he/HeMobileCTA";
 import HeStructuredData from "@/components/he/HeStructuredData";
 import AgentTagCapture from "@/components/he/AgentTagCapture";
+import HeDraftBanner from "@/components/he/HeDraftBanner";
 import { heSite } from "@/data/he/site";
 
 // Heebo for both roles for now; alternatives (Assistant, Rubik) are judged in preview.
@@ -47,11 +48,13 @@ export default function HebrewRootLayout({ children }: Readonly<{ children: Reac
           <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />
         ) : null}
       </head>
-      <body className="bg-brand-bg text-brand-text font-body antialiased">
+      {/* --he-banner-h is the draft banner's height; the sticky header sits below it. Both go at launch. */}
+      <body className="bg-brand-bg text-brand-text font-body antialiased [--he-banner-h:2rem]">
         {/* Needs an absolute origin, so only once the Hebrew canonical host is set. */}
         {canonicalHost ? <HeStructuredData base={`https://${canonicalHost}`} /> : null}
         {/* Every page keeps ?a=<agent>, so a client entering on any page is credited. */}
         <AgentTagCapture />
+        <HeDraftBanner />
         <HeHeader />
         <main id="main" tabIndex={-1} className="outline-none">
           {children}

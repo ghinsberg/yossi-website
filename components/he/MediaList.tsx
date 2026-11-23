@@ -1,4 +1,5 @@
 import type { HeMediaItem } from "@/data/he/media";
+import HeText from "@/components/he/HeText";
 
 export default function MediaList({ items, readCta }: { items: readonly HeMediaItem[]; readCta: string }) {
   return (
@@ -9,8 +10,13 @@ export default function MediaList({ items, readCta }: { items: readonly HeMediaI
             <bdi>{m.outlet}</bdi>
             {m.year ? <> · {m.year}</> : null}
           </p>
-          <p className="mt-1 text-lg font-semibold text-brand-text">
-            <bdi>{m.title}</bdi>
+          {m.titleEn ? (
+            <p className="mt-1 text-lg font-semibold text-brand-text">
+              <bdi lang="en">{m.titleEn}</bdi>
+            </p>
+          ) : null}
+          <p className="mt-1 text-brand-text-secondary">
+            <HeText>{m.title}</HeText>
           </p>
           <a href={m.url} className="mt-2 inline-block text-brand-gold underline" rel="noopener">
             {readCta}

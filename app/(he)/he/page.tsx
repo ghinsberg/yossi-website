@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import LogoWall from "@/components/ui/LogoWall";
 import Placeholder from "@/components/he/Placeholder";
-import { heHome } from "@/data/he/home";
+import { EndorsementFigure } from "@/components/he/EndorsementList";
+import { heHome, heProofClientNames } from "@/data/he/home";
+import { heKeynotes } from "@/data/he/keynotes";
+import { heFeaturedEndorsement, heEndorsementsPage } from "@/data/he/endorsements";
 import { heSite } from "@/data/he/site";
+import { clients } from "@/data/clients";
 import { hebrewAlternates } from "@/lib/he/canonical";
 import { homeAlternates } from "@/lib/seo";
 import { readSiteEnv } from "@/lib/site";
@@ -11,9 +16,13 @@ import { readSiteEnv } from "@/lib/site";
 // Agent-tagged URLs (?a=gilat) declare the untagged address as canonical.
 const languages = homeAlternates(readSiteEnv());
 export const metadata: Metadata = {
+  description: heHome.metaDescription,
   // Page-level alternates replace the layout's, so the canonical is restated with the languages.
   alternates: languages ? { ...hebrewAlternates("/"), languages } : hebrewAlternates("/"),
 };
+
+// The English client list, in the order the Hebrew data names them.
+const proofClients = heProofClientNames.map((name) => clients.find((c) => c.name === name)!);
 
 export default function HeHome() {
   const h = heHome;
@@ -52,11 +61,59 @@ export default function HeHome() {
         </div>
       </section>
 
-      {/* Proof strip */}
+      {/* Proof strip: logos only, so the strip runs left-to-right like the English one (its marquee assumes LTR). */}
       <section className="border-y border-brand-gold/20 py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-text mb-6">{h.proof.title}</h2>
-          <Placeholder>{h.proof.placeholder}</Placeholder>
+          <h2 className="text-xl md:text-2xl font-heading font-bold text-brand-text mb-8 text-center">{h.proof.title}</h2>
+          <div dir="ltr">
+            <LogoWall items={proofClients} variant="clients" />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured endorsement */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text mb-6">{h.endorsement.title}</h2>
+          <EndorsementFigure e={heFeaturedEndorsement} translatedNote={heEndorsementsPage.translatedNote} />
+          <div className="mt-6">
+            <Button variant="outline" href={h.endorsement.href}>
+              {h.endorsement.cta}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Keynotes teaser */}
+      <section className="bg-brand-surface/30 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text">{h.keynotes.title}</h2>
+            <p className="mt-6 text-lg text-brand-text-secondary">{h.keynotes.body}</p>
+            <ul className="mt-6 grid gap-3">
+              {heKeynotes.map((k) => (
+                <li key={k.slug} className="border-s-2 border-brand-gold ps-4">
+                  <h3 className="text-xl font-heading font-bold text-brand-text">
+                    <bdi>{k.title}</bdi>
+                  </h3>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Button variant="outline" href={h.keynotes.href}>
+                {h.keynotes.cta}
+              </Button>
+            </div>
+          </div>
+          <div className="relative aspect-video rounded-2xl overflow-hidden">
+            <Image
+              src="/images/stage/hero-1.jpg"
+              alt={h.keynotes.imageAlt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -73,27 +130,22 @@ export default function HeHome() {
         </div>
       </section>
 
-      {/* Keynotes teaser */}
+      {/* English speaker reel, the same file the English home page plays */}
       <section className="bg-brand-surface/30 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text">{h.keynotes.title}</h2>
-            <p className="mt-6 text-lg text-brand-text-secondary">{h.keynotes.body}</p>
-            <Placeholder className="mt-6">{h.keynotes.placeholder}</Placeholder>
-            <div className="mt-8">
-              <Button variant="outline" href={h.keynotes.href}>
-                {h.keynotes.cta}
-              </Button>
-            </div>
-          </div>
-          <div className="relative aspect-video rounded-2xl overflow-hidden">
-            <Image
-              src="/images/stage/hero-1.jpg"
-              alt={h.keynotes.imageAlt}
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-            />
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text">{h.reel.title}</h2>
+          <p className="mt-4 text-lg text-brand-text-secondary">{h.reel.caption}</p>
+          <div className="mt-8 rounded-2xl overflow-hidden aspect-video bg-black">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/images/stage/hero-2.jpg"
+              aria-label={h.reel.videoLabel}
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/speaker-reel.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>

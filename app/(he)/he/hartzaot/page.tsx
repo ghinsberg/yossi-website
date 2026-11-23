@@ -19,7 +19,7 @@ export default function Page() {
       <PageIntro title={p.title} intro={p.intro} />
       <section className="mt-12">
         <ListOrPlaceholder items={heKeynotes} empty={p.empty}>
-          {(items) => <KeynoteList items={items} forWhomLabel={p.forWhomLabel} takeawayLabel={p.takeawayLabel} />}
+          {(items) => <KeynoteList items={items} forWhomLabel={p.forWhomLabel} takeawayLabel={p.takeawayLabel} titleEnLabel={p.titleEnLabel} />}
         </ListOrPlaceholder>
       </section>
       <div className="mt-12">
