@@ -42,6 +42,15 @@ describe("findLaunchBlockers", () => {
   it("flags <Placeholder in components and app", () => {
     expect(run([{ path: "app/(he)/he/page.tsx", text: "<Placeholder>x</Placeholder>" }])).toHaveLength(1);
   });
+  it("flags the draft banner in the layout, and nowhere outside the Hebrew directories", () => {
+    const r = run([{ path: "app/(he)/he/layout.tsx", text: "<body>\n<HeDraftBanner />\n</body>" }]);
+    expect(r).toEqual([{ path: "app/(he)/he/layout.tsx", line: 2, reason: "<HeDraftBanner> still present" }]);
+    expect(run([{ path: "components/he/X.tsx", text: "<HeDraftBanner/>" }])).toHaveLength(1);
+    expect(run([{ path: "components/other/X.tsx", text: "<HeDraftBanner />" }])).toEqual([]);
+  });
+  it("does not flag a component whose name only starts like the banner's", () => {
+    expect(run([{ path: "components/he/X.tsx", text: "<HeDraftBannerNote />" }])).toEqual([]);
+  });
   it("lets function definitions and the marker constant in data/he/site.ts pass", () => {
     const text = [
       'export const PLACEHOLDER_MARK = "⟦טיוטה⟧";',

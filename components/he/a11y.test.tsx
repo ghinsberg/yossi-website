@@ -17,7 +17,9 @@ import HeHeader from "./HeHeader";
 import HeFooter from "./HeFooter";
 import HeMobileCTA from "./HeMobileCTA";
 import { heLegal } from "@/data/he/legal";
-import { PLACEHOLDER_MARK } from "@/data/he/site";
+import { PLACEHOLDER_MARK, heSite } from "@/data/he/site";
+import HeDraftBanner from "./HeDraftBanner";
+import { findLaunchBlockers } from "../../scripts/check-he-launch.mjs";
 
 const pages = {
   home: HomePage, hasipur: HasipurPage, hartzaot: HartzaotPage, video: VideoPage,
@@ -64,6 +66,28 @@ describe("layout", () => {
     const fontsCss = readFileSync("app/fonts-he.css", "utf8");
     expect(fontsCss).toContain('--font-heading: "Heebo", "Heebo Fallback";');
     expect(fontsCss).toContain('--font-body: "Heebo", "Heebo Fallback";');
+  });
+});
+
+describe("draft banner", () => {
+  const html = renderToStaticMarkup(<HeDraftBanner />);
+  it("is rendered once by the layout, before the header", () => {
+    expect(layoutSrc.match(/<HeDraftBanner \/>/g)).toHaveLength(1);
+    expect(layoutSrc.indexOf("<HeDraftBanner />")).toBeLessThan(layoutSrc.indexOf("<HeHeader />"));
+  });
+  it("is a sticky, labelled note with the draft text and stamp, and holds nothing focusable", () => {
+    expect(html).toContain("data-draft-banner");
+    expect(html).toContain('role="note"');
+    expect(html).toContain(`aria-label="${heSite.draftBanner.label}"`);
+    expect(html).toContain(heSite.draftBanner.text);
+    expect(html).toContain(PLACEHOLDER_MARK);
+    expect(html).toMatch(/class="sticky top-0 [^"]*h-8/);
+    expect(html).not.toMatch(/<(a|button|input)\b/);
+  });
+  it("sits above the header, whose sticky offset is the banner height set in the layout", () => {
+    expect(html).toMatch(/z-\[45\]/);
+    expect(layoutSrc).toContain("[--he-banner-h:2rem]");
+    expect(renderToStaticMarkup(<HeHeader />)).toContain("sticky top-[var(--he-banner-h,0px)] z-40");
   });
 });
 
@@ -117,9 +141,14 @@ describe("footer and mobile bar", () => {
 });
 
 describe("legal shells", () => {
-  it("are fully stamped draft text, with Hebrew titles in metadata", () => {
+  it("every Hebrew line is a draft the launch gate counts, with Hebrew titles in metadata", () => {
+    const src = readFileSync("data/he/legal.ts", "utf8");
+    const flagged = new Set(findLaunchBlockers([{ path: "data/he/legal.ts", text: src }]).map((b) => b.line));
+    src.split("\n").forEach((l, i) => {
+      if (/[\u0590-\u05FF]/.test(l) && !l.trim().startsWith("//")) expect(flagged.has(i + 1), `legal.ts:${i + 1}`).toBe(true);
+    });
     for (const html of [renderToStaticMarkup(<NegishutPage />), renderToStaticMarkup(<PratiyutPage />)]) {
-      for (const li of html.match(/<li>[\s\S]*?<\/li>/g) ?? []) expect(li).toContain(PLACEHOLDER_MARK);
+      for (const li of html.match(/<li>[\s\S]*?<\/li>/g) ?? []) expect(li.replace(/<[^>]+>/g, "").trim()).not.toBe("");
       expect(html).toContain("data-placeholder");
     }
     expect(negMeta.title).toBe(heLegal.accessibility.metaTitle);
