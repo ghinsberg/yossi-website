@@ -13,7 +13,7 @@ export default function KeynoteList({
     <ul className="grid gap-8">
       {items.map((k) => (
         <li key={k.slug} className="rounded-2xl border border-brand-gold/20 bg-brand-surface/30 p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text">{k.title}</h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text"><bdi>{k.title}</bdi></h2>
           <dl className="mt-4 grid gap-4">
             <div>
               <dt className="font-semibold text-brand-gold">{forWhomLabel}</dt>

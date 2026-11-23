@@ -12,7 +12,7 @@ export function orderVideos(videos: readonly HeVideo[]): HeVideo[] {
 
 export const heVideosPage = {
   metaTitle: draft("סרטונים"),
-  metaDescription: draft("הרצאות וראיונות של יוסי גינסברג, קודם בעברית ואחר כך מהבמות בעולם."),
+  metaDescription: draft("סרטונים של יוסי גינסברג."),
   title: ph("סרטונים"),
   intro: ph("קודם מה שיוסי אומר בעברית. אחר כך מהבמות בעולם."),
   empty: draft("הסרטונים יופיעו כאן, אחרי שיוסי יאשר כל אחד מהם"),

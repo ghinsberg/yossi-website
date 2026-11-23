@@ -8,7 +8,9 @@ export default function EndorsementList({ items }: { items: readonly HeEndorseme
           <figure className="h-full rounded-2xl border border-brand-gold/20 bg-brand-surface/30 p-6">
             <blockquote className="text-lg leading-relaxed text-brand-text">{e.quote}</blockquote>
             <figcaption className="mt-4 text-brand-text-secondary">
-              <span className="font-semibold text-brand-text">{e.name}</span>
+              <span className="font-semibold text-brand-text">
+                <bdi>{e.name}</bdi>
+              </span>
               {", "}
               {e.role}
               {", "}

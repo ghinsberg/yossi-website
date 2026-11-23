@@ -4,7 +4,7 @@ import { draft, ph } from "./site";
 // forty years, the stages, Chalalan by name, ventures that did not all succeed.
 export const heStory = {
   metaTitle: draft("הסיפור"),
-  metaDescription: draft("הספר, ומה שבא אחריו: ארבעים שנה של במות ושל מיזמים."),
+  metaDescription: draft("הספר ומה שבא אחריו."),
   title: ph("הסיפור אחרי הספר"),
   book: {
     title: ph("הספר"),

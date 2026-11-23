@@ -4,7 +4,6 @@ import { heEndorsements } from "./endorsements";
 import { heMedia } from "./media";
 import { heFaq } from "./faq";
 import { heVideos, orderVideos, type HeVideo } from "./videos";
-import { PLACEHOLDER_MARK } from "./site";
 
 describe("content lists", () => {
   it("start empty: nothing unapproved ships", () => {
@@ -13,11 +12,8 @@ describe("content lists", () => {
     expect(heEndorsements).toEqual([]);
     expect(heMedia).toEqual([]);
   });
-  it("every FAQ question and answer is a stamped draft", () => {
-    for (const f of heFaq) {
-      expect(f.q.startsWith(PLACEHOLDER_MARK)).toBe(true);
-      expect(f.a.startsWith(PLACEHOLDER_MARK)).toBe(true);
-    }
+  it("FAQ is empty until real answers exist", () => {
+    expect(heFaq).toEqual([]);
   });
 });
 

@@ -54,7 +54,7 @@ export const heSite = {
   meta: {
     titleDefault: draft("יוסי גינסברג | הרצאות לארגונים ולכנסים"),
     titleTemplate: draft("%s | יוסי גינסברג"),
-    description: draft("יוסי גינסברג, מרצה על במות בארץ ובעולם. הרצאות בעברית לארגונים, לכנסים ולאירועים."),
+    description: draft("יוסי גינסברג, מרצה. הרצאות בעברית."),
     siteName: draft("יוסי גינסברג"),
   },
   notFound: {

@@ -5,6 +5,7 @@ import HamlatzotPage from "@/app/(he)/he/hamlatzot/page";
 import HartzaotPage from "@/app/(he)/he/hartzaot/page";
 import VideoPage from "@/app/(he)/he/video/page";
 import TikshoretPage from "@/app/(he)/he/tikshoret/page";
+import SheelotPage from "@/app/(he)/he/sheelot/page";
 import HasipurPage from "@/app/(he)/he/hasipur/page";
 import TodaPage, { metadata as todaMeta } from "@/app/(he)/he/toda/page";
 
@@ -32,7 +33,7 @@ describe("ListOrPlaceholder", () => {
 });
 
 describe("pages with empty lists", () => {
-  const pages = { hamlatzot: HamlatzotPage, hartzaot: HartzaotPage, video: VideoPage, tikshoret: TikshoretPage };
+  const pages = { hamlatzot: HamlatzotPage, hartzaot: HartzaotPage, video: VideoPage, tikshoret: TikshoretPage, sheelot: SheelotPage };
   for (const [name, Page] of Object.entries(pages)) {
     it(`${name}: one h1, a Placeholder, no empty list or sections`, () => {
       const html = renderToStaticMarkup(<Page />);

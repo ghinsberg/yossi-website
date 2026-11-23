@@ -7,7 +7,7 @@ export const heMedia: HeMediaItem[] = [];
 
 export const heMediaPage = {
   metaTitle: draft("בתקשורת"),
-  metaDescription: draft("יוסי גינסברג בעיתונות ובטלוויזיה, בישראל ובעולם."),
+  metaDescription: draft("עמוד התקשורת של יוסי גינסברג."),
   title: ph("בתקשורת"),
   intro: ph("קודם בישראל, אחר כך בעולם."),
   empty: draft("הכתבות והראיונות יופיעו כאן, אחרי שכל פריט ייבדק ויאושר"),

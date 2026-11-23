@@ -14,8 +14,8 @@ export const heEndorsements: HeEndorsement[] = [];
 
 export const heEndorsementsPage = {
   metaTitle: draft("המלצות"),
-  metaDescription: draft("המלצות על יוסי גינסברג ממי שהזמינו אותו להרצות."),
+  metaDescription: draft("המלצות על יוסי גינסברג."),
   title: ph("המלצות"),
-  intro: ph("מה אומרים מי שהזמינו אותו להרצות."),
+  intro: ph("מה שאומרים מי שהזמינו אותו להרצות."),
   empty: draft("ההמלצות יופיעו כאן, בשם, בתפקיד ובארגון, אחרי שכל אחת תאושר ותהיה הסכמה בכתב"),
 };

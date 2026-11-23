@@ -2,15 +2,8 @@ import { draft, ph } from "./site";
 
 export type HeFaqItem = { q: string; a: string };
 
-// Draft questions an organizer asks. Answers state no facts: each one only says
-// the detail awaits Yossi's confirmation.
-export const heFaq: HeFaqItem[] = [
-  { q: ph("באיזו שפה ההרצאה?"), a: ph("התשובה תתפרסם אחרי שיוסי יאשר אותה.") },
-  { q: ph("כמה זמן נמשכת הרצאה?"), a: ph("התשובה תתפרסם אחרי שיוסי יאשר אותה.") },
-  { q: ph("באילו פורמטים אפשר להזמין?"), a: ph("התשובה תתפרסם אחרי שיוסי יאשר אותה.") },
-  { q: ph("איך מסדרים נסיעות ולינה?"), a: ph("התשובה תתפרסם אחרי שיוסי יאשר אותה.") },
-  { q: ph("מה צריך להכין מבחינה טכנית?"), a: ph("התשובה תתפרסם אחרי שיוסי יאשר אותה.") },
-];
+// Empty until Yossi supplies real answers. Nothing is invented here.
+export const heFaq: HeFaqItem[] = [];
 
 export const heFaqPage = {
   metaTitle: draft("שאלות ותשובות"),
