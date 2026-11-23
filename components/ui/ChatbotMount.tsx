@@ -290,21 +290,6 @@ const SYSTEM_PROMPT =
   "Every response must be 150 words or less. Answer only what was asked. " +
   "One follow-up question maximum at the end if appropriate.";
 
-const AVAILABILITY_KEYWORDS = [
-  "available", "availability", "schedule", "calendar", "date", "dates",
-  "book you", "book yossi", "when can", "are you free", "open date",
-  "2025", "2026", "2027",
-];
-
-const RELEVANT_KEYWORDS = [
-  "keynote", "keynotes", "speak", "speaking", "speaker", "talk", "presentation",
-  "survival", "survive", "amazon", "jungle", "laws", "philosophy", "wisdom",
-  "book", "booking", "hire", "event", "conference", "fee", "cost", "price",
-  "yossi", "ghinsberg", "story", "adventure", "inspiration", "motivational",
-  "stage", "audience", "corporate", "leadership", "resilience", "mindset",
-  "who are you", "what do you do", "tell me", "about you", "how you",
-];
-
 function SpeakerButton({ text }: { text: string }) {
   const [state, setState] = useState<"idle" | "loading" | "playing">("idle");
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -391,15 +376,6 @@ function TextMode({ onSwitchToVoice }: { onSwitchToVoice: () => void }) {
 
     const detected = detectContact(text);
     if (detected) setContactCard(detected);
-
-    if (AVAILABILITY_KEYWORDS.some((k) => text.toLowerCase().includes(k))) {
-      setMessages((p) => [...p, { role: "assistant", content: "I don't have access to my calendar here — my team handles all scheduling. You can check availability at yossighinsberg.com/book-yossi." }]);
-      return;
-    }
-    if (!RELEVANT_KEYWORDS.some((k) => text.toLowerCase().includes(k))) {
-      setMessages((p) => [...p, { role: "assistant", content: "That's a conversation for another time. Right now I'm here to talk about what I do on stage. What brings you here today?" }]);
-      return;
-    }
 
     setIsLoading(true);
     try {
