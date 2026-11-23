@@ -21,15 +21,15 @@ export type HeVideo = {
 // Hebrew-language clips will be added later and sort first (orderVideos).
 export const heVideos: HeVideo[] = [
   { youtubeId: "BDGQx1V1MK0", titleEn: "Stories and Lessons", title: draft("סיפורים ולקחים"), language: "en", context: draft("מהבמה.") },
-  { youtubeId: "RS3p_8di8WA", titleEn: "Innovation Is Key", title: draft("החדשנות היא המפתח"), language: "en", context: draft("מהבמה.") },
+  { youtubeId: "RS3p_8di8WA", titleEn: "Innovation Is Key", title: draft("חדשנות היא המפתח"), language: "en", context: draft("מהבמה.") },
   { youtubeId: "FINMVryLQmw", titleEn: "Nature Is the Answer", title: draft("הטבע הוא התשובה"), language: "en", context: draft("מהבמה.") },
   { youtubeId: "_QyWIuCarUc", titleEn: "Dreamers", title: draft("חולמים"), language: "en", context: draft("מהבמה.") },
   { youtubeId: "ebBx8fFMCSY", titleEn: "The Now Is Here", title: draft("העכשיו כבר כאן"), language: "en", context: draft("מהבמה.") },
-  { youtubeId: "hDQWgqtuGUw", titleEn: "Being a Dreamer and Making Dreams Come True", title: draft("להיות חולם, ולהגשים חלומות"), language: "en", context: draft("מהבמה.") },
+  { youtubeId: "hDQWgqtuGUw", titleEn: "Being a Dreamer and Making Dreams Come True", title: draft("להיות חולם ולהגשים חלומות"), language: "en", context: draft("מהבמה.") },
   { youtubeId: "UepK6QniFgA", titleEn: "What We Really Search For", title: draft("מה אנחנו באמת מחפשים"), language: "en", context: draft("מהבמה.") },
   { youtubeId: "hZqjdbmyJKI", titleEn: "Surviving the Impossible", title: draft("לשרוד את הבלתי אפשרי"), language: "en", context: draft("יוסי מספר את הסיפור מהאמזונס הבוליביאני.") },
   { youtubeId: "N1ADswxJdVU", titleEn: "Once in a Lifetime — Amazon Expedition", title: draft("פעם בחיים: מסע לאמזונס"), language: "en", context: draft("מתוך הסיפור.") },
-  { youtubeId: "bjfqeAGa7cg", titleEn: "Victim Is a Choice", title: draft("קורבן זו בחירה"), language: "en", context: draft("קליפ קצר.") },
+  { youtubeId: "bjfqeAGa7cg", titleEn: "Victim Is a Choice", title: draft("להיות קורבן זו בחירה"), language: "en", context: draft("קליפ קצר.") },
   { youtubeId: "R1-QtfpBxqI", titleEn: "Inspiring the Heroes", title: draft("לתת השראה לגיבורים"), language: "en", context: draft("קליפ קצר.") },
   { youtubeId: "Jc6-JiOZw1Q", titleEn: "Save the Amazon", title: draft("להציל את האמזונס"), language: "en", context: draft("קליפ קצר.") },
 ];

@@ -4,7 +4,10 @@ export type HeEndorsement = {
   quote: string;
   /** Latin, as on the English site (rendered inside <bdi>). */
   name: string;
-  role: string;
+  /** The person's title exactly as data/testimonials.ts has it (tested). */
+  roleEn: string;
+  /** Hebrew rendering of roleEn. When absent, the page shows roleEn in Latin. */
+  role?: string;
   /** Latin company name, as on the English site (rendered inside <bdi>). */
   organization: string;
   consentOnRecord: true;
@@ -21,8 +24,9 @@ export type HeEndorsement = {
 // Yossi still approves each one for the Hebrew site before launch.
 export const heEndorsements: HeEndorsement[] = [
   {
-    quote: draft("מרהיב, מעורר השראה, מרגש, עוצר נשימה. אמליץ על יוסי כמרצה מרכזי בכל מקום ובכל הזדמנות."),
+    quote: draft("מרהיב, מעורר השראה, מרגש, עוצר נשימה. אמליץ על יוסי כמרצה מרכזי בכל מקום ובכל פעם שאוכל."),
     name: "John Zaharakis",
+    roleEn: "General Manager, Conferences & Events",
     role: draft("מנהל כללי, כנסים ואירועים"),
     organization: "American Express",
     consentOnRecord: true,
@@ -31,7 +35,8 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("בניסיון שלי, יוסי גינסברג במקום הראשון."),
     name: "Chris Varelas",
-    role: draft("ראש בנקאות ההשקעות הארצית"),
+    roleEn: "Head of National Investment Bank",
+    // Shown in English: the Hebrew interpretation of this title was not reliable (controller ruling).
     organization: "Citibank",
     consentOnRecord: true,
     translatedFrom: "en",
@@ -39,6 +44,7 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("כל מי שדיברתי איתו היה מרותק ושבוי. התובנות של יוסי יעזרו לנו לבנות את מערך השותפים שלנו."),
     name: "John Hennessey",
+    roleEn: "General Manager, Small, Medium and Corporate Business",
     role: draft("מנהל כללי, עסקים קטנים, בינוניים ותאגידים"),
     organization: "Microsoft",
     consentOnRecord: true,
@@ -47,7 +53,8 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("לא פחות מקוסם. יוסי יצר באולם תחושת התרוממות רוח עצומה."),
     name: "Ron Yariv",
-    role: draft("מנהל מכירות בינלאומיות"),
+    roleEn: "Managing Director, International Sales",
+    role: draft("מנהל כללי, מכירות בינלאומיות"),
     organization: "Hilton International",
     consentOnRecord: true,
     translatedFrom: "en",
@@ -55,14 +62,16 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("הסיפור של יוסי מעורר השראה ומלא בלקחים עסקיים מעשיים."),
     name: "Abe Peled",
+    roleEn: "Chairman and CEO",
     role: draft("יו\"ר ומנכ\"ל"),
     organization: "NDS",
     consentOnRecord: true,
     translatedFrom: "en",
   },
   {
-    quote: draft("בכל הקריירה שלי לא ראיתי אולם מלא ששקוע כל כך לגמרי במושב של כנס."),
+    quote: draft("בכל שנות הקריירה שלי לא ראיתי אולם מלא כל כך מרותק במושב של כנס."),
     name: "Bob Fuller",
+    roleEn: "Tech Support Executive",
     role: draft("בכיר בתמיכה טכנית"),
     organization: "IBM",
     consentOnRecord: true,
@@ -71,15 +80,17 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("התרשמנו כל כך, שהזמנו את יוסי להרצאה נוספת למחרת. הוא מרצה בקליבר יוצא דופן."),
     name: "Elmo de Alwis",
+    roleEn: "CEO and Managing Director",
     role: draft("מנכ\"ל ומנהל כללי"),
     organization: "Sigma Pharmaceuticals",
     consentOnRecord: true,
     translatedFrom: "en",
   },
   {
-    quote: draft("המשובים מהמשתתפים היו פנטסטיים. הם היו מרותקים ולא רצו שיפסיק. ההמלצה שלי עליו היא בלי שום הסתייגות."),
+    quote: draft("המשובים מהמשתתפים היו פנטסטיים. הם היו מרותקים ולא רצו שיפסיק. המלצה בלי הסתייגות."),
     name: "Kerry McWhinnie",
-    role: draft("ארגון אירועים"),
+    roleEn: "Event Organizer",
+    role: draft("הפקת אירועים"),
     organization: "RE/MAX",
     consentOnRecord: true,
     translatedFrom: "en",
@@ -87,6 +98,7 @@ export const heEndorsements: HeEndorsement[] = [
   {
     quote: draft("הרגשתי שנלקחתי לעולם אחר. זה היה אישי מאוד ומרגש עמוקות."),
     name: "Gilbert Enoka",
+    roleEn: "Mental Skills Coach",
     role: draft("מאמן מנטלי"),
     organization: "New Zealand All Blacks",
     consentOnRecord: true,

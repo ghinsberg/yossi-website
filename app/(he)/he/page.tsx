@@ -107,7 +107,7 @@ export default function HeHome() {
           </div>
           <div className="relative aspect-video rounded-2xl overflow-hidden">
             <Image
-              src="/images/stage/hero-1.jpg"
+              src="/images/stage/hero-2.jpg"
               alt={h.keynotes.imageAlt}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -130,7 +130,7 @@ export default function HeHome() {
         </div>
       </section>
 
-      {/* English speaker reel, the same file the English home page plays */}
+      {/* English speaker reel, the same file the English home page plays. No poster: hero-2 is already the keynotes image above, and the first frame is Yossi on stage. */}
       <section className="bg-brand-surface/30 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-text">{h.reel.title}</h2>
@@ -140,7 +140,6 @@ export default function HeHome() {
               controls
               playsInline
               preload="metadata"
-              poster="/images/stage/hero-2.jpg"
               aria-label={h.reel.videoLabel}
               className="w-full h-full object-cover"
             >

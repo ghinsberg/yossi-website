@@ -9,7 +9,9 @@ import SheelotPage from "@/app/(he)/he/sheelot/page";
 import HasipurPage from "@/app/(he)/he/hasipur/page";
 import TodaPage, { metadata as todaMeta } from "@/app/(he)/he/toda/page";
 import HeText, { splitLatin } from "./HeText";
-import { heKeynotes } from "@/data/he/keynotes";
+import { displayTitleEn } from "./VideoList";
+import { readFileSync } from "node:fs";
+import { heKeynotes, heKeynoteNames } from "@/data/he/keynotes";
 import { heEndorsements, heEndorsementsPage } from "@/data/he/endorsements";
 import { heVideos } from "@/data/he/videos";
 import { heFaq } from "@/data/he/faq";
@@ -64,6 +66,23 @@ describe("pages with content", () => {
     const html = renderToStaticMarkup(<VideoPage />);
     expect(count(html, "<iframe")).toBe(heVideos.length);
     expect(count(html, "<h2")).toBe(1);
+  });
+  it("video shows English titles with a comma where the English data has an em dash", () => {
+    const html = renderToStaticMarkup(<VideoPage />);
+    expect(html).not.toContain("—");
+    expect(html).toContain("Once in a Lifetime, Amazon Expedition");
+    expect(displayTitleEn("A — B")).toBe("A, B");
+  });
+  it("hamlatzot shows Chris Varelas's English title in a Latin-isolated bdi", () => {
+    expect(renderToStaticMarkup(<HamlatzotPage />)).toContain('<bdi lang="en">Head of National Investment Bank</bdi>');
+  });
+  it("sheelot names the keynote from the keynote data, not a second literal", () => {
+    const html = renderToStaticMarkup(<SheelotPage />);
+    expect(html).toContain(heKeynoteNames.realVsImaginary);
+    expect(readFileSync("data/he/faq.ts", "utf8")).toContain("${heKeynoteNames.realVsImaginary}");
+  });
+  it("tikshoret shows no em dash", () => {
+    expect(renderToStaticMarkup(<TikshoretPage />)).not.toContain("—");
   });
   it("sheelot renders every question", () => {
     expect(count(renderToStaticMarkup(<SheelotPage />), "<details")).toBe(heFaq.length);

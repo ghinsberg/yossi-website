@@ -3,7 +3,8 @@ import { draft, ph } from "./site";
 export type HeMediaItem = {
   /** Latin outlet name, as the English site writes it (rendered in <bdi>). */
   outlet: string;
-  /** The English title of the item, as the English site writes it. */
+  /** The English title of the item, exactly as the English site writes it
+   *  (tested); MediaList shows its em dash as a comma. */
   titleEn?: string;
   /** One Hebrew line saying what the item is. */
   title: string;
@@ -25,7 +26,7 @@ export const heMedia: HeMediaItem[] = [
   },
   {
     outlet: "Wondery / Amazon Podcasts",
-    titleEn: "Against The Odds, Season 32",
+    titleEn: "Against The Odds — Season 32",
     title: draft("\"Lost in the Rainforest\", סדרת פודקאסט עלילתית בארבעה פרקים."),
     url: "https://wondery.com/shows/against-the-odds/season/32/",
     year: 2023,
@@ -51,11 +52,11 @@ export const heMediaPage = {
   metaTitle: draft("בתקשורת"),
   metaDescription: draft("יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם."),
   title: draft("בתקשורת"),
-  intro: draft("ארבעים שנה אחרי, הסיפור עדיין עובר הלאה: בטלוויזיה, בפודקאסטים ובעיתונות."),
+  intro: draft("יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות."),
   israelTitle: draft("בישראל"),
   israelPlaceholder: draft("כתבות וראיונות מהתקשורת הישראלית יופיעו כאן, אחרי שכל פריט ייבדק ויאושר"),
   worldTitle: draft("בעולם"),
-  asSeenInTitle: ph("הסיפור הופיע גם ב:"),
+  asSeenInTitle: ph("סיקרו את הסיפור:"),
   empty: draft("הכתבות והראיונות יופיעו כאן, אחרי שכל פריט ייבדק ויאושר"),
   readCta: draft("לפריט המקורי"),
 };

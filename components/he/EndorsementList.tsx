@@ -9,7 +9,7 @@ export function EndorsementFigure({ e, translatedNote }: { e: HeEndorsement; tra
           <bdi>{e.name}</bdi>
         </span>
         {", "}
-        {e.role}
+        {e.role ?? <bdi lang="en">{e.roleEn}</bdi>}
         {", "}
         <bdi>{e.organization}</bdi>
         {e.translatedFrom === "en" ? (

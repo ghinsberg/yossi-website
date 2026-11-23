@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { heKeynotes } from "./keynotes";
@@ -44,13 +45,19 @@ describe("endorsements", () => {
   it.each(heEndorsements.map((e) => [e.name, e] as const))("%s: complete, translated, and published on the English site", (_n, e) => {
     expect(e.name.trim()).not.toBe("");
     expect(e.organization.trim()).not.toBe("");
-    expect(e.role.trim()).not.toBe("");
     expect(e.quote.trim()).not.toBe("");
     expect(e.translatedFrom).toBe("en");
     expect(e.consentOnRecord).toBe(true);
     const en = testimonials.find((t) => t.author === e.name);
     expect(en, `${e.name} not in data/testimonials.ts`).toBeDefined();
     expect(e.organization).toBe(en!.company);
+    // The role is tied to the English data: roleEn is the English title, and a
+    // Hebrew role exists only as a rendering of it.
+    expect(e.roleEn).toBe(en!.title);
+    if (e.role !== undefined) expect(e.role).toMatch(/[֐-׿]/);
+  });
+  it("shows Chris Varelas's title in English, not a Hebrew interpretation", () => {
+    expect(heEndorsements.find((e) => e.name === "Chris Varelas")!.role).toBeUndefined();
   });
   it("features one of the listed endorsements on the home page", () => {
     expect(heEndorsements).toContain(heFeaturedEndorsement);
@@ -82,6 +89,12 @@ describe("videos", () => {
 });
 
 describe("home proof strip", () => {
+  it("every client name is one the English FAQ says he has spoken for", () => {
+    const faq = readFileSync("app/(en)/faq/page.tsx", "utf8");
+    const line = faq.split("\n").find((l) => l.includes("Google, Apple, Microsoft"))!;
+    expect(line).toContain("Million Dollar Round Table");
+    for (const n of heProofClientNames) expect(line.includes(n), n).toBe(true);
+  });
   it("every client name exists in the English client list", () => {
     expect(heProofClientNames.length).toBeGreaterThan(0);
     const names = new Set(clients.map((c) => c.name));
@@ -97,6 +110,14 @@ describe("media", () => {
   it("is non-empty and every URL appears in the English media or story page source", () => {
     expect(heMedia.length).toBeGreaterThan(0);
     for (const m of heMedia) expect(enSource.includes(m.url), m.url).toBe(true);
+  });
+  it("every titleEn and year ties back to the English source", () => {
+    const decoded = enSource.replace(/&apos;/g, "'").replace(/&mdash;/g, "—");
+    for (const m of heMedia) {
+      const at = decoded.indexOf(m.titleEn!);
+      expect(at, m.titleEn).toBeGreaterThanOrEqual(0);
+      if (m.year) expect(decoded.slice(Math.max(0, at - 600), at + 600)).toContain(String(m.year));
+    }
   });
   it("every outlet name appears in the English source", () => {
     for (const m of heMedia) expect(enSource.includes(m.outlet), m.outlet).toBe(true);
@@ -124,10 +145,24 @@ describe("FAQ", () => {
 });
 
 describe("the film", () => {
-  it("is mentioned once on the whole Hebrew site, on the story page, as a stamped proposal", () => {
-    const all = JSON.stringify([heKeynotes, heEndorsements, heMedia, heAsSeenIn, heFaq, heHome, heStory, heVideos]);
-    expect(all.split("רדקליף").length - 1).toBe(1);
-    expect(heStory.book.film).toContain("רדקליף");
+  // Every export of every data/he/*.ts module (tests excluded), walked to its strings.
+  const modules = import.meta.glob(["./*.ts", "!./*.test.ts"], { eager: true }) as Record<string, Record<string, unknown>>;
+  const strings: string[] = [];
+  const walk = (v: unknown, seen = new Set<unknown>()) => {
+    if (typeof v === "string") strings.push(v);
+    else if (v && typeof v === "object" && !seen.has(v)) {
+      seen.add(v);
+      for (const x of Object.values(v)) walk(x, seen);
+    }
+  };
+  for (const mod of Object.values(modules)) walk(mod);
+  // "Jungle" not preceded by "the ": "The Laws of the Jungle" is a keynote, not the film.
+  // "הסרט" as a whole word: "הסרטונים" (videos) is not the film.
+  const FILM = /רדקליף|(?<!the )Jungle|(^|[^א-ת])הסרט($|[^א-ת])|סרט קולנוע/;
+  it("is mentioned in exactly one string on the whole Hebrew site: the stamped story proposal", () => {
+    expect(Object.keys(modules).length).toBeGreaterThanOrEqual(10);
+    const hits = strings.filter((s) => FILM.test(s));
+    expect(hits).toEqual([heStory.book.film]);
     expect(heStory.book.film.startsWith(PLACEHOLDER_MARK)).toBe(true);
   });
 });
