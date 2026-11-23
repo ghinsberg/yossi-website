@@ -1,11 +1,27 @@
-import Placeholder from "@/components/he/Placeholder";
+import type { Metadata } from "next";
+import Button from "@/components/ui/Button";
+import PageIntro from "@/components/he/PageIntro";
+import ListOrPlaceholder from "@/components/he/ListOrPlaceholder";
+import FaqList from "@/components/he/FaqList";
+import { heFaq, heFaqPage as p } from "@/data/he/faq";
 import { heSite } from "@/data/he/site";
 
-// Stub. A later task replaces this with the real page.
+export const metadata: Metadata = { title: p.metaTitle, description: p.metaDescription };
+
 export default function Page() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
-      <Placeholder>{heSite.pageNames.sheelot}: {heSite.placeholder.stub}</Placeholder>
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+      <PageIntro title={p.title} intro={p.intro} />
+      <section className="mt-12">
+        <ListOrPlaceholder items={heFaq} empty={p.empty}>
+          {(items) => <FaqList items={items} />}
+        </ListOrPlaceholder>
+      </section>
+      <div className="mt-12">
+        <Button variant="outline" href={heSite.bookingHref}>
+          {p.bookCta}
+        </Button>
+      </div>
     </div>
   );
 }
