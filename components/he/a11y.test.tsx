@@ -60,9 +60,10 @@ describe("layout", () => {
     expect(readFileSync("app/(he)/he/page.tsx", "utf8")).not.toContain("AgentTagCapture");
   });
   it("layout loads Heebo once and binds it to both font variables", () => {
-    expect(layoutSrc.match(/Heebo\(/g)).toHaveLength(1);
-    expect(layoutSrc).toContain('variable: "--font-heading"');
-    expect(layoutSrc).toMatch(/"--font-body": heebo\.style\.fontFamily/);
+    expect(layoutSrc.match(/import "@\/app\/fonts-he\.css";/g)).toHaveLength(1);
+    const fontsCss = readFileSync("app/fonts-he.css", "utf8");
+    expect(fontsCss).toContain('--font-heading: "Heebo", "Heebo Fallback";');
+    expect(fontsCss).toContain('--font-body: "Heebo", "Heebo Fallback";');
   });
 });
 

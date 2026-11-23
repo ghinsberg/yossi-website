@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Heebo } from "next/font/google";
+import { preload } from "react-dom";
+import "@/app/fonts-he.css";
 import "@/app/(en)/globals.css";
 import HeHeader from "@/components/he/HeHeader";
 import HeFooter from "@/components/he/HeFooter";
@@ -9,16 +10,9 @@ import AgentTagCapture from "@/components/he/AgentTagCapture";
 import { heSite } from "@/data/he/site";
 
 // Heebo for both roles for now; alternatives (Assistant, Rubik) are judged in preview.
-// Loaded once, with the weights the Hebrew pages use (normal, medium, semibold,
-// bold, extrabold), and bound to the English layout's two CSS variable names
-// so font-heading / font-body just work.
-const heebo = Heebo({
-  subsets: ["hebrew", "latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-heading",
-  display: "swap",
-});
-const fontVars = { "--font-body": heebo.style.fontFamily } as React.CSSProperties;
+// Self-hosted in app/fonts-he.css with the weights the Hebrew pages use (normal,
+// medium, semibold, bold, extrabold) and bound to the English layout's two CSS
+// variable names, so font-heading / font-body just work.
 
 const canonicalHost = process.env.HE_CANONICAL_HOST;
 const live = process.env.HE_LIVE === "1";
@@ -39,9 +33,15 @@ export const metadata: Metadata = {
   robots: live ? { index: true, follow: true } : { index: false, follow: false },
 };
 
+// The same font files the Google font loader preloaded on Hebrew pages, in the
+// same order. preload() emits one <link rel="preload"> each in <head>.
+const FONT_PRELOADS = ["heebo-latin", "dm-sans-latin", "inter-latin", "heebo-hebrew"];
+const FONT_PRELOAD = { as: "font", type: "font/woff2", crossOrigin: "anonymous" } as const;
+
 export default function HebrewRootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  for (const f of FONT_PRELOADS) preload(`/fonts/${f}.woff2`, FONT_PRELOAD);
   return (
-    <html lang="he" dir="rtl" className={`h-full ${heebo.variable}`} style={fontVars}>
+    <html lang="he" dir="rtl" className="h-full">
       <head>
         {plausibleDomain ? (
           <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />

@@ -100,7 +100,7 @@ describe("decideRoute", () => {
       expect(decideRoute("yossighinsberg.com", p, {})).toEqual({ action: "next" });
     },
   );
-  it.each(["/images/a.jpg", "/api/contact", "/sitemap.xml", "/robots.txt"])(
+  it.each(["/images/a.jpg", "/api/contact", "/sitemap.xml", "/robots.txt", "/fonts/heebo-hebrew.woff2"])(
     "passes shared path %s through on a Hebrew host",
     (p) => {
       expect(decideRoute("x.co.il", p, HE)).toEqual({ action: "next" });
@@ -156,12 +156,12 @@ describe("isHebrewHost", () => {
 describe("isSharedPath", () => {
   it.each([
     "/api/contact", "/_next/static/a.js", "/images/a.jpg", "/videos/a.mp4", "/audio/a.mp3",
-    "/icon.svg", "/sitemap.xml", "/robots.txt", "/favicon.ico",
+    "/fonts/heebo-latin.woff2", "/icon.svg", "/sitemap.xml", "/robots.txt", "/favicon.ico",
   ])("%s is shared", (p) => {
     expect(isSharedPath(p)).toBe(true);
   });
   it.each([
-    "/", "/hartzaot", "/he", "/apiary", "/imagesx/a",
+    "/", "/hartzaot", "/he", "/apiary", "/imagesx/a", "/fonts", "/fontsx/a.woff2",
     "/llms.txt", "/globe.svg", "/yossi-ghinsberg-speaker-onesheet.pdf",
     "/yossi-ghinsberg-speaker-onesheet.html", "/x/y.pdf",
   ])("%s is not shared", (p) => {

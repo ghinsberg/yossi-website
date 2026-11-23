@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* Fonts served via next/font/google in layout.tsx — eliminates render-blocking @import */
+/* Fonts are self-hosted: app/fonts-en.css and app/fonts-he.css, files in public/fonts. */
 
 @theme {
   --color-brand-bg: #0A0A0A;

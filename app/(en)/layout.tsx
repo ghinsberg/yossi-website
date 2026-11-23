@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter } from "next/font/google";
+import { preload } from "react-dom";
+import "@/app/fonts-en.css";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -12,19 +13,7 @@ import Contentsquare from "@/components/Contentsquare";
 import MetaPixel from "@/components/MetaPixel";
 import Preloader from "@/components/Preloader";
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-});
+const FONT_PRELOAD = { as: "font", type: "font/woff2", crossOrigin: "anonymous" } as const;
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yossighinsberg.com";
 const OG_IMAGE = `${BASE_URL}/images/headshots/yossi-headshot-1.jpg`;
@@ -100,8 +89,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Self-hosted fonts (app/fonts-en.css): preload the latin subsets, as the
+  // Google font loader did. preload() emits one <link rel="preload"> in <head>;
+  // a JSX <link> there would be emitted twice by React.
+  for (const f of ["dm-sans-latin", "inter-latin"]) {
+    preload(`/fonts/${f}.woff2`, FONT_PRELOAD);
+  }
   return (
-    <html lang="en" className={`h-full ${dmSans.variable} ${inter.variable}`}>
+    <html lang="en" className="h-full">
       <head>
         {/* Preload first hero image with high priority — signals LCP element to browser */}
         <link rel="preload" as="image" href="/images/stage/carousel_bkk_for_website.jpg" fetchPriority="high" />

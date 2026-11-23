@@ -38,7 +38,7 @@ export function readSiteEnv(): SiteEnv {
   };
 }
 
-const SHARED_PREFIXES = ["/api/", "/_next/", "/images/", "/videos/", "/audio/"];
+const SHARED_PREFIXES = ["/api/", "/_next/", "/images/", "/videos/", "/audio/", "/fonts/"];
 const SHARED_FILES = new Set([
   "/icon.svg",
   "/sitemap.xml",
