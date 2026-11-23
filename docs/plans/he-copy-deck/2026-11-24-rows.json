@@ -1,0 +1,2080 @@
+{
+ "sections": [
+  {
+   "file": "home",
+   "prefix": "H",
+   "title": "עמוד הבית"
+  },
+  {
+   "file": "story",
+   "prefix": "S",
+   "title": "הסיפור"
+  },
+  {
+   "file": "keynotes",
+   "prefix": "K",
+   "title": "הרצאות"
+  },
+  {
+   "file": "videos",
+   "prefix": "V",
+   "title": "סרטונים"
+  },
+  {
+   "file": "endorsements",
+   "prefix": "E",
+   "title": "המלצות"
+  },
+  {
+   "file": "media",
+   "prefix": "M",
+   "title": "בתקשורת"
+  },
+  {
+   "file": "faq",
+   "prefix": "Q",
+   "title": "שאלות ותשובות"
+  },
+  {
+   "file": "booking",
+   "prefix": "B",
+   "title": "הזמנת הרצאה (טופס)"
+  },
+  {
+   "file": "thanks",
+   "prefix": "T",
+   "title": "עמוד תודה"
+  },
+  {
+   "file": "site",
+   "prefix": "G",
+   "title": "תפריט, כותרת תחתונה, עמוד 404, באנר"
+  },
+  {
+   "file": "legal",
+   "prefix": "L",
+   "title": "נגישות ופרטיות (טיוטה לעורך דין)"
+  },
+  {
+   "file": "seo",
+   "prefix": "O",
+   "title": "תיאורים לגוגל"
+  },
+  {
+   "file": "agents",
+   "prefix": "A",
+   "title": "סוכנים"
+  }
+ ],
+ "rows": [
+  {
+   "id": "H01",
+   "file": "home",
+   "path": "heHome.metaDescription",
+   "text": "יוסי גינסברג מרצה לארגונים ולכנסים, בעברית ובאנגלית. ההרצאות, הסרטונים, ההמלצות והזמנת הרצאה.",
+   "stamped": false
+  },
+  {
+   "id": "H02",
+   "file": "home",
+   "path": "heHome.hero.title",
+   "text": "מכירים את הסיפור. עכשיו תכירו את מה שבא אחריו.",
+   "stamped": false
+  },
+  {
+   "id": "H03",
+   "file": "home",
+   "path": "heHome.hero.sub",
+   "text": "יוסי גינסברג מרצה לארגונים ולכנסים, בעברית ובאנגלית. הוא מדבר על מנהיגות כשאין ודאות, על חוסן ועל לחץ, מתוך מה שלמד בג'ונגל ובעשורים שאחריו.",
+   "stamped": false
+  },
+  {
+   "id": "H04",
+   "file": "home",
+   "path": "heHome.hero.primaryCta",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "H05",
+   "file": "home",
+   "path": "heHome.hero.secondaryCta",
+   "text": "צפייה בסרטונים",
+   "stamped": false
+  },
+  {
+   "id": "H06",
+   "file": "home",
+   "path": "heHome.hero.imageAlt",
+   "text": "יוסי גינסברג על במה חשוכה, במקטורן חום, מדבר בידיים פתוחות. בקדמת התמונה צלליות של הקהל",
+   "stamped": false
+  },
+  {
+   "id": "H07",
+   "file": "home",
+   "path": "heHome.hero.footagePlaceholder",
+   "text": "כאן יופיע סרטון הרצאה בעברית",
+   "stamped": false
+  },
+  {
+   "id": "H08",
+   "file": "home",
+   "path": "heHome.proof.title",
+   "text": "בין הארגונים שבהם הרצה",
+   "stamped": true
+  },
+  {
+   "id": "H09",
+   "file": "home",
+   "path": "heHome.endorsement.title",
+   "text": "מה אמרו עליו",
+   "stamped": false
+  },
+  {
+   "id": "H10",
+   "file": "home",
+   "path": "heHome.endorsement.cta",
+   "text": "לכל ההמלצות",
+   "stamped": false
+  },
+  {
+   "id": "H11",
+   "file": "home",
+   "path": "heHome.after.title",
+   "text": "אחרי הספר",
+   "stamped": false
+  },
+  {
+   "id": "H12",
+   "file": "home",
+   "path": "heHome.after.body",
+   "text": "הספר נגמר ביציאה מהג'ונגל. החיים לא. אחריו באו יותר מארבעים שנה: אכסניה באמזונס שהקים יחד עם הקהילה שבניה השתתפו בחילוץ שלו, חברות בעמק הסיליקון שלא שינו את העולם, אלבום, ובמות ברחבי העולם.",
+   "stamped": false
+  },
+  {
+   "id": "H13",
+   "file": "home",
+   "path": "heHome.after.cta",
+   "text": "הסיפור המלא",
+   "stamped": false
+  },
+  {
+   "id": "H14",
+   "file": "home",
+   "path": "heHome.keynotes.title",
+   "text": "ההרצאות",
+   "stamped": false
+  },
+  {
+   "id": "H15",
+   "file": "home",
+   "path": "heHome.keynotes.body",
+   "text": "שלוש הרצאות. כל אחת נבנית מחדש לקהל, לנושא האירוע ולמה שאתם רוצים שיקרה בו.",
+   "stamped": false
+  },
+  {
+   "id": "H16",
+   "file": "home",
+   "path": "heHome.keynotes.cta",
+   "text": "לפירוט ההרצאות",
+   "stamped": false
+  },
+  {
+   "id": "H17",
+   "file": "home",
+   "path": "heHome.keynotes.imageAlt",
+   "text": "במה גדולה בכנס: על מסך ענק דיוקן של יוסי גינסברג, והוא עצמו עומד בקצה הבמה וידיו מורמות",
+   "stamped": false
+  },
+  {
+   "id": "H18",
+   "file": "home",
+   "path": "heHome.reel.title",
+   "text": "מהבמות בעולם",
+   "stamped": false
+  },
+  {
+   "id": "H19",
+   "file": "home",
+   "path": "heHome.reel.caption",
+   "text": "קטעים מהרצאות של יוסי על במות בחו\"ל. הסרטון באנגלית.",
+   "stamped": false
+  },
+  {
+   "id": "H20",
+   "file": "home",
+   "path": "heHome.reel.videoLabel",
+   "text": "סרטון קטעים מהרצאות של יוסי גינסברג, באנגלית",
+   "stamped": false
+  },
+  {
+   "id": "H21",
+   "file": "home",
+   "path": "heHome.booking.title",
+   "text": "מתכננים אירוע?",
+   "stamped": false
+  },
+  {
+   "id": "H22",
+   "file": "home",
+   "path": "heHome.booking.body",
+   "text": "ספרו לנו על האירוע ונחזור אליכם.",
+   "stamped": false
+  },
+  {
+   "id": "H23",
+   "file": "home",
+   "path": "heHome.booking.cta",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "S01",
+   "file": "story",
+   "path": "heStory.metaTitle",
+   "text": "הסיפור",
+   "stamped": false
+  },
+  {
+   "id": "S02",
+   "file": "story",
+   "path": "heStory.metaDescription",
+   "text": "מה שבא אחרי הספר בחזרה מטואיצ'י: הבמות, צ'לאלן באמזונס הבוליביאני, ומיזמים שלא שינו את העולם.",
+   "stamped": false
+  },
+  {
+   "id": "S03",
+   "file": "story",
+   "path": "heStory.title",
+   "text": "הסיפור אחרי הספר",
+   "stamped": false
+  },
+  {
+   "id": "S04",
+   "file": "story",
+   "path": "heStory.book.title",
+   "text": "הספר",
+   "stamped": false
+  },
+  {
+   "id": "S05",
+   "file": "story",
+   "path": "heStory.book.body",
+   "text": "ב-1981, בגיל 22, יוסי נכנס לג'ונגל של האמזונס בבוליביה ומצא את עצמו לבד. את מה שעבר שם כתב בספר בחזרה מטואיצ'י, שיצא בעברית ב-1985. את החלק הזה אתם מכירים. העמוד הזה מתחיל איפה שהספר נגמר.",
+   "stamped": false
+  },
+  {
+   "id": "S06",
+   "file": "story",
+   "path": "heStory.book.film",
+   "text": "ב-2017 הסיפור הפך לסרט קולנוע, Jungle, בכיכובו של דניאל רדקליף.",
+   "stamped": true
+  },
+  {
+   "id": "S07",
+   "file": "story",
+   "path": "heStory.book.imageAlt",
+   "text": "יוסי הצעיר, רזה ומזוקן, בחולצה משובצת ובמכנסיים קרועים, עומד על חול בשולי היער",
+   "stamped": false
+  },
+  {
+   "id": "S08",
+   "file": "story",
+   "path": "heStory.book.imageCaption",
+   "text": "אחרי החילוץ, בוליביה, 1981",
+   "stamped": false
+  },
+  {
+   "id": "S09",
+   "file": "story",
+   "path": "heStory.stage.title",
+   "text": "הבמה",
+   "stamped": false
+  },
+  {
+   "id": "S10",
+   "file": "story",
+   "path": "heStory.stage.body",
+   "text": "רוב העבודה של יוסי היא בארגונים. הוא מרצה בכנסים, בימי הנהלה ובאירועי חברה, בעברית ובאנגלית. כל הרצאה נבנית מחדש לקהל, לנושא האירוע ולמה שהארגון רוצה שיקרה בו.",
+   "stamped": false
+  },
+  {
+   "id": "S11",
+   "file": "story",
+   "path": "heStory.stage.scale",
+   "text": "הוא מדבר מול אולמות של 10,000 איש, ומול חדר ישיבות של שנים עשר איש. ב-2025 עלה לבמה הראשית של כנס MDRT במיאמי ביץ', מול 6,000 משתתפים.",
+   "stamped": true
+  },
+  {
+   "id": "S12",
+   "file": "story",
+   "path": "heStory.stage.workshop",
+   "text": "לארגונים שרוצים יותר מהרצאה, הוא מעצב ומוביל גם יום סדנה מלא. האורך, המקום והמבנה נקבעים יחד עם הארגון, אחרי תדריך מעמיק.",
+   "stamped": false
+  },
+  {
+   "id": "S13",
+   "file": "story",
+   "path": "heStory.stage.giveTitle",
+   "text": "הרצאה אחת, ועוד אחת לקהילה",
+   "stamped": false
+  },
+  {
+   "id": "S14",
+   "file": "story",
+   "path": "heStory.stage.give",
+   "text": "ארגון שמזמין את יוסי מוזמן גם לתרום הרצאה נוספת שלו לכל מטרה קהילתית שיבחר. זה יכול להיות אולם הקולנוע של ארמוסיו שבמקסיקו, כשכל העיר מוזמנת, יוזמה לבני נוער באל סלבדור, בית ספר בשווייץ או בית אבות בתל אביב.",
+   "stamped": false
+  },
+  {
+   "id": "S15",
+   "file": "story",
+   "path": "heStory.stage.imageAlt",
+   "text": "יוסי גינסברג על במה חשוכה, במקטורן חום, מדבר בידיים פתוחות. בקדמת התמונה צלליות של הקהל",
+   "stamped": false
+  },
+  {
+   "id": "S16",
+   "file": "story",
+   "path": "heStory.stage.imageCaption",
+   "text": "כנס ASPIRE, ICE קרקוב, 2017. 2,000 משתתפים",
+   "stamped": true
+  },
+  {
+   "id": "S17",
+   "file": "story",
+   "path": "heStory.chalalan.name",
+   "text": "צ'לאלן",
+   "stamped": false
+  },
+  {
+   "id": "S18",
+   "file": "story",
+   "path": "heStory.chalalan.body",
+   "text": "יוסי חזר לאמזונס, לכפר של בני העם אוצ'ופיאמונה, כדי להודות להם על שהצילו את חייו. הם ביקשו שיעזור להם להציל את שלהם. הכפר שלהם גסס, הצעירים עזבו ולא חזרו, והחלום של הקהילה היה להקים אכסניה למטיילים על אגם קטן ונסתר בשם צ'לאלן. לא היה כסף, והמקום היה שש שעות שיט במעלה הנהר. הוא לא יכול היה לסרב.",
+   "stamped": false
+  },
+  {
+   "id": "S19",
+   "file": "story",
+   "path": "heStory.chalalan.built",
+   "text": "שלוש שנים הוא חי איתם, ויחד הם בנו את צ'לאלן. הוא היה שותף גם להקמת הפארק הלאומי מדידי. האכסניה שייכת כולה לבני אוצ'ופיאמונה ומנוהלת על ידם. יוסי נושא בתואר דירקטור של צ'לאלן לכל החיים.",
+   "stamped": false
+  },
+  {
+   "id": "S20",
+   "file": "story",
+   "path": "heStory.chalalan.recognition",
+   "text": "ב-2002 בחר המגזין National Geographic Traveler בצ'לאלן כאחד מעשרים יעדי התיירות החשובים בעולם. ב-2008 קיבל המקום את פרס Equator של UNDP.",
+   "stamped": true
+  },
+  {
+   "id": "S21",
+   "file": "story",
+   "path": "heStory.chalalan.ambassador",
+   "text": "ב-2025 מינו אותו בני אוצ'ופיאמונה, באופן רשמי, לשגריר שלהם בעולם.",
+   "stamped": false
+  },
+  {
+   "id": "S22",
+   "file": "story",
+   "path": "heStory.chalalan.imageAlt",
+   "text": "אגם שקט מוקף יער גשם. השמיים והעננים משתקפים במים",
+   "stamped": false
+  },
+  {
+   "id": "S23",
+   "file": "story",
+   "path": "heStory.ventures.title",
+   "text": "מיזמים",
+   "stamped": false
+  },
+  {
+   "id": "S24",
+   "file": "story",
+   "path": "heStory.ventures.siliconValley",
+   "text": "בין 2013 ל-2017 היה יוסי בעמק הסיליקון והקים שתי חברות, Blinq ו-Headbox, סביב בינה מלאכותית וזהות דיגיטלית. הוא לא היה יזם טכנולוגי רגיל: אדם סקרן שפשוט הגיע, מוקף באנשים מנוסים ממנו בהרבה.",
+   "stamped": false
+  },
+  {
+   "id": "S25",
+   "file": "story",
+   "path": "heStory.ventures.honest",
+   "text": "המיזמים האלה לא שינו את העולם. נשארו לו מהם חבלות, שמוכיחות שניסה. ולכן, כשהוא מדבר על אומץ בעולם חדש, יש לזה משקל.",
+   "stamped": false
+  },
+  {
+   "id": "S26",
+   "file": "story",
+   "path": "heStory.ventures.cita",
+   "text": "הוא כיהן כסגן נשיא של CITA, מרכז למחקר ולטיפול בהתמכרויות, ועזר להקים שתים עשרה מרפאות בשתים עשרה ערים בעולם.",
+   "stamped": true
+  },
+  {
+   "id": "S27",
+   "file": "story",
+   "path": "heStory.ventures.album",
+   "text": "ב-2008 הוציא אלבום של מוזיקת עולם, Mr Sleep and the Flying Green Toad, עם המוזיקאים Avishai Barnatan ו-Amir Paiss. שלושה עשר שירים, את כל המילים כתב בעצמו.",
+   "stamped": false
+  },
+  {
+   "id": "S28",
+   "file": "story",
+   "path": "heStory.ventures.linoCambi",
+   "text": "ב-2024 רכשו יוסי ופול טמפלר חלקת אדמה בדרום כרתים, מול הים הלובי. שם הם בונים את Lino Cambi, מקום נסתר לאנשים שרוצים להתרחק מהרעש ולחזור למה שחשוב.",
+   "stamped": false
+  },
+  {
+   "id": "S29",
+   "file": "story",
+   "path": "heStory.cta.talks",
+   "text": "ההרצאות",
+   "stamped": false
+  },
+  {
+   "id": "S30",
+   "file": "story",
+   "path": "heStory.cta.book",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "K01",
+   "file": "keynotes",
+   "path": "heKeynoteNames.map",
+   "text": "המפה נגמרה",
+   "stamped": false
+  },
+  {
+   "id": "K02",
+   "file": "keynotes",
+   "path": "heKeynoteNames.laws",
+   "text": "חוקי הג'ונגל",
+   "stamped": false
+  },
+  {
+   "id": "K03",
+   "file": "keynotes",
+   "path": "heKeynoteNames.realVsImaginary",
+   "text": "הישרדות אמיתית, הישרדות מדומיינת",
+   "stamped": false
+  },
+  {
+   "id": "K04",
+   "file": "keynotes",
+   "path": "heKeynotes[0].title",
+   "text": "המפה נגמרה",
+   "stamped": true
+  },
+  {
+   "id": "K05",
+   "file": "keynotes",
+   "path": "heKeynotes[0].forWhom",
+   "text": "ארגונים שחיים בשינוי מתמיד: הייטק, פיננסים, שירותים מקצועיים, וכל ארגון שהוודאות של פעם כבר לא עובדת בו.",
+   "stamped": false
+  },
+  {
+   "id": "K06",
+   "file": "keynotes",
+   "path": "heKeynotes[0].takeaway",
+   "text": "דרך חשיבה שעובדת כשאין ודאות. לחץ כאינסטינקט הישרדות שמופעל במקום הלא נכון. גמישות במקום אשליית השליטה, ויצירתיות תחת לחץ. אחרי ההרצאה מנהלים מקבלים החלטות מהר יותר וסומכים על שיקול הדעת שלהם, וצוותים מפסיקים לחכות שהמפה תחזור ומתחילים לנווט בשטח שלפניהם.",
+   "stamped": false
+  },
+  {
+   "id": "K07",
+   "file": "keynotes",
+   "path": "heKeynotes[1].title",
+   "text": "חוקי הג'ונגל",
+   "stamped": true
+  },
+  {
+   "id": "K08",
+   "file": "keynotes",
+   "path": "heKeynotes[1].forWhom",
+   "text": "כל קהל ארגוני: פיננסים, ביטוח, הייטק, בריאות, ארגונים מקצועיים. במיוחד צוותים שחוקים, צוותים שעובדים תחת לחץ קיצוני, ומקומות שהמורל בהם נמוך.",
+   "stamped": false
+  },
+  {
+   "id": "K09",
+   "file": "keynotes",
+   "path": "heKeynotes[1].takeaway",
+   "text": "ההבדל בין כאב לסבל. למה התנגדות גדולה היא סימן שאתם בדרך הנכונה. איך עוברים משיתוק לתועלת. צוותים שחוקים מוצאים מחדש טעם ומניע, אנשים מפסיקים להתחמק משיחות קשות ומהחלטות קשות, וחוסן הופך למיומנות ולא לתכונת אופי.",
+   "stamped": false
+  },
+  {
+   "id": "K10",
+   "file": "keynotes",
+   "path": "heKeynotes[2].title",
+   "text": "הישרדות אמיתית, הישרדות מדומיינת",
+   "stamped": true
+  },
+  {
+   "id": "K11",
+   "file": "keynotes",
+   "path": "heKeynotes[2].forWhom",
+   "text": "כל קהל ארגוני, ובמיוחד צוותי הנהלה, ארגוני מכירות, אנשי מקצועות הבריאות, וכל צוות שעובד על טורים גבוהים כבר יותר מדי זמן.",
+   "stamped": false
+  },
+  {
+   "id": "K12",
+   "file": "keynotes",
+   "path": "heKeynotes[2].takeaway",
+   "text": "ההבחנה בין סכנה אמיתית לבין הלחץ היומיומי שהגוף מפרש כסכנה. כלים מעשיים לכבות את תגובת הלחץ בזמן אמת, דרך הגוף ולא דרך המחשבה, כולל שתי טכניקות שיוסי מלמד רק בהרצאה הזו ובסדנה. מנהלים מורידים עומס מהצוות בלי לוותר על ביצועים, והארגון מקבל שפה משותפת להבין מה זה לחץ באמת.",
+   "stamped": false
+  },
+  {
+   "id": "K13",
+   "file": "keynotes",
+   "path": "heKeynotesPage.metaTitle",
+   "text": "הרצאות",
+   "stamped": false
+  },
+  {
+   "id": "K14",
+   "file": "keynotes",
+   "path": "heKeynotesPage.metaDescription",
+   "text": "שלוש ההרצאות של יוסי גינסברג: על מנהיגות כשאין ודאות, על חוסן ועל לחץ. למי כל הרצאה מתאימה ומה הקהל לוקח ממנה.",
+   "stamped": false
+  },
+  {
+   "id": "K15",
+   "file": "keynotes",
+   "path": "heKeynotesPage.title",
+   "text": "הרצאות",
+   "stamped": false
+  },
+  {
+   "id": "K16",
+   "file": "keynotes",
+   "path": "heKeynotesPage.intro",
+   "text": "שלוש הרצאות. כל אחת נבנית מחדש לקהל, לנושא האירוע ולמה שאתם רוצים שיקרה בו. בישראל ההרצאות בעברית.",
+   "stamped": false
+  },
+  {
+   "id": "K17",
+   "file": "keynotes",
+   "path": "heKeynotesPage.empty",
+   "text": "שמות ההרצאות, למי הן מתאימות ומה הקהל לוקח מהן יופיעו כאן, אחרי שיוסי יאשר אותם",
+   "stamped": false
+  },
+  {
+   "id": "K18",
+   "file": "keynotes",
+   "path": "heKeynotesPage.forWhomLabel",
+   "text": "למי זה מתאים",
+   "stamped": false
+  },
+  {
+   "id": "K19",
+   "file": "keynotes",
+   "path": "heKeynotesPage.takeawayLabel",
+   "text": "מה לוקחים מזה",
+   "stamped": false
+  },
+  {
+   "id": "K20",
+   "file": "keynotes",
+   "path": "heKeynotesPage.titleEnLabel",
+   "text": "השם באנגלית:",
+   "stamped": false
+  },
+  {
+   "id": "K21",
+   "file": "keynotes",
+   "path": "heKeynotesPage.bookCta",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "V01",
+   "file": "videos",
+   "path": "heVideos[0].title",
+   "text": "סיפורים ולקחים",
+   "stamped": false
+  },
+  {
+   "id": "V02",
+   "file": "videos",
+   "path": "heVideos[0].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V03",
+   "file": "videos",
+   "path": "heVideos[1].title",
+   "text": "חדשנות היא המפתח",
+   "stamped": false
+  },
+  {
+   "id": "V04",
+   "file": "videos",
+   "path": "heVideos[1].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V05",
+   "file": "videos",
+   "path": "heVideos[2].title",
+   "text": "הטבע הוא התשובה",
+   "stamped": false
+  },
+  {
+   "id": "V06",
+   "file": "videos",
+   "path": "heVideos[2].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V07",
+   "file": "videos",
+   "path": "heVideos[3].title",
+   "text": "חולמים",
+   "stamped": false
+  },
+  {
+   "id": "V08",
+   "file": "videos",
+   "path": "heVideos[3].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V09",
+   "file": "videos",
+   "path": "heVideos[4].title",
+   "text": "העכשיו כבר כאן",
+   "stamped": false
+  },
+  {
+   "id": "V10",
+   "file": "videos",
+   "path": "heVideos[4].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V11",
+   "file": "videos",
+   "path": "heVideos[5].title",
+   "text": "להיות חולם ולהגשים חלומות",
+   "stamped": false
+  },
+  {
+   "id": "V12",
+   "file": "videos",
+   "path": "heVideos[5].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V13",
+   "file": "videos",
+   "path": "heVideos[6].title",
+   "text": "מה אנחנו באמת מחפשים",
+   "stamped": false
+  },
+  {
+   "id": "V14",
+   "file": "videos",
+   "path": "heVideos[6].context",
+   "text": "מהבמה.",
+   "stamped": false
+  },
+  {
+   "id": "V15",
+   "file": "videos",
+   "path": "heVideos[7].title",
+   "text": "לשרוד את הבלתי אפשרי",
+   "stamped": false
+  },
+  {
+   "id": "V16",
+   "file": "videos",
+   "path": "heVideos[7].context",
+   "text": "יוסי מספר את הסיפור מהאמזונס הבוליביאני.",
+   "stamped": false
+  },
+  {
+   "id": "V17",
+   "file": "videos",
+   "path": "heVideos[8].title",
+   "text": "פעם בחיים: מסע לאמזונס",
+   "stamped": false
+  },
+  {
+   "id": "V18",
+   "file": "videos",
+   "path": "heVideos[8].context",
+   "text": "מתוך הסיפור.",
+   "stamped": false
+  },
+  {
+   "id": "V19",
+   "file": "videos",
+   "path": "heVideos[9].title",
+   "text": "להיות קורבן זו בחירה",
+   "stamped": false
+  },
+  {
+   "id": "V20",
+   "file": "videos",
+   "path": "heVideos[9].context",
+   "text": "קליפ קצר.",
+   "stamped": false
+  },
+  {
+   "id": "V21",
+   "file": "videos",
+   "path": "heVideos[10].title",
+   "text": "לתת השראה לגיבורים",
+   "stamped": false
+  },
+  {
+   "id": "V22",
+   "file": "videos",
+   "path": "heVideos[10].context",
+   "text": "קליפ קצר.",
+   "stamped": false
+  },
+  {
+   "id": "V23",
+   "file": "videos",
+   "path": "heVideos[11].title",
+   "text": "להציל את האמזונס",
+   "stamped": false
+  },
+  {
+   "id": "V24",
+   "file": "videos",
+   "path": "heVideos[11].context",
+   "text": "קליפ קצר.",
+   "stamped": false
+  },
+  {
+   "id": "V25",
+   "file": "videos",
+   "path": "heVideosPage.metaTitle",
+   "text": "סרטונים",
+   "stamped": false
+  },
+  {
+   "id": "V26",
+   "file": "videos",
+   "path": "heVideosPage.metaDescription",
+   "text": "קטעים מהרצאות של יוסי גינסברג על במות בעולם. הסרטונים באנגלית.",
+   "stamped": false
+  },
+  {
+   "id": "V27",
+   "file": "videos",
+   "path": "heVideosPage.title",
+   "text": "סרטונים",
+   "stamped": false
+  },
+  {
+   "id": "V28",
+   "file": "videos",
+   "path": "heVideosPage.intro",
+   "text": "הסרטונים כאן באנגלית, רובם מבמות בחו\"ל. סרטונים בעברית יתווספו בהמשך.",
+   "stamped": false
+  },
+  {
+   "id": "V29",
+   "file": "videos",
+   "path": "heVideosPage.empty",
+   "text": "הסרטונים יופיעו כאן, אחרי שיוסי יאשר כל אחד מהם",
+   "stamped": false
+  },
+  {
+   "id": "V30",
+   "file": "videos",
+   "path": "heVideosPage.hebrewHeading",
+   "text": "בעברית",
+   "stamped": false
+  },
+  {
+   "id": "V31",
+   "file": "videos",
+   "path": "heVideosPage.englishHeading",
+   "text": "באנגלית",
+   "stamped": false
+  },
+  {
+   "id": "V32",
+   "file": "videos",
+   "path": "heVideosPage.englishNote",
+   "text": "מהבמות בחו\"ל, מהסיפור, וקליפים קצרים.",
+   "stamped": false
+  },
+  {
+   "id": "V33",
+   "file": "videos",
+   "path": "heVideosPage.embedTitlePrefix",
+   "text": "סרטון",
+   "stamped": false
+  },
+  {
+   "id": "E01",
+   "file": "endorsements",
+   "path": "heEndorsements[0].quote",
+   "text": "מרהיב, מעורר השראה, מרגש, עוצר נשימה. אמליץ על יוסי כמרצה מרכזי בכל מקום ובכל פעם שאוכל.",
+   "stamped": false
+  },
+  {
+   "id": "E02",
+   "file": "endorsements",
+   "path": "heEndorsements[0].role",
+   "text": "מנהל כללי, כנסים ואירועים",
+   "stamped": false
+  },
+  {
+   "id": "E03",
+   "file": "endorsements",
+   "path": "heEndorsements[1].quote",
+   "text": "בניסיון שלי, יוסי גינסברג במקום הראשון.",
+   "stamped": false
+  },
+  {
+   "id": "E04",
+   "file": "endorsements",
+   "path": "heEndorsements[2].quote",
+   "text": "כל מי שדיברתי איתו היה מרותק ושבוי. התובנות של יוסי יעזרו לנו לבנות את מערך השותפים שלנו.",
+   "stamped": false
+  },
+  {
+   "id": "E05",
+   "file": "endorsements",
+   "path": "heEndorsements[2].role",
+   "text": "מנהל כללי, עסקים קטנים, בינוניים ותאגידים",
+   "stamped": false
+  },
+  {
+   "id": "E06",
+   "file": "endorsements",
+   "path": "heEndorsements[3].quote",
+   "text": "לא פחות מקוסם. יוסי יצר באולם תחושת התרוממות רוח עצומה.",
+   "stamped": false
+  },
+  {
+   "id": "E07",
+   "file": "endorsements",
+   "path": "heEndorsements[3].role",
+   "text": "מנהל כללי, מכירות בינלאומיות",
+   "stamped": false
+  },
+  {
+   "id": "E08",
+   "file": "endorsements",
+   "path": "heEndorsements[4].quote",
+   "text": "הסיפור של יוסי מעורר השראה ומלא בלקחים עסקיים מעשיים.",
+   "stamped": false
+  },
+  {
+   "id": "E09",
+   "file": "endorsements",
+   "path": "heEndorsements[4].role",
+   "text": "יו\"ר ומנכ\"ל",
+   "stamped": false
+  },
+  {
+   "id": "E10",
+   "file": "endorsements",
+   "path": "heEndorsements[5].quote",
+   "text": "בכל שנות הקריירה שלי לא ראיתי אולם מלא כל כך מרותק במושב של כנס.",
+   "stamped": false
+  },
+  {
+   "id": "E11",
+   "file": "endorsements",
+   "path": "heEndorsements[5].role",
+   "text": "בכיר בתמיכה טכנית",
+   "stamped": false
+  },
+  {
+   "id": "E12",
+   "file": "endorsements",
+   "path": "heEndorsements[6].quote",
+   "text": "התרשמנו כל כך, שהזמנו את יוסי להרצאה נוספת למחרת. הוא מרצה בקליבר יוצא דופן.",
+   "stamped": false
+  },
+  {
+   "id": "E13",
+   "file": "endorsements",
+   "path": "heEndorsements[6].role",
+   "text": "מנכ\"ל ומנהל כללי",
+   "stamped": false
+  },
+  {
+   "id": "E14",
+   "file": "endorsements",
+   "path": "heEndorsements[7].quote",
+   "text": "המשובים מהמשתתפים היו פנטסטיים. הם היו מרותקים ולא רצו שיפסיק. המלצה בלי הסתייגות.",
+   "stamped": false
+  },
+  {
+   "id": "E15",
+   "file": "endorsements",
+   "path": "heEndorsements[7].role",
+   "text": "הפקת אירועים",
+   "stamped": false
+  },
+  {
+   "id": "E16",
+   "file": "endorsements",
+   "path": "heEndorsements[8].quote",
+   "text": "הרגשתי שנלקחתי לעולם אחר. זה היה אישי מאוד ומרגש עמוקות.",
+   "stamped": false
+  },
+  {
+   "id": "E17",
+   "file": "endorsements",
+   "path": "heEndorsements[8].role",
+   "text": "מאמן מנטלי",
+   "stamped": false
+  },
+  {
+   "id": "E18",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.metaTitle",
+   "text": "המלצות",
+   "stamped": false
+  },
+  {
+   "id": "E19",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.metaDescription",
+   "text": "מה אמרו על הרצאות של יוסי גינסברג מנהלים ומארגני אירועים ב-American Express, Citibank, Microsoft, IBM ועוד.",
+   "stamped": false
+  },
+  {
+   "id": "E20",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.title",
+   "text": "המלצות",
+   "stamped": false
+  },
+  {
+   "id": "E21",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.intro",
+   "text": "מה אמרו מי שהזמינו אותו, ומי שישבו באולם.",
+   "stamped": false
+  },
+  {
+   "id": "E22",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.empty",
+   "text": "ההמלצות יופיעו כאן, בשם, בתפקיד ובארגון, אחרי שכל אחת תאושר ותהיה הסכמה בכתב",
+   "stamped": false
+  },
+  {
+   "id": "E23",
+   "file": "endorsements",
+   "path": "heEndorsementsPage.translatedNote",
+   "text": "תורגם מאנגלית",
+   "stamped": false
+  },
+  {
+   "id": "E24",
+   "file": "endorsements",
+   "path": "heFeaturedEndorsement.quote",
+   "text": "מרהיב, מעורר השראה, מרגש, עוצר נשימה. אמליץ על יוסי כמרצה מרכזי בכל מקום ובכל פעם שאוכל.",
+   "stamped": false
+  },
+  {
+   "id": "E25",
+   "file": "endorsements",
+   "path": "heFeaturedEndorsement.role",
+   "text": "מנהל כללי, כנסים ואירועים",
+   "stamped": false
+  },
+  {
+   "id": "M01",
+   "file": "media",
+   "path": "heMedia[0].title",
+   "text": "שחזור דרמטי של הסיפור לסדרת התעודה. עונה 1, פרק 3, \"Escape from the Amazon\".",
+   "stamped": false
+  },
+  {
+   "id": "M02",
+   "file": "media",
+   "path": "heMedia[1].title",
+   "text": "\"Lost in the Rainforest\", סדרת פודקאסט עלילתית בארבעה פרקים.",
+   "stamped": false
+  },
+  {
+   "id": "M03",
+   "file": "media",
+   "path": "heMediaPage.metaTitle",
+   "text": "בתקשורת",
+   "stamped": false
+  },
+  {
+   "id": "M04",
+   "file": "media",
+   "path": "heMediaPage.metaDescription",
+   "text": "יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם.",
+   "stamped": false
+  },
+  {
+   "id": "M05",
+   "file": "media",
+   "path": "heMediaPage.title",
+   "text": "בתקשורת",
+   "stamped": false
+  },
+  {
+   "id": "M06",
+   "file": "media",
+   "path": "heMediaPage.intro",
+   "text": "יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות.",
+   "stamped": false
+  },
+  {
+   "id": "M07",
+   "file": "media",
+   "path": "heMediaPage.israelTitle",
+   "text": "בישראל",
+   "stamped": false
+  },
+  {
+   "id": "M08",
+   "file": "media",
+   "path": "heMediaPage.israelPlaceholder",
+   "text": "כתבות וראיונות מהתקשורת הישראלית יופיעו כאן, אחרי שכל פריט ייבדק ויאושר",
+   "stamped": false
+  },
+  {
+   "id": "M09",
+   "file": "media",
+   "path": "heMediaPage.worldTitle",
+   "text": "בעולם",
+   "stamped": false
+  },
+  {
+   "id": "M10",
+   "file": "media",
+   "path": "heMediaPage.asSeenInTitle",
+   "text": "סיקרו את הסיפור:",
+   "stamped": true
+  },
+  {
+   "id": "M11",
+   "file": "media",
+   "path": "heMediaPage.empty",
+   "text": "הכתבות והראיונות יופיעו כאן, אחרי שכל פריט ייבדק ויאושר",
+   "stamped": false
+  },
+  {
+   "id": "M12",
+   "file": "media",
+   "path": "heMediaPage.readCta",
+   "text": "לפריט המקורי",
+   "stamped": false
+  },
+  {
+   "id": "Q01",
+   "file": "faq",
+   "path": "heFaq[0].q",
+   "text": "על מה יוסי מרצה?",
+   "stamped": false
+  },
+  {
+   "id": "Q02",
+   "file": "faq",
+   "path": "heFaq[0].a",
+   "text": "על מנהיגות כשאין ודאות, על חוסן, על הישרדות, על ניהול לחץ ועל הפוטנציאל האנושי. ההרצאות נשענות על מה שעבר בג'ונגל ועל מה שפיתח בעשורים שאחריו. יש שלוש הרצאות, והפירוט בעמוד ההרצאות.",
+   "stamped": false
+  },
+  {
+   "id": "Q03",
+   "file": "faq",
+   "path": "heFaq[1].q",
+   "text": "באיזו שפה ההרצאה?",
+   "stamped": false
+  },
+  {
+   "id": "Q04",
+   "file": "faq",
+   "path": "heFaq[1].a",
+   "text": "בישראל, בעברית. יוסי מרצה גם באנגלית.",
+   "stamped": false
+  },
+  {
+   "id": "Q05",
+   "file": "faq",
+   "path": "heFaq[2].q",
+   "text": "כמה זמן נמשכת הרצאה?",
+   "stamped": false
+  },
+  {
+   "id": "Q06",
+   "file": "faq",
+   "path": "heFaq[2].a",
+   "text": "הרצאה רגילה נמשכת 60 דקות. אפשר גם הרצאה ואחריה שיחה מונחית של 20 עד 30 דקות, ולארגונים שרוצים חוויה עמוקה יותר יש יום סדנה מלא.",
+   "stamped": false
+  },
+  {
+   "id": "Q07",
+   "file": "faq",
+   "path": "heFaq[3].q",
+   "text": "אפשר להתאים את ההרצאה לאירוע שלנו?",
+   "stamped": false
+  },
+  {
+   "id": "Q08",
+   "file": "faq",
+   "path": "heFaq[3].a",
+   "text": "כן. כל הזמנה מתחילה בתדריך לפני האירוע, וההרצאה נבנית סביב הקהל שלכם, נושא האירוע והתוצאה שאתם רוצים. אין שתי הרצאות זהות.",
+   "stamped": false
+  },
+  {
+   "id": "Q09",
+   "file": "faq",
+   "path": "heFaq[4].q",
+   "text": "ההרצאה רק פרונטלית?",
+   "stamped": false
+  },
+  {
+   "id": "Q10",
+   "file": "faq",
+   "path": "heFaq[4].a",
+   "text": "לא. יוסי מרצה באולם, מרחוק, ובשילוב של השניים. כל פורמט מותאם לקהל ולמטרה, ולא מדובר בהרצאה מוקלטת.",
+   "stamped": false
+  },
+  {
+   "id": "Q11",
+   "file": "faq",
+   "path": "heFaq[5].q",
+   "text": "לאיזה גודל קהל?",
+   "stamped": false
+  },
+  {
+   "id": "Q12",
+   "file": "faq",
+   "path": "heFaq[5].a",
+   "text": "ממפגשי הנהלה קטנים ועד במות ראשיות מול אלפי אנשים, כולל הבמה הראשית של כנס MDRT ב-2025.",
+   "stamped": true
+  },
+  {
+   "id": "Q13",
+   "file": "faq",
+   "path": "heFaq[6].q",
+   "text": "מה זה יום הסדנה?",
+   "stamped": false
+  },
+  {
+   "id": "Q14",
+   "file": "faq",
+   "path": "heFaq[6].a",
+   "text": "יום שלם שיוסי מעצב ומוביל סביב התוצאה שהארגון מחפש, במשרדים או מחוץ להם. האורך, המקום והמבנה נקבעים יחד אחרי תדריך מעמיק. יוסי מוביל את כל היום ומעביר בעצמו את שתי הטכניקות שהוא מלמד רק בסדנה ובהרצאה 'הישרדות אמיתית, הישרדות מדומיינת'. לחלקים שמתאימים לכך הוא מצרף מנחים מהשורה הראשונה.",
+   "stamped": false
+  },
+  {
+   "id": "Q15",
+   "file": "faq",
+   "path": "heFaq[7].q",
+   "text": "איך מזמינים?",
+   "stamped": false
+  },
+  {
+   "id": "Q16",
+   "file": "faq",
+   "path": "heFaq[7].a",
+   "text": "ממלאים את טופס ההזמנה באתר. הפנייה מגיעה לנציגים של יוסי בישראל, ונחזור אליכם.",
+   "stamped": false
+  },
+  {
+   "id": "Q17",
+   "file": "faq",
+   "path": "heFaqPage.metaTitle",
+   "text": "שאלות ותשובות",
+   "stamped": false
+  },
+  {
+   "id": "Q18",
+   "file": "faq",
+   "path": "heFaqPage.metaDescription",
+   "text": "שפה, אורך, פורמטים והתאמה לאירוע: מה שמארגנים שואלים לפני שמזמינים הרצאה של יוסי גינסברג.",
+   "stamped": false
+  },
+  {
+   "id": "Q19",
+   "file": "faq",
+   "path": "heFaqPage.title",
+   "text": "שאלות ותשובות",
+   "stamped": false
+  },
+  {
+   "id": "Q20",
+   "file": "faq",
+   "path": "heFaqPage.intro",
+   "text": "מה שמארגנים שואלים לפני שמזמינים הרצאה.",
+   "stamped": false
+  },
+  {
+   "id": "Q21",
+   "file": "faq",
+   "path": "heFaqPage.empty",
+   "text": "השאלות והתשובות יופיעו כאן, אחרי שיוסי יאשר אותן",
+   "stamped": false
+  },
+  {
+   "id": "Q22",
+   "file": "faq",
+   "path": "heFaqPage.bookCta",
+   "text": "לא מצאתם תשובה? הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B01",
+   "file": "booking",
+   "path": "heBooking.metaTitle",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B02",
+   "file": "booking",
+   "path": "heBooking.metaDescription",
+   "text": "הזמנת הרצאה של יוסי גינסברג, בעברית.",
+   "stamped": false
+  },
+  {
+   "id": "B03",
+   "file": "booking",
+   "path": "heBooking.title",
+   "text": "הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B04",
+   "file": "booking",
+   "path": "heBooking.intro",
+   "text": "ספרו לנו על האירוע ונחזור אליכם.",
+   "stamped": false
+  },
+  {
+   "id": "B05",
+   "file": "booking",
+   "path": "heBooking.agentCard.title",
+   "text": "הפנייה תטופל על ידי",
+   "stamped": false
+  },
+  {
+   "id": "B06",
+   "file": "booking",
+   "path": "heBooking.agentCard.phoneLabel",
+   "text": "טלפון",
+   "stamped": false
+  },
+  {
+   "id": "B07",
+   "file": "booking",
+   "path": "heBooking.agentCard.emailLabel",
+   "text": "אימייל",
+   "stamped": false
+  },
+  {
+   "id": "B08",
+   "file": "booking",
+   "path": "heBooking.form.ariaLabel",
+   "text": "טופס הזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B09",
+   "file": "booking",
+   "path": "heBooking.form.requiredNote",
+   "text": "שדות המסומנים בכוכבית הם שדות חובה",
+   "stamped": false
+  },
+  {
+   "id": "B10",
+   "file": "booking",
+   "path": "heBooking.form.requiredMark",
+   "text": "שדה חובה",
+   "stamped": false
+  },
+  {
+   "id": "B11",
+   "file": "booking",
+   "path": "heBooking.form.optionalMark",
+   "text": "לא חובה",
+   "stamped": false
+  },
+  {
+   "id": "B12",
+   "file": "booking",
+   "path": "heBooking.form.submit",
+   "text": "שליחה",
+   "stamped": false
+  },
+  {
+   "id": "B13",
+   "file": "booking",
+   "path": "heBooking.form.sending",
+   "text": "שולחים...",
+   "stamped": false
+  },
+  {
+   "id": "B14",
+   "file": "booking",
+   "path": "heBooking.form.fields.name.label",
+   "text": "שם מלא",
+   "stamped": false
+  },
+  {
+   "id": "B15",
+   "file": "booking",
+   "path": "heBooking.form.fields.name.placeholder",
+   "text": "שם פרטי ושם משפחה",
+   "stamped": false
+  },
+  {
+   "id": "B16",
+   "file": "booking",
+   "path": "heBooking.form.fields.organisation.label",
+   "text": "ארגון או חברה",
+   "stamped": false
+  },
+  {
+   "id": "B17",
+   "file": "booking",
+   "path": "heBooking.form.fields.organisation.placeholder",
+   "text": "שם הארגון",
+   "stamped": false
+  },
+  {
+   "id": "B18",
+   "file": "booking",
+   "path": "heBooking.form.fields.phone.label",
+   "text": "טלפון",
+   "stamped": false
+  },
+  {
+   "id": "B19",
+   "file": "booking",
+   "path": "heBooking.form.fields.email.label",
+   "text": "אימייל",
+   "stamped": false
+  },
+  {
+   "id": "B20",
+   "file": "booking",
+   "path": "heBooking.form.fields.eventDate.label",
+   "text": "תאריך האירוע",
+   "stamped": false
+  },
+  {
+   "id": "B21",
+   "file": "booking",
+   "path": "heBooking.form.fields.eventDate.placeholder",
+   "text": "למשל: מרץ 2027",
+   "stamped": false
+  },
+  {
+   "id": "B22",
+   "file": "booking",
+   "path": "heBooking.form.fields.eventLocation.label",
+   "text": "מיקום האירוע",
+   "stamped": false
+  },
+  {
+   "id": "B23",
+   "file": "booking",
+   "path": "heBooking.form.fields.eventLocation.placeholder",
+   "text": "עיר או אולם",
+   "stamped": false
+  },
+  {
+   "id": "B24",
+   "file": "booking",
+   "path": "heBooking.form.fields.audienceSize.label",
+   "text": "מספר משתתפים משוער",
+   "stamped": false
+  },
+  {
+   "id": "B25",
+   "file": "booking",
+   "path": "heBooking.form.fields.audienceSize.placeholder",
+   "text": "למשל: 200",
+   "stamped": false
+  },
+  {
+   "id": "B26",
+   "file": "booking",
+   "path": "heBooking.form.fields.message.label",
+   "text": "ספרו לנו על האירוע",
+   "stamped": false
+  },
+  {
+   "id": "B27",
+   "file": "booking",
+   "path": "heBooking.form.fields.message.placeholder",
+   "text": "מה האירוע, ומה חשוב לכם שיקרה בו",
+   "stamped": false
+  },
+  {
+   "id": "B28",
+   "file": "booking",
+   "path": "heBooking.form.errors.required",
+   "text": "שדה חובה",
+   "stamped": false
+  },
+  {
+   "id": "B29",
+   "file": "booking",
+   "path": "heBooking.form.errors.invalidEmail",
+   "text": "כתובת האימייל לא תקינה",
+   "stamped": false
+  },
+  {
+   "id": "B30",
+   "file": "booking",
+   "path": "heBooking.form.errors.submitFailed",
+   "text": "השליחה לא הצליחה. הפרטים שמילאתם עדיין בטופס, אפשר לנסות שוב.",
+   "stamped": false
+  },
+  {
+   "id": "B31",
+   "file": "booking",
+   "path": "heBooking.email.subjectLabel",
+   "text": "פנייה להרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B32",
+   "file": "booking",
+   "path": "heBooking.email.title",
+   "text": "פנייה חדשה להזמנת הרצאה",
+   "stamped": false
+  },
+  {
+   "id": "B33",
+   "file": "booking",
+   "path": "heBooking.email.agentLabel",
+   "text": "נציג",
+   "stamped": false
+  },
+  {
+   "id": "B34",
+   "file": "booking",
+   "path": "heBooking.email.footer",
+   "text": "נשלח מטופס ההזמנה באתר העברי",
+   "stamped": false
+  },
+  {
+   "id": "B35",
+   "file": "booking",
+   "path": "heBooking.email.attributionTitle",
+   "text": "מאיפה הגיעו",
+   "stamped": false
+  },
+  {
+   "id": "B36",
+   "file": "booking",
+   "path": "heBooking.email.labels.name",
+   "text": "שם",
+   "stamped": false
+  },
+  {
+   "id": "B37",
+   "file": "booking",
+   "path": "heBooking.email.labels.email",
+   "text": "אימייל",
+   "stamped": false
+  },
+  {
+   "id": "B38",
+   "file": "booking",
+   "path": "heBooking.email.labels.organisation",
+   "text": "ארגון",
+   "stamped": false
+  },
+  {
+   "id": "B39",
+   "file": "booking",
+   "path": "heBooking.email.labels.phone",
+   "text": "טלפון",
+   "stamped": false
+  },
+  {
+   "id": "B40",
+   "file": "booking",
+   "path": "heBooking.email.labels.eventDate",
+   "text": "תאריך האירוע",
+   "stamped": false
+  },
+  {
+   "id": "B41",
+   "file": "booking",
+   "path": "heBooking.email.labels.eventLocation",
+   "text": "מיקום",
+   "stamped": false
+  },
+  {
+   "id": "B42",
+   "file": "booking",
+   "path": "heBooking.email.labels.audienceSize",
+   "text": "גודל קהל",
+   "stamped": false
+  },
+  {
+   "id": "B43",
+   "file": "booking",
+   "path": "heBooking.email.labels.message",
+   "text": "הודעה",
+   "stamped": false
+  },
+  {
+   "id": "B44",
+   "file": "booking",
+   "path": "heBooking.email.labels.source",
+   "text": "מקור",
+   "stamped": false
+  },
+  {
+   "id": "B45",
+   "file": "booking",
+   "path": "heBooking.email.labels.medium",
+   "text": "ערוץ",
+   "stamped": false
+  },
+  {
+   "id": "B46",
+   "file": "booking",
+   "path": "heBooking.email.labels.campaign",
+   "text": "קמפיין",
+   "stamped": false
+  },
+  {
+   "id": "B47",
+   "file": "booking",
+   "path": "heBooking.email.labels.content",
+   "text": "וריאנט",
+   "stamped": false
+  },
+  {
+   "id": "B48",
+   "file": "booking",
+   "path": "heBooking.email.labels.term",
+   "text": "מונח",
+   "stamped": false
+  },
+  {
+   "id": "B49",
+   "file": "booking",
+   "path": "heBooking.email.labels.referrer",
+   "text": "הגיעו מ",
+   "stamped": false
+  },
+  {
+   "id": "B50",
+   "file": "booking",
+   "path": "heBooking.email.labels.landed",
+   "text": "עמוד נחיתה",
+   "stamped": false
+  },
+  {
+   "id": "T01",
+   "file": "thanks",
+   "path": "heThanks.metaTitle",
+   "text": "תודה",
+   "stamped": false
+  },
+  {
+   "id": "T02",
+   "file": "thanks",
+   "path": "heThanks.metaDescription",
+   "text": "הפנייה התקבלה.",
+   "stamped": false
+  },
+  {
+   "id": "T03",
+   "file": "thanks",
+   "path": "heThanks.title",
+   "text": "תודה",
+   "stamped": false
+  },
+  {
+   "id": "T04",
+   "file": "thanks",
+   "path": "heThanks.body",
+   "text": "הפנייה שלכם התקבלה. נחזור אליכם.",
+   "stamped": false
+  },
+  {
+   "id": "T05",
+   "file": "thanks",
+   "path": "heThanks.home",
+   "text": "חזרה לעמוד הראשי",
+   "stamped": false
+  },
+  {
+   "id": "G01",
+   "file": "site",
+   "path": "PLACEHOLDER_MARK",
+   "text": "⟦טיוטה⟧",
+   "stamped": false
+  },
+  {
+   "id": "G02",
+   "file": "site",
+   "path": "heSite.name",
+   "text": "יוסי גינסברג",
+   "stamped": false
+  },
+  {
+   "id": "G10",
+   "file": "site",
+   "path": "heSite.englishSiteLabel",
+   "text": "האתר הבינלאומי, באנגלית",
+   "stamped": false
+  },
+  {
+   "id": "G11",
+   "file": "site",
+   "path": "heSite.footer.navTitle",
+   "text": "באתר",
+   "stamped": false
+  },
+  {
+   "id": "G12",
+   "file": "site",
+   "path": "heSite.footer.legalLinks[0].label",
+   "text": "הצהרת נגישות",
+   "stamped": false
+  },
+  {
+   "id": "G13",
+   "file": "site",
+   "path": "heSite.footer.legalLinks[1].label",
+   "text": "מדיניות פרטיות",
+   "stamped": false
+  },
+  {
+   "id": "G15",
+   "file": "site",
+   "path": "heSite.footer.contactPlaceholder",
+   "text": "פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם",
+   "stamped": false
+  },
+  {
+   "id": "G16",
+   "file": "site",
+   "path": "heSite.footer.rights",
+   "text": "כל הזכויות שמורות ליוסי גינסברג",
+   "stamped": false
+  },
+  {
+   "id": "G17",
+   "file": "site",
+   "path": "heSite.ui.homeAria",
+   "text": "יוסי גינסברג, לעמוד הראשי",
+   "stamped": false
+  },
+  {
+   "id": "G18",
+   "file": "site",
+   "path": "heSite.ui.openMenu",
+   "text": "פתיחת התפריט",
+   "stamped": false
+  },
+  {
+   "id": "G19",
+   "file": "site",
+   "path": "heSite.ui.closeMenu",
+   "text": "סגירת התפריט",
+   "stamped": false
+  },
+  {
+   "id": "G20",
+   "file": "site",
+   "path": "heSite.ui.mainNav",
+   "text": "ניווט ראשי",
+   "stamped": false
+  },
+  {
+   "id": "G21",
+   "file": "site",
+   "path": "heSite.ui.skipToContent",
+   "text": "דילוג לתוכן",
+   "stamped": false
+  },
+  {
+   "id": "G22",
+   "file": "site",
+   "path": "heSite.ui.homeLabel",
+   "text": "ראשי",
+   "stamped": false
+  },
+  {
+   "id": "G23",
+   "file": "site",
+   "path": "heSite.ui.mobileMenu",
+   "text": "תפריט",
+   "stamped": false
+  },
+  {
+   "id": "G24",
+   "file": "site",
+   "path": "heSite.ui.footerNav",
+   "text": "ניווט בתחתית העמוד",
+   "stamped": false
+  },
+  {
+   "id": "G25",
+   "file": "site",
+   "path": "heSite.ui.legalNav",
+   "text": "מידע משפטי",
+   "stamped": false
+  },
+  {
+   "id": "G26",
+   "file": "site",
+   "path": "heSite.meta.titleDefault",
+   "text": "יוסי גינסברג | הרצאות לארגונים ולכנסים",
+   "stamped": false
+  },
+  {
+   "id": "G27",
+   "file": "site",
+   "path": "heSite.meta.titleTemplate",
+   "text": "%s | יוסי גינסברג",
+   "stamped": false
+  },
+  {
+   "id": "G28",
+   "file": "site",
+   "path": "heSite.meta.description",
+   "text": "יוסי גינסברג, מרצה. הרצאות בעברית.",
+   "stamped": false
+  },
+  {
+   "id": "G30",
+   "file": "site",
+   "path": "heSite.notFound.title",
+   "text": "העמוד לא נמצא",
+   "stamped": false
+  },
+  {
+   "id": "G31",
+   "file": "site",
+   "path": "heSite.notFound.body",
+   "text": "הכתובת שחיפשתם לא קיימת, או שהיא עברה למקום אחר.",
+   "stamped": false
+  },
+  {
+   "id": "G34",
+   "file": "site",
+   "path": "heSite.placeholder.stub",
+   "text": "העמוד הזה עוד לא נכתב",
+   "stamped": false
+  },
+  {
+   "id": "G35",
+   "file": "site",
+   "path": "heSite.draftBanner.text",
+   "text": "גרסת טיוטה לבדיקה. התוכן עוד לא אושר.",
+   "stamped": false
+  },
+  {
+   "id": "G36",
+   "file": "site",
+   "path": "heSite.draftBanner.label",
+   "text": "הודעה על גרסת טיוטה",
+   "stamped": false
+  },
+  {
+   "id": "L01",
+   "file": "legal",
+   "path": "heLegal.accessibility.metaTitle",
+   "text": "הצהרת נגישות",
+   "stamped": false
+  },
+  {
+   "id": "L02",
+   "file": "legal",
+   "path": "heLegal.accessibility.metaDescription",
+   "text": "הצהרת הנגישות של האתר.",
+   "stamped": false
+  },
+  {
+   "id": "L03",
+   "file": "legal",
+   "path": "heLegal.accessibility.title",
+   "text": "הצהרת נגישות",
+   "stamped": false
+  },
+  {
+   "id": "L04",
+   "file": "legal",
+   "path": "heLegal.accessibility.intro",
+   "text": "האתר נבנה מתוך מחשבה על נגישות, כדי שאפשר יהיה להשתמש בו בקלות.",
+   "stamped": false
+  },
+  {
+   "id": "L05",
+   "file": "legal",
+   "path": "heLegal.accessibility.measuresTitle",
+   "text": "מה עשינו",
+   "stamped": false
+  },
+  {
+   "id": "L06",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[0]",
+   "text": "אפשר לנווט באתר ולמלא את טופס ההזמנה באמצעות המקלדת בלבד.",
+   "stamped": false
+  },
+  {
+   "id": "L07",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[1]",
+   "text": "כל רכיב שאפשר ללחוץ עליו מקבל סימון מיקוד ברור כשעוברים אליו.",
+   "stamped": false
+  },
+  {
+   "id": "L08",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[2]",
+   "text": "בראש כל עמוד יש קישור לדילוג ישיר לתוכן.",
+   "stamped": false
+  },
+  {
+   "id": "L09",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[3]",
+   "text": "לכל שדה בטופס יש תווית, ושגיאות מוצמדות לשדה שלהן ומוכרזות כהתראות.",
+   "stamped": false
+  },
+  {
+   "id": "L10",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[4]",
+   "text": "לתמונות יש טקסט חלופי.",
+   "stamped": false
+  },
+  {
+   "id": "L11",
+   "file": "legal",
+   "path": "heLegal.accessibility.measures[5]",
+   "text": "האתר בנוי מימין לשמאל, וכותרות ואזורי העמוד מסומנים.",
+   "stamped": false
+  },
+  {
+   "id": "L12",
+   "file": "legal",
+   "path": "heLegal.accessibility.missingTitle",
+   "text": "פרטים שחסרים",
+   "stamped": false
+  },
+  {
+   "id": "L13",
+   "file": "legal",
+   "path": "heLegal.accessibility.missing[0]",
+   "text": "איש הקשר לענייני נגישות, ואיך אפשר לפנות אליו",
+   "stamped": false
+  },
+  {
+   "id": "L14",
+   "file": "legal",
+   "path": "heLegal.accessibility.missing[1]",
+   "text": "רמת ההתאמה לתקן, ותאריך הבדיקה האחרונה",
+   "stamped": false
+  },
+  {
+   "id": "L15",
+   "file": "legal",
+   "path": "heLegal.privacy.metaTitle",
+   "text": "מדיניות פרטיות",
+   "stamped": false
+  },
+  {
+   "id": "L16",
+   "file": "legal",
+   "path": "heLegal.privacy.metaDescription",
+   "text": "מדיניות הפרטיות של האתר.",
+   "stamped": false
+  },
+  {
+   "id": "L17",
+   "file": "legal",
+   "path": "heLegal.privacy.title",
+   "text": "מדיניות פרטיות",
+   "stamped": false
+  },
+  {
+   "id": "L18",
+   "file": "legal",
+   "path": "heLegal.privacy.intro",
+   "text": "כאן מוסבר איזה מידע האתר אוסף ולמה.",
+   "stamped": false
+  },
+  {
+   "id": "L19",
+   "file": "legal",
+   "path": "heLegal.privacy.formTitle",
+   "text": "טופס ההזמנה",
+   "stamped": false
+  },
+  {
+   "id": "L20",
+   "file": "legal",
+   "path": "heLegal.privacy.form[0]",
+   "text": "בטופס ההזמנה אתם מוסרים שם, ארגון וטלפון. אפשר גם למסור אימייל, פרטי האירוע והודעה.",
+   "stamped": false
+  },
+  {
+   "id": "L21",
+   "file": "legal",
+   "path": "heLegal.privacy.form[1]",
+   "text": "המידע משמש כדי לענות לפנייה שלכם.",
+   "stamped": false
+  },
+  {
+   "id": "L22",
+   "file": "legal",
+   "path": "heLegal.privacy.form[2]",
+   "text": "הפנייה נשלחת באימייל ליוסי גינסברג, ולנציג המטפל בפנייה, כשפרטיו יוגדרו.",
+   "stamped": false
+  },
+  {
+   "id": "L23",
+   "file": "legal",
+   "path": "heLegal.privacy.form[3]",
+   "text": "האימייל נשלח באמצעות השירות Resend.",
+   "stamped": false
+  },
+  {
+   "id": "L24",
+   "file": "legal",
+   "path": "heLegal.privacy.form[4]",
+   "text": "יחד עם הפנייה נשלח גם מידע על הדרך שבה הגעתם לאתר, כמו פרמטרים בקישור והעמוד שממנו הגעתם.",
+   "stamped": false
+  },
+  {
+   "id": "L25",
+   "file": "legal",
+   "path": "heLegal.privacy.visitTitle",
+   "text": "הביקור באתר",
+   "stamped": false
+  },
+  {
+   "id": "L26",
+   "file": "legal",
+   "path": "heLegal.privacy.visit[0]",
+   "text": "האתר לא מפעיל פיקסלים פרסומיים.",
+   "stamped": false
+  },
+  {
+   "id": "L27",
+   "file": "legal",
+   "path": "heLegal.privacy.visit[1]",
+   "text": "אם הקישור שהגעתם דרכו כולל תג של נציג, התג נשמר בדפדפן למשך הביקור בלבד (אחסון הפעלה), כדי שהפנייה תגיע לנציג הנכון.",
+   "stamped": false
+  },
+  {
+   "id": "L28",
+   "file": "legal",
+   "path": "heLegal.privacy.visit[2]",
+   "text": "בעמודים עם סרטונים מוטמע נגן של YouTube. טעינה או הפעלה של סרטון מחברת את הדפדפן שלכם אל YouTube (Google).",
+   "stamped": false
+  },
+  {
+   "id": "L29",
+   "file": "legal",
+   "path": "heLegal.privacy.statsLine",
+   "text": "ייתכן שנעשה שימוש בסטטיסטיקת ביקורים ידידותית לפרטיות, בלי עוגיות.",
+   "stamped": false
+  },
+  {
+   "id": "L30",
+   "file": "legal",
+   "path": "heLegal.privacy.missingTitle",
+   "text": "פרטים שחסרים",
+   "stamped": false
+  },
+  {
+   "id": "L31",
+   "file": "legal",
+   "path": "heLegal.privacy.missing[0]",
+   "text": "מי הגוף האחראי על המידע, ואיך יוצרים איתו קשר",
+   "stamped": false
+  },
+  {
+   "id": "L32",
+   "file": "legal",
+   "path": "heLegal.privacy.missing[1]",
+   "text": "כמה זמן נשמרות פניות",
+   "stamped": false
+  },
+  {
+   "id": "L33",
+   "file": "legal",
+   "path": "heLegal.privacy.missing[2]",
+   "text": "אילו ספקי שירות מעבדים את המידע",
+   "stamped": false
+  },
+  {
+   "id": "L34",
+   "file": "legal",
+   "path": "heLegal.privacy.missing[3]",
+   "text": "רשימת הגורמים החיצוניים שמקבלים מידע (ספק שליחת האימייל, מארח הסרטונים, וספק הסטטיסטיקה אם יופעל), והבסיס החוקי לכך",
+   "stamped": false
+  },
+  {
+   "id": "L35",
+   "file": "legal",
+   "path": "heLegal.privacy.missing[4]",
+   "text": "הזכויות של המשתמשים וכיצד לממש אותן",
+   "stamped": false
+  },
+  {
+   "id": "O01",
+   "file": "seo",
+   "path": "heSeo.personName",
+   "text": "יוסי גינסברג",
+   "stamped": false
+  },
+  {
+   "id": "O02",
+   "file": "seo",
+   "path": "heSeo.jobTitle",
+   "text": "מרצה",
+   "stamped": false
+  },
+  {
+   "id": "O03",
+   "file": "seo",
+   "path": "heSeo.description",
+   "text": "יוסי גינסברג, מרצה. הרצאות בעברית.",
+   "stamped": false
+  },
+  {
+   "id": "O04",
+   "file": "seo",
+   "path": "heSeo.bookTitle",
+   "text": "בחזרה מטואיצ'י",
+   "stamped": false
+  },
+  {
+   "id": "A01",
+   "file": "agents",
+   "path": "agents[0].nameHe",
+   "text": "רפי אגיב",
+   "stamped": false
+  },
+  {
+   "id": "A02",
+   "file": "agents",
+   "path": "agents[1].nameHe",
+   "text": "גילת אביב",
+   "stamped": false
+  }
+ ]
+}
