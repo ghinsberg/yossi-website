@@ -57,9 +57,11 @@ describe("decideRoute", () => {
   });
   it.each([
     "/%68e", "/%68e/hasipur", "/he.rsc", "/he.segments/x", "/HE", "/He/hartzaot",
-    "/%E0%A4%A",
   ])("blocks encoded, suffixed or odd-case %s on the English host", (p) => {
     expect(decideRoute("yossighinsberg.com", p, {})).toEqual({ action: "notFound" });
+  });
+  it("answers a malformed path with a bare 404 on the English host", () => {
+    expect(decideRoute("yossighinsberg.com", "/%E0%A4%A", {})).toEqual({ action: "notFound", bare: true });
   });
   // "/%2568e" decodes once to "/%68e", which Next routes as the literal
   // segment "%68e", not /he, so it is an ordinary English 404.
@@ -84,7 +86,7 @@ describe("decideRoute", () => {
     expect(decideRoute("x.co.il", p, HE)).toEqual({ action: "redirect", host: "x.co.il", pathname: to });
   });
   it("404s a malformed path on a Hebrew host", () => {
-    expect(decideRoute("x.co.il", "/%E0%A4%A", HE)).toEqual({ action: "notFound" });
+    expect(decideRoute("x.co.il", "/%E0%A4%A", HE)).toEqual({ action: "notFound", bare: true });
   });
   it.each(["/llms.txt", "/yossi-ghinsberg-speaker-onesheet.html", "/yossi-ghinsberg-speaker-onesheet.pdf", "/x/y.pdf", "/globe.svg"])(
     "rewrites English-only file %s under /he on a Hebrew host",

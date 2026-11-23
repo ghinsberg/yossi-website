@@ -14,7 +14,9 @@ export type RouteDecision =
   | { action: "next" }
   | { action: "redirect"; host: string; pathname: string }
   | { action: "rewrite"; pathname: string }
-  | { action: "notFound" };
+  // bare: answer 404 straight from the middleware. Used for a path that does
+  // not decode, which Next's router would otherwise turn into a 500.
+  | { action: "notFound"; bare?: true };
 
 export type SiteEnv = {
   /** Comma-separated Hebrew hosts (full host strings, port included), or "*". */
@@ -89,7 +91,7 @@ export function decideRoute(
   const host = hostHeader.toLowerCase();
   const heCanonical = env.heCanonicalHost?.trim().toLowerCase();
   const p = decodePath(pathname);
-  if (p === null) return { action: "notFound" };
+  if (p === null) return { action: "notFound", bare: true };
 
   if (heCanonical && host === `www.${heCanonical}`) {
     return { action: "redirect", host: heCanonical, pathname };

@@ -13,9 +13,17 @@ export function middleware(req: NextRequest) {
       url.pathname = d.pathname;
       return NextResponse.rewrite(url);
     case "notFound":
+      if (d.bare) {
+        return new NextResponse("Not Found", {
+          status: 404,
+          headers: { "content-type": "text/plain; charset=utf-8" },
+        });
+      }
       // No route matches /__blocked except the English catch-all, which 404s.
+      // The explicit status covers RSC and segment requests too, which Next
+      // would otherwise answer 200 with the not-found payload.
       url.pathname = "/__blocked";
-      return NextResponse.rewrite(url);
+      return NextResponse.rewrite(url, { status: 404 });
     default:
       return NextResponse.next();
   }
