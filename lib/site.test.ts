@@ -215,3 +215,13 @@ describe("redirectUrl", () => {
     expect(u.href).toBe("https://yossighinsberg.com/story?utm_source=x");
   });
 });
+
+describe("isHebrewHost ignores an English canonical host", () => {
+  it.each(["yossighinsberg.com", "www.yossighinsberg.com", "yossi-website.vercel.app"])(
+    "%s set as HE_CANONICAL_HOST does not make the English host Hebrew",
+    (c) => {
+      expect(isHebrewHost("yossighinsberg.com", { heCanonicalHost: c })).toBe(false);
+      expect(isHebrewHost("www.yossighinsberg.com", { heCanonicalHost: c })).toBe(false);
+    },
+  );
+});

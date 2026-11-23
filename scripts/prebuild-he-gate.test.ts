@@ -5,8 +5,13 @@ describe("shouldGate", () => {
   it("gates a Production build that serves a Hebrew host", () => {
     expect(shouldGate({ VERCEL_ENV: "production", HE_HOSTS: "x.co.il" })).toBe(true);
   });
+  it("gates a Production build with only the canonical Hebrew host set", () => {
+    expect(shouldGate({ VERCEL_ENV: "production", HE_CANONICAL_HOST: "x.co.il" })).toBe(true);
+  });
   it.each([
     [{}],
+    [{ VERCEL_ENV: "production", HE_CANONICAL_HOST: " " }],
+    [{ VERCEL_ENV: "preview", HE_CANONICAL_HOST: "x.co.il" }],
     [{ VERCEL_ENV: "production" }],
     [{ VERCEL_ENV: "production", HE_HOSTS: "" }],
     [{ VERCEL_ENV: "production", HE_HOSTS: "  " }],

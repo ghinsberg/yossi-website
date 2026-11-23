@@ -58,7 +58,11 @@ export function isSharedPath(pathname: string): boolean {
 export function isHebrewHost(host: string, env: SiteEnv): boolean {
   const h = host.toLowerCase();
   const canonical = env.heCanonicalHost?.trim().toLowerCase();
-  if (canonical && (h === canonical || h === `www.${canonical}`)) return true;
+  // A canonical host that is one of the English hosts is a misconfiguration
+  // and is ignored, so it can never turn the English site Hebrew.
+  const canonicalIsEnglish =
+    canonical === CANONICAL_HOST || (canonical !== undefined && DUPLICATE_HOSTS.has(canonical));
+  if (canonical && !canonicalIsEnglish && (h === canonical || h === `www.${canonical}`)) return true;
   const entries = (env.heHosts ?? "")
     .split(",")
     .map((s) => s.trim().toLowerCase())

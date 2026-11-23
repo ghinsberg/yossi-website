@@ -1,5 +1,6 @@
 // prebuild: runs the Hebrew launch gate only for a Production build that
-// serves a Hebrew host (VERCEL_ENV=production and HE_HOSTS set). Then a gate
+// serves a Hebrew host (VERCEL_ENV=production and HE_HOSTS or
+// HE_CANONICAL_HOST set: either one makes a host Hebrew). Then a gate
 // failure fails the build. Every other build exits 0 at once, silently.
 import { spawnSync } from "node:child_process";
 import { join } from "node:path";
@@ -7,7 +8,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 /** @param {Record<string, string | undefined>} env */
 export function shouldGate(env) {
-  return env.VERCEL_ENV === "production" && (env.HE_HOSTS ?? "").trim() !== "";
+  const set = (v) => (v ?? "").trim() !== "";
+  return env.VERCEL_ENV === "production" && (set(env.HE_HOSTS) || set(env.HE_CANONICAL_HOST));
 }
 
 function main() {
