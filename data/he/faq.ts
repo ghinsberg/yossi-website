@@ -1,4 +1,4 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 import { heKeynoteNames } from "./keynotes";
 
 export type HeFaqItem = { q: string; a: string };
@@ -37,7 +37,7 @@ export const heFaq: HeFaqItem[] = [
   },
   {
     q: draft("לאיזה גודל קהל?"),
-    a: ph(
+    a: draft(
       "ממפגשי הנהלה קטנים ועד במות ראשיות מול אלפי אנשים, כולל הבמה הראשית של כנס MDRT ב-2025.",
     ),
   },
@@ -58,6 +58,7 @@ export const heFaqPage = {
   metaDescription: draft("שפה, אורך, פורמטים והתאמה לאירוע: מה שמארגנים שואלים לפני שמזמינים הרצאה של יוסי גינסברג."),
   title: draft("שאלות ותשובות"),
   intro: draft("מה שמארגנים שואלים לפני שמזמינים הרצאה."),
-  empty: draft("השאלות והתשובות יופיעו כאן, אחרי שיוסי יאשר אותן"),
+  // Cleared 2026-11-24: an empty list now renders nothing.
+  empty: "",
   bookCta: draft("לא מצאתם תשובה? הזמנת הרצאה"),
 };

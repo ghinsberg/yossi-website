@@ -2,7 +2,7 @@ import { heSite, PLACEHOLDER_MARK } from "@/data/he/site";
 
 // One sticky notice that the whole site is an unapproved draft. It replaces a
 // stamp on every paragraph. Removed at launch: scripts/check-he-launch.sh
-// counts <HeDraftBanner> as a blocker, like <Placeholder>.
+// counts <HeDraftBanner> as a blocker.
 // Height is fixed (h-8) and matches --he-banner-h in the layout, which the
 // sticky header uses as its top offset so the two never overlap.
 export default function HeDraftBanner() {

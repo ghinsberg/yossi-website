@@ -116,6 +116,7 @@ export const heEndorsementsPage = {
   ),
   title: draft("המלצות"),
   intro: draft("מה אמרו מי שהזמינו אותו, ומי שישבו באולם."),
-  empty: draft("ההמלצות יופיעו כאן, בשם, בתפקיד ובארגון, אחרי שכל אחת תאושר ותהיה הסכמה בכתב"),
+  // Cleared 2026-11-24: an empty list now renders nothing.
+  empty: "",
   translatedNote: draft("תורגם מאנגלית"),
 };

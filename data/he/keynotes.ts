@@ -1,4 +1,4 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 
 export type HeKeynote = {
   /** The English keynote slug in data/keynotes.ts (checked by a test). */
@@ -12,11 +12,11 @@ export type HeKeynote = {
 };
 
 // One entry per keynote in data/keynotes.ts, in the same order. Hebrew titles
-// are proposals (ph). The flagship's English name is changing from "From
+// are proposals (listed in the source map; stamped with ph() until 2026-11-24). The flagship's English name is changing from "From
 // Survival to Legacy" to "The Map Has Run Out" (owner decision); the Hebrew
 // proposal follows the new name. Source map: docs/plans/2026-11-24-hebrew-content-sources.md
 /** Hebrew title proposals, unstamped, so other pages (the FAQ) can name a talk
- *  without a second literal. heKeynotes stamps them with ph(). */
+ *  without a second literal. heKeynotes wraps them in draft(). */
 export const heKeynoteNames = {
   map: draft("המפה נגמרה"),
   laws: draft("חוקי הג'ונגל"),
@@ -26,7 +26,7 @@ export const heKeynoteNames = {
 export const heKeynotes: HeKeynote[] = [
   {
     slug: "be-brave-in-a-new-world",
-    title: ph(heKeynoteNames.map),
+    title: draft(heKeynoteNames.map),
     titleEn: "The Map Has Run Out",
     forWhom: draft(
       "ארגונים שחיים בשינוי מתמיד: הייטק, פיננסים, שירותים מקצועיים, וכל ארגון שהוודאות של פעם כבר לא עובדת בו וחייב להתאים את עצמו לעולם החדש.",
@@ -37,7 +37,7 @@ export const heKeynotes: HeKeynote[] = [
   },
   {
     slug: "made-not-broken",
-    title: ph(heKeynoteNames.laws),
+    title: draft(heKeynoteNames.laws),
     titleEn: "The Laws of the Jungle",
     forWhom: draft(
       "כל קהל ארגוני: פיננסים, ביטוח, הייטק, בריאות, ארגונים מקצועיים. במיוחד צוותים שחוקים, צוותים שעובדים תחת לחץ קיצוני, ומקומות שהמורל בהם נמוך.",
@@ -48,7 +48,7 @@ export const heKeynotes: HeKeynote[] = [
   },
   {
     slug: "real-vs-imaginary-survival",
-    title: ph(heKeynoteNames.realVsImaginary),
+    title: draft(heKeynoteNames.realVsImaginary),
     titleEn: "Real Survival vs Imaginary Survival",
     forWhom: draft(
       "כל קהל ארגוני, ובמיוחד צוותי הנהלה, ארגוני מכירות, אנשי מקצועות הבריאות, וכל צוות שעובד על טורים גבוהים כבר יותר מדי זמן.",
@@ -68,9 +68,16 @@ export const heKeynotesPage = {
   intro: draft(
     "שלוש הרצאות. כל אחת נבנית מחדש לקהל, לנושא האירוע ולמה שאתם רוצים שיקרה בו. בישראל ההרצאות בעברית.",
   ),
-  empty: draft("שמות ההרצאות, למי הן מתאימות ומה הקהל לוקח מהן יופיעו כאן, אחרי שיוסי יאשר אותם"),
+  // Cleared 2026-11-24: an empty list now renders nothing.
+  empty: "",
   forWhomLabel: draft("למי זה מתאים"),
   takeawayLabel: draft("מה לוקחים מזה"),
   titleEnLabel: draft("השם באנגלית:"),
   bookCta: draft("הזמנת הרצאה"),
+  // The full-day workshop, from app/(en)/keynotes/page.tsx (section "workshop").
+  workshopTitle: draft("יום סדנה מלא"),
+  workshopBody: draft(
+    "הרצאה מזיזה אולם לשעה. יום שלם מעביר אנשים דרך משהו שהם לא שוכחים. לארגונים שרוצים יותר מהרצאה, יוסי מעצב ומוביל יום סדנה סביב התוצאה שאתם מחפשים, במשרדים או מחוץ להם. האורך, המקום והמבנה נקבעים יחד איתכם, אחרי תדריך מעמיק.",
+  ),
+  workshopFit: draft("מתאים לימי הנהלה, לכנסי פתיחה של צוותי מכירות, ולצוותים שעוברים שינוי."),
 };

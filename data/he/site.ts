@@ -3,8 +3,9 @@
 /** Marks draft copy that Yossi has not approved. Launch check lists every use. */
 export const PLACEHOLDER_MARK = "⟦טיוטה⟧";
 
-/** Draft text that must stand out on the page: claims for Yossi to confirm and
- *  keynote title proposals. Carries a visible stamp. */
+/** Draft text with a visible stamp. Since 2026-11-24 nothing in data/he calls
+ *  it (a test checks): the stamped claims and proposals are draft() and listed
+ *  in the source map. Kept for tests and for a page that must show a stamp. */
 export function ph(text: string): string {
   return `${PLACEHOLDER_MARK} ${text}`;
 }
@@ -42,7 +43,9 @@ export const heSite = {
       { label: draft("מדיניות פרטיות"), href: "/pratiyut" },
     ],
     contactTitle: draft("הזמנת הרצאה"),
-    contactPlaceholder: draft("פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם"),
+    // Cleared 2026-11-24. A contact note under contactTitle; the footer shows
+    // the contact column only while this is non-empty.
+    contactPlaceholder: "",
     rights: draft("כל הזכויות שמורות ליוסי גינסברג"),
   },
   ui: {

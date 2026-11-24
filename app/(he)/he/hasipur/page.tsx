@@ -5,12 +5,13 @@ import PageIntro from "@/components/he/PageIntro";
 import HeText from "@/components/he/HeText";
 import { heStory as s } from "@/data/he/story";
 import { heSite } from "@/data/he/site";
-import { hebrewAlternates } from "@/lib/he/canonical";
+import { hebrewAlternates, hebrewOpenGraph } from "@/lib/he/canonical";
 
 export const metadata: Metadata = {
   title: s.metaTitle,
   description: s.metaDescription,
   alternates: hebrewAlternates("/hasipur"),
+  ...hebrewOpenGraph("/hasipur", { title: s.metaTitle, description: s.metaDescription }),
 };
 
 const h2 = "text-2xl md:text-3xl font-heading font-bold text-brand-text";
@@ -64,6 +65,17 @@ export default function Page() {
         <p className={body}><HeText>{s.stage.workshop}</HeText></p>
         <h3 className={h3}>{s.stage.giveTitle}</h3>
         <p className={body}><HeText>{s.stage.give}</HeText></p>
+        {s.stage.israel.length > 0 ? (
+          <>
+            <h3 className={h3}>{s.stage.israelTitle}</h3>
+            <ul className="mt-4 list-disc ps-6 space-y-2 text-lg leading-relaxed text-brand-text-secondary">
+              {s.stage.israel.map((line) => (
+                <li key={line}><HeText>{line}</HeText></li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+        {s.stage.shalva ? <p className={body}><HeText>{s.stage.shalva}</HeText></p> : null}
       </section>
 
       <section className="mt-16">

@@ -1,8 +1,9 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 
 // Home page strings. Every fact here traces to the English site; the source
-// map is docs/plans/2026-11-24-hebrew-content-sources.md. ph() marks the
-// lines Yossi must confirm (claims); draft() is all other draft copy.
+// map is docs/plans/2026-11-24-hebrew-content-sources.md. Every line is draft();
+// the claims Yossi must confirm are listed there under "Claims for Yossi to
+// confirm" (until 2026-11-24 they carried a visible stamp, ph()).
 
 /** Client names shown in the proof strip. Each must exist in data/clients.ts
  *  (checked by data/he/content-lists.test.ts), and each is a company the
@@ -31,10 +32,22 @@ export const heHome = {
     secondaryCta: draft("צפייה בסרטונים"),
     secondaryHref: "/video",
     imageAlt: draft("יוסי גינסברג על במה, קירח ובזקן אפור קצר, במקטורן ירקרק ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים"),
-    footagePlaceholder: draft("כאן יופיע סרטון הרצאה בעברית"),
+    // Cleared 2026-11-24: no Hebrew talk film exists yet, so the hero shows the
+    // photo alone. Fill this slot only together with a film.
+    footagePlaceholder: "",
   },
   proof: {
-    title: ph("בין הארגונים שבהם הרצה"),
+    title: draft("בין הארגונים שבהם הרצה"),
+    // Israeli organisations, from a document in his files (census 2026-11-23).
+    // Not yet confirmed by Yossi; the full list is on the story page.
+    israelLine: draft("ובישראל, בין השאר: Google ישראל, ועידת התיירות של כלכליסט, סינמה סיטי, חיל החינוך בצה\"ל, המועצה המקומית כפר כמא."),
+  },
+  // The talk at Calcalist's tourism conference, 2018 (public YouTube video on
+  // Calcalist's channel; also in data/he/videos.ts). Spoken language not confirmed.
+  israelVideo: {
+    title: draft("מהבמה בישראל"),
+    caption: draft("ועידת התיירות של כלכליסט, 2018"),
+    youtubeId: "4nKdAjljNhU",
   },
   endorsement: {
     title: draft("מה אמרו עליו"),

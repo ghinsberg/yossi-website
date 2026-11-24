@@ -9,6 +9,7 @@ import HeStructuredData from "@/components/he/HeStructuredData";
 import AgentTagCapture from "@/components/he/AgentTagCapture";
 import HeDraftBanner from "@/components/he/HeDraftBanner";
 import { heSite } from "@/data/he/site";
+import { HE_SHARE_IMAGE, hebrewOpenGraphBase } from "@/lib/he/canonical";
 
 // Heebo for both roles for now; alternatives (Assistant, Rubik) are judged in preview.
 // Self-hosted in app/fonts-he.css with the weights the Hebrew pages use (normal,
@@ -24,12 +25,14 @@ export const metadata: Metadata = {
   ...(canonicalHost ? { metadataBase: new URL(`https://${canonicalHost}`) } : {}),
   title: { default: heSite.meta.titleDefault, template: heSite.meta.titleTemplate },
   description: heSite.meta.description,
-  openGraph: {
-    type: "website",
-    siteName: heSite.meta.siteName,
-    locale: "he_IL",
+  // The Hebrew share image (WhatsApp and social previews). Relative URLs resolve
+  // against metadataBase once the Hebrew host is set.
+  openGraph: hebrewOpenGraphBase(),
+  twitter: {
+    card: "summary_large_image",
     title: heSite.meta.titleDefault,
     description: heSite.meta.description,
+    images: [HE_SHARE_IMAGE.url],
   },
   robots: live ? { index: true, follow: true } : { index: false, follow: false },
 };

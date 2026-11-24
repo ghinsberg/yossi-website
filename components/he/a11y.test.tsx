@@ -149,7 +149,19 @@ describe("legal shells", () => {
     });
     for (const html of [renderToStaticMarkup(<NegishutPage />), renderToStaticMarkup(<PratiyutPage />)]) {
       for (const li of html.match(/<li>[\s\S]*?<\/li>/g) ?? []) expect(li.replace(/<[^>]+>/g, "").trim()).not.toBe("");
-      expect(html).toContain("data-placeholder");
+      // The items counsel must supply: a plain labelled list, not a placeholder box.
+      expect(html).not.toContain("data-placeholder");
+      expect(html).toContain("data-to-complete");
+    }
+    for (const [html, section] of [
+      [renderToStaticMarkup(<NegishutPage />), heLegal.accessibility],
+      [renderToStaticMarkup(<PratiyutPage />), heLegal.privacy],
+    ] as const) {
+      const list = html.match(/<ul data-to-complete[^>]*>([\s\S]*?)<\/ul>/)![1];
+      expect(list.match(/<li>/g)).toHaveLength(section.missing.length);
+      for (const m of section.missing) expect(list).toContain(m);
+      // The list sits under its own heading.
+      expect(html.indexOf(section.missingTitle)).toBeLessThan(html.indexOf("data-to-complete"));
     }
     expect(negMeta.title).toBe(heLegal.accessibility.metaTitle);
     expect(priMeta.title).toBe(heLegal.privacy.metaTitle);

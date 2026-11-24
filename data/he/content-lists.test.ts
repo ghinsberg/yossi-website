@@ -3,11 +3,11 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { heKeynotes } from "./keynotes";
 import { heEndorsements, heFeaturedEndorsement } from "./endorsements";
-import { heAsSeenIn, heMedia } from "./media";
+import { heAsSeenIn, heIsraelMedia, heMedia } from "./media";
 import { heFaq } from "./faq";
 import { heHome, heProofClientNames } from "./home";
 import { heStory } from "./story";
-import { heVideos, orderVideos, type HeVideo } from "./videos";
+import { HE_ONLY_VIDEO_IDS, heVideos, orderVideos, type HeVideo } from "./videos";
 import { PLACEHOLDER_MARK } from "./site";
 import { keynotes } from "@/data/keynotes";
 import { testimonials } from "@/data/testimonials";
@@ -28,9 +28,10 @@ describe("keynotes", () => {
       expect(k.titleEn).toBe(en.flagship ? "The Map Has Run Out" : en.title);
     }
   });
-  it("titles are stamped proposals; who-for and takeaway are filled", () => {
+  it("titles are unstamped draft proposals; who-for and takeaway are filled", () => {
     for (const k of heKeynotes) {
-      expect(k.title.startsWith(PLACEHOLDER_MARK)).toBe(true);
+      expect(k.title.trim()).not.toBe("");
+      expect(k.title).not.toContain(PLACEHOLDER_MARK);
       expect(k.forWhom.trim()).not.toBe("");
       expect(k.takeaway.trim()).not.toBe("");
     }
@@ -66,17 +67,34 @@ describe("endorsements", () => {
 
 describe("videos", () => {
   const englishIds = new Set(videos.map((v) => v.id));
-  it("is non-empty and every YouTube id exists in data/videos.ts", () => {
+  // Ids not on the English site must be named, with a source, in HE_ONLY_VIDEO_IDS
+  // (data/he/videos.ts). Every other id is checked against data/videos.ts.
+  const enSiteVideos = heVideos.filter((v) => !(v.youtubeId in HE_ONLY_VIDEO_IDS));
+  it("is non-empty and every YouTube id exists in data/videos.ts, except the named non-English-site ones", () => {
     expect(heVideos.length).toBeGreaterThan(0);
-    for (const v of heVideos) expect(englishIds.has(v.youtubeId), v.youtubeId).toBe(true);
+    for (const v of enSiteVideos) expect(englishIds.has(v.youtubeId), v.youtubeId).toBe(true);
+  });
+  it("the allowlist is exactly the Calcalist clip, has a source, and is not on the English site", () => {
+    expect(Object.keys(HE_ONLY_VIDEO_IDS)).toEqual(["4nKdAjljNhU"]);
+    for (const [id, source] of Object.entries(HE_ONLY_VIDEO_IDS)) {
+      expect(source).toMatch(/Calcalist/);
+      expect(englishIds.has(id)).toBe(false);
+      expect(heVideos.some((v) => v.youtubeId === id)).toBe(true);
+    }
   });
   it("English titles match data/videos.ts", () => {
-    for (const v of heVideos) expect(v.titleEn).toBe(videos.find((e) => e.id === v.youtubeId)!.title);
+    for (const v of enSiteVideos) expect(v.titleEn).toBe(videos.find((e) => e.id === v.youtubeId)!.title);
   });
-  it("has no duplicates, all are marked English, each has a Hebrew title and context", () => {
+  it("the Calcalist clip is an Israeli-stage item that never claims to be in Hebrew", () => {
+    const c = heVideos.find((v) => v.youtubeId === "4nKdAjljNhU")!;
+    expect(c.language).toBe("he");
+    expect(c.titleEn).toBeUndefined();
+    expect(c.title + c.context).not.toContain("בעברית");
+  });
+  it("has no duplicates, the English-site clips are marked English, each has a Hebrew title and context", () => {
     expect(new Set(heVideos.map((v) => v.youtubeId)).size).toBe(heVideos.length);
     for (const v of heVideos) {
-      expect(v.language).toBe("en");
+      if (!(v.youtubeId in HE_ONLY_VIDEO_IDS)) expect(v.language).toBe("en");
       expect(v.title).toMatch(/[֐-׿]/);
       expect(v.context.trim()).not.toBe("");
     }
@@ -100,8 +118,9 @@ describe("home proof strip", () => {
     const names = new Set(clients.map((c) => c.name));
     for (const n of heProofClientNames) expect(names.has(n), n).toBe(true);
   });
-  it("the proof heading is a stamped claim", () => {
-    expect(heHome.proof.title.startsWith(PLACEHOLDER_MARK)).toBe(true);
+  it("the proof heading is an unstamped draft (listed as a claim in the source map)", () => {
+    expect(heHome.proof.title.trim()).not.toBe("");
+    expect(heHome.proof.title).not.toContain(PLACEHOLDER_MARK);
   });
 });
 
@@ -121,6 +140,18 @@ describe("media", () => {
   });
   it("every outlet name appears in the English source", () => {
     for (const m of heMedia) expect(enSource.includes(m.outlet), m.outlet).toBe(true);
+  });
+  it("Israeli items: the confirmed podcast and the two ynet headlines with their links", () => {
+    expect(heIsraelMedia.map((m) => m.outlet)).toEqual([heIsraelMedia[0].outlet, "ynet", "ynet"]);
+    expect(heIsraelMedia.filter((m) => m.url).map((m) => m.url)).toEqual([
+      "https://www.ynet.co.il/articles/0,7340,L-5124308,00.html",
+      "https://www.ynet.co.il/articles/0,7340,L-4023042,00.html",
+    ]);
+    // ynet items: no year is known; only a published headline, nothing else.
+    for (const m of heIsraelMedia.filter((x) => x.outlet === "ynet")) {
+      expect(m.year).toBeUndefined();
+      expect(m.publishedHeadline).toBe(true);
+    }
   });
   it("'as seen in' names come from the English media logos, without TechCrunch", () => {
     const names = new Set(mediaLogos.map((m) => m.name));
@@ -156,15 +187,23 @@ describe("the film", () => {
     }
   };
   for (const mod of Object.values(modules)) walk(mod);
+  // Published headlines (heIsraelMedia items flagged publishedHeadline) are
+  // copied from the press, not written by us, so a headline about the film is
+  // not a second mention. Everything else stays strict.
+  const headlines = new Set(heIsraelMedia.filter((m) => m.publishedHeadline).map((m) => m.title));
   // "Jungle" not preceded by "the ": "The Laws of the Jungle" is a keynote, not the film.
   // "הסרט" as a whole word: "הסרטונים" (videos) is not the film.
   // "הוליווד" too: the sentence follows Yossi's own term for it, "סרט הוליוודי".
   const FILM = /רדקליף|(?<!the )Jungle|(^|[^א-ת])הסרט($|[^א-ת])|סרט קולנוע|הוליווד/;
-  it("is mentioned in exactly one string on the whole Hebrew site: the stamped story proposal", () => {
+  it("is mentioned in exactly one string we wrote on the whole Hebrew site: the story proposal", () => {
     expect(Object.keys(modules).length).toBeGreaterThanOrEqual(10);
-    const hits = strings.filter((s) => FILM.test(s));
+    const hits = strings.filter((s) => FILM.test(s) && !headlines.has(s));
     expect(hits).toEqual([heStory.book.film]);
-    expect(heStory.book.film.startsWith(PLACEHOLDER_MARK)).toBe(true);
+    expect(heStory.book.film).not.toContain(PLACEHOLDER_MARK);
+  });
+  it("exempts only published headlines, and only two of them", () => {
+    expect(headlines.size).toBe(2);
+    for (const h of headlines) expect(heMedia.map((m) => m.title)).not.toContain(h);
   });
 });
 

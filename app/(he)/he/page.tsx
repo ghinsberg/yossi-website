@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import LogoWall from "@/components/ui/LogoWall";
-import Placeholder from "@/components/he/Placeholder";
+import HeText from "@/components/he/HeText";
+import HeVideoEmbed from "@/components/he/HeVideoEmbed";
 import { EndorsementFigure } from "@/components/he/EndorsementList";
 import { heHome, heProofClientNames } from "@/data/he/home";
 import { heKeynotes } from "@/data/he/keynotes";
 import { heFeaturedEndorsement, heEndorsementsPage } from "@/data/he/endorsements";
 import { heSite } from "@/data/he/site";
 import { clients } from "@/data/clients";
-import { hebrewAlternates } from "@/lib/he/canonical";
+import { hebrewAlternates, hebrewOpenGraph } from "@/lib/he/canonical";
 import { homeAlternates } from "@/lib/seo";
 import { readSiteEnv } from "@/lib/site";
 
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   description: heHome.metaDescription,
   // Page-level alternates replace the layout's, so the canonical is restated with the languages.
   alternates: languages ? { ...hebrewAlternates("/"), languages } : hebrewAlternates("/"),
+  ...hebrewOpenGraph("/", { description: heHome.metaDescription }),
 };
 
 // The English client list, in the order the Hebrew data names them.
@@ -28,7 +30,7 @@ export default function HeHome() {
   const h = heHome;
   return (
     <>
-      {/* Hero */}
+      {/* Hero. The photo stands alone until a Hebrew talk film exists (hero.footagePlaceholder is empty). */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-surface/40 to-brand-bg">
         <div className="max-w-7xl mx-auto px-6 pt-10 pb-16 md:pt-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -52,14 +54,24 @@ export default function HeHome() {
               fill
               priority
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-center opacity-60"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 flex items-center justify-center p-6">
-              <Placeholder className="bg-brand-bg/80">{h.hero.footagePlaceholder}</Placeholder>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* The talk from an Israeli stage (Calcalist's tourism conference, 2018). */}
+      {h.israelVideo.youtubeId ? (
+        <section className="py-12 md:py-16">
+          <div className="max-w-5xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text">{h.israelVideo.title}</h2>
+            <p className="mt-3 text-lg text-brand-text-secondary">{h.israelVideo.caption}</p>
+            <div className="mt-6">
+              <HeVideoEmbed youtubeId={h.israelVideo.youtubeId} title={h.israelVideo.caption} />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Proof strip: logos only, so the strip runs left-to-right like the English one (its marquee assumes LTR). */}
       <section className="border-y border-brand-gold/20 py-12">
@@ -68,6 +80,11 @@ export default function HeHome() {
           <div dir="ltr">
             <LogoWall items={proofClients} variant="clients" />
           </div>
+          {h.proof.israelLine ? (
+            <p className="mt-8 text-center text-lg text-brand-text-secondary">
+              <HeText>{h.proof.israelLine}</HeText>
+            </p>
+          ) : null}
         </div>
       </section>
 

@@ -17,7 +17,7 @@ export default function KeynoteList({
         <li key={k.slug} className="rounded-2xl border border-brand-gold/20 bg-brand-surface/30 p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-text"><bdi>{k.title}</bdi></h2>
           {/* The English name, so Yossi and the agents can match the proposal to the talk. */}
-          <p className="mt-1 text-sm text-brand-text-secondary">
+          <p className="mt-1 text-xs text-brand-text-secondary">
             {titleEnLabel} <bdi lang="en">{k.titleEn}</bdi>
           </p>
           <dl className="mt-4 grid gap-4">

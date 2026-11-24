@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
-import ListOrPlaceholder from "./ListOrPlaceholder";
+import ListOrNothing from "./ListOrNothing";
 import HamlatzotPage from "@/app/(he)/he/hamlatzot/page";
 import HartzaotPage from "@/app/(he)/he/hartzaot/page";
 import VideoPage from "@/app/(he)/he/video/page";
@@ -13,30 +13,34 @@ import { displayTitleEn } from "./VideoList";
 import { readFileSync } from "node:fs";
 import { heKeynotes, heKeynoteNames } from "@/data/he/keynotes";
 import { heEndorsements, heEndorsementsPage } from "@/data/he/endorsements";
-import { heVideos } from "@/data/he/videos";
+import { heVideos, heVideosPage } from "@/data/he/videos";
 import { heFaq } from "@/data/he/faq";
-import { heMedia } from "@/data/he/media";
+import { heIsraelMedia, heMedia, heMediaPage } from "@/data/he/media";
+import { heStory } from "@/data/he/story";
 
 const count = (html: string, needle: string) => html.split(needle).length - 1;
 
-describe("ListOrPlaceholder", () => {
-  it("renders a Placeholder and no list container for an empty list", () => {
+describe("ListOrNothing", () => {
+  it("renders nothing at all for an empty list: no section, no heading, no placeholder", () => {
     const html = renderToStaticMarkup(
-      <ListOrPlaceholder items={[]} empty="x">
-        {() => <ul data-list />}
-      </ListOrPlaceholder>,
+      <ListOrNothing items={[]}>
+        {() => (
+          <section>
+            <h2>t</h2>
+            <ul data-list />
+          </section>
+        )}
+      </ListOrNothing>,
     );
-    expect(html).toContain("data-placeholder");
-    expect(html).not.toContain("data-list");
+    expect(html).toBe("");
   });
-  it("renders the list and no Placeholder when there are items", () => {
+  it("renders the list when there are items", () => {
     const html = renderToStaticMarkup(
-      <ListOrPlaceholder items={[1]} empty="x">
+      <ListOrNothing items={[1]}>
         {() => <ul data-list />}
-      </ListOrPlaceholder>,
+      </ListOrNothing>,
     );
     expect(html).toContain("data-list");
-    expect(html).not.toContain("data-placeholder");
   });
 });
 
@@ -62,10 +66,13 @@ describe("pages with content", () => {
     expect(count(html, heEndorsementsPage.translatedNote)).toBe(heEndorsements.length);
     for (const e of heEndorsements) expect(html).toContain(`<bdi>${e.organization.replace("&", "&amp;")}</bdi>`);
   });
-  it("video renders one embed per clip and only the English group while no Hebrew clip exists", () => {
+  it("video renders one embed per clip, the Israeli group first, then the world group", () => {
     const html = renderToStaticMarkup(<VideoPage />);
     expect(count(html, "<iframe")).toBe(heVideos.length);
-    expect(count(html, "<h2")).toBe(1);
+    expect(count(html, "<h2")).toBe(2);
+    expect(html.indexOf(heVideosPage.hebrewHeading)).toBeLessThan(html.indexOf(heVideosPage.englishHeading));
+    expect(html.indexOf("embed/4nKdAjljNhU")).toBeLessThan(html.indexOf("embed/BDGQx1V1MK0"));
+    expect(heVideosPage.hebrewHeading).not.toBe("בעברית");
   });
   it("video shows English titles with a comma where the English data has an em dash", () => {
     const html = renderToStaticMarkup(<VideoPage />);
@@ -87,11 +94,16 @@ describe("pages with content", () => {
   it("sheelot renders every question", () => {
     expect(count(renderToStaticMarkup(<SheelotPage />), "<details")).toBe(heFaq.length);
   });
-  it("tikshoret keeps the Israeli press placeholder and lists the international items", () => {
+  it("tikshoret shows the Israeli items first, then the international ones, and no placeholder", () => {
     const html = renderToStaticMarkup(<TikshoretPage />);
     expect(count(html, "<h1")).toBe(1);
-    expect(count(html, "data-placeholder")).toBe(1);
+    expect(html).not.toContain("data-placeholder");
+    expect(heIsraelMedia.length).toBe(3);
+    expect(html.indexOf(heMediaPage.israelTitle)).toBeLessThan(html.indexOf(heMediaPage.worldTitle));
     for (const m of heMedia) expect(html).toContain(`href="${m.url}"`);
+    for (const m of heIsraelMedia) if (m.url) expect(html).toContain(`href="${m.url}"`);
+    // No link is known for the podcast, so it renders none.
+    expect(count(html, heMediaPage.readCta)).toBe(heMedia.length + heIsraelMedia.filter((m) => m.url).length);
   });
 });
 
@@ -101,6 +113,12 @@ describe("story and thanks", () => {
     expect(count(html, "<h1")).toBe(1);
     expect(html).not.toContain("data-placeholder");
     expect(count(html, "רדקליף")).toBe(1);
+  });
+  it("story lists the Israeli organisations and the Shalva line once", () => {
+    const html = renderToStaticMarkup(<HasipurPage />);
+    expect(heStory.stage.israel.length).toBeGreaterThan(0);
+    for (const line of heStory.stage.israel) expect(html.replace(/<\/?bdi>/g, "")).toContain(line.replace(/"/g, "&quot;"));
+    expect(count(html, "שלווה")).toBe(1);
   });
   it("story isolates Latin names in bdi", () => {
     const html = renderToStaticMarkup(<HasipurPage />);

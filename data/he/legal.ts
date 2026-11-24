@@ -12,8 +12,8 @@ import { draft } from "./site";
 // parameters, optional Plausible statistics, no advertising pixels). Facts the
 // code cannot know (named contact person, conformance level, audit date,
 // controller details, retention, processors) are NOT written: each is a
-// `missing` entry, rendered as a Placeholder naming what counsel/Yossi must
-// supply.
+// `missing` entry, rendered as a plain list under "details still to be
+// completed", naming what counsel/Yossi must supply.
 
 export const heLegal = {
   accessibility: {
@@ -26,11 +26,11 @@ export const heLegal = {
       draft("אפשר לנווט באתר ולמלא את טופס ההזמנה באמצעות המקלדת בלבד."),
       draft("כל רכיב שאפשר ללחוץ עליו מקבל סימון מיקוד ברור כשעוברים אליו."),
       draft("בראש כל עמוד יש קישור לדילוג ישיר לתוכן."),
-      draft("לכל שדה בטופס יש תווית, ושגיאות מוצמדות לשדה שלהן ומוכרזות כהתראות."),
+      draft("לכל שדה בטופס יש תווית. שגיאות מוצמדות לשדה שלהן, ומעל הטופס מוכרזת שורה אחת שמסכמת כמה שדות צריך לתקן."),
       draft("לתמונות יש טקסט חלופי."),
       draft("האתר בנוי מימין לשמאל, וכותרות ואזורי העמוד מסומנים."),
     ] as string[],
-    missingTitle: draft("פרטים שחסרים"),
+    missingTitle: draft("פרטים שעוד יושלמו"),
     missing: [
       draft("איש הקשר לענייני נגישות, ואיך אפשר לפנות אליו"),
       draft("רמת ההתאמה לתקן, ותאריך הבדיקה האחרונה"),
@@ -56,7 +56,7 @@ export const heLegal = {
       draft("בעמודים עם סרטונים מוטמע נגן של YouTube. טעינה או הפעלה של סרטון מחברת את הדפדפן שלכם אל YouTube (Google)."),
     ] as string[],
     statsLine: draft("ייתכן שנעשה שימוש בסטטיסטיקת ביקורים ידידותית לפרטיות, בלי עוגיות."),
-    missingTitle: draft("פרטים שחסרים"),
+    missingTitle: draft("פרטים שעוד יושלמו"),
     missing: [
       draft("מי הגוף האחראי על המידע, ואיך יוצרים איתו קשר"),
       draft("כמה זמן נשמרות פניות"),

@@ -1,11 +1,12 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 
 // Story page: the book in a paragraph, then the years since. Every fact traces
 // to app/(en)/story/page.tsx or app/(en)/yossi/page.tsx; the source map is
 // docs/plans/2026-11-24-hebrew-content-sources.md. Vocabulary and some phrasing
-// follow Yossi's own Hebrew bios (2018-2023, see data/he/glossary.md). ph() marks
-// claims for Yossi to confirm, facts taken only from his Hebrew texts, and the
-// one film sentence (a proposal he may strike).
+// follow Yossi's own Hebrew bios (2018-2023, see data/he/glossary.md). Claims for
+// Yossi to confirm, facts taken only from his Hebrew texts, and the one film
+// sentence (a proposal he may strike) are listed in the source map; until
+// 2026-11-24 they carried a visible stamp, ph().
 export const heStory = {
   metaTitle: draft("הסיפור"),
   metaDescription: draft(
@@ -18,7 +19,7 @@ export const heStory = {
       "ב-1981, בגיל 22, יצא יוסי למסע באמזונס של בוליביה, מצא את עצמו לבד בנבכי הג'ונגל ושרד כנגד כל הסיכויים. את הסיפור כתב בספר \"בחזרה מטואיצ'י\", שיצא בעברית ב-1985 וקיבל בישראל מעמד של ספר קאלט. את החלק הזה אתם מכירים. העמוד הזה מתחיל איפה שהספר נגמר.",
     ),
     // Proposal: whether the film appears on the Hebrew site is Yossi's call.
-    film: ph("ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף."),
+    film: draft("ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף."),
     imageAlt: draft("יוסי הצעיר, רזה ומזוקן, בחולצה משובצת ובמכנסיים קרועים, עומד על חול בשולי היער"),
     imageCaption: draft("אחרי החילוץ, בוליביה, 1981"),
   },
@@ -27,7 +28,7 @@ export const heStory = {
     body: draft(
       "רוב העבודה של יוסי היא בארגונים. הוא מרצה בכנסים, בימי הנהלה ובאירועי חברה, בעברית ובאנגלית. יוסי הוא מספר סיפורים: הוא מגולל סיפורי הרפתקאות אישיים המלווים במסרים, ולוקח את הקהל לא רק אל עמקי האמזונס אלא גם אל נבכי הנשמה. כל הרצאה נבנית מחדש לקהל, לנושא האירוע ולמה שהארגון רוצה שיקרה בו.",
     ),
-    scale: ph(
+    scale: draft(
       "הוא מדבר מול אולמות של 10,000 איש, ומול חדר ישיבות של שנים עשר איש. ב-2025 עלה לבמה הראשית של כנס MDRT במיאמי ביץ', מול 6,000 משתתפים.",
     ),
     workshop: draft(
@@ -41,6 +42,25 @@ export const heStory = {
     // Cleared 2026-11-24: the caption belonged to an old photo (on-stage.jpg) that
     // Yossi had replaced. No verified caption exists for the new photo.
     imageCaption: "",
+    // Israeli organisations he has spoken for, as a document in his files states
+    // them (census 2026-11-23, opened or OCR-read). Not yet confirmed by Yossi.
+    israelTitle: draft("בישראל"),
+    // Rows marked [email] come from his email, event confirmed by later
+    // correspondence; the Calcalist row from the public YouTube title of the talk.
+    israel: [
+      draft("המועצה המקומית כפר כמא, ערב מלגות, 2025"),
+      draft("Nataraj, הרצאה, 2022"),
+      draft("Google ישראל, הרצאה, 2020"), // [email]
+      draft("חיל החינוך בצה\"ל, הרצאה, 2019"),
+      draft("מלון פסטורל, כפר בלום, הרצאה, 2019"), // [email]
+      draft("קיבוץ אלרום, הרצאה, 2019"), // [email]
+      draft("ועידת התיירות של כלכליסט, 2018"),
+      draft("גמלאי משרד ראש הממשלה, הרצאה, 2018"),
+      draft("סינמה סיטי, הרצאה קצרה לאנשי המכירות, 2018"),
+      draft("קהילת INSIDERS, אירוע קהילה"),
+    ] as string[],
+    // From his own Hebrew texts (HE2, HE3, 2018). Not yet confirmed by Yossi.
+    shalva: draft("יוסי הוא גם שגריר רצון טוב של שלווה, ארגון שעוזר לילדים עם מוגבלויות."),
   },
   chalalan: {
     name: draft("צ'אלאלאן"),
@@ -50,7 +70,7 @@ export const heStory = {
     built: draft(
       "שלוש שנים חי שם כבן לשבט, ויחד הם בנו את צ'אלאלאן, כפר נופש אקולוגי. הוא היה שותף גם להקמת הפארק הלאומי מאדידי. כפר הנופש שייך כולו לבני השבט ומנוהל על ידם. יוסי נושא בתואר דירקטור של צ'אלאלאן לכל החיים.",
     ),
-    recognition: ph(
+    recognition: draft(
       "ב-2002 בחר המגזין National Geographic Traveler בצ'אלאלאן כאחד מעשרים יעדי התיירות החשובים בעולם. ב-2008 קיבל המקום את פרס Equator של UNDP.",
     ),
     ambassador: draft("ב-2025 מינו אותו בני השבט, באופן רשמי, לשגריר שבט האוצ'ופיאמונס בעולם."),
@@ -64,10 +84,10 @@ export const heStory = {
     honest: draft(
       "המיזמים האלה לא שינו את העולם. נשארו לו מהם חבלות, שמוכיחות שניסה. ולכן, כשהוא מדבר על אומץ בעולם חדש, יש לזה משקל.",
     ),
-    cita: ph(
+    cita: draft(
       "במשך שש שנים כיהן כסגן נשיא של CITA, מרכז למחקר ולטיפול בהתמכרויות, שעסק בטיפול בנפגעי סמים אופיאטים. הוא עזר להקים שנים עשר מרכזי גמילה ושיקום, בשתים עשרה ערים בעולם. בישראל הקים את גלריית קולקטאקו לעיצוב פנים וחוץ.",
     ),
-    album: ph(
+    album: draft(
       "ב-2008 הוציא אלבום של מוזיקת עולם, Mr Sleep and the Flying Green Toad, עם המוזיקאים Avishai Barnatan ו-Amir Paiss. שלושה עשר שירים, את כל המילים כתב בעצמו. הוא כתב גם ספר שני, \"חוקי הג'ונגל\", ספר תובנות שיצא בהוצאת כנרת זמורה ביתן.",
     ),
     linoCambi: draft(

@@ -1,4 +1,4 @@
-import { draft, ph } from "./site";
+import { draft } from "./site";
 
 export type HeMediaItem = {
   /** Latin outlet name, as the English site writes it (rendered in <bdi>). */
@@ -13,8 +13,8 @@ export type HeMediaItem = {
   year?: number;
 };
 
-// From app/(en)/media/page.tsx and app/(en)/story/page.tsx. The English site
-// names no Israeli outlet, so Israeli press stays a Placeholder on the page.
+// From app/(en)/media/page.tsx and app/(en)/story/page.tsx. Israeli items are
+// in heIsraelMedia below, from the librarian's census, not the English site.
 // The film is left out here on purpose: it is mentioned once, on the story page.
 export const heMedia: HeMediaItem[] = [
   {
@@ -48,15 +48,48 @@ export const heAsSeenIn = [
   "National Geographic",
 ] as const;
 
+/** An Israeli media item. url and year only where known. */
+export type HeIsraelMediaItem = {
+  outlet: string;
+  title: string;
+  url?: string;
+  year?: number;
+  /** The title is a published headline, copied exactly, not our copy. */
+  publishedHeadline?: true;
+};
+
+// The podcast: from the census of his files (2026-11-23), the only Israeli item
+// its podcast log marks as confirmed (booked or signed items are not shown as
+// aired). The two ynet items: headlines copied exactly as his agent's public
+// page (gilataviv.co.il, "מה אמרו בתקשורת") shows them, with its links; the
+// articles were not opened, so no year and no summary.
+export const heIsraelMedia: HeIsraelMediaItem[] = [
+  { outlet: draft("הפודקאסט של ערן שטרן"), title: draft("יוסי התארח בפודקאסט."), year: 2021 },
+  {
+    outlet: "ynet",
+    title: draft(`"בחזרה מטואיצ'י", גרסת המסך הגדול: "טיול בפארק לעומת המציאות"`),
+    url: "https://www.ynet.co.il/articles/0,7340,L-5124308,00.html",
+    publishedHeadline: true,
+  },
+  {
+    outlet: "ynet",
+    title: draft(`בחזרה מטואיצ'י לאוהל בחצר: בית של שורד`),
+    url: "https://www.ynet.co.il/articles/0,7340,L-4023042,00.html",
+    publishedHeadline: true,
+  },
+];
+
 export const heMediaPage = {
   metaTitle: draft("בתקשורת"),
   metaDescription: draft("יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם."),
   title: draft("בתקשורת"),
   intro: draft("יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות."),
   israelTitle: draft("בישראל"),
-  israelPlaceholder: draft("כתבות וראיונות מהתקשורת הישראלית יופיעו כאן, אחרי שכל פריט ייבדק ויאושר"),
+  // Cleared 2026-11-24: the Israeli section shows heIsraelMedia, or nothing.
+  israelPlaceholder: "",
   worldTitle: draft("בעולם"),
-  asSeenInTitle: ph("סיקרו את הסיפור:"),
-  empty: draft("הכתבות והראיונות יופיעו כאן, אחרי שכל פריט ייבדק ויאושר"),
+  asSeenInTitle: draft("סיקרו את הסיפור:"),
+  // Cleared 2026-11-24: an empty list now renders nothing.
+  empty: "",
   readCta: draft("לפריט המקורי"),
 };
