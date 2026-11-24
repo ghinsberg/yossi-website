@@ -244,3 +244,21 @@ describe("English email html builder", () => {
     expect(typeof buildEnglishEmailHtml).toBe("function");
   });
 });
+
+describe("isHebrewSpam", () => {
+  const ok = { site: "he", website: "", formRenderedAt: 0, formSubmittedAt: 3000 };
+  it("is false for every non-Hebrew body, whatever it holds", async () => {
+    const { isHebrewSpam } = await import("./contact");
+    for (const b of [null, undefined, "x", 1, [], {}, { site: "en", website: "spam" }, { site: "zz", formRenderedAt: 0, formSubmittedAt: 1 }, { website: "spam" }]) {
+      expect(isHebrewSpam(b)).toBe(false);
+    }
+  });
+  it("Hebrew: a person passes; a filled trap, under 3 s, or a missing time fails", async () => {
+    const { isHebrewSpam } = await import("./contact");
+    expect(isHebrewSpam(ok)).toBe(false);
+    expect(isHebrewSpam({ ...ok, website: " x " })).toBe(true);
+    expect(isHebrewSpam({ ...ok, formSubmittedAt: 2999 })).toBe(true);
+    expect(isHebrewSpam({ ...ok, formRenderedAt: null })).toBe(true);
+    expect(isHebrewSpam({ ...ok, formSubmittedAt: Infinity })).toBe(true);
+  });
+});

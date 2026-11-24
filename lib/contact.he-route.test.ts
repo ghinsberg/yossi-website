@@ -9,7 +9,8 @@ vi.mock("resend", () => ({
   },
 }));
 
-const he = { site: "he", name: "דנה כהן", organisation: "אקמה", phone: "050-1234567" };
+// A real person: the hidden field is empty and the form took 4 seconds.
+const he = { site: "he", name: "דנה כהן", organisation: "אקמה", phone: "050-1234567", website: "", formRenderedAt: 1_000_000, formSubmittedAt: 1_004_000 };
 
 async function post(body: unknown) {
   const { POST } = await import("@/app/api/contact/route");
@@ -74,5 +75,38 @@ describe("Hebrew POST /api/contact", () => {
   it("a Resend error is a 500 Failed to send email", async () => {
     sendMock.mockResolvedValue({ error: { message: "x" } });
     expect(await post(he)).toEqual({ status: 500, json: { error: "Failed to send email" } });
+  });
+
+  describe("spam protection (Hebrew path only)", () => {
+    it("a filled honeypot gets 200 success and no email", async () => {
+      expect(await post({ ...he, website: "http://spam.example" })).toEqual({ status: 200, json: { success: true } });
+      expect(sendMock).not.toHaveBeenCalled();
+    });
+    it("a submission under 3 seconds after render gets 200 success and no email", async () => {
+      expect(await post({ ...he, formSubmittedAt: he.formRenderedAt + 2999 })).toEqual({ status: 200, json: { success: true } });
+      expect(sendMock).not.toHaveBeenCalled();
+    });
+    it("a missing or malformed timestamp counts as too fast: 200 success and no email", async () => {
+      for (const body of [
+        { ...he, formRenderedAt: undefined },
+        { ...he, formSubmittedAt: undefined },
+        { ...he, formRenderedAt: "1000", formSubmittedAt: "9000" },
+        { ...he, formSubmittedAt: Number.NaN },
+      ]) {
+        expect(await post(body)).toEqual({ status: 200, json: { success: true } });
+      }
+      expect(sendMock).not.toHaveBeenCalled();
+    });
+    it("a spam submission learns nothing, even with invalid fields", async () => {
+      expect(await post({ ...he, phone: "", website: "x" })).toEqual({ status: 200, json: { success: true } });
+      expect(sendMock).not.toHaveBeenCalled();
+    });
+    it("a normal submission at exactly 3 seconds sends one email, without the anti-spam fields", async () => {
+      expect(await post({ ...he, formSubmittedAt: he.formRenderedAt + 3000 })).toEqual({ status: 200, json: { success: true } });
+      expect(sendMock).toHaveBeenCalledTimes(1);
+      const html = sendMock.mock.calls[0][0].html as string;
+      expect(html).not.toContain("formRenderedAt");
+      expect(html).not.toContain(String(he.formRenderedAt));
+    });
   });
 });

@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import HeAgentCard from "./HeAgentCard";
-import HeBookingForm, { validateHeForm } from "./HeBookingForm";
+import HeBookingForm, { ErrorSummary, FieldError, errorSummaryText, validateHeForm } from "./HeBookingForm";
 import BookingPage, { metadata } from "@/app/(he)/he/hazmana/page";
 import { agents, resolveAgent } from "@/data/he/agents";
 import { heBooking } from "@/data/he/booking";
@@ -60,9 +60,42 @@ describe("HeBookingForm (server render)", () => {
       expect(tag).toContain("text-end");
     }
   });
+  it("has a honeypot: off-screen with a logical inset, out of tab order, hidden from assistive tech", () => {
+    const wrap = html.match(/<div[^>]*data-honeypot[^>]*>/)![0];
+    expect(wrap).toContain('aria-hidden="true"');
+    expect(wrap).toMatch(/-start-\[10000px\]/);
+    // Not display:none (the "hidden" utility) and no inline style hiding it.
+    const classes = wrap.match(/class="([^"]*)"/)![1].split(/\s+/);
+    expect(classes).not.toContain("hidden");
+    expect(wrap).not.toMatch(/display:\s*none/);
+    const input = html.match(/<input[^>]*name="website"[^>]*>/)![0];
+    expect(input).toContain('tabindex="-1"');
+    expect(input).toContain('autoComplete="off"');
+    expect(input).not.toContain("required");
+  });
   it("submit is enabled before sending and has no error alert yet", () => {
     expect(html).not.toContain('disabled=');
     expect(html).not.toContain('role="alert"');
+  });
+});
+
+describe("error summary", () => {
+  it("one line with the count, from data, announced once as an alert", () => {
+    expect(errorSummaryText(1)).toBe(heBooking.form.errors.summaryOne);
+    expect(errorSummaryText(3)).toBe(heBooking.form.errors.summaryMany.replace("{count}", "3"));
+    const s = renderToStaticMarkup(<ErrorSummary count={3} />);
+    expect(s.match(/role="alert"/g)).toHaveLength(1);
+    expect(s).toContain("3");
+  });
+  it("field messages carry an id for aria-describedby and are not alerts of their own", () => {
+    const e = renderToStaticMarkup(<FieldError id="name-error">x</FieldError>);
+    expect(e).toContain('id="name-error"');
+    expect(e).not.toContain("role=");
+  });
+  it("the form wires each field to its message by aria-describedby, and the old per-field alert is gone", () => {
+    const src = readFileSync("components/he/HeBookingForm.tsx", "utf8");
+    expect(src).toContain('"aria-describedby": err ? errId : undefined');
+    expect(src.match(/<p\b[^>]*role="alert"/g)).toHaveLength(2); // the summary and the send-failure line
   });
 });
 

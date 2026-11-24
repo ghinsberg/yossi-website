@@ -89,6 +89,31 @@ function validateHebrew(b: Record<string, unknown>): EnquiryResult {
   return { ok: true, site: "he", data: data as Enquiry };
 }
 
+/** Shortest time, in ms, between the Hebrew form rendering and its submit. */
+export const HE_MIN_FILL_MS = 3000;
+/** Name of the Hebrew form's hidden field. People never see it; bots fill it. */
+export const HE_HONEYPOT_FIELD = "website";
+
+/**
+ * True when a Hebrew submission looks automated: the hidden field has a value,
+ * or the form was sent less than HE_MIN_FILL_MS after it rendered. Both
+ * timestamps come from the browser's own clock (so clock skew between browser
+ * and server cannot matter); a missing or non-numeric one counts as too fast.
+ * Always false for anything that is not a Hebrew submission, so the English
+ * path never reaches this check's outcome.
+ */
+export function isHebrewSpam(body: unknown): boolean {
+  if (body === null || typeof body !== "object") return false;
+  const b = body as Record<string, unknown>;
+  if (b.site !== "he") return false;
+  const trap = b[HE_HONEYPOT_FIELD];
+  if (trap !== undefined && trap !== null && String(trap).trim() !== "") return true;
+  const start = b.formRenderedAt;
+  const end = b.formSubmittedAt;
+  if (typeof start !== "number" || typeof end !== "number" || !Number.isFinite(start) || !Number.isFinite(end)) return true;
+  return end - start < HE_MIN_FILL_MS;
+}
+
 export function recipientsFor(site: Site, agent: Agent | null): string[] {
   const to = [OWNER_EMAIL];
   if (site === "he" && agent && agent.email) to.push(agent.email);

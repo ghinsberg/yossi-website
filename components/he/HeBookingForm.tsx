@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState, useSyncExternalStore, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type ChangeEvent, type FormEvent } from "react";
 import HeAgentCard from "@/components/he/HeAgentCard";
 import { DEFAULT_AGENT_TAG, resolveAgent } from "@/data/he/agents";
 import { heBooking } from "@/data/he/booking";
-import { EMAIL_RE } from "@/lib/contact";
+import { EMAIL_RE, HE_HONEYPOT_FIELD } from "@/lib/contact";
 import { captureAgentTag } from "@/lib/he/agentTag";
 import { captureAndGetUTM, clearUTM } from "@/lib/utm";
 
@@ -40,11 +40,62 @@ export function validateHeForm(v: Values): Errors {
   return errs;
 }
 
+/** The one line above the fields when validation fails. Announced once
+ *  (role="alert"); the per-field messages are not alerts of their own. */
+export function errorSummaryText(count: number): string {
+  const e = heBooking.form.errors;
+  return count === 1 ? e.summaryOne : e.summaryMany.replace("{count}", String(count));
+}
+
+export function ErrorSummary({ count }: { count: number }) {
+  return (
+    <p id="form-error-summary" role="alert" className="mb-6 rounded-lg border border-red-400/60 px-4 py-3 text-red-300">
+      {errorSummaryText(count)}
+    </p>
+  );
+}
+
+/** A field's message, tied to its input by aria-describedby. Not an alert. */
+export function FieldError({ id, children }: { id: string; children: string }) {
+  return (
+    <p id={id} className="text-red-400 text-sm mt-1">
+      {children}
+    </p>
+  );
+}
+
+/** Hidden trap for bots: off-screen (logical inset, not display:none, which
+ *  some bots skip), out of the tab order and hidden from assistive tech. */
+export function Honeypot({ value, onChange }: { value: string; onChange: (e: ChangeEvent<HTMLInputElement>) => void }) {
+  return (
+    <div aria-hidden="true" data-honeypot className="absolute -start-[10000px] top-auto w-px h-px overflow-hidden">
+      <label htmlFor={HE_HONEYPOT_FIELD}>{heBooking.form.honeypotLabel}</label>
+      <input
+        id={HE_HONEYPOT_FIELD}
+        name={HE_HONEYPOT_FIELD}
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
+}
+
 export default function HeBookingForm() {
   const [values, setValues] = useState<Values>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
+  const [summaryCount, setSummaryCount] = useState(0);
+  const [trap, setTrap] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  // When the form appeared in the browser, sent with the submit time (both from
+  // the browser's clock) so the server can drop submissions under 3 seconds.
+  const renderedAt = useRef<number | null>(null);
+  useEffect(() => {
+    renderedAt.current = Date.now();
+  }, []);
   const f = heBooking.form;
 
   // The tag lives in the URL or sessionStorage, which the server cannot see, so
@@ -65,6 +116,7 @@ export default function HeBookingForm() {
     const errs = validateHeForm(values);
     setErrors(errs);
     const first = ORDER.find((k) => errs[k]);
+    setSummaryCount(Object.keys(errs).length);
     if (first) {
       formRef.current?.querySelector<HTMLElement>(`[name="${first}"]`)?.focus();
       return;
@@ -74,7 +126,15 @@ export default function HeBookingForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, ...captureAndGetUTM(), site: "he", agentTag: captureAgentTag() }),
+        body: JSON.stringify({
+          ...values,
+          ...captureAndGetUTM(),
+          site: "he",
+          agentTag: captureAgentTag(),
+          [HE_HONEYPOT_FIELD]: trap,
+          formRenderedAt: renderedAt.current,
+          formSubmittedAt: Date.now(),
+        }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success) {
@@ -121,11 +181,7 @@ export default function HeBookingForm() {
         ) : (
           <input {...common} type={opts.type ?? "text"} inputMode={opts.inputMode} dir={opts.ltr ? "ltr" : undefined} className={cls} />
         )}
-        {err ? (
-          <p id={errId} role="alert" className="text-red-400 text-sm mt-1">
-            {err}
-          </p>
-        ) : null}
+        {err ? <FieldError id={errId}>{err}</FieldError> : null}
       </div>
     );
   };
@@ -133,8 +189,10 @@ export default function HeBookingForm() {
   return (
     <div>
       {agent ? <HeAgentCard agent={agent} /> : null}
-      <form ref={formRef} onSubmit={onSubmit} noValidate aria-label={f.ariaLabel}>
+      <form ref={formRef} onSubmit={onSubmit} noValidate aria-label={f.ariaLabel} className="relative">
         <p className="text-sm text-brand-text-secondary mb-6">{f.requiredNote}</p>
+        {summaryCount > 0 ? <ErrorSummary count={summaryCount} /> : null}
+        <Honeypot value={trap} onChange={(e) => setTrap(e.target.value)} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {field("name", { autoComplete: "name" })}
           {field("organisation", { autoComplete: "organization" })}

@@ -33,7 +33,12 @@ export const heBooking = {
       required: draft("שדה חובה"),
       invalidEmail: draft("כתובת האימייל לא תקינה"),
       submitFailed: draft("השליחה לא הצליחה. הפרטים שמילאתם עדיין בטופס, אפשר לנסות שוב."),
+      // One line above the fields when validation fails ({count} is a number).
+      summaryOne: draft("יש שדה אחד שצריך לתקן."),
+      summaryMany: draft("יש {count} שדות שצריך לתקן."),
     },
+    // Label of the hidden anti-spam field. People never see it; bots fill it.
+    honeypotLabel: draft("לא למילוי"),
   },
   email: {
     subjectLabel: draft("פנייה להרצאה"),

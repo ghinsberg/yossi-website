@@ -4,6 +4,7 @@ import { resolveAgent } from "@/data/he/agents";
 import {
   EMAIL_FROM,
   buildEnglishEmailHtml,
+  isHebrewSpam,
   buildHebrewEmailHtml,
   recipientsFor,
   subjectFor,
@@ -13,6 +14,12 @@ import {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+
+    // Hebrew form only: a bot gets the same answer as a person and no email is
+    // sent, so it learns nothing. isHebrewSpam is false for every English body.
+    if (isHebrewSpam(body)) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
 
     // Validation, recipients, subject and the email bodies are pure functions
     // in lib/contact.ts (unit tested). Recipients never come from the request:
