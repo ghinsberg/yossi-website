@@ -14,13 +14,15 @@ export const metadata: Metadata = {
 };
 
 const h2 = "text-2xl md:text-3xl font-heading font-bold text-brand-text";
+// An item whose title is "" is held back: it renders nothing, not even its link.
+const israelMedia = heIsraelMedia.filter((m) => m.title.trim() !== "");
 
 export default function Page() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
       <PageIntro title={p.title} intro={p.intro} />
       {/* Israeli media first, as the design asks. */}
-      <ListOrNothing items={heIsraelMedia}>
+      <ListOrNothing items={israelMedia}>
         {(items) => (
           <section className="mt-12">
             <h2 className={h2}>{p.israelTitle}</h2>

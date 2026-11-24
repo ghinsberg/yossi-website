@@ -9,7 +9,7 @@ import HeStructuredData from "@/components/he/HeStructuredData";
 import AgentTagCapture from "@/components/he/AgentTagCapture";
 import HeDraftBanner from "@/components/he/HeDraftBanner";
 import { heSite } from "@/data/he/site";
-import { HE_SHARE_IMAGE, hebrewOpenGraphBase } from "@/lib/he/canonical";
+import { HE_SHARE_DESCRIPTION, HE_SHARE_IMAGE, hebrewOpenGraphBase, shareTitle } from "@/lib/he/canonical";
 
 // Heebo for both roles for now; alternatives (Assistant, Rubik) are judged in preview.
 // Self-hosted in app/fonts-he.css with the weights the Hebrew pages use (normal,
@@ -30,8 +30,9 @@ export const metadata: Metadata = {
   openGraph: hebrewOpenGraphBase(),
   twitter: {
     card: "summary_large_image",
-    title: heSite.meta.titleDefault,
-    description: heSite.meta.description,
+    // Draft prefix until launch, as on Open Graph; the tab title above has none.
+    title: shareTitle(heSite.meta.titleDefault, live),
+    description: HE_SHARE_DESCRIPTION,
     images: [HE_SHARE_IMAGE.url],
   },
   robots: live ? { index: true, follow: true } : { index: false, follow: false },

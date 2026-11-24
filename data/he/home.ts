@@ -31,7 +31,7 @@ export const heHome = {
     primaryCta: draft("הזמנת הרצאה"),
     secondaryCta: draft("צפייה בסרטונים"),
     secondaryHref: "/video",
-    imageAlt: draft("יוסי גינסברג על במה, קירח ובזקן אפור קצר, במקטורן ירקרק ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים"),
+    imageAlt: draft("יוסי גינסברג על במה, במקטורן ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים"),
     // Cleared 2026-11-24: no Hebrew talk film exists yet, so the hero shows the
     // photo alone. Fill this slot only together with a film.
     footagePlaceholder: "",
@@ -39,8 +39,8 @@ export const heHome = {
   proof: {
     title: draft("בין הארגונים שבהם הרצה"),
     // Israeli organisations, from a document in his files (census 2026-11-23).
-    // Not yet confirmed by Yossi; the full list is on the story page.
-    israelLine: draft("ובישראל, בין השאר: Google ישראל, ועידת התיירות של כלכליסט, סינמה סיטי, חיל החינוך בצה\"ל, המועצה המקומית כפר כמא."),
+    // Not yet confirmed by Yossi; each name is a row on the story page's list.
+    israelLine: draft("ובישראל: ועידת התיירות של כלכליסט, המועצה המקומית כפר כמא, מלון פסטורל כפר בלום."),
   },
   // The talk at Calcalist's tourism conference, 2018 (public YouTube video on
   // Calcalist's channel; also in data/he/videos.ts). Spoken language not confirmed.

@@ -91,8 +91,10 @@ function validateHebrew(b: Record<string, unknown>): EnquiryResult {
 
 /** Shortest time, in ms, between the Hebrew form rendering and its submit. */
 export const HE_MIN_FILL_MS = 3000;
-/** Name of the Hebrew form's hidden field. People never see it; bots fill it. */
-export const HE_HONEYPOT_FIELD = "website";
+/** Name of the Hebrew form's hidden field. People never see it; bots fill it.
+ *  A name no browser autofill recognises (an autofilled "website" would drop a
+ *  real enquiry). */
+export const HE_HONEYPOT_FIELD = "hp_x";
 
 /**
  * True when a Hebrew submission looks automated: the hidden field has a value,

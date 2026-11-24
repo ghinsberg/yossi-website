@@ -62,9 +62,11 @@ export type HeIsraelMediaItem = {
 // its podcast log marks as confirmed (booked or signed items are not shown as
 // aired). The two ynet items: headlines copied exactly as his agent's public
 // page (gilataviv.co.il, "מה אמרו בתקשורת") shows them, with its links; the
-// articles were not opened, so no year and no summary.
+// articles were not opened, so no year and no summary. The first ynet headline
+// is about the film, so the film appears twice on the site (it and the story
+// sentence); listed for Yossi in the source map.
 export const heIsraelMedia: HeIsraelMediaItem[] = [
-  { outlet: draft("הפודקאסט של ערן שטרן"), title: draft("יוסי התארח בפודקאסט."), year: 2021 },
+  { outlet: draft("הפודקאסט של ערן שטרן"), title: draft("פרק בהשתתפות יוסי."), year: 2021 },
   {
     outlet: "ynet",
     title: draft(`"בחזרה מטואיצ'י", גרסת המסך הגדול: "טיול בפארק לעומת המציאות"`),
@@ -73,7 +75,9 @@ export const heIsraelMedia: HeIsraelMediaItem[] = [
   },
   {
     outlet: "ynet",
-    title: draft(`בחזרה מטואיצ'י לאוהל בחצר: בית של שורד`),
+    // Held back until Yossi confirms (review ruling 2026-11-24): the article is
+    // about his home. A blank title renders nothing, not even the link.
+    title: "",
     url: "https://www.ynet.co.il/articles/0,7340,L-4023042,00.html",
     publishedHeadline: true,
   },
@@ -81,9 +85,9 @@ export const heIsraelMedia: HeIsraelMediaItem[] = [
 
 export const heMediaPage = {
   metaTitle: draft("בתקשורת"),
-  metaDescription: draft("יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם."),
+  metaDescription: draft("יוסי גינסברג בתקשורת, בישראל ובעולם: טלוויזיה, עיתונות ופודקאסטים."),
   title: draft("בתקשורת"),
-  intro: draft("יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות."),
+  intro: draft("יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה, בעיתונות ובפודקאסטים."),
   israelTitle: draft("בישראל"),
   // Cleared 2026-11-24: the Israeli section shows heIsraelMedia, or nothing.
   israelPlaceholder: "",

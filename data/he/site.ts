@@ -64,6 +64,10 @@ export const heSite = {
     titleTemplate: draft("%s | יוסי גינסברג"),
     description: draft("יוסי גינסברג, מרצה. הרצאות בעברית."),
     siteName: draft("יוסי גינסברג"),
+    /** Until launch (HE_LIVE not 1), put before the Open Graph and X title of
+     *  every Hebrew page, so a forwarded share card does not look approved. The
+     *  browser tab title is unchanged. */
+    ogDraftPrefix: draft("טיוטה: "),
   },
   notFound: {
     title: draft("העמוד לא נמצא"),

@@ -1,8 +1,9 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, describe, it, expect, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import HeAgentCard from "./HeAgentCard";
-import HeBookingForm, { ErrorSummary, FieldError, errorSummaryText, validateHeForm } from "./HeBookingForm";
+import HeBookingForm, { ErrorSummary, FieldError, errorSummaryFor, errorSummaryText, validateHeForm, waitForMinimumFill } from "./HeBookingForm";
+import { HE_MIN_FILL_MS, isHebrewSpam } from "@/lib/contact";
 import BookingPage, { metadata } from "@/app/(he)/he/hazmana/page";
 import { agents, resolveAgent } from "@/data/he/agents";
 import { heBooking } from "@/data/he/booking";
@@ -68,7 +69,7 @@ describe("HeBookingForm (server render)", () => {
     const classes = wrap.match(/class="([^"]*)"/)![1].split(/\s+/);
     expect(classes).not.toContain("hidden");
     expect(wrap).not.toMatch(/display:\s*none/);
-    const input = html.match(/<input[^>]*name="website"[^>]*>/)![0];
+    const input = html.match(/<input[^>]*name="hp_x"[^>]*>/)![0];
     expect(input).toContain('tabindex="-1"');
     expect(input).toContain('autoComplete="off"');
     expect(input).not.toContain("required");
@@ -76,6 +77,62 @@ describe("HeBookingForm (server render)", () => {
   it("submit is enabled before sending and has no error alert yet", () => {
     expect(html).not.toContain('disabled=');
     expect(html).not.toContain('role="alert"');
+  });
+  it("posts, so a submit before hydration can never put name and phone in the URL", () => {
+    const form = html.match(/<form[^>]*>/)![0];
+    expect(form).toContain('method="post"');
+    expect(form).not.toMatch(/method="get"/i);
+  });
+});
+
+describe("the 3-second minimum, on the client", () => {
+  afterEach(() => vi.useRealTimers());
+  it("waits out the remainder before sending, so a quick person is never under the server's threshold", async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(1_000_000);
+    const renderedAt = Date.now();
+    vi.setSystemTime(1_001_000); // the person submits one second in
+    let done = false;
+    const p = waitForMinimumFill(renderedAt).then(() => {
+      done = true;
+    });
+    await vi.advanceTimersByTimeAsync(HE_MIN_FILL_MS - 1000 - 1);
+    expect(done).toBe(false);
+    await vi.advanceTimersByTimeAsync(1);
+    await p;
+    expect(done).toBe(true);
+    // The body is built after the wait, so the server sees a person, not a bot.
+    expect(isHebrewSpam({ site: "he", hp_x: "", formRenderedAt: renderedAt, formSubmittedAt: Date.now() })).toBe(false);
+  });
+  it("does not wait once the minimum has passed", async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(2_000_000);
+    const late = waitForMinimumFill(2_000_000 - HE_MIN_FILL_MS);
+    expect(vi.getTimerCount()).toBe(0);
+    await late;
+  });
+  it("with no render time known yet, waits the whole minimum", async () => {
+    vi.useFakeTimers();
+    let done = false;
+    const p = waitForMinimumFill(null).then(() => {
+      done = true;
+    });
+    await vi.advanceTimersByTimeAsync(HE_MIN_FILL_MS - 1);
+    expect(done).toBe(false);
+    await vi.advanceTimersByTimeAsync(1);
+    await p;
+    expect(done).toBe(true);
+  });
+  it("the button shows its sending state during the wait: status is set before the wait, the fetch comes after", () => {
+    const src = readFileSync("components/he/HeBookingForm.tsx", "utf8");
+    const body = src.slice(src.indexOf("async function onSubmit"));
+    const sending = body.indexOf('setStatus("submitting")');
+    const wait = body.indexOf("await waitForMinimumFill(renderedAt.current)");
+    const send = body.indexOf('fetch("/api/contact"');
+    expect(sending).toBeGreaterThan(-1);
+    expect(wait).toBeGreaterThan(sending);
+    expect(send).toBeGreaterThan(wait);
+    expect(body.indexOf("formSubmittedAt: Date.now()")).toBeGreaterThan(wait);
   });
 });
 
@@ -86,6 +143,19 @@ describe("error summary", () => {
     const s = renderToStaticMarkup(<ErrorSummary count={3} />);
     expect(s.match(/role="alert"/g)).toHaveLength(1);
     expect(s).toContain("3");
+  });
+  it("a second failed submit with the same count announces again: each attempt remounts the summary", () => {
+    const first = errorSummaryFor(1, 2)!;
+    const second = errorSummaryFor(2, 2)!;
+    // A new key makes React unmount the old alert node and mount a fresh one,
+    // which screen readers announce even though the text is the same.
+    expect(first.key).not.toBeNull();
+    expect(second.key).not.toBe(first.key);
+    expect(renderToStaticMarkup(first)).toBe(renderToStaticMarkup(second));
+    expect(errorSummaryFor(3, 0)).toBeNull();
+    const src = readFileSync("components/he/HeBookingForm.tsx", "utf8");
+    expect(src).toContain("errorSummaryFor(attempt, summaryCount)");
+    expect(src).toMatch(/setAttempt\(\(a\) => a \+ 1\)/);
   });
   it("field messages carry an id for aria-describedby and are not alerts of their own", () => {
     const e = renderToStaticMarkup(<FieldError id="name-error">x</FieldError>);

@@ -44,23 +44,28 @@ export const heStory = {
     imageCaption: "",
     // Israeli organisations he has spoken for, as a document in his files states
     // them (census 2026-11-23, opened or OCR-read). Not yet confirmed by Yossi.
-    israelTitle: draft("בישראל"),
+    // The page shows this list above the community-talk offer.
+    israelTitle: draft("על במות בישראל"),
     // Rows marked [email] come from his email, event confirmed by later
     // correspondence; the Calcalist row from the public YouTube title of the talk.
+    // One shape per row: name, kind of event, year (name and kind when the year
+    // is unknown). Rows set to "" are held back until Yossi confirms (review
+    // ruling 2026-11-24; reasons in the source map); the page renders nothing for
+    // them. Never delete or reorder a row: the copy deck maps rows by index.
     israel: [
       draft("המועצה המקומית כפר כמא, ערב מלגות, 2025"),
       draft("Nataraj, הרצאה, 2022"),
-      draft("Google ישראל, הרצאה, 2020"), // [email]
-      draft("חיל החינוך בצה\"ל, הרצאה, 2019"),
-      draft("מלון פסטורל, כפר בלום, הרצאה, 2019"), // [email]
-      draft("קיבוץ אלרום, הרצאה, 2019"), // [email]
-      draft("ועידת התיירות של כלכליסט, 2018"),
-      draft("גמלאי משרד ראש הממשלה, הרצאה, 2018"),
-      draft("סינמה סיטי, הרצאה קצרה לאנשי המכירות, 2018"),
-      draft("קהילת INSIDERS, אירוע קהילה"),
+      "", // [2] held back
+      "", // [3] held back
+      draft("מלון פסטורל כפר בלום, הרצאה, 2019"), // [email]
+      "", // [5] held back
+      draft("ועידת התיירות של כלכליסט, הרצאה, 2018"),
+      "", // [7] held back
+      "", // [8] held back
+      draft("INSIDERS, מפגש קהילה"),
     ] as string[],
-    // From his own Hebrew texts (HE2, HE3, 2018). Not yet confirmed by Yossi.
-    shalva: draft("יוסי הוא גם שגריר רצון טוב של שלווה, ארגון שעוזר לילדים עם מוגבלויות."),
+    // Held back until Yossi confirms (review ruling 2026-11-24); renders nothing.
+    shalva: "",
   },
   chalalan: {
     name: draft("צ'אלאלאן"),

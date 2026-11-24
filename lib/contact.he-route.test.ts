@@ -10,7 +10,7 @@ vi.mock("resend", () => ({
 }));
 
 // A real person: the hidden field is empty and the form took 4 seconds.
-const he = { site: "he", name: "דנה כהן", organisation: "אקמה", phone: "050-1234567", website: "", formRenderedAt: 1_000_000, formSubmittedAt: 1_004_000 };
+const he = { site: "he", name: "דנה כהן", organisation: "אקמה", phone: "050-1234567", hp_x: "", formRenderedAt: 1_000_000, formSubmittedAt: 1_004_000 };
 
 async function post(body: unknown) {
   const { POST } = await import("@/app/api/contact/route");
@@ -79,7 +79,7 @@ describe("Hebrew POST /api/contact", () => {
 
   describe("spam protection (Hebrew path only)", () => {
     it("a filled honeypot gets 200 success and no email", async () => {
-      expect(await post({ ...he, website: "http://spam.example" })).toEqual({ status: 200, json: { success: true } });
+      expect(await post({ ...he, hp_x: "http://spam.example" })).toEqual({ status: 200, json: { success: true } });
       expect(sendMock).not.toHaveBeenCalled();
     });
     it("a submission under 3 seconds after render gets 200 success and no email", async () => {
@@ -98,7 +98,7 @@ describe("Hebrew POST /api/contact", () => {
       expect(sendMock).not.toHaveBeenCalled();
     });
     it("a spam submission learns nothing, even with invalid fields", async () => {
-      expect(await post({ ...he, phone: "", website: "x" })).toEqual({ status: 200, json: { success: true } });
+      expect(await post({ ...he, phone: "", hp_x: "x" })).toEqual({ status: 200, json: { success: true } });
       expect(sendMock).not.toHaveBeenCalled();
     });
     it("a normal submission at exactly 3 seconds sends one email, without the anti-spam fields", async () => {

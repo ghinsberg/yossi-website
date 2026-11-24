@@ -18,6 +18,7 @@ const h2 = "text-2xl md:text-3xl font-heading font-bold text-brand-text";
 const h3 = "mt-8 text-xl font-heading font-bold text-brand-text";
 const body = "mt-4 text-lg leading-relaxed text-brand-text-secondary";
 const caption = "mt-3 text-sm text-center text-brand-text-secondary";
+const israel = s.stage.israel.filter((line) => line.trim() !== "");
 
 export default function Page() {
   return (
@@ -63,18 +64,20 @@ export default function Page() {
           ) : null}
         </figure>
         <p className={body}><HeText>{s.stage.workshop}</HeText></p>
-        <h3 className={h3}>{s.stage.giveTitle}</h3>
-        <p className={body}><HeText>{s.stage.give}</HeText></p>
-        {s.stage.israel.length > 0 ? (
+        {/* The Israeli list sits above the community-talk offer. A row set to ""
+            (held back) renders nothing; with no rows left, no heading either. */}
+        {israel.length > 0 ? (
           <>
             <h3 className={h3}>{s.stage.israelTitle}</h3>
             <ul className="mt-4 list-disc ps-6 space-y-2 text-lg leading-relaxed text-brand-text-secondary">
-              {s.stage.israel.map((line) => (
+              {israel.map((line) => (
                 <li key={line}><HeText>{line}</HeText></li>
               ))}
             </ul>
           </>
         ) : null}
+        <h3 className={h3}>{s.stage.giveTitle}</h3>
+        <p className={body}><HeText>{s.stage.give}</HeText></p>
         {s.stage.shalva ? <p className={body}><HeText>{s.stage.shalva}</HeText></p> : null}
       </section>
 

@@ -61,6 +61,6 @@ export const heVideosPage = {
   // "בישראל", not "בעברית": the spoken language of the clip is not confirmed.
   hebrewHeading: draft("בישראל"),
   englishHeading: draft("בעולם"),
-  englishNote: draft("מהבמות בחו\"ל, מהסיפור, וקליפים קצרים. הסרטונים באנגלית."),
+  englishNote: draft("קטעים מהבמות בחו\"ל, מתוך הסיפור וקליפים קצרים. כל הסרטונים כאן באנגלית."),
   embedTitlePrefix: draft("סרטון"),
 };

@@ -15,7 +15,8 @@ export function hebrewAlternates(path: string, canonicalHost = process.env.HE_CA
  * The share image for the Hebrew site (WhatsApp, Facebook, LinkedIn, X).
  * stage/carousel-4.jpg, viewed 2026-11-24: Yossi on stage as he looks today
  * (bald, short grey beard), head microphone, finger raised. 1920x1080, 268 KB,
- * no text added. Its alt is the home hero's alt, from data/he.
+ * no text added. Its alt is the home hero's alt, from data/he, which describes
+ * the scene, not his appearance.
  */
 export const HE_SHARE_IMAGE = {
   url: "/images/stage/carousel-4.jpg",
@@ -24,14 +25,26 @@ export const HE_SHARE_IMAGE = {
   type: "image/jpeg",
 } as const;
 
+/**
+ * A share-card title (openGraph.title, twitter.title). Until launch (HE_LIVE
+ * not "1") it carries the draft prefix from data, so a forwarded WhatsApp or
+ * social card does not look approved. The browser tab title never does.
+ */
+export function shareTitle(title: string, live = process.env.HE_LIVE === "1") {
+  return live ? title : `${heSite.meta.ogDraftPrefix}${title}`;
+}
+
+/** The default share description: the home page's, which says Hebrew and English. */
+export const HE_SHARE_DESCRIPTION = heHome.metaDescription;
+
 /** The layout's Open Graph, shared by every Hebrew page. */
 export function hebrewOpenGraphBase() {
   return {
     type: "website" as const,
     siteName: heSite.meta.siteName,
     locale: "he_IL",
-    title: heSite.meta.titleDefault,
-    description: heSite.meta.description,
+    title: shareTitle(heSite.meta.titleDefault),
+    description: HE_SHARE_DESCRIPTION,
     images: [{ ...HE_SHARE_IMAGE, alt: heHome.hero.imageAlt }],
   };
 }
@@ -53,7 +66,7 @@ export function hebrewOpenGraph(
   return {
     openGraph: {
       ...base,
-      title: page.title ? heSite.meta.titleTemplate.replace("%s", page.title) : base.title,
+      title: page.title ? shareTitle(heSite.meta.titleTemplate.replace("%s", page.title)) : base.title,
       description: page.description ?? base.description,
       url: path,
     },

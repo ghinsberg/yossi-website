@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore, type ChangeEvent, ty
 import HeAgentCard from "@/components/he/HeAgentCard";
 import { DEFAULT_AGENT_TAG, resolveAgent } from "@/data/he/agents";
 import { heBooking } from "@/data/he/booking";
-import { EMAIL_RE, HE_HONEYPOT_FIELD } from "@/lib/contact";
+import { EMAIL_RE, HE_HONEYPOT_FIELD, HE_MIN_FILL_MS } from "@/lib/contact";
 import { captureAgentTag } from "@/lib/he/agentTag";
 import { captureAndGetUTM, clearUTM } from "@/lib/utm";
 
@@ -45,6 +45,20 @@ export function validateHeForm(v: Values): Errors {
 export function errorSummaryText(count: number): string {
   const e = heBooking.form.errors;
   return count === 1 ? e.summaryOne : e.summaryMany.replace("{count}", String(count));
+}
+
+/** Waits out what is left of the minimum fill time, so a person who submits
+ *  fast is never under the server's threshold and never silently dropped. The
+ *  server rule stays; this only makes sure a person always passes it. */
+export async function waitForMinimumFill(renderedAt: number | null): Promise<void> {
+  const wait = HE_MIN_FILL_MS - (Date.now() - (renderedAt ?? Date.now()));
+  if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+}
+
+/** The summary for one submit attempt. Keyed by the attempt, so a second
+ *  failed submit with the same count remounts the alert and is announced again. */
+export function errorSummaryFor(attempt: number, count: number) {
+  return count > 0 ? <ErrorSummary key={attempt} count={count} /> : null;
 }
 
 export function ErrorSummary({ count }: { count: number }) {
@@ -88,6 +102,7 @@ export default function HeBookingForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [summaryCount, setSummaryCount] = useState(0);
+  const [attempt, setAttempt] = useState(0);
   const [trap, setTrap] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   // When the form appeared in the browser, sent with the submit time (both from
@@ -113,6 +128,7 @@ export default function HeBookingForm() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (status === "submitting") return;
+    setAttempt((a) => a + 1);
     const errs = validateHeForm(values);
     setErrors(errs);
     const first = ORDER.find((k) => errs[k]);
@@ -123,6 +139,8 @@ export default function HeBookingForm() {
     }
     setStatus("submitting");
     try {
+      // The button shows its sending state while this waits.
+      await waitForMinimumFill(renderedAt.current);
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -189,9 +207,9 @@ export default function HeBookingForm() {
   return (
     <div>
       {agent ? <HeAgentCard agent={agent} /> : null}
-      <form ref={formRef} onSubmit={onSubmit} noValidate aria-label={f.ariaLabel} className="relative">
+      <form ref={formRef} method="post" onSubmit={onSubmit} noValidate aria-label={f.ariaLabel} className="relative">
         <p className="text-sm text-brand-text-secondary mb-6">{f.requiredNote}</p>
-        {summaryCount > 0 ? <ErrorSummary count={summaryCount} /> : null}
+        {errorSummaryFor(attempt, summaryCount)}
         <Honeypot value={trap} onChange={(e) => setTrap(e.target.value)} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {field("name", { autoComplete: "name" })}

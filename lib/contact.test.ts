@@ -246,19 +246,24 @@ describe("English email html builder", () => {
 });
 
 describe("isHebrewSpam", () => {
-  const ok = { site: "he", website: "", formRenderedAt: 0, formSubmittedAt: 3000 };
+  const ok = { site: "he", hp_x: "", formRenderedAt: 0, formSubmittedAt: 3000 };
   it("is false for every non-Hebrew body, whatever it holds", async () => {
     const { isHebrewSpam } = await import("./contact");
-    for (const b of [null, undefined, "x", 1, [], {}, { site: "en", website: "spam" }, { site: "zz", formRenderedAt: 0, formSubmittedAt: 1 }, { website: "spam" }]) {
+    for (const b of [null, undefined, "x", 1, [], {}, { site: "en", hp_x: "spam" }, { site: "zz", formRenderedAt: 0, formSubmittedAt: 1 }, { hp_x: "spam" }]) {
       expect(isHebrewSpam(b)).toBe(false);
     }
   });
   it("Hebrew: a person passes; a filled trap, under 3 s, or a missing time fails", async () => {
     const { isHebrewSpam } = await import("./contact");
     expect(isHebrewSpam(ok)).toBe(false);
-    expect(isHebrewSpam({ ...ok, website: " x " })).toBe(true);
+    expect(isHebrewSpam({ ...ok, hp_x: " x " })).toBe(true);
     expect(isHebrewSpam({ ...ok, formSubmittedAt: 2999 })).toBe(true);
     expect(isHebrewSpam({ ...ok, formRenderedAt: null })).toBe(true);
     expect(isHebrewSpam({ ...ok, formSubmittedAt: Infinity })).toBe(true);
+  });
+  it("the hidden field is hp_x, a name no autofill recognises; the old name website is no longer a trap", async () => {
+    const { isHebrewSpam, HE_HONEYPOT_FIELD } = await import("./contact");
+    expect(HE_HONEYPOT_FIELD).toBe("hp_x");
+    expect(isHebrewSpam({ ...ok, website: "https://example.com" })).toBe(false);
   });
 });

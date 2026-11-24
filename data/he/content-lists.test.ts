@@ -124,6 +124,34 @@ describe("home proof strip", () => {
   });
 });
 
+describe("Israeli organisations", () => {
+  const shown = heStory.stage.israel.filter(Boolean);
+  it("the five that remain, in the data order, and the held-back rows blank", () => {
+    expect(heStory.stage.israel.map((l) => l === "")).toEqual([false, false, true, true, false, true, false, true, true, false]);
+    expect(shown).toEqual([
+      "המועצה המקומית כפר כמא, ערב מלגות, 2025",
+      "Nataraj, הרצאה, 2022",
+      "מלון פסטורל כפר בלום, הרצאה, 2019",
+      "ועידת התיירות של כלכליסט, הרצאה, 2018",
+      "INSIDERS, מפגש קהילה",
+    ]);
+  });
+  it("every row has one shape: name, kind of event, year (or name and kind when the year is unknown)", () => {
+    for (const l of shown) {
+      const parts = l.split(", ");
+      expect([2, 3], l).toContain(parts.length);
+      if (parts.length === 3) expect(parts[2], l).toMatch(/^\d{4}$/);
+      else expect(parts[1], l).not.toMatch(/\d/);
+    }
+  });
+  it("the home line names only rows on the story list", () => {
+    expect(heHome.proof.israelLine).toBe("ובישראל: ועידת התיירות של כלכליסט, המועצה המקומית כפר כמא, מלון פסטורל כפר בלום.");
+    for (const name of ["ועידת התיירות של כלכליסט", "המועצה המקומית כפר כמא", "מלון פסטורל כפר בלום"]) {
+      expect(shown.some((l) => l.startsWith(name)), name).toBe(true);
+    }
+  });
+});
+
 describe("media", () => {
   const enSource = readFileSync("app/(en)/media/page.tsx", "utf8") + readFileSync("app/(en)/story/page.tsx", "utf8");
   it("is non-empty and every URL appears in the English media or story page source", () => {
@@ -141,7 +169,9 @@ describe("media", () => {
   it("every outlet name appears in the English source", () => {
     for (const m of heMedia) expect(enSource.includes(m.outlet), m.outlet).toBe(true);
   });
-  it("Israeli items: the confirmed podcast and the two ynet headlines with their links", () => {
+  it("Israeli items: the confirmed podcast and the two ynet headlines with their links (the second held back, blank)", () => {
+    expect(heIsraelMedia[2].title).toBe("");
+    expect(heIsraelMedia[0].title).toBe("פרק בהשתתפות יוסי.");
     expect(heIsraelMedia.map((m) => m.outlet)).toEqual([heIsraelMedia[0].outlet, "ynet", "ynet"]);
     expect(heIsraelMedia.filter((m) => m.url).map((m) => m.url)).toEqual([
       "https://www.ynet.co.il/articles/0,7340,L-5124308,00.html",
@@ -190,7 +220,8 @@ describe("the film", () => {
   // Published headlines (heIsraelMedia items flagged publishedHeadline) are
   // copied from the press, not written by us, so a headline about the film is
   // not a second mention. Everything else stays strict.
-  const headlines = new Set(heIsraelMedia.filter((m) => m.publishedHeadline).map((m) => m.title));
+  // A blanked (held-back) item has no title and exempts nothing.
+  const headlines = new Set(heIsraelMedia.filter((m) => m.publishedHeadline && m.title).map((m) => m.title));
   // "Jungle" not preceded by "the ": "The Laws of the Jungle" is a keynote, not the film.
   // "הסרט" as a whole word: "הסרטונים" (videos) is not the film.
   // "הוליווד" too: the sentence follows Yossi's own term for it, "סרט הוליוודי".
@@ -201,8 +232,12 @@ describe("the film", () => {
     expect(hits).toEqual([heStory.book.film]);
     expect(heStory.book.film).not.toContain(PLACEHOLDER_MARK);
   });
-  it("exempts only published headlines, and only two of them", () => {
-    expect(headlines.size).toBe(2);
+  // The first ynet headline is about the film, so the film appears twice on the
+  // site (that headline and the story sentence); recorded for Yossi in the source map.
+  it("exempts only published headlines shown on the site, now one", () => {
+    expect(headlines.size).toBe(1);
+    expect([...headlines]).toEqual([heIsraelMedia[1].title]);
+    expect(heIsraelMedia[1].url).toBe("https://www.ynet.co.il/articles/0,7340,L-5124308,00.html");
     for (const h of headlines) expect(heMedia.map((m) => m.title)).not.toContain(h);
   });
 });

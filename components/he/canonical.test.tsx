@@ -65,3 +65,60 @@ describe("without the Hebrew host", () => {
     expect(metadata.twitter).toMatchObject({ card: "summary_large_image", images: ["/images/stage/carousel-4.jpg"] });
   });
 });
+
+// Until launch a forwarded WhatsApp or social card says it is a draft. The
+// browser tab title is unchanged; only openGraph.title and twitter.title.
+describe("share titles carry the draft prefix until launch", () => {
+  type Titled = { openGraph?: { title?: string }; twitter?: { title?: string }; title?: unknown };
+  const load = async (live: boolean, host?: string) => {
+    if (live) process.env.HE_LIVE = "1";
+    else delete process.env.HE_LIVE;
+    if (host) process.env.HE_CANONICAL_HOST = host;
+    else delete process.env.HE_CANONICAL_HOST;
+    vi.resetModules();
+    const { heSite } = await import("@/data/he/site");
+    const layout = (await import("@/app/(he)/he/layout")).metadata as Titled;
+    const story = (await import("@/app/(he)/he/hasipur/page")).metadata as Titled;
+    const home = (await import("@/app/(he)/he/page")).metadata as Titled;
+    return { heSite, layout, story, home };
+  };
+  afterAll(() => {
+    delete process.env.HE_LIVE;
+    delete process.env.HE_CANONICAL_HOST;
+    vi.resetModules();
+  });
+
+  it("the prefix comes from data and is Hebrew", async () => {
+    const { heSite } = await load(false);
+    expect(heSite.meta.ogDraftPrefix.trim()).not.toBe("");
+    expect(heSite.meta.ogDraftPrefix).toMatch(/[֐-׿]/);
+  });
+  it("draft, no host: the layout's Open Graph and X titles are prefixed, the tab title is not", async () => {
+    const { heSite, layout } = await load(false);
+    const p = heSite.meta.ogDraftPrefix;
+    expect(layout.openGraph!.title).toBe(p + heSite.meta.titleDefault);
+    expect(layout.twitter!.title).toBe(p + heSite.meta.titleDefault);
+    expect(layout.title).toEqual({ default: heSite.meta.titleDefault, template: heSite.meta.titleTemplate });
+  });
+  it("draft, with the host: each page's Open Graph title is prefixed, the tab title is not", async () => {
+    const { heSite, story, home } = await load(false, "he.example");
+    const p = heSite.meta.ogDraftPrefix;
+    expect(story.openGraph!.title).toBe(p + heSite.meta.titleTemplate.replace("%s", heSite.pageNames.hasipur));
+    expect(home.openGraph!.title).toBe(p + heSite.meta.titleDefault);
+    expect(story.title).toBe(heSite.pageNames.hasipur);
+  });
+  it("live: no prefix anywhere", async () => {
+    const { heSite, layout } = await load(true);
+    expect(layout.openGraph!.title).toBe(heSite.meta.titleDefault);
+    expect(layout.twitter!.title).toBe(heSite.meta.titleDefault);
+    const withHost = await load(true, "he.example");
+    expect(withHost.story.openGraph!.title).toBe(heSite.meta.titleTemplate.replace("%s", heSite.pageNames.hasipur));
+    expect(withHost.home.openGraph!.title).toBe(heSite.meta.titleDefault);
+  });
+  it("the default share description is the home page's, which says Hebrew and English", async () => {
+    const { layout } = await load(false);
+    const { heHome } = await import("@/data/he/home");
+    expect((layout.openGraph as { description?: string }).description).toBe(heHome.metaDescription);
+    expect((layout.twitter as { description?: string }).description).toBe(heHome.metaDescription);
+  });
+});

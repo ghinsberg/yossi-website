@@ -98,12 +98,18 @@ describe("pages with content", () => {
     const html = renderToStaticMarkup(<TikshoretPage />);
     expect(count(html, "<h1")).toBe(1);
     expect(html).not.toContain("data-placeholder");
+    // Three items are kept in the data (keys and order fixed); the second ynet
+    // item is blanked (held back) and renders nothing at all, not even its link.
     expect(heIsraelMedia.length).toBe(3);
+    const shown = heIsraelMedia.filter((m) => m.title);
+    expect(shown).toHaveLength(2);
     expect(html.indexOf(heMediaPage.israelTitle)).toBeLessThan(html.indexOf(heMediaPage.worldTitle));
     for (const m of heMedia) expect(html).toContain(`href="${m.url}"`);
-    for (const m of heIsraelMedia) if (m.url) expect(html).toContain(`href="${m.url}"`);
+    for (const m of shown) if (m.url) expect(html).toContain(`href="${m.url}"`);
+    expect(html).not.toContain(heIsraelMedia[2].url!);
+    expect(html).not.toMatch(/<li[^>]*>\s*<\/li>|<p[^>]*><\/p>/);
     // No link is known for the podcast, so it renders none.
-    expect(count(html, heMediaPage.readCta)).toBe(heMedia.length + heIsraelMedia.filter((m) => m.url).length);
+    expect(count(html, heMediaPage.readCta)).toBe(heMedia.length + shown.filter((m) => m.url).length);
   });
 });
 
@@ -114,11 +120,25 @@ describe("story and thanks", () => {
     expect(html).not.toContain("data-placeholder");
     expect(count(html, "רדקליף")).toBe(1);
   });
-  it("story lists the Israeli organisations and the Shalva line once", () => {
+  it("story lists the remaining Israeli organisations above the community-talk offer, and no blanked row", () => {
     const html = renderToStaticMarkup(<HasipurPage />);
-    expect(heStory.stage.israel.length).toBeGreaterThan(0);
-    for (const line of heStory.stage.israel) expect(html.replace(/<\/?bdi>/g, "")).toContain(line.replace(/"/g, "&quot;"));
-    expect(count(html, "שלווה")).toBe(1);
+    const plain = html.replace(/<\/?bdi>/g, "");
+    // Ten rows kept in the data (keys and order fixed); five are blanked (held back).
+    expect(heStory.stage.israel).toHaveLength(10);
+    const shown = heStory.stage.israel.filter(Boolean);
+    expect(shown).toHaveLength(5);
+    for (const line of shown) expect(plain).toContain(line.replace(/"/g, "&quot;"));
+    const list = html.match(/<ul[^>]*>([\s\S]*?)<\/ul>/)![1];
+    expect(list.match(/<li>/g)).toHaveLength(shown.length);
+    expect(html).not.toMatch(/<li>\s*<\/li>|<p[^>]*><\/p>|<h[23][^>]*><\/h[23]>/);
+    // The list sits above the offer, under its own heading.
+    expect(html.indexOf(heStory.stage.israelTitle)).toBeLessThan(html.indexOf(heStory.stage.giveTitle));
+    expect(html.indexOf(shown[shown.length - 1])).toBeLessThan(html.indexOf(heStory.stage.giveTitle));
+    expect(heStory.stage.israelTitle).toBe("על במות בישראל");
+    // The Shalva line is blanked and renders nothing.
+    expect(heStory.stage.shalva).toBe("");
+    expect(plain).toContain("<bdi>INSIDERS</bdi>".replace(/<\/?bdi>/g, ""));
+    expect(html).toContain("<bdi>INSIDERS</bdi>");
   });
   it("story isolates Latin names in bdi", () => {
     const html = renderToStaticMarkup(<HasipurPage />);
