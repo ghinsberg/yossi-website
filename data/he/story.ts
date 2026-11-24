@@ -37,8 +37,10 @@ export const heStory = {
     give: draft(
       "ארגון שמזמין את יוסי מוזמן גם לתרום הרצאה נוספת שלו לכל מטרה קהילתית שיבחר. זה יכול להיות אולם הקולנוע של ארמוסיו שבמקסיקו, כשכל העיר מוזמנת, יוזמה לבני נוער באל סלבדור, בית ספר בשווייץ או בית אבות בתל אביב.",
     ),
-    imageAlt: draft("יוסי גינסברג על במה חשוכה, במקטורן חום, מדבר בידיים פתוחות. בקדמת התמונה צלליות של הקהל"),
-    imageCaption: ph("כנס ASPIRE, ICE קרקוב, 2017. 2,000 משתתפים"),
+    imageAlt: draft("אולם ענק וחשוך מלא קהל. יוסי גינסברג עומד במרכז במה רחבה מתחת למסך גדול, ודמותו מוקרנת גם על שני מסכי צד"),
+    // Cleared 2026-11-24: the caption belonged to an old photo (on-stage.jpg) that
+    // Yossi had replaced. No verified caption exists for the new photo.
+    imageCaption: "",
   },
   chalalan: {
     name: draft("צ'אלאלאן"),

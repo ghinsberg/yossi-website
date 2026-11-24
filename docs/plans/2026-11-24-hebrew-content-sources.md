@@ -312,3 +312,12 @@ None of these is used on the Hebrew site. Both sides quoted.
 | CITA, spelled | "׳סיטא׳" (HE1 2023); "חברת סיטה" (HE4 2019) | "CITA, the Center for Research and Treatment of Addiction" | Kept in Latin, CITA. |
 | Collectaco, what it designs | "לעיצוב פנים ונוף" (HE2, HE3 2018) | "לעיצוב פנים וחוץ" (HE4 2019); not on the English site | Uses his newer wording, stamped. |
 | His age and the trip | "במהלך טיול שאחרי הצבא" (HE5 2020) | "Yossi Ghinsberg was 22" (en/story/page.tsx:108) | Not a conflict; noted only because the site does not use the army detail. |
+
+
+## Photo change, 2026-11-24 (Yossi's instruction)
+
+Yossi: the stage photo `stage/on-stage.jpg` is dated, "with hair on my head, I haven't looked like that at least 10 years".
+- Home hero now uses `stage/carousel-4.jpg` (viewed: Yossi on stage, bald, short grey beard, greenish jacket, head microphone, smiling, finger raised; "EXPO ONE" on the screen behind).
+- Story page, stage section, now uses `stage/carousel-5.jpg` (viewed: a very large dark hall full of people; Yossi centre stage under a big screen showing a "Real Survival vs Imaginary Survival" slide; his figure on two side screens; "JEUNESSE EXPO ONE" on the stage front).
+- The caption "כנס ASPIRE, ICE קרקוב, 2017. 2,000 משתתפים" is removed with the old photo, so Claim 3 above no longer appears on the Hebrew site. No caption was written for the new photo: the event and year are not verified.
+- English site, not changed: `en/story/page.tsx:453-458` still shows `on-stage.jpg` captioned ASPIRE, Krakow, 2017. If the photo is more than ten years old, that caption cannot be right. For Yossi to rule.

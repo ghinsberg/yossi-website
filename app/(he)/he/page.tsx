@@ -47,12 +47,12 @@ export default function HeHome() {
           </div>
           <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
             <Image
-              src="/images/stage/on-stage.jpg"
+              src="/images/stage/carousel-4.jpg"
               alt={h.hero.imageAlt}
               fill
               priority
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[75%_50%] opacity-60"
+              className="object-cover object-center opacity-60"
             />
             <div className="absolute inset-0 flex items-center justify-center p-6">
               <Placeholder className="bg-brand-bg/80">{h.hero.footagePlaceholder}</Placeholder>

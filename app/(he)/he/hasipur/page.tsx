@@ -50,14 +50,16 @@ export default function Page() {
         <p className={body}><HeText>{s.stage.scale}</HeText></p>
         <figure className="mt-8">
           <Image
-            src="/images/stage/on-stage.jpg"
+            src="/images/stage/carousel-5.jpg"
             alt={s.stage.imageAlt}
-            width={1900}
-            height={1060}
+            width={1920}
+            height={1080}
             sizes="(min-width: 768px) 48rem, 100vw"
             className="w-full h-auto rounded-xl"
           />
-          <figcaption className={caption}><HeText>{s.stage.imageCaption}</HeText></figcaption>
+          {s.stage.imageCaption ? (
+            <figcaption className={caption}><HeText>{s.stage.imageCaption}</HeText></figcaption>
+          ) : null}
         </figure>
         <p className={body}><HeText>{s.stage.workshop}</HeText></p>
         <h3 className={h3}>{s.stage.giveTitle}</h3>
