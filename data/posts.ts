@@ -1811,4 +1811,119 @@ A leadership audience has heard plenty of advice. What it rarely gets is a story
 
 To talk about a keynote for your summit, get in touch through this site or contact the regional bureau representatives listed on the booking page. Every enquiry receives a tailored proposal within 48 hours.`,
   },
+  {
+    slug: "safety-conference-keynote-speaker",
+    title: "Safety Conference Keynote Speaker: How to Choose One Your Team Will Listen To",
+    date: "2026-11-24",
+    readTime: "7 min read",
+    category: "Event Planning",
+    excerpt:
+      "Safety audiences have sat through the slides, the statistics, and the warnings. Here is how to pick a keynote speaker who makes the room pay attention to risk without lecturing them.",
+    keywords: [
+      "safety conference keynote speaker",
+      "safety keynote speaker",
+      "workplace safety conference speaker",
+      "safety stand-down speaker",
+      "motivational speaker for safety events",
+    ],
+    content: `SAFETY CONFERENCE KEYNOTE SPEAKER: HOW TO CHOOSE ONE YOUR TEAM WILL LISTEN TO
+
+Safety audiences are some of the hardest to speak to. They have seen the slides. They have read the incident reports. They have sat through the video with the sad music. Many of them have heard "safety is everyone's responsibility" more times than they can count.
+
+So when you book a keynote for a safety conference, you are not trying to tell people that safety matters. They know. You are trying to get them to feel it again, and to do something on Monday that they did not do last week.
+
+This guide is for planners who have that job. It works for any speaker at any safety event.
+
+START WITH THE PROBLEM, NOT THE THEME
+
+Before you look at speakers, write down what is actually going wrong, or what could.
+
+Are people cutting corners because they are rushed? Are near misses going unreported? Are experienced workers getting complacent? Are new hires afraid to speak up? Is there a recent incident the whole company is still thinking about?
+
+Each of these needs a different talk. Complacency needs a story that shakes people awake. Silence needs a story about speaking up. A recent incident may need no keynote at all, or a very careful one.
+
+Write two sentences. "Our people are doing X. We want them to do Y." Give those two sentences to every speaker you speak to.
+
+WHY MOST SAFETY KEYNOTES FAIL
+
+They fail in three common ways.
+
+They scare people. Fear works for about ten minutes. Then people switch off, or they resent being managed. Nobody changes how they work because they were frightened in a hotel ballroom.
+
+They lecture. A speaker who stands on a stage and tells experienced workers how to do their jobs loses the room quickly. Respect goes both ways.
+
+They are too general. A talk about "mindset" or "attitude" that could be given at any event gives people nothing to take back to the site, the warehouse, or the office.
+
+A good safety keynote does the opposite. It tells the truth, treats the audience as adults, and connects to something they can use.
+
+WHAT TO LOOK FOR IN A SPEAKER
+
+Credibility in the room. Safety people are practical. They want to know the speaker has been through something real, or has worked in the field. Ask what gives this person the right to speak on the subject. A good answer is specific.
+
+Honesty about mistakes. The best speakers on risk talk about what they got wrong. A speaker who only tells stories about being right will not land with people who deal with failure every day.
+
+Practical takeaways. People should leave with at least one thing they can use. A technique, a question, a habit. If a speaker cannot name what the audience will take away, press them on it.
+
+Respect for the audience. Watch how the speaker talks about workers and managers in a recording. Is it with respect, or with a sense of being above them?
+
+A tone that fits your culture. Some safety cultures are formal. Some are plain spoken and a bit rough. The speaker needs to sound like they belong.
+
+SOME SPEAKERS ARE WRONG FOR THIS EVENT
+
+Be careful with speakers whose main selling point is a dramatic story, if the story has no connection to the audience's work. A great adventure does not help a safety audience unless the speaker can say something true about risk, judgment, or decision making.
+
+Be careful with speakers who claim to be safety experts without evidence. Ask for their background. Ask who they have worked with. Ask to speak to a past client.
+
+Be careful with anyone who promises to "cut incidents". No keynote can promise that. A speaker can change how people think for a day. What happens after depends on your programme, your managers, and your culture.
+
+QUESTIONS TO ASK BEFORE YOU BOOK
+
+How will you tailor the talk to our industry? You want to hear that they will ask about your sites, your risks, and your language. If they say the talk works anywhere, be careful.
+
+Can I see a full recording to a similar audience? A showreel shows the best two minutes. A full talk shows whether the speaker can hold a room for an hour.
+
+What do you want people to do afterwards? The answer should be concrete. If the answer is "feel inspired", ask again.
+
+Will you speak to our leaders beforehand? A short briefing call lets the speaker avoid contradicting your safety message or touching a sensitive subject by accident.
+
+Are you comfortable with a sensitive topic? If your company has had a serious injury or a death, tell the speaker. They need to know before they walk on.
+
+PLAN THE SLOT AS CAREFULLY AS THE SPEAKER
+
+The keynote is only one part of the day. A few practical choices change how well it lands.
+
+Put it early. People are fresher in the morning, and the talk can set the tone for everything after.
+
+Mix the room. If you can, put frontline staff, supervisors, and senior leaders in the same session. A shared story gives people a common reference point.
+
+Leave time for questions. Safety people have things to say. A moderated Q&A or a fireside chat often works better than another ten minutes of talk.
+
+Link it to your programme. If your safety work has a name, a slogan, or a set of standards, let the speaker know. A good speaker can point toward it without sounding like an advertisement.
+
+Plan the follow up. Give table groups a question to discuss. Ask managers to run a short conversation in their teams the next week. A keynote on its own is an event. A keynote with follow up is the start of something.
+
+BUDGET AND FORMAT
+
+Fees vary widely. Travel, accommodation, and format all change the total. A keynote with a workshop costs more than a keynote alone.
+
+If you run safety events across several sites, ask whether the speaker offers a virtual version, or whether a shorter session could work for site visits. Say what your budget is early. Good bureaus and speakers will tell you what is possible.
+
+WHERE YOSSI GHINSBERG FITS
+
+Yossi Ghinsberg is a keynote speaker, author, and survivor. In 1981, at age 22, he survived 20 days alone in the Bolivian Amazon rainforest with no food, no fire, and no tools. His memoir Jungle became the 2017 film "Jungle" starring Daniel Radcliffe.
+
+He is not a safety professional and does not present himself as one. What he brings is a lived story about how people behave when things go wrong, and what separates a real threat from a manufactured one. His keynote "Real Survival vs Imaginary Survival" is built around that idea, and audiences leave with the Snake Breath technique for acute stress and Full Sensory Activation for presence under pressure.
+
+His keynotes are "From Survival to Legacy", "The Laws of the Jungle", and "Real Survival vs Imaginary Survival", and each is customized per event. He speaks worldwide and travels from California for North American events. Formats include a 60 minute keynote, a keynote with a 20 to 30 minute fireside chat, and half-day or full-day workshops.
+
+Whether he suits your event depends on what your people need. If your audience needs technical safety training, book a technical expert. If they need a story that gets them thinking about risk, judgment, and staying calm, he may be one option to consider.
+
+THE SHORT VERSION
+
+Write down what is actually going wrong. Skip speakers who scare, lecture, or stay general. Look for credibility in the room, honesty about mistakes, and something practical to take away. Ask how they will tailor the talk, ask for a full recording, and book a briefing call. Then plan the slot and the follow up with the same care.
+
+A safety audience does not need to be told that risk is real. It needs a reason to take one more careful look.
+
+To talk about a keynote for your event, get in touch through this site or contact the regional bureau representatives listed on the booking page. Every enquiry receives a tailored proposal within 48 hours.`,
+  },
 ];
