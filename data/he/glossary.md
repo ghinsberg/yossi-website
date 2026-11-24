@@ -59,6 +59,9 @@ Added 2026-11-24. His documents (read-only, in his Drive; plain-text copies in `
 | Silicon Valley | סיליקון ואלי | His form (was עמק הסיליקון) |
 | full-day workshop | יום סדנה מלא | |
 | translated from English (endorsement note) | תורגם מאנגלית | |
+| Shalva (the organisation) | שלווה | His spelling (HE2, HE3); goodwill ambassador = שגריר רצון טוב (added 2026-11-24) |
+| Calcalist (newspaper) | כלכליסט | Its tourism conference: ועידת התיירות של כלכליסט (added 2026-11-24) |
+| From Israeli stages (video group) | בישראל | Not "בעברית" while a clip's spoken language is unconfirmed |
 
 Never used: Hebrew equivalents of "comeback", "one of the top speakers in the world", "world-class", "transformative", "innovative". From his own bios, also never: "מרצה עסקי מצליח ובעל פרסום עולמי", "אחד המרצים המבוקשים", "בין החמישה המובילים", "מהפכניות" (full list in the source map).
 

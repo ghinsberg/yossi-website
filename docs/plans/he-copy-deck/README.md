@@ -3,7 +3,7 @@
 Yossi edits the Hebrew site copy in a Google Doc, not in code.
 
 - **Doc:** https://docs.google.com/document/d/1BRNVS7wIkA7vedef8Q0NdSQfAxXQ-HnHc6JrpEfK3Us/edit (in his Drive, created 2026-11-24).
-- **Map:** `2026-11-24-rows.json` holds every row exactly as exported: `id` (the code shown in the doc, for example `H02`), `file` (`data/he/<file>.ts`), `path` (export name and key path), `text`, and `stamped` (true when the site shows a ⟦טיוטה⟧ stamp: a claim or proposal).
+- **Map:** `2026-11-24-rows.json` holds every row exactly as exported: `id` (the code shown in the doc, for example `H02`), `file` (`data/he/<file>.ts`), `path` (export name and key path), `text`, and `stamped` (true when the site showed a ⟦טיוטה⟧ stamp: a claim or proposal). Since 2026-11-24 no row is stamped; the eleven that were are listed in the source map under "Was stamped on the page until 2026-11-24". The 2026-11-24 additions, clears and changes are in `.superpowers/sdd/2026-11-23-hebrew-site-implementation/copydeck/complete-changes.json`.
 - **Export script:** `scripts/export-he-copy.ts`. Bundle and run:
   `npx esbuild scripts/export-he-copy.ts --bundle --platform=node --format=cjs --alias:@=. --outfile=<scratch>/export.cjs && node <scratch>/export.cjs <out.json>`
 

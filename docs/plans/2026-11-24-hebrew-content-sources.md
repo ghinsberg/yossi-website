@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-24
 **Branch:** `hebrew-site`
-**Status:** DRAFT. Every string below is wrapped in `draft()` or `ph()` and counted by `scripts/check-he-launch.sh`. Nothing here is approved by Yossi.
+**Status:** DRAFT. Every string below is wrapped in `draft()` and counted by `scripts/check-he-launch.sh`. Nothing here is approved by Yossi. Since 2026-11-24 ("complete" pass) no line carries a visible ⟦טיוטה⟧ stamp: the single sticky banner marks the whole site as a draft, and the rows that were stamped are listed under "Was stamped on the page until 2026-11-24" below.
 
 Rule: every factual statement in Hebrew traces to a line of the English site in this worktree. The Hebrew is written from the facts, not translated line by line. Where two English sources disagree, the fact is left out and listed under "Conflicts".
 
@@ -31,7 +31,7 @@ Known true facts allowed by the brief in addition to the English site (marked **
 | hero.sub | יוסי גינסברג מרצה לארגונים ולכנסים, בעברית ובאנגלית. הוא מדבר על מנהיגות כשאין ודאות, על חוסן ועל התמודדות עם מצבי לחץ ומשברים, מתוך מה שלמד בג'ונגל ובעשורים שאחריו. | en/page.tsx:33; en/keynotes/page.tsx:161; en/yossi/page.tsx:117 | "speaks on leadership under uncertainty, resilience, survival, stress management... draw directly from his 20 days alone in the Amazon and the philosophy he developed in the four decades since"; "Languages: English, Hebrew"; "Most of my work happens in corporate environments" | fact; **his Hebrew:** HE4 (2019), talk subtitle: "סודות הישרדות מהאמזונס להתמודדות עם מצבי לחץ ומשברים" |
 | metaDescription | יוסי גינסברג מרצה לארגונים ולכנסים, בעברית ובאנגלית. ההרצאות, הסרטונים, ההמלצות והזמנת הרצאה. | en/keynotes/page.tsx:161; en/yossi/page.tsx:117 | "Languages: English, Hebrew"; "Most of my work happens in corporate environments" | fact |
 | heProofClientNames | Google, Apple, Microsoft, Coca-Cola, BMW, American Express, Citibank, General Motors (logos) | en/faq/page.tsx:65; data/clients.ts:8-16 | "Google, Apple, Microsoft, BMW, American Express, Coca-Cola, Citibank, General Motors, and the Million Dollar Round Table (MDRT)" | fact, CLAIM (see below) |
-| proof.title | ⟦טיוטה⟧ בין הארגונים שבהם הרצה | en/faq/page.tsx:64-65 | "What companies has Yossi spoken for?" | CLAIM |
+| proof.title | בין הארגונים שבהם הרצה | en/faq/page.tsx:64-65 | "What companies has Yossi spoken for?" | CLAIM |
 | endorsement.title, .cta | מה אמרו עליו / לכל ההמלצות | none | | phrasing only |
 | after.title | אחרי הספר | none | | phrasing only |
 | after.body | הספר נגמר ביציאה מהג'ונגל. החיים לא. אחריו באו יותר מארבעים שנה: כפר נופש אקולוגי באמזונס, שהקים יחד עם בני השבט שהצילו את חייו, חברות בסיליקון ואלי שלא שינו את העולם, אלבום, ובמות ברחבי העולם. | brief (forty years); en/story/page.tsx:166-168; en/yossi/page.tsx:207, 219; en/story/page.tsx:431-433, 442; en/story/page.tsx:394; en/page.tsx:29 | "Kevin Gale... and the indigenous Uchupiamona hunters that accompanied him, found him alive"; "to thank them for saving him"; "For three years he lived with them and they built Chalalan together"; "building companies... Two ventures: Blinq and Headbox"; "The ventures did not change the world"; "In 2008, Yossi released an album"; "He speaks to audiences worldwide" | fact; **his Hebrew:** HE2/HE3 (2018), HE4 (2019): "כפר הנופש האקולוגי", "בני השבט שהצילו את חייו", "סיליקון ואלי" (lexicon) |
@@ -40,7 +40,7 @@ Known true facts allowed by the brief in addition to the English site (marked **
 | keynotes.cta | לפירוט ההרצאות | none | | interface |
 | keynotes.imageAlt | במה גדולה בכנס: על מסך ענק דיוקן של יוסי גינסברג, והוא עצמו עומד בקצה הבמה וידיו מורמות | image `stage/hero-2.jpg` (used by the English site in components/sections/Hero.tsx:8), viewed. Replaces `stage/hero-1.jpg`, removed by controller ruling (a man seen from behind, not identifiable) | (describes the picture) | interface |
 | hero.imageAlt | יוסי גינסברג על במה חשוכה, במקטורן חום, מדבר בידיים פתוחות. בקדמת התמונה צלליות של הקהל | image `stage/on-stage.jpg`, viewed | (describes the picture) | interface |
-| hero.footagePlaceholder | כאן יופיע סרטון הרצאה בעברית | none (Hebrew film not located) | | interface |
+| hero.footagePlaceholder | (cleared 2026-11-24; was "כאן יופיע סרטון הרצאה בעברית") | none | | the hero shows the photo alone, at full opacity |
 | reel.title | מהבמות בעולם | none | | phrasing only |
 | reel.caption | קטעים מהרצאות של יוסי על במות בחו"ל. הסרטון באנגלית. | components/sections/DemoReel.tsx:15-24 (the English home's speaker reel, `/videos/speaker-reel.mp4`); frames viewed: stage footage only | "Speaker reel — self-hosted" | fact |
 | reel.videoLabel | סרטון קטעים מהרצאות של יוסי גינסברג, באנגלית | as above | | interface |
@@ -53,11 +53,11 @@ Known true facts allowed by the brief in addition to the English site (marked **
 | title | הסיפור אחרי הספר | none | | phrasing only |
 | metaDescription | מה שבא אחרי הספר "בחזרה מטואיצ'י": הבמות, צ'אלאלאן באמזונס הבוליביאני, ומיזמים שלא שינו את העולם. | brief; en/yossi/page.tsx:151; en/story/page.tsx:442 | "helping to establish Chalalan Ecolodge... Bolivian Amazon"; "The ventures did not change the world" | fact; **his Hebrew:** lexicon: צ'אלאלאן (HE1-HE4); book title quoted as in HE2-HE5 |
 | book.body | ב-1981, בגיל 22, יצא יוסי למסע באמזונס של בוליביה, מצא את עצמו לבד בנבכי הג'ונגל ושרד כנגד כל הסיכויים. את הסיפור כתב בספר "בחזרה מטואיצ'י", שיצא בעברית ב-1985 וקיבל בישראל מעמד של ספר קאלט. את החלק הזה אתם מכירים. העמוד הזה מתחיל איפה שהספר נגמר. | brief (1981, Bolivia, title); en/story/page.tsx:108, 111-112, 136-142, 194-195 | "Yossi Ghinsberg was 22"; "Yossi walked into the Bolivian Amazon"; "He was alone."; "The original Hebrew edition appeared in 1985: Back from Tuichi" | fact; **his Hebrew:** HE3 (2018): "הוא מצא את עצמו מבודד ... בנבכי הג׳ונגל ושרד כנגד כל הסיכויים"; HE1 (2023): "ספרו בחזרה מטואיצ׳י בעל מעמד קאלט בישראל" (cult status also in the design doc, line 9); "מסע" HE1/HE3/HE4. His "three weeks" left out (Conflicts). |
-| book.film | ⟦טיוטה⟧ ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף. | en/story/page.tsx:203-204 | "In 2017, director Greg McLean made it into a film starring Daniel Radcliffe." | PROPOSAL (film, see below); **his Hebrew:** HE5 (2020): "ספרו הראשון הפך בשנת 2017 לסרט הוליוודי, בכיכובו של דניאל רדקליף" |
+| book.film | ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף. | en/story/page.tsx:203-204 | "In 2017, director Greg McLean made it into a film starring Daniel Radcliffe." | PROPOSAL (film, see below); **his Hebrew:** HE5 (2020): "ספרו הראשון הפך בשנת 2017 לסרט הוליוודי, בכיכובו של דניאל רדקליף" |
 | book.imageAlt | יוסי הצעיר, רזה ומזוקן, בחולצה משובצת ובמכנסיים קרועים, עומד על חול בשולי היער | image `adventure/rescue-1981.jpg`, viewed | (describes the picture) | interface |
 | book.imageCaption | אחרי החילוץ, בוליביה, 1981 | en/story/page.tsx:182 | "After rescue, Bolivia, 1981" | fact |
 | stage.body | רוב העבודה של יוסי היא בארגונים. הוא מרצה בכנסים, בימי הנהלה ובאירועי חברה, בעברית ובאנגלית. יוסי הוא מספר סיפורים: הוא מגולל סיפורי הרפתקאות אישיים המלווים במסרים, ולוקח את הקהל לא רק אל עמקי האמזונס אלא גם אל נבכי הנשמה. כל הרצאה נבנית מחדש לקהל, לנושא האירוע ולמה שהארגון רוצה שיקרה בו. | en/yossi/page.tsx:117; en/keynotes/page.tsx:161, 59-60; en/keynotes/page.tsx:238-239 | "Most of my work happens in corporate environments"; "Languages: English, Hebrew"; "Every keynote is tailored to your audience, your theme, and the outcome you need"; "Leadership offsites... Sales kickoffs" | fact; **his Hebrew:** HE2 (2018): "יוסי הוא מספר סיפורים"; HE2/HE3: "יוסי מגולל סיפורי הרפתקאות אישיים המלווים במסרים עמוקים"; HE3/HE4: "סוחף את הקהל לא רק אל עמקי האמזונס אלא גם אל נבכי הנשמה" ("עמוקים" dropped; "סוחף" softened to "לוקח") |
-| stage.scale | ⟦טיוטה⟧ הוא מדבר מול אולמות של 10,000 איש, ומול חדר ישיבות של שנים עשר איש. ב-2025 עלה לבמה הראשית של כנס MDRT במיאמי ביץ', מול 6,000 משתתפים. | en/story/page.tsx:470-471, 480, 600 | "He speaks to audiences of 10,000. He speaks to boardrooms of twelve."; "6,000 / MDRT 2025, Miami Beach"; "MDRT Main Stage 2025, 6,000 Attendees" | CLAIM |
+| stage.scale | הוא מדבר מול אולמות של 10,000 איש, ומול חדר ישיבות של שנים עשר איש. ב-2025 עלה לבמה הראשית של כנס MDRT במיאמי ביץ', מול 6,000 משתתפים. | en/story/page.tsx:470-471, 480, 600 | "He speaks to audiences of 10,000. He speaks to boardrooms of twelve."; "6,000 / MDRT 2025, Miami Beach"; "MDRT Main Stage 2025, 6,000 Attendees" | CLAIM |
 | stage.workshop | לארגונים שרוצים יותר מהרצאה, הוא מעצב ומוביל גם יום סדנה מלא. האורך, המקום והמבנה נקבעים יחד עם הארגון, אחרי תדריך מעמיק. | en/keynotes/page.tsx:175, 182 | "The full-day workshop."; "For organisations that want more than a talk, Yossi designs and leads a workshop... The length, the location, and the shape are decided with you, after a deep brief." | fact |
 | stage.giveTitle | הרצאה אחת, ועוד אחת לקהילה | en/yossi/page.tsx:96 | "Buy One, Give One Free" | phrasing only |
 | stage.give | ארגון שמזמין את יוסי מוזמן גם לתרום הרצאה נוספת שלו לכל מטרה קהילתית שיבחר. זה יכול להיות אולם הקולנוע של ארמוסיו שבמקסיקו, כשכל העיר מוזמנת, יוזמה לבני נוער באל סלבדור, בית ספר בשווייץ או בית אבות בתל אביב. | en/yossi/page.tsx:117, 120, 126 | "why not give one more talk to the community?"; "It could be in the cinema of Hermosillo, Mexico, with the whole town invited... a youth initiative in El Salvador... A private school in Switzerland. A senior citizens' home in Tel Aviv."; "The corporation that invites me is also invited to gift me to any community purpose they choose." | fact |
@@ -66,14 +66,14 @@ Known true facts allowed by the brief in addition to the English site (marked **
 | chalalan.name | צ'אלאלאן | en/story/page.tsx:257 | "Chalalan Ecolodge" | fact; **his Hebrew:** his spelling, HE1 (2023), HE2/HE3 (2018), HE4 (2019) x6 (was צ'לאלן) |
 | chalalan.body | יוסי חזר לאמזונס, לכפר של שבט האוצ'ופיאמונס, כדי להודות לבני השבט על שהצילו את חייו. הם ביקשו שיעזור להם להציל את שלהם. הכפר שלהם גסס, הצעירים עזבו ולא חזרו, והחלום של בני השבט היה להקים כפר נופש למטיילים על אגם קטן ונסתר בשם צ'אלאלאן. לא היה כסף, והמקום היה שש שעות שיט במעלה הנהר. הוא לא יכול היה לסרב. | en/yossi/page.tsx:207, 210, 213, 216 | "Yossi returned... upriver to the village of the Uchupiamona people, to thank them for saving him."; "they asked if he would help them save theirs. Their village was dying. The young people were leaving and not coming back. Their dream was to build a lodge for tourists on a small, hidden gem of a lake called Chalalan."; "There was no money. The location was six hours upriver"; "He could not say no." | fact (timing "ten years after" left out, see Conflicts); **his Hebrew:** lexicon from HE2-HE4: "שבט האוצ׳ופיאמונס", "בני השבט", "כפר נופש" |
 | chalalan.built | שלוש שנים חי שם כבן לשבט, ויחד הם בנו את צ'אלאלאן, כפר נופש אקולוגי. הוא היה שותף גם להקמת הפארק הלאומי מאדידי. כפר הנופש שייך כולו לבני השבט ומנוהל על ידם. יוסי נושא בתואר דירקטור של צ'אלאלאן לכל החיים. | en/yossi/page.tsx:219, 225; en/story/page.tsx:257-260 | "For three years he lived with them and they built Chalalan together."; "helped establish the park itself. The lodge is owned and run entirely by the Uchupiamona people"; "Yossi is its lifetime director" | fact; **his Hebrew:** HE3/HE4: "חי שם שלוש שנים כבן לשבט האוצ׳ופיאמונס. יחד הם בנו את צ׳אלאלאן כפר נופש אקולוגי"; HE1: "המאדידי" |
-| chalalan.recognition | ⟦טיוטה⟧ ב-2002 בחר המגזין National Geographic Traveler בצ'אלאלאן כאחד מעשרים יעדי התיירות החשובים בעולם. ב-2008 קיבל המקום את פרס Equator של UNDP. | en/story/page.tsx:269-275; components/StructuredData.tsx:51-52 | "National Geographic Traveler, 2002: Named one of the 20 most important tourist destinations in the world."; "Equator Prize, UNDP, 2008"; "Equator Prize, UNDP 2008, for Chalalan Ecolodge and Madidi National Park" | CLAIM; **his Hebrew:** lexicon: צ'אלאלאן |
+| chalalan.recognition | ב-2002 בחר המגזין National Geographic Traveler בצ'אלאלאן כאחד מעשרים יעדי התיירות החשובים בעולם. ב-2008 קיבל המקום את פרס Equator של UNDP. | en/story/page.tsx:269-275; components/StructuredData.tsx:51-52 | "National Geographic Traveler, 2002: Named one of the 20 most important tourist destinations in the world."; "Equator Prize, UNDP, 2008"; "Equator Prize, UNDP 2008, for Chalalan Ecolodge and Madidi National Park" | CLAIM; **his Hebrew:** lexicon: צ'אלאלאן |
 | chalalan.ambassador | ב-2025 מינו אותו בני השבט, באופן רשמי, לשגריר שבט האוצ'ופיאמונס בעולם. | en/yossi/page.tsx:148 | "In 2025, the Uchupiamona Nation formally appointed Yossi Ghinsberg as their Ambassador to the World." | fact; **his Hebrew:** HE2/HE3 (2018): "שגריר שבט האוצ׳ופימונס בעולם" (date conflict, see Conflicts between his texts) |
 | chalalan.imageAlt | אגם שקט מוקף יער גשם. השמיים והעננים משתקפים במים | image `yossi/chalalan/chalalan-lake.jpg`, viewed | (describes the picture; the alt does not name the lake, since the picture alone cannot show which lake it is) | interface |
 | ventures.title | מיזמים | none | | phrasing only |
 | ventures.siliconValley | בין 2013 ל-2017 היה יוסי בסיליקון ואלי והקים שתי חברות, Blinq ו-Headbox, סביב בינה מלאכותית וזהות דיגיטלית. הוא לא היה יזם טכנולוגי רגיל: אדם סקרן שפשוט הגיע, מוקף באנשים מנוסים ממנו בהרבה. | en/story/page.tsx:431-437 | "Between 2013 and 2017, he found himself in Silicon Valley, building companies around AI and digital identity [the clause "before either concept had a mainstream name" is omitted, see For Yossi to decide]. Two ventures: Blinq and Headbox. Not a conventional tech founder. A curious man who showed up, surrounded by people far more experienced" | fact; **his Hebrew:** lexicon: "סיליקון ואלי" HE1, HE2, HE3 |
 | ventures.honest | המיזמים האלה לא שינו את העולם. נשארו לו מהם חבלות, שמוכיחות שניסה. ולכן, כשהוא מדבר על אומץ בעולם חדש, יש לזה משקל. | en/story/page.tsx:442-444 | "The ventures did not change the world. He has the bruises to prove he tried. That is why, when he speaks about being brave in a new world, it lands." | fact |
-| ventures.cita | ⟦טיוטה⟧ במשך שש שנים כיהן כסגן נשיא של CITA, מרכז למחקר ולטיפול בהתמכרויות, שעסק בטיפול בנפגעי סמים אופיאטים. הוא עזר להקים שנים עשר מרכזי גמילה ושיקום, בשתים עשרה ערים בעולם. בישראל הקים את גלריית קולקטאקו לעיצוב פנים וחוץ. | en/story/page.tsx:321-323 | "He also served as Vice President of CITA, the Center for Research and Treatment of Addiction, helping establish twelve clinics in twelve cities around the world." | CLAIM; **his Hebrew:** NEW FACTS from his own Hebrew text, not on the English site: "שש שנים" HE1 (2023) "סגן נשיא ׳סיטא׳ במשך שש שנים"; opiates HE1 "מרכזי טיפול בנפגעי התמכרויות לסמים אופיאטים", HE4 (2019); "מרכזי גמילה ושיקום" HE2-HE4; Collectaco HE4 (2019) "גלריית קולקטאקו לעיצוב פנים וחוץ" (HE2/HE3 2018: "לעיצוב פנים ונוף") |
-| ventures.album | ⟦טיוטה⟧ ב-2008 הוציא אלבום של מוזיקת עולם, Mr Sleep and the Flying Green Toad, עם המוזיקאים Avishai Barnatan ו-Amir Paiss. שלושה עשר שירים, את כל המילים כתב בעצמו. הוא כתב גם ספר שני, "חוקי הג'ונגל", ספר תובנות שיצא בהוצאת כנרת זמורה ביתן. | en/story/page.tsx:391, 394-396 | "Mr Sleep and the Flying Green Toad."; "In 2008, Yossi released an album of world music and global fusion with musicians Avishai Barnatan and Amir Paiss. Thirteen tracks. Every lyric written by him." | CLAIM (musicians' names kept in Latin: the English site gives no Hebrew spelling); **his Hebrew:** NEW FACT from his own Hebrew text: HE4 (2019) "פרסם ספר תובנות בשם ׳חוקי הג׳ונגל׳ בהוצאת כנרת זמורה ביתן"; HE5 (2020) names both books. The English site has the book in English only (data/posts.ts:265 "Eventually I wrote a book about it: Laws of the Jungle"). Now ph(). |
+| ventures.cita | במשך שש שנים כיהן כסגן נשיא של CITA, מרכז למחקר ולטיפול בהתמכרויות, שעסק בטיפול בנפגעי סמים אופיאטים. הוא עזר להקים שנים עשר מרכזי גמילה ושיקום, בשתים עשרה ערים בעולם. בישראל הקים את גלריית קולקטאקו לעיצוב פנים וחוץ. | en/story/page.tsx:321-323 | "He also served as Vice President of CITA, the Center for Research and Treatment of Addiction, helping establish twelve clinics in twelve cities around the world." | CLAIM; **his Hebrew:** NEW FACTS from his own Hebrew text, not on the English site: "שש שנים" HE1 (2023) "סגן נשיא ׳סיטא׳ במשך שש שנים"; opiates HE1 "מרכזי טיפול בנפגעי התמכרויות לסמים אופיאטים", HE4 (2019); "מרכזי גמילה ושיקום" HE2-HE4; Collectaco HE4 (2019) "גלריית קולקטאקו לעיצוב פנים וחוץ" (HE2/HE3 2018: "לעיצוב פנים ונוף") |
+| ventures.album | ב-2008 הוציא אלבום של מוזיקת עולם, Mr Sleep and the Flying Green Toad, עם המוזיקאים Avishai Barnatan ו-Amir Paiss. שלושה עשר שירים, את כל המילים כתב בעצמו. הוא כתב גם ספר שני, "חוקי הג'ונגל", ספר תובנות שיצא בהוצאת כנרת זמורה ביתן. | en/story/page.tsx:391, 394-396 | "Mr Sleep and the Flying Green Toad."; "In 2008, Yossi released an album of world music and global fusion with musicians Avishai Barnatan and Amir Paiss. Thirteen tracks. Every lyric written by him." | CLAIM (musicians' names kept in Latin: the English site gives no Hebrew spelling); **his Hebrew:** NEW FACT from his own Hebrew text: HE4 (2019) "פרסם ספר תובנות בשם ׳חוקי הג׳ונגל׳ בהוצאת כנרת זמורה ביתן"; HE5 (2020) names both books. The English site has the book in English only (data/posts.ts:265 "Eventually I wrote a book about it: Laws of the Jungle"). Was ph() until 2026-11-24, now draft(). |
 | ventures.linoCambi | ב-2024 רכשו יוסי ופול טמפלר חלקת אדמה בדרום כרתים, מול הים הלובי. שם הם בונים את Lino Cambi, מקום נסתר לאנשים שרוצים להתרחק מהרעש ולחזור למה שחשוב. | en/story/page.tsx:521-523, 541-545; en/yossi/page.tsx:265 | "In May 2024, Yossi and Paul Templer signed the deed on a piece of land in South Crete... overlooking the Libyan Sea."; "Lino Cambi, a hidden sanctuary... where people who are done with noise can come to remember what matters"; "Together, they are building"; en/yossi/page.tsx:274 "purchased from Agapitos and Dimitra Zeakis" | fact (land size left out, see Conflicts) |
 | cta.* | ההרצאות / הזמנת הרצאה | none | | interface |
 
@@ -81,13 +81,13 @@ Known true facts allowed by the brief in addition to the English site (marked **
 
 | Key | Hebrew | English source | English text | Type |
 |---|---|---|---|---|
-| [0].title | ⟦טיוטה⟧ המפה נגמרה | owner decision (rename to "The Map Has Run Out", commit e086114 on main); data/keynotes.ts:29, 34 | "From Survival to Legacy"; "The map has run out." | PROPOSAL |
+| [0].title | המפה נגמרה | owner decision (rename to "The Map Has Run Out", commit e086114 on main); data/keynotes.ts:29, 34 | "From Survival to Legacy"; "The map has run out." | PROPOSAL |
 | [0].forWhom | ארגונים שחיים בשינוי מתמיד: הייטק, פיננסים, שירותים מקצועיים, וכל ארגון שהוודאות של פעם כבר לא עובדת בו וחייב להתאים את עצמו לעולם החדש. | data/keynotes.ts:53, 34 | "Technology, financial services, professional services, any organisation navigating disruption"; "the quiet collapse of certainty as a management tool" | fact; **his Hebrew:** HE5 (2020): "כולנו חייבים לדייק ולהתאים את עצמנו לעולם החדש" |
 | [0].takeaway | דרך חשיבה שעובדת כשאין ודאות. לחץ כאינסטינקט הישרדות שמופעל במקום הלא נכון. גמישות במקום אשליית השליטה, ויצירתיות תחת לחץ. אחרי ההרצאה מנהלים מקבלים החלטות מהר יותר וסומכים על שיקול הדעת שלהם, וצוותים מפסיקים לחכות שהמפה תחזור ומתחילים לנווט בשטח שלפניהם. | data/keynotes.ts:34, 39, 42-44, 47-49, 61 | "A way of thinking that works when nothing is certain. Leaders leave making faster decisions and trusting their own judgment. Teams stop waiting for the map to reappear and start navigating the terrain in front of them."; "Redefining stress as a misdirected survival instinct"; "The Illusion of Control: Why adaptability beats certainty"; "Innovation Under Pressure" | fact |
-| [1].title | ⟦טיוטה⟧ חוקי הג'ונגל | data/keynotes.ts:75 | "The Laws of the Jungle" | PROPOSAL |
+| [1].title | חוקי הג'ונגל | data/keynotes.ts:75 | "The Laws of the Jungle" | PROPOSAL |
 | [1].forWhom | כל קהל ארגוני: פיננסים, ביטוח, הייטק, בריאות, ארגונים מקצועיים. במיוחד צוותים שחוקים, צוותים שעובדים תחת לחץ קיצוני, ומקומות שהמורל בהם נמוך. | data/keynotes.ts:99, 101-105 | "All corporate audiences. Financial services, insurance, technology, healthcare, professional associations."; solves: "Low morale", "Burnout", "Teams facing extreme pressure" | fact |
 | [1].takeaway | ההבדל בין כאב לסבל. למה התנגדות גדולה היא סימן שאתם בדרך הנכונה. איך עוברים משיתוק לתועלת. צוותים שחוקים מוצאים מחדש טעם ומניע, אנשים מפסיקים להתחמק משיחות קשות ומהחלטות קשות, וחוסן מנטלי הופך למיומנות ולא לתכונת אופי. | data/keynotes.ts:83-95, 108-110 | takeaways "The Bigger Your Goal, The More Resistance You Face... the signal you're on the right path", "Pain Doesn't Mean Suffering", "From paralysis to usefulness"; outcomes "Burned-out teams rediscover purpose and drive", "People stop avoiding hard conversations and hard decisions", "Resilience becomes a skill, not a personality trait" | fact; **his Hebrew:** HE4 (2019), talk benefits: "איך מייצרים חוסן מנטלי כדי לעמוד בכל משימה" |
-| [2].title | ⟦טיוטה⟧ הישרדות אמיתית, הישרדות מדומיינת | data/keynotes.ts:122 | "Real Survival vs Imaginary Survival" | PROPOSAL |
+| [2].title | הישרדות אמיתית, הישרדות מדומיינת | data/keynotes.ts:122 | "Real Survival vs Imaginary Survival" | PROPOSAL |
 | [2].forWhom | כל קהל ארגוני, ובמיוחד צוותי הנהלה, ארגוני מכירות, אנשי מקצועות הבריאות, וכל צוות שעובד על טורים גבוהים כבר יותר מדי זמן. | data/keynotes.ts:146 | "All corporate audiences. Especially leadership teams, sales organisations, healthcare professionals, and any group running too hot for too long." | fact |
 | [2].takeaway | ההבחנה בין סכנה אמיתית לבין הלחץ היומיומי שהגוף מפרש כסכנה. כלים מעשיים להתמודדות עם מצבי לחץ: לכבות את תגובת הלחץ בזמן אמת, דרך הגוף ולא דרך המחשבה, כולל שתי טכניקות שיוסי מלמד רק בהרצאה הזו ובסדנה. מנהלים מורידים עומס מהצוות בלי לוותר על ביצועים, והארגון מקבל שפה משותפת להבין מה זה לחץ באמת. | data/keynotes.ts:127, 155-157; en/faq/page.tsx:78 | "The body cannot tell the difference... This keynote gives audiences the tools to switch the system off. Not through the mind... Through the body... in real time... the discernment between real and imaginary survival"; outcomes; "taught in the 'Real Survival vs Imaginary Survival' keynote and the full-day workshop. Yossi teaches them nowhere else." | fact; **his Hebrew:** HE2-HE4 talk subtitle: "להתמודדות עם מצבי לחץ ומשברים" |
 | [n].titleEn | The Map Has Run Out / The Laws of the Jungle / Real Survival vs Imaginary Survival | data/keynotes.ts:75, 122; owner rename for [0] | | fact (English names) |
@@ -113,8 +113,8 @@ All twelve ids are from `data/videos.ts` (a test compares them). Titles are Hebr
 | bjfqeAGa7cg | להיות קורבן זו בחירה | קליפ קצר. | data/videos.ts:26; VideosPageClient.tsx:118 ("Quick Clips") | fact |
 | R1-QtfpBxqI | לתת השראה לגיבורים | קליפ קצר. | data/videos.ts:27 | fact |
 | Jc6-JiOZw1Q | להציל את האמזונס | קליפ קצר. | data/videos.ts:28 | fact |
-| page.intro | הסרטונים כאן באנגלית, רובם מבמות בחו"ל. סרטונים בעברית יתווספו בהמשך. | data/videos.ts:9-28 (7 of 12 are "keynote") | | fact |
-| page.englishHeading / englishNote / metaDescription | באנגלית / מהבמות בחו"ל, מהסיפור, וקליפים קצרים. / קטעים מהרצאות של יוסי גינסברג על במות בעולם. הסרטונים באנגלית. | VideosPageClient.tsx:95, 105, 118 | | fact |
+| page.intro | קטעים מהרצאות של יוסי, מהבמה בישראל ומהבמות בעולם. (changed 2026-11-24; was "...סרטונים בעברית יתווספו בהמשך.") | data/videos.ts:9-28; the Calcalist clip (see below) | | fact |
+| page.hebrewHeading / englishHeading / englishNote / metaDescription | בישראל / בעולם / מהבמות בחו"ל, מהסיפור, וקליפים קצרים. הסרטונים באנגלית. / קטעים מהרצאות של יוסי גינסברג, מהבמה בישראל ומהבמות בעולם. (all changed 2026-11-24; were בעברית / באנגלית / no "הסרטונים באנגלית." / "...על במות בעולם. הסרטונים באנגלית.") "בישראל", not "בעברית": the Calcalist clip's spoken language is not confirmed. | VideosPageClient.tsx:95, 105, 118 | | fact |
 
 Left out: the three film clips (`Zlztb8QXGTg`, `Tn-lbqRLdcE`, `HruuP7Q90vg`), so the film is mentioned once only; `LCRjBVnQ5JM` (`siteConfig.speakerReelId`), which `data/videos.ts:9` says was removed as "bureau-branded".
 
@@ -146,9 +146,9 @@ All `translatedFrom: "en"`. Quotes are from the `testimonials` list. Names and o
 | [1] outlet, titleEn, year, url | Wondery / Amazon Podcasts · 2023 · Against The Odds — Season 32 (shown with a comma) · https://wondery.com/shows/against-the-odds/season/32/ | en/story/page.tsx:361, 367, 370 | "Wondery / Amazon Podcasts, 2023", "Against The Odds — Season 32" | fact |
 | [1].title | "Lost in the Rainforest", סדרת פודקאסט עלילתית בארבעה פרקים. | en/story/page.tsx:373-374 | "Lost in the Rainforest — a four-episode narrative series" | fact |
 | heAsSeenIn | The Washington Post, Newsweek, Variety, The Hollywood Reporter, CNN, Los Angeles Times, Discovery Channel, BBC, National Geographic | data/clients.ts:23-31; en/media/page.tsx:54-57 | "As Seen In" (TechCrunch left out per CLAUDE.md "No TechCrunch mentions") | CLAIM |
-| asSeenInTitle | ⟦טיוטה⟧ סיקרו את הסיפור: | en/media/page.tsx:54 | "As Seen In" | CLAIM |
+| asSeenInTitle | סיקרו את הסיפור: | en/media/page.tsx:54 | "As Seen In" | CLAIM |
 | intro | יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות. | en/story/page.tsx:334; brief; en/media/page.tsx:228 (Television), 54 (As Seen In: press) | "Forty years. The story still travels." Podcasts dropped from the line: the English media page has no podcast (Wondery is on the story page only) | fact |
-| israelTitle, israelPlaceholder, worldTitle, readCta, metaDescription | בישראל / כתבות וראיונות מהתקשורת הישראלית יופיעו כאן... / בעולם / לפריט המקורי / יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם. | none (the English site names no Israeli outlet) | | interface / phrasing only |
+| israelTitle, israelPlaceholder, worldTitle, readCta, metaDescription | בישראל / (israelPlaceholder cleared 2026-11-24) / בעולם / לפריט המקורי / יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם. | none (the English site names no Israeli outlet) | | interface / phrasing only |
 
 ## FAQ (`data/he/faq.ts`)
 
@@ -159,7 +159,7 @@ All `translatedFrom: "en"`. Quotes are from the `testimonials` list. Names and o
 | כמה זמן נמשכת הרצאה? | הרצאה רגילה נמשכת 60 דקות. אפשר גם הרצאה ואחריה שיחה מונחית של 20 עד 30 דקות, ולארגונים שרוצים חוויה עמוקה יותר יש יום סדנה מלא. | en/faq/page.tsx:44 | "The standard keynote is 60 minutes. Yossi also delivers a Keynote + Fireside Chat format (60 + 20–30 minutes) and a full-day workshop for organisations that want a deeper experience." | fact |
 | אפשר להתאים את ההרצאה לאירוע שלנו? | כן. כל הזמנה מתחילה בתדריך לפני האירוע, וההרצאה נבנית סביב הקהל שלכם, נושא האירוע והתוצאה שאתם רוצים. אין שתי הרצאות זהות. | en/faq/page.tsx:48 | "Yes. Every engagement begins with a pre-event brief... shaped around your audience, your theme, and the outcome you need. No two performances are identical." | fact |
 | ההרצאה רק פרונטלית? | לא. יוסי מרצה באולם, מרחוק, ובשילוב של השניים. כל פורמט מותאם לקהל ולמטרה, ולא מדובר בהרצאה מוקלטת. | en/faq/page.tsx:31 | "Yossi delivers keynotes in-person, virtually, and in hybrid formats. All three formats are tailored to the audience and outcome, not simply recorded presentations." | fact |
-| לאיזה גודל קהל? | ⟦טיוטה⟧ ממפגשי הנהלה קטנים ועד במות ראשיות מול אלפי אנשים, כולל הבמה הראשית של כנס MDRT ב-2025. | en/faq/page.tsx:52 | "Yossi has delivered to intimate executive gatherings and to main-stage audiences of thousands — including the MDRT Main Stage 2025." (numbers left out, see Conflicts) | CLAIM |
+| לאיזה גודל קהל? | ממפגשי הנהלה קטנים ועד במות ראשיות מול אלפי אנשים, כולל הבמה הראשית של כנס MDRT ב-2025. | en/faq/page.tsx:52 | "Yossi has delivered to intimate executive gatherings and to main-stage audiences of thousands — including the MDRT Main Stage 2025." (numbers left out, see Conflicts) | CLAIM |
 | מה זה יום הסדנה? | יום שלם שיוסי מעצב ומוביל סביב התוצאה שהארגון מחפש, במשרדים או מחוץ להם. האורך, המקום והמבנה נקבעים יחד אחרי תדריך מעמיק. יוסי מוביל את כל היום ומעביר בעצמו את שתי הטכניקות שהוא מלמד רק בסדנה ובהרצאה '{heKeynoteNames.realVsImaginary}'. לחלקים שמתאימים לכך הוא מצרף מנחים מהשורה הראשונה. (the talk's name is built from data/he/keynotes.ts) | en/keynotes/page.tsx:182, 206; en/faq/page.tsx:78 | "designs and leads a workshop built around the outcome you are after. On premises or off-site. The length, the location, and the shape are decided with you, after a deep brief."; "Yossi runs the entire program and personally delivers the two signature techniques"; "Top facilitators for the modules that fit"; "Yossi teaches them nowhere else" | fact |
 | איך מזמינים? | ממלאים את טופס ההזמנה באתר. הפנייה מגיעה לנציגים של יוסי בישראל, ונחזור אליכם. | design doc, lines 125-127, 176-178 (Hebrew form routes to the Israeli agent) | | fact (project design, not the English site) |
 | page metaDescription | שפה, אורך, פורמטים והתאמה לאירוע: מה שמארגנים שואלים לפני שמזמינים הרצאה של יוסי גינסברג. | none | | phrasing only |
@@ -173,13 +173,13 @@ Left out of the FAQ: fees, currency, the foreign bureaus, "travels from Californ
 | `data/he/site.ts` draftBanner.text | גרסת טיוטה לבדיקה. התוכן עוד לא אושר. | none | interface |
 | `data/he/site.ts` draftBanner.label | הודעה על גרסת טיוטה | none | interface |
 | `data/he/site.ts` footer.rights, notFound.title, notFound.body | unchanged text, `ph()` switched to `draft()` | none | phrasing only |
-| `data/he/booking.ts`, `data/he/thanks.ts`, `data/he/legal.ts` | unchanged text, every `ph()` switched to `draft()` (stamp rule). Form fields, validation, the contact route and the counsel placeholders are unchanged. | none | phrasing only / interface |
+| `data/he/booking.ts`, `data/he/thanks.ts`, `data/he/legal.ts` | unchanged text, every `ph()` switched to `draft()` (stamp rule). 2026-11-24 changes are in "Complete pass" below. | none | phrasing only / interface |
 
 ---
 
 ## Claims for Yossi to confirm
 
-Each line keeps `ph()` so it shows a visible ⟦טיוטה⟧ stamp on the page.
+Until 2026-11-24 each line kept `ph()` and showed a visible ⟦טיוטה⟧ stamp. Now every line is `draft()` with no stamp (the banner marks the site). Rows 12 onward were added 2026-11-24. Claim 3 (the ASPIRE caption) is no longer on the site.
 
 | # | Hebrew line | English source | Note |
 |---|---|---|---|
@@ -194,6 +194,21 @@ Each line keeps `ph()` so it shows a visible ⟦טיוטה⟧ stamp on the page.
 | 9 | story `ventures.cita`: "שעסק בטיפול בנפגעי סמים אופיאטים" | HE1 (2023): "מרכזי טיפול בנפגעי התמכרויות לסמים אופיאטים"; HE2/HE3 (2018), HE4 (2019): "הטיפול בנפגעי סמים אופיאטים (הרואין, מטדון וכו׳)" | From his own Hebrew text, not on the English site (which says addiction in general). His "מחלוצי/מחלוצות הטיפול" (pioneers) is not used. The English verb "helping establish" is kept over his "הקים" / "פתח". |
 | 10 | story `ventures.cita`: "בישראל הקים את גלריית קולקטאקו לעיצוב פנים וחוץ." | HE4 (2019): "הקים את גלריית קולקטאקו לעיצוב פנים וחוץ" (HE2/HE3 2018: "גלריית קולקטאקו החדשנית לעיצוב פנים ונוף") | From his own Hebrew text, not on the English site. "החדשנית" dropped. The year and "returned with his family" (HE4) are left out. Is the gallery still open, and is this the spelling he wants? |
 | 11 | story `ventures.album`: "הוא כתב גם ספר שני, "חוקי הג'ונגל", ספר תובנות שיצא בהוצאת כנרת זמורה ביתן." | HE4 (2019): "פרסם ספר תובנות בשם ׳חוקי הג׳ונגל׳ בהוצאת כנרת זמורה ביתן"; HE5 (2020) | From his own Hebrew text, not on the English site (which mentions the book in English only, data/posts.ts:265). HE5's "רבי מכר בארץ ובעולם" is not used. The `album` line moved from `draft()` to `ph()` for this. |
+
+| 12 | home `proof.israelLine`; story `stage.israelTitle` + `stage.israel[0]` "המועצה המקומית כפר כמא, ערב מלגות, 2025" | Census (`shared-mind/commons/2026-11-23_lucienne-to-vandam_hebrew-site-assets.md` §3): poster, OCR snippet, Drive `1Va70TUc6pznTV6BFRHvKl2DqoWlQQoyk`, 13.2.2025 | from a document in his files; not yet confirmed by Yossi; needs his word before launch |
+| 13 | story `stage.israel[1]` "Nataraj, הרצאה, 2022" | Census §1 and §3: folder `_INDEX.md` (opened), talk to an Israeli audience at Nataraj, 2022-11-12 | from a document in his files; not yet confirmed by Yossi; needs his word before launch. Name kept in Latin: the census gives no Hebrew spelling |
+| 14 | story `stage.israel[3]` "חיל החינוך בצה\"ל, הרצאה, 2019"; in `proof.israelLine` | Census §3: scanned order form, OCR snippet, Drive `1WV-fWpmZFf7IPOSngsVyRoVOFOb2qKYN`, 2019-11-20, ordered via Rafi Agiv | from a document in his files; not yet confirmed by Yossi; needs his word before launch. The venue the document names (Sde Teiman) is left out |
+| 15 | story `stage.israel[7]` "גמלאי משרד ראש הממשלה, הרצאה, 2018"; was in `proof.israelLine` draft 1 | Census §3: `Work 2018.xlsx`, opened, 12.2.2018 ("as written in the sheet") | from a document in his files; not yet confirmed by Yossi; needs his word before launch |
+| 16 | story `stage.israel[8]` "סינמה סיטי, הרצאה קצרה לאנשי המכירות, 2018"; in `proof.israelLine` | Census §3: same sheet, 22.1 and 11.2.2018, "salespeople screening and short lecture" | from a document in his files; not yet confirmed by Yossi; needs his word before launch. "Screening" left out (film rule) |
+| 17 | story `stage.israel[9]` "קהילת INSIDERS, אירוע קהילה" | Census §3: doc opened, Drive `1D_CrgSDKtN0Kog5lbPKihtakZMeTMFUHqe7b_9yGZiE`, doc dated 2019-08-08, event date not stated | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No year (the event date is not stated); the co-speaker's name is left out |
+| 18 | story `stage.israel[2]` "Google ישראל, הרצאה, 2020"; in `proof.israelLine` | his email, event confirmed by later correspondence (researcher, read-only, relayed by the controller 2026-11-24) | not yet confirmed by Yossi; needs his word before launch. No feedback quote from email is used (no consent; one is off the record) |
+| 19 | story `stage.israel[4]` "מלון פסטורל, כפר בלום, הרצאה, 2019" | his email, event confirmed by later correspondence | as 18 |
+| 20 | story `stage.israel[5]` "קיבוץ אלרום, הרצאה, 2019" | his email, event confirmed by later correspondence | as 18 |
+| 21 | story `stage.israel[6]` "ועידת התיירות של כלכליסט, 2018"; in `proof.israelLine`; home `israelVideo.title` "מהבמה בישראל" + `israelVideo.caption` "ועידת התיירות של כלכליסט, 2018"; videos `heVideos[12]` (YouTube `4nKdAjljNhU`) title "ועידת התיירות 2018", context "הרצאה בוועידת התיירות של כלכליסט, 2018." | YouTube, Calcalist channel, public title "ועידת התיירות 2018 - יוסי גינסברג"; embedded on gilataviv.co.il speaker page under "צפו בקטע מההרצאה" | spoken language not confirmed; Yossi to confirm and to approve use. The video was not played. No text says it is in Hebrew; the group heading is "בישראל" |
+| 22 | media `heIsraelMedia[0]` "הפודקאסט של ערן שטרן" · 2021, "יוסי התארח בפודקאסט." | Census §4: podcast log, opened, Drive `1Am0XD-MmFZKXN14iShJyvKpQmNjihsQf`: Eran Stern podcast, 2 May 2021 (confirmed) | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No link is known |
+| 23 | media `heIsraelMedia[1]` ynet: "בחזרה מטואיצ'י", גרסת המסך הגדול: "טיול בפארק לעומת המציאות" (https://www.ynet.co.il/articles/0,7340,L-5124308,00.html) | his agent's public page (gilataviv.co.il), "מה אמרו בתקשורת" | headline copied from his agent's public page; the article itself was not opened; Yossi to approve. A published headline about the film, not our copy: the film-once test exempts it explicitly |
+| 24 | media `heIsraelMedia[2]` ynet: בחזרה מטואיצ'י לאוהל בחצר: בית של שורד (https://www.ynet.co.il/articles/0,7340,L-4023042,00.html) | his agent's public page, "מה אמרו בתקשורת" | headline copied from his agent's public page; the article itself was not opened; Yossi to approve, especially this one, which is about his home. The controller's message wrapped it in quotes; they were read as delimiters, not part of the headline |
+| 25 | story `stage.shalva` "יוסי הוא גם שגריר רצון טוב של שלווה, ארגון שעוזר לילדים עם מוגבלויות." | his own Hebrew texts HE2, HE3 (2018): "הוא גם שגריר של רצון טוב של ארגון שלווה שעוזר לילדים עם מוגבלויות." | from his own 2018 text, may be out of date; Yossi to confirm. Supersedes row 41 of "not used" below. The family line beside it in his text stays out |
 
 ## Proposals (Yossi's to decide)
 
@@ -286,7 +301,7 @@ His own words, verbatim (typos as in the original). Any of them can be overruled
 | 38 | "יוסי ... נאלץ לפתח יכולות שלעיתים נדמה שאפילו הצליחו לעקוף את חוקי הטבע." | HE4 2019 | Grandeur. |
 | 39 | Where he lives: "הוא מחלק את חייו בין אוסטרליה לישראל" / "כיום הוא מחלק את חייו בין אוסטרליה לישראל" / "בשנת 2008 חזר עם משפחתו לישראל" | HE2, HE3 2018; HE4 2019 | Stale and private; the site says nothing about where he lives. |
 | 40 | Family: "אב לילדה עם צרכים מיוחדים בעצמו וכן לעוד שתי בנות ובן" / "אב לארבעה ילדים" | HE2, HE3 2018; HE4 2019 | Family is private. |
-| 41 | "הוא גם שגריר של רצון טוב של ארגון שלווה שעוזר לילדים עם מוגבלויות." | HE2, HE3 2018 | Not on the English site, may be out of date (2018), and tied to the family line above. Yossi's call. |
+| 41 | "הוא גם שגריר של רצון טוב של ארגון שלווה שעוזר לילדים עם מוגבלויות." | HE2, HE3 2018 | USED since 2026-11-24 as a draft claim (Claims row 25, story `stage.shalva`), without the family line. |
 | 42 | "הוא יזם טכנולוגי שפעל בסיליקון ואלי, רמאללה ותל אביב בפיתוח אפלקציות מתקדמות." | HE2, HE3 2018 | Ramallah and Tel Aviv are not on the English site and nothing names what was built; not concrete enough. |
 | 43 | "ספרו ׳בחזרה מטואיצ׳י׳ מעולם לא יצא מדפוס בישראל במשך למעלה משלושים שנה" / "עדיין מודפס ונמכר" | HE2, HE3 2018; HE4 2019 | True as of 2018 by his account, but about the book rather than what came after, and needs a current check. The cult-status line is used instead. |
 | 44 | "הדיסקברי צ׳אנל הפיק סרט דוקומנטרי מצליח המבוסס על הספר" | HE2, HE3 2018; HE4 2019 | "מצליח" brags; and the English site calls it a dramatised series episode, not a documentary film (see Conflicts). The media page keeps the English description. |
@@ -321,3 +336,64 @@ Yossi: the stage photo `stage/on-stage.jpg` is dated, "with hair on my head, I h
 - Story page, stage section, now uses `stage/carousel-5.jpg` (viewed: a very large dark hall full of people; Yossi centre stage under a big screen showing a "Real Survival vs Imaginary Survival" slide; his figure on two side screens; "JEUNESSE EXPO ONE" on the stage front).
 - The caption "כנס ASPIRE, ICE קרקוב, 2017. 2,000 משתתפים" is removed with the old photo, so Claim 3 above no longer appears on the Hebrew site. No caption was written for the new photo: the event and year are not verified.
 - English site, not changed: `en/story/page.tsx:453-458` still shows `on-stage.jpg` captioned ASPIRE, Krakow, 2017. If the photo is more than ten years old, that caption cannot be right. For Yossi to rule.
+
+
+## Complete pass, 2026-11-24
+
+Owner's instruction: "complete all pages with the text you have. I'll edit later." The launch gate still blocks; what changed is how the draft looks.
+
+### Was stamped on the page until 2026-11-24
+
+These rows showed a ⟦טיוטה⟧ stamp in the page text (`ph()`). Their text is unchanged; they are now `draft()` and the sticky banner marks the site. They are still claims or proposals, listed above.
+
+| File | Key path | Kind |
+|---|---|---|
+| data/he/home.ts | heHome.proof.title | Claim 1 |
+| data/he/story.ts | heStory.book.film | Proposal 1 |
+| data/he/story.ts | heStory.stage.scale | Claim 2 |
+| data/he/story.ts | heStory.chalalan.recognition | Claim 4 |
+| data/he/story.ts | heStory.ventures.cita | Claims 5, 8, 9, 10 |
+| data/he/story.ts | heStory.ventures.album | Claim 11 |
+| data/he/keynotes.ts | heKeynotes[0].title | Proposal 2 |
+| data/he/keynotes.ts | heKeynotes[1].title | Proposal 3 |
+| data/he/keynotes.ts | heKeynotes[2].title | Proposal 4 |
+| data/he/media.ts | heMediaPage.asSeenInTitle | Claim 7 |
+| data/he/faq.ts | heFaq[5].a | Claim 6 |
+
+### New strings (sources)
+
+| File, key | Hebrew | Source | Type |
+|---|---|---|---|
+| keynotes `heKeynotesPage.workshopTitle` | יום סדנה מלא | en/keynotes/page.tsx:175 "The full-day workshop." | fact |
+| keynotes `heKeynotesPage.workshopBody` | הרצאה מזיזה אולם לשעה. יום שלם מעביר אנשים דרך משהו שהם לא שוכחים. לארגונים שרוצים יותר מהרצאה, ... אחרי תדריך מעמיק. | en/keynotes/page.tsx:178-182 "A keynote moves a room for an hour. A full day moves people through something they don't forget." / "For organisations that want more than a talk, Yossi designs and leads a workshop built around the outcome you are after. On premises or off-site. The length, the location, and the shape are decided with you, after a deep brief." | fact |
+| keynotes `heKeynotesPage.workshopFit` | מתאים לימי הנהלה, לכנסי פתיחה של צוותי מכירות, ולצוותים שעוברים שינוי. | en/keynotes/page.tsx "Best for:" "Leadership offsites... Sales kickoffs... Culture work for teams going through change." | fact |
+| booking `form.errors.summaryOne` / `summaryMany` | יש שדה אחד שצריך לתקן. / יש {count} שדות שצריך לתקן. | none | interface |
+| booking `form.honeypotLabel` | לא למילוי | none (label of the hidden anti-spam field; aria-hidden, people never see it) | interface |
+| home `proof.israelLine`, `israelVideo.*`; story `stage.israelTitle`, `stage.israel[*]`, `stage.shalva`; videos `heVideos[12]`; media `heIsraelMedia[*]` | see Claims 12-25 | see Claims 12-25 | CLAIM |
+
+Not added: the "one talk, and one for the community" offer on the keynotes page (it is on the English /yossi page, not the English keynotes page; it stays on the story page).
+
+### Changed strings
+
+videos `heVideosPage.intro`, `metaDescription`, `hebrewHeading`, `englishHeading`, `englishNote` (see the Videos table); legal `accessibility.missingTitle` and `privacy.missingTitle` "פרטים שחסרים" → "פרטים שעוד יושלמו" (the counsel list is now a plain list under this heading, not dashed boxes); legal `accessibility.measures[3]` → "לכל שדה בטופס יש תווית. שגיאות מוצמדות לשדה שלהן, ומעל הטופס מוכרזת שורה אחת שמסכמת כמה שדות צריך לתקן." (matches the new error summary).
+
+### Cleared strings (value "", the page renders nothing for them)
+
+home `hero.footagePlaceholder`; keynotes `heKeynotesPage.empty`; videos `heVideosPage.empty`; endorsements `heEndorsementsPage.empty`; media `heMediaPage.israelPlaceholder`, `heMediaPage.empty`; faq `heFaqPage.empty`; site `footer.contactPlaceholder`.
+
+### Census items left out, and why
+
+| Item | Why |
+|---|---|
+| Harel (insurance) | deck filename only |
+| Talkhouse Tel Aviv | filenames only, language unknown |
+| "Mizrachi keynote", 200 bank managers | snippet only, client not confirmed, upcoming/unclear |
+| Longevity conference lecture | not opened |
+| Elta | upcoming (scheduled 30 Nov 2026), from the design doc, not delivered |
+| Shalva (as a client, 2019 deck) | deck filename only; his ambassador role is used instead (Claim 25) |
+| Jungle pre-premiere and screenings (Ramat Gan, Hod Hasharon, Modiin, 2018) | film events; the film is mentioned once only |
+| Ohad the Nomad (booked), Radio Tel Aviv with Guri Alfi (booked) | booked, not confirmed as aired |
+| Shark Tank Israel (agreement signed; home-take video) | not confirmed as aired; brief says leave out |
+| Hebrew print interview (COVID period) | outlet and interviewer not named; text reversed |
+| All footage in census §1 | none played; only the Calcalist clip (public, titled) is used, from the controller's message |
+| Hebrew endorsements | census found none |
