@@ -39,7 +39,7 @@ Known true facts allowed by the brief in addition to the English site (marked **
 | keynotes.body | שלוש הרצאות. כל אחת נבנית מחדש לקהל, לנושא האירוע ולמה שאתם רוצים שיקרה בו. | en/keynotes/page.tsx:53, 59-60 | "Three keynotes."; "Every keynote is tailored to your audience, your theme, and the outcome you need." | fact |
 | keynotes.cta | לפירוט ההרצאות | none | | interface |
 | keynotes.imageAlt | במה גדולה בכנס: על מסך ענק דיוקן של יוסי גינסברג, והוא עצמו עומד בקצה הבמה וידיו מורמות | image `stage/hero-2.jpg` (used by the English site in components/sections/Hero.tsx:8), viewed. Replaces `stage/hero-1.jpg`, removed by controller ruling (a man seen from behind, not identifiable) | (describes the picture) | interface |
-| hero.imageAlt | יוסי גינסברג על במה חשוכה, במקטורן חום, מדבר בידיים פתוחות. בקדמת התמונה צלליות של הקהל | image `stage/on-stage.jpg`, viewed | (describes the picture) | interface |
+| hero.imageAlt | יוסי גינסברג על במה, במקטורן ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים (review pass 2026-11-24: the scene only, no words about his appearance) | image `stage/carousel-4.jpg` (since the photo change 2026-11-24), viewed | (describes the picture); also the share image's alt | interface |
 | hero.footagePlaceholder | (cleared 2026-11-24; was "כאן יופיע סרטון הרצאה בעברית") | none | | the hero shows the photo alone, at full opacity |
 | reel.title | מהבמות בעולם | none | | phrasing only |
 | reel.caption | קטעים מהרצאות של יוסי על במות בחו"ל. הסרטון באנגלית. | components/sections/DemoReel.tsx:15-24 (the English home's speaker reel, `/videos/speaker-reel.mp4`); frames viewed: stage footage only | "Speaker reel — self-hosted" | fact |
@@ -114,7 +114,7 @@ All twelve ids are from `data/videos.ts` (a test compares them). Titles are Hebr
 | R1-QtfpBxqI | לתת השראה לגיבורים | קליפ קצר. | data/videos.ts:27 | fact |
 | Jc6-JiOZw1Q | להציל את האמזונס | קליפ קצר. | data/videos.ts:28 | fact |
 | page.intro | קטעים מהרצאות של יוסי, מהבמה בישראל ומהבמות בעולם. (changed 2026-11-24; was "...סרטונים בעברית יתווספו בהמשך.") | data/videos.ts:9-28; the Calcalist clip (see below) | | fact |
-| page.hebrewHeading / englishHeading / englishNote / metaDescription | בישראל / בעולם / מהבמות בחו"ל, מהסיפור, וקליפים קצרים. הסרטונים באנגלית. / קטעים מהרצאות של יוסי גינסברג, מהבמה בישראל ומהבמות בעולם. (all changed 2026-11-24; were בעברית / באנגלית / no "הסרטונים באנגלית." / "...על במות בעולם. הסרטונים באנגלית.") "בישראל", not "בעברית": the Calcalist clip's spoken language is not confirmed. | VideosPageClient.tsx:95, 105, 118 | | fact |
+| page.hebrewHeading / englishHeading / englishNote / metaDescription | בישראל / בעולם / קטעים מהבמות בחו"ל, מתוך הסיפור וקליפים קצרים. כל הסרטונים כאן באנגלית. (englishNote changed again in the review pass 2026-11-24; was "מהבמות בחו"ל, מהסיפור, וקליפים קצרים. הסרטונים באנגלית.") / קטעים מהרצאות של יוסי גינסברג, מהבמה בישראל ומהבמות בעולם. (all changed 2026-11-24; were בעברית / באנגלית / no "הסרטונים באנגלית." / "...על במות בעולם. הסרטונים באנגלית.") "בישראל", not "בעברית": the Calcalist clip's spoken language is not confirmed. | VideosPageClient.tsx:95, 105, 118 | | fact |
 
 Left out: the three film clips (`Zlztb8QXGTg`, `Tn-lbqRLdcE`, `HruuP7Q90vg`), so the film is mentioned once only; `LCRjBVnQ5JM` (`siteConfig.speakerReelId`), which `data/videos.ts:9` says was removed as "bureau-branded".
 
@@ -147,8 +147,8 @@ All `translatedFrom: "en"`. Quotes are from the `testimonials` list. Names and o
 | [1].title | "Lost in the Rainforest", סדרת פודקאסט עלילתית בארבעה פרקים. | en/story/page.tsx:373-374 | "Lost in the Rainforest — a four-episode narrative series" | fact |
 | heAsSeenIn | The Washington Post, Newsweek, Variety, The Hollywood Reporter, CNN, Los Angeles Times, Discovery Channel, BBC, National Geographic | data/clients.ts:23-31; en/media/page.tsx:54-57 | "As Seen In" (TechCrunch left out per CLAUDE.md "No TechCrunch mentions") | CLAIM |
 | asSeenInTitle | סיקרו את הסיפור: | en/media/page.tsx:54 | "As Seen In" | CLAIM |
-| intro | יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות. | en/story/page.tsx:334; brief; en/media/page.tsx:228 (Television), 54 (As Seen In: press) | "Forty years. The story still travels." Podcasts dropped from the line: the English media page has no podcast (Wondery is on the story page only) | fact |
-| israelTitle, israelPlaceholder, worldTitle, readCta, metaDescription | בישראל / (israelPlaceholder cleared 2026-11-24) / בעולם / לפריט המקורי / יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם. | none (the English site names no Israeli outlet) | | interface / phrasing only |
+| intro | יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה, בעיתונות ובפודקאסטים. (review pass 2026-11-24; was "...בטלוויזיה ובעיתונות.") | en/story/page.tsx:334; brief; en/media/page.tsx:228 (Television), 54 (As Seen In: press); podcasts: en/story/page.tsx (Wondery) and the Israeli podcast (Claim 22) | "Forty years. The story still travels." Podcasts are back in the line: the page itself lists two | fact |
+| israelTitle, israelPlaceholder, worldTitle, readCta, metaDescription | בישראל / (israelPlaceholder cleared 2026-11-24) / בעולם / לפריט המקורי / יוסי גינסברג בתקשורת, בישראל ובעולם: טלוויזיה, עיתונות ופודקאסטים. (metaDescription changed in the review pass 2026-11-24; was "יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם.") | none (the English site names no Israeli outlet) | | interface / phrasing only |
 
 ## FAQ (`data/he/faq.ts`)
 
@@ -179,7 +179,7 @@ Left out of the FAQ: fees, currency, the foreign bureaus, "travels from Californ
 
 ## Claims for Yossi to confirm
 
-Until 2026-11-24 each line kept `ph()` and showed a visible ⟦טיוטה⟧ stamp. Now every line is `draft()` with no stamp (the banner marks the site). Rows 12 onward were added 2026-11-24. Claim 3 (the ASPIRE caption) is no longer on the site.
+Until 2026-11-24 each line kept `ph()` and showed a visible ⟦טיוטה⟧ stamp. Now every line is `draft()` with no stamp (the banner marks the site). Rows 12 onward were added 2026-11-24. Claim 3 (the ASPIRE caption) is no longer on the site. Rows 14, 15, 16, 18, 20, 24 and 25 are held back since the review pass (see "Held back until Yossi confirms").
 
 | # | Hebrew line | English source | Note |
 |---|---|---|---|
@@ -195,26 +195,40 @@ Until 2026-11-24 each line kept `ph()` and showed a visible ⟦טיוטה⟧ sta
 | 10 | story `ventures.cita`: "בישראל הקים את גלריית קולקטאקו לעיצוב פנים וחוץ." | HE4 (2019): "הקים את גלריית קולקטאקו לעיצוב פנים וחוץ" (HE2/HE3 2018: "גלריית קולקטאקו החדשנית לעיצוב פנים ונוף") | From his own Hebrew text, not on the English site. "החדשנית" dropped. The year and "returned with his family" (HE4) are left out. Is the gallery still open, and is this the spelling he wants? |
 | 11 | story `ventures.album`: "הוא כתב גם ספר שני, "חוקי הג'ונגל", ספר תובנות שיצא בהוצאת כנרת זמורה ביתן." | HE4 (2019): "פרסם ספר תובנות בשם ׳חוקי הג׳ונגל׳ בהוצאת כנרת זמורה ביתן"; HE5 (2020) | From his own Hebrew text, not on the English site (which mentions the book in English only, data/posts.ts:265). HE5's "רבי מכר בארץ ובעולם" is not used. The `album` line moved from `draft()` to `ph()` for this. |
 
-| 12 | home `proof.israelLine`; story `stage.israelTitle` + `stage.israel[0]` "המועצה המקומית כפר כמא, ערב מלגות, 2025" | Census (`shared-mind/commons/2026-11-23_lucienne-to-vandam_hebrew-site-assets.md` §3): poster, OCR snippet, Drive `1Va70TUc6pznTV6BFRHvKl2DqoWlQQoyk`, 13.2.2025 | from a document in his files; not yet confirmed by Yossi; needs his word before launch |
+| 12 | home `proof.israelLine` "ובישראל: ועידת התיירות של כלכליסט, המועצה המקומית כפר כמא, מלון פסטורל כפר בלום." (review pass 2026-11-24; names only rows still on the story list); story `stage.israelTitle` "על במות בישראל" + `stage.israel[0]` "המועצה המקומית כפר כמא, ערב מלגות, 2025" | Census (`shared-mind/commons/2026-11-23_lucienne-to-vandam_hebrew-site-assets.md` §3): poster, OCR snippet, Drive `1Va70TUc6pznTV6BFRHvKl2DqoWlQQoyk`, 13.2.2025 | from a document in his files; not yet confirmed by Yossi; needs his word before launch. The story page shows the list above the community-talk offer |
 | 13 | story `stage.israel[1]` "Nataraj, הרצאה, 2022" | Census §1 and §3: folder `_INDEX.md` (opened), talk to an Israeli audience at Nataraj, 2022-11-12 | from a document in his files; not yet confirmed by Yossi; needs his word before launch. Name kept in Latin: the census gives no Hebrew spelling |
-| 14 | story `stage.israel[3]` "חיל החינוך בצה\"ל, הרצאה, 2019"; in `proof.israelLine` | Census §3: scanned order form, OCR snippet, Drive `1WV-fWpmZFf7IPOSngsVyRoVOFOb2qKYN`, 2019-11-20, ordered via Rafi Agiv | from a document in his files; not yet confirmed by Yossi; needs his word before launch. The venue the document names (Sde Teiman) is left out |
-| 15 | story `stage.israel[7]` "גמלאי משרד ראש הממשלה, הרצאה, 2018"; was in `proof.israelLine` draft 1 | Census §3: `Work 2018.xlsx`, opened, 12.2.2018 ("as written in the sheet") | from a document in his files; not yet confirmed by Yossi; needs his word before launch |
-| 16 | story `stage.israel[8]` "סינמה סיטי, הרצאה קצרה לאנשי המכירות, 2018"; in `proof.israelLine` | Census §3: same sheet, 22.1 and 11.2.2018, "salespeople screening and short lecture" | from a document in his files; not yet confirmed by Yossi; needs his word before launch. "Screening" left out (film rule) |
-| 17 | story `stage.israel[9]` "קהילת INSIDERS, אירוע קהילה" | Census §3: doc opened, Drive `1D_CrgSDKtN0Kog5lbPKihtakZMeTMFUHqe7b_9yGZiE`, doc dated 2019-08-08, event date not stated | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No year (the event date is not stated); the co-speaker's name is left out |
-| 18 | story `stage.israel[2]` "Google ישראל, הרצאה, 2020"; in `proof.israelLine` | his email, event confirmed by later correspondence (researcher, read-only, relayed by the controller 2026-11-24) | not yet confirmed by Yossi; needs his word before launch. No feedback quote from email is used (no consent; one is off the record) |
-| 19 | story `stage.israel[4]` "מלון פסטורל, כפר בלום, הרצאה, 2019" | his email, event confirmed by later correspondence | as 18 |
-| 20 | story `stage.israel[5]` "קיבוץ אלרום, הרצאה, 2019" | his email, event confirmed by later correspondence | as 18 |
-| 21 | story `stage.israel[6]` "ועידת התיירות של כלכליסט, 2018"; in `proof.israelLine`; home `israelVideo.title` "מהבמה בישראל" + `israelVideo.caption` "ועידת התיירות של כלכליסט, 2018"; videos `heVideos[12]` (YouTube `4nKdAjljNhU`) title "ועידת התיירות 2018", context "הרצאה בוועידת התיירות של כלכליסט, 2018." | YouTube, Calcalist channel, public title "ועידת התיירות 2018 - יוסי גינסברג"; embedded on gilataviv.co.il speaker page under "צפו בקטע מההרצאה" | spoken language not confirmed; Yossi to confirm and to approve use. The video was not played. No text says it is in Hebrew; the group heading is "בישראל" |
-| 22 | media `heIsraelMedia[0]` "הפודקאסט של ערן שטרן" · 2021, "יוסי התארח בפודקאסט." | Census §4: podcast log, opened, Drive `1Am0XD-MmFZKXN14iShJyvKpQmNjihsQf`: Eran Stern podcast, 2 May 2021 (confirmed) | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No link is known |
-| 23 | media `heIsraelMedia[1]` ynet: "בחזרה מטואיצ'י", גרסת המסך הגדול: "טיול בפארק לעומת המציאות" (https://www.ynet.co.il/articles/0,7340,L-5124308,00.html) | his agent's public page (gilataviv.co.il), "מה אמרו בתקשורת" | headline copied from his agent's public page; the article itself was not opened; Yossi to approve. A published headline about the film, not our copy: the film-once test exempts it explicitly |
-| 24 | media `heIsraelMedia[2]` ynet: בחזרה מטואיצ'י לאוהל בחצר: בית של שורד (https://www.ynet.co.il/articles/0,7340,L-4023042,00.html) | his agent's public page, "מה אמרו בתקשורת" | headline copied from his agent's public page; the article itself was not opened; Yossi to approve, especially this one, which is about his home. The controller's message wrapped it in quotes; they were read as delimiters, not part of the headline |
-| 25 | story `stage.shalva` "יוסי הוא גם שגריר רצון טוב של שלווה, ארגון שעוזר לילדים עם מוגבלויות." | his own Hebrew texts HE2, HE3 (2018): "הוא גם שגריר של רצון טוב של ארגון שלווה שעוזר לילדים עם מוגבלויות." | from his own 2018 text, may be out of date; Yossi to confirm. Supersedes row 41 of "not used" below. The family line beside it in his text stays out |
+| 14 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H4 | | |
+| 15 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H6 | | |
+| 16 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H3 | | |
+| 17 | story `stage.israel[9]` "INSIDERS, מפגש קהילה" (review pass 2026-11-24; was "קהילת INSIDERS, אירוע קהילה"; INSIDERS renders in bdi) | Census §3: doc opened, Drive `1D_CrgSDKtN0Kog5lbPKihtakZMeTMFUHqe7b_9yGZiE`, doc dated 2019-08-08, event date not stated | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No year (the event date is not stated); the co-speaker's name is left out |
+| 18 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H5 | | |
+| 19 | story `stage.israel[4]` "מלון פסטורל כפר בלום, הרצאה, 2019" (review pass 2026-11-24: one row shape, name, kind, year; was "מלון פסטורל, כפר בלום, הרצאה, 2019"); in `proof.israelLine` | his email, event confirmed by later correspondence (researcher, read-only, relayed by the controller 2026-11-24) | not yet confirmed by Yossi; needs his word before launch. No feedback quote from email is used (no consent; one is off the record) |
+| 20 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H1 | | |
+| 21 | story `stage.israel[6]` "ועידת התיירות של כלכליסט, הרצאה, 2018" (review pass 2026-11-24: kind of event added for one row shape); in `proof.israelLine`; home `israelVideo.title` "מהבמה בישראל" + `israelVideo.caption` "ועידת התיירות של כלכליסט, 2018"; videos `heVideos[12]` (YouTube `4nKdAjljNhU`) title "ועידת התיירות 2018", context "הרצאה בוועידת התיירות של כלכליסט, 2018." | YouTube, Calcalist channel, public title "ועידת התיירות 2018 - יוסי גינסברג"; embedded on gilataviv.co.il speaker page under "צפו בקטע מההרצאה" | spoken language not confirmed; Yossi to confirm and to approve use. Nobody has watched it: Yossi to watch it and approve it. Controller ruling 2026-11-24: it stays on the home page (public, on Calcalist's own channel, the title names him, the thumbnail shows him alone on stage as he looks today). No text says it is in Hebrew; the group heading is "בישראל" |
+| 22 | media `heIsraelMedia[0]` "הפודקאסט של ערן שטרן" · 2021, "פרק בהשתתפות יוסי." (review pass 2026-11-24; was "יוסי התארח בפודקאסט.") | Census §4: podcast log, opened, Drive `1Am0XD-MmFZKXN14iShJyvKpQmNjihsQf`: Eran Stern podcast, 2 May 2021 (confirmed) | from a document in his files; not yet confirmed by Yossi; needs his word before launch. No link is known |
+| 23 | media `heIsraelMedia[1]` ynet: "בחזרה מטואיצ'י", גרסת המסך הגדול: "טיול בפארק לעומת המציאות" (https://www.ynet.co.il/articles/0,7340,L-5124308,00.html) | his agent's public page (gilataviv.co.il), "מה אמרו בתקשורת" | headline copied from his agent's public page; the article itself was not opened; Yossi to approve. A published headline about the film, not our copy: the film-once test exempts it explicitly. With it the film appears twice on the site (see "For Yossi to decide" 8) |
+| 24 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H7 | | |
+| 25 | HELD BACK 2026-11-24, value now "": see "Held back until Yossi confirms", row H2 | | |
+
+## Held back until Yossi confirms
+
+Review ruling, 2026-11-24. Each value is now `""` in `data/he/` (keys and array positions kept, so the copy deck still maps them) and the page renders nothing for it. A test (`components/he/held-back.test.tsx`) fails if any of these names returns to a Hebrew page or data value. Each comes back only on Yossi's word.
+
+| # | Was | Where | Why it is held back |
+|---|---|---|---|
+| H1 | "קיבוץ אלרום, הרצאה, 2019" (was Claim 20) | story `stage.israel[5]` | The only evidence is a private letter from an audience member, and the year was wrong. |
+| H2 | "יוסי הוא גם שגריר רצון טוב של שלווה, ארגון שעוזר לילדים עם מוגבלויות." (was Claim 25) | story `stage.shalva` | Not on the allowed list; its source text touches his family. |
+| H3 | "סינמה סיטי, הרצאה קצרה לאנשי המכירות, 2018" (was Claim 16) | story `stage.israel[8]`; was in home `proof.israelLine` | A film screening with a short talk; who the client was is unclear. |
+| H4 | "חיל החינוך בצה"ל, הרצאה, 2019" (was Claim 14) | story `stage.israel[3]`; was in home `proof.israelLine` | Two sources disagree about which unit, and the order form shows a booking, not a delivered talk. |
+| H5 | "Google ישראל, הרצאה, 2020" (was Claim 18) | story `stage.israel[2]`; was in home `proof.israelLine` | The agency noted in the same email thread that Google "is not public". Held until Yossi rules. Google stays in the client logo strip, which comes from the English site. |
+| H6 | "גמלאי משרד ראש הממשלה, הרצאה, 2018" (was Claim 15) | story `stage.israel[7]` | In Israel this is commonly read as security-service retirees; that body may not want its events published. |
+| H7 | ynet: "בחזרה מטואיצ'י לאוהל בחצר: בית של שורד" (was Claim 24) | media `heIsraelMedia[2].title` (the url stays in the data and is not rendered) | The article is about his home. |
 
 ## Proposals (Yossi's to decide)
 
 | # | Item | Where | Note |
 |---|---|---|---|
-| 1 | The film sentence: "ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף." | `data/he/story.ts` book.film | The only mention of the film on the Hebrew site. Strike it and the film is gone (a test checks it appears exactly once). |
+| 1 | The film sentence: "ב-2017 הספר הפך לסרט הוליוודי, Jungle, בכיכובו של דניאל רדקליף." | `data/he/story.ts` book.film | The only film sentence we wrote, but not the only mention: the first ynet headline on the media page (Claim 23) is also about the film. Striking this sentence leaves that headline, so the film stays on the site unless the headline goes too (see "For Yossi to decide" 8). |
 | 2 | Keynote title "המפה נגמרה" for "The Map Has Run Out" | `data/he/keynotes.ts` [0].title | Based on the owner's new English name, not "From Survival to Legacy". The English data file still has the old title. |
 | 3 | Keynote title "חוקי הג'ונגל" for "The Laws of the Jungle" | `data/he/keynotes.ts` [1].title | Also the name of his second book. Update 2026-11-24: his own Hebrew texts say a Hebrew edition exists, "ספר תובנות בשם ׳חוקי הג׳ונגל׳ בהוצאת כנרת זמורה ביתן" (HE4, 2019), and HE5 (2020) already used "״חוקי הג׳ונגל״" as a Hebrew talk title. That makes the name a strong fit in Israel. Note: in Hebrew "חוק הג'ונגל" is an idiom for lawlessness, the opposite of the talk's meaning. |
 | 4 | Keynote title "הישרדות אמיתית, הישרדות מדומיינת" for "Real Survival vs Imaginary Survival" | `data/he/keynotes.ts` [2].title | A comma instead of "מול" reads more naturally in Hebrew. |
@@ -254,6 +268,7 @@ Until 2026-11-24 each line kept `ph()` and showed a visible ⟦טיוטה⟧ sta
 | 5 | Hebrew spellings for the musicians Avishai Barnatan and Amir Paiss | `data/he/story.ts` ventures.album | Kept in Latin until Yossi gives the spellings. |
 | 6 | The endorsements page intro "מה אמרו מי שהזמינו אותו, ומי שישבו באולם." | `data/he/endorsements.ts` heEndorsementsPage.intro | It asserts that every endorser booked him or sat in the hall. Confirm, or soften. |
 | 7 | Chris Varelas's title shown in English | `data/he/endorsements.ts` (roleEn) | Controller ruling; a Hebrew rendering needs Yossi's knowledge of the role. |
+| 8 | The film appears twice on the Hebrew site | story `book.film` (Proposal 1); media `heIsraelMedia[1]`, the first ynet headline (Claim 23) | Keep both, keep one, or strike both. Striking the story sentence alone does not remove the film from the site. |
 
 ## From Yossi's own bios, not used, and why
 
@@ -365,8 +380,8 @@ These rows showed a ⟦טיוטה⟧ stamp in the page text (`ph()`). Their text
 | File, key | Hebrew | Source | Type |
 |---|---|---|---|
 | keynotes `heKeynotesPage.workshopTitle` | יום סדנה מלא | en/keynotes/page.tsx:175 "The full-day workshop." | fact |
-| keynotes `heKeynotesPage.workshopBody` | הרצאה מזיזה אולם לשעה. יום שלם מעביר אנשים דרך משהו שהם לא שוכחים. לארגונים שרוצים יותר מהרצאה, ... אחרי תדריך מעמיק. | en/keynotes/page.tsx:178-182 "A keynote moves a room for an hour. A full day moves people through something they don't forget." / "For organisations that want more than a talk, Yossi designs and leads a workshop built around the outcome you are after. On premises or off-site. The length, the location, and the shape are decided with you, after a deep brief." | fact |
-| keynotes `heKeynotesPage.workshopFit` | מתאים לימי הנהלה, לכנסי פתיחה של צוותי מכירות, ולצוותים שעוברים שינוי. | en/keynotes/page.tsx "Best for:" "Leadership offsites... Sales kickoffs... Culture work for teams going through change." | fact |
+| keynotes `heKeynotesPage.workshopBody` | הרצאה סוחפת אולם לשעה. ביום שלם אנשים עוברים תהליך שנשאר איתם. לארגונים שרוצים יותר מהרצאה, יוסי בונה ומנחה יום סדנה סביב התוצאה שאתם רוצים להשיג, במשרדים שלכם או מחוצה להם. ... אחרי תדריך מעמיק. (review pass 2026-11-24; was "הרצאה מזיזה אולם לשעה. יום שלם מעביר אנשים דרך משהו שהם לא שוכחים. ...") | en/keynotes/page.tsx:178-182 "A keynote moves a room for an hour. A full day moves people through something they don't forget." / "For organisations that want more than a talk, Yossi designs and leads a workshop built around the outcome you are after. On premises or off-site. The length, the location, and the shape are decided with you, after a deep brief." | fact |
+| keynotes `heKeynotesPage.workshopFit` | מתאים לימי הנהלה, לכנסי מכירות ולצוותים שעוברים שינוי. (review pass 2026-11-24; was "...לכנסי פתיחה של צוותי מכירות, ולצוותים...") | en/keynotes/page.tsx "Best for:" "Leadership offsites... Sales kickoffs... Culture work for teams going through change." | fact |
 | booking `form.errors.summaryOne` / `summaryMany` | יש שדה אחד שצריך לתקן. / יש {count} שדות שצריך לתקן. | none | interface |
 | booking `form.honeypotLabel` | לא למילוי | none (label of the hidden anti-spam field; aria-hidden, people never see it) | interface |
 | home `proof.israelLine`, `israelVideo.*`; story `stage.israelTitle`, `stage.israel[*]`, `stage.shalva`; videos `heVideos[12]`; media `heIsraelMedia[*]` | see Claims 12-25 | see Claims 12-25 | CLAIM |
@@ -376,6 +391,10 @@ Not added: the "one talk, and one for the community" offer on the keynotes page 
 ### Changed strings
 
 videos `heVideosPage.intro`, `metaDescription`, `hebrewHeading`, `englishHeading`, `englishNote` (see the Videos table); legal `accessibility.missingTitle` and `privacy.missingTitle` "פרטים שחסרים" → "פרטים שעוד יושלמו" (the counsel list is now a plain list under this heading, not dashed boxes); legal `accessibility.measures[3]` → "לכל שדה בטופס יש תווית. שגיאות מוצמדות לשדה שלהן, ומעל הטופס מוכרזת שורה אחת שמסכמת כמה שדות צריך לתקן." (matches the new error summary).
+
+### Review pass, 2026-11-24 (changed and new strings)
+
+home `proof.israelLine`, `hero.imageAlt`; story `stage.israelTitle` "על במות בישראל", `stage.israel[4]`, `[6]`, `[9]` (one row shape); media `heIsraelMedia[0].title`, `heMediaPage.metaDescription`, `heMediaPage.intro`; keynotes `heKeynotesPage.workshopBody`, `workshopFit`; videos `heVideosPage.englishNote`; legal privacy line "ולנציג של יוסי בישראל שמטפל בפנייה." (was "ולנציג המטפל בפנייה, כשפרטיו יוגדרו."). New: site `meta.ogDraftPrefix` "טיוטה: " (interface; put before every Open Graph and X title until `HE_LIVE=1`; the tab title has none). The layout's default share description is now home `metaDescription` (it says Hebrew and English), not `meta.description`. Held back (value ""): see "Held back until Yossi confirms". Story `stage.imageAlt` checked: no words about his appearance, unchanged.
 
 ### Cleared strings (value "", the page renders nothing for them)
 
