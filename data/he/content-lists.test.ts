@@ -158,7 +158,8 @@ describe("the film", () => {
   for (const mod of Object.values(modules)) walk(mod);
   // "Jungle" not preceded by "the ": "The Laws of the Jungle" is a keynote, not the film.
   // "הסרט" as a whole word: "הסרטונים" (videos) is not the film.
-  const FILM = /רדקליף|(?<!the )Jungle|(^|[^א-ת])הסרט($|[^א-ת])|סרט קולנוע/;
+  // "הוליווד" too: the sentence follows Yossi's own term for it, "סרט הוליוודי".
+  const FILM = /רדקליף|(?<!the )Jungle|(^|[^א-ת])הסרט($|[^א-ת])|סרט קולנוע|הוליווד/;
   it("is mentioned in exactly one string on the whole Hebrew site: the stamped story proposal", () => {
     expect(Object.keys(modules).length).toBeGreaterThanOrEqual(10);
     const hits = strings.filter((s) => FILM.test(s));
