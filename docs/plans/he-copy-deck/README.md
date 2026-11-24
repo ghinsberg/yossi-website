@@ -15,3 +15,9 @@ Yossi edits the Hebrew site copy in a Google Doc, not in code.
 4. An emptied row means remove that text from the site. Text written under a table is an addition: ask where it goes if it is not obvious.
 5. The same Hebrew string can appear under several codes (a button label used on three pages). If he changes one and not the others, apply only that one and tell him.
 6. Re-export, and never regenerate the doc over his edits: a regenerated doc would be a new file and would lose his work.
+
+## Keeping the doc in step with the site (added 2026-11-24)
+
+`scripts/sync-he-copy-deck.py READ_DOC.json ROWS_NOW.json [--write-map]` computes the Docs requests that bring the doc in line with `data/he`: changed texts, cleared texts (the row stays, emptied) and new strings (appended as new rows with the next free code and a flag). Run it dry, apply the printed requests with the Docs connector, run it again with `--write-map`, then read the doc once more and run it dry: it must report zero changes.
+
+It refuses to run when any doc row differs from the map. That means Yossi has edited the doc. Apply his edits to the site first (see "Applying his edits"), update the map, and only then sync.
