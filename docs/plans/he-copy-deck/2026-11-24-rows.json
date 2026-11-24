@@ -106,14 +106,14 @@
    "id": "H06",
    "file": "home",
    "path": "heHome.hero.imageAlt",
-   "text": "יוסי גינסברג על במה, קירח ובזקן אפור קצר, במקטורן ירקרק ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים",
+   "text": "יוסי גינסברג על במה, במקטורן ועם מיקרופון ראש. הוא מחייך ומרים אצבע תוך כדי דיבור. ברקע אורות במה ירוקים",
    "stamped": false
   },
   {
    "id": "H07",
    "file": "home",
    "path": "heHome.hero.footagePlaceholder",
-   "text": "כאן יופיע סרטון הרצאה בעברית",
+   "text": "",
    "stamped": false
   },
   {
@@ -554,7 +554,7 @@
    "id": "K17",
    "file": "keynotes",
    "path": "heKeynotesPage.empty",
-   "text": "שמות ההרצאות, למי הן מתאימות ומה הקהל לוקח מהן יופיעו כאן, אחרי שיוסי יאשר אותם",
+   "text": "",
    "stamped": false
   },
   {
@@ -764,7 +764,7 @@
    "id": "V26",
    "file": "videos",
    "path": "heVideosPage.metaDescription",
-   "text": "קטעים מהרצאות של יוסי גינסברג על במות בעולם. הסרטונים באנגלית.",
+   "text": "קטעים מהרצאות של יוסי גינסברג, מהבמה בישראל ומהבמות בעולם.",
    "stamped": false
   },
   {
@@ -778,35 +778,35 @@
    "id": "V28",
    "file": "videos",
    "path": "heVideosPage.intro",
-   "text": "הסרטונים כאן באנגלית, רובם מבמות בחו\"ל. סרטונים בעברית יתווספו בהמשך.",
+   "text": "קטעים מהרצאות של יוסי, מהבמה בישראל ומהבמות בעולם.",
    "stamped": false
   },
   {
    "id": "V29",
    "file": "videos",
    "path": "heVideosPage.empty",
-   "text": "הסרטונים יופיעו כאן, אחרי שיוסי יאשר כל אחד מהם",
+   "text": "",
    "stamped": false
   },
   {
    "id": "V30",
    "file": "videos",
    "path": "heVideosPage.hebrewHeading",
-   "text": "בעברית",
+   "text": "בישראל",
    "stamped": false
   },
   {
    "id": "V31",
    "file": "videos",
    "path": "heVideosPage.englishHeading",
-   "text": "באנגלית",
+   "text": "בעולם",
    "stamped": false
   },
   {
    "id": "V32",
    "file": "videos",
    "path": "heVideosPage.englishNote",
-   "text": "מהבמות בחו\"ל, מהסיפור, וקליפים קצרים.",
+   "text": "קטעים מהבמות בחו\"ל, מתוך הסיפור וקליפים קצרים. כל הסרטונים כאן באנגלית.",
    "stamped": false
   },
   {
@@ -967,7 +967,7 @@
    "id": "E22",
    "file": "endorsements",
    "path": "heEndorsementsPage.empty",
-   "text": "ההמלצות יופיעו כאן, בשם, בתפקיד ובארגון, אחרי שכל אחת תאושר ותהיה הסכמה בכתב",
+   "text": "",
    "stamped": false
   },
   {
@@ -1016,7 +1016,7 @@
    "id": "M04",
    "file": "media",
    "path": "heMediaPage.metaDescription",
-   "text": "יוסי גינסברג בטלוויזיה, בפודקאסטים ובעיתונות בעולם.",
+   "text": "יוסי גינסברג בתקשורת, בישראל ובעולם: טלוויזיה, עיתונות ופודקאסטים.",
    "stamped": false
   },
   {
@@ -1030,7 +1030,7 @@
    "id": "M06",
    "file": "media",
    "path": "heMediaPage.intro",
-   "text": "יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה ובעיתונות.",
+   "text": "יותר מארבעים שנה אחרי, הסיפור עדיין מסופר: בטלוויזיה, בעיתונות ובפודקאסטים.",
    "stamped": false
   },
   {
@@ -1044,7 +1044,7 @@
    "id": "M08",
    "file": "media",
    "path": "heMediaPage.israelPlaceholder",
-   "text": "כתבות וראיונות מהתקשורת הישראלית יופיעו כאן, אחרי שכל פריט ייבדק ויאושר",
+   "text": "",
    "stamped": false
   },
   {
@@ -1065,7 +1065,7 @@
    "id": "M11",
    "file": "media",
    "path": "heMediaPage.empty",
-   "text": "הכתבות והראיונות יופיעו כאן, אחרי שכל פריט ייבדק ויאושר",
+   "text": "",
    "stamped": false
   },
   {
@@ -1219,7 +1219,7 @@
    "id": "Q21",
    "file": "faq",
    "path": "heFaqPage.empty",
-   "text": "השאלות והתשובות יופיעו כאן, אחרי שיוסי יאשר אותן",
+   "text": "",
    "stamped": false
   },
   {
@@ -1660,7 +1660,7 @@
    "id": "G15",
    "file": "site",
    "path": "heSite.footer.contactPlaceholder",
-   "text": "פרטי הקשר של הנציגים בישראל יופיעו כאן, אחרי אישורם",
+   "text": "",
    "stamped": false
   },
   {
@@ -1849,7 +1849,7 @@
    "id": "L09",
    "file": "legal",
    "path": "heLegal.accessibility.measures[3]",
-   "text": "לכל שדה בטופס יש תווית, ושגיאות מוצמדות לשדה שלהן ומוכרזות כהתראות.",
+   "text": "לכל שדה בטופס יש תווית. שגיאות מוצמדות לשדה שלהן, ומעל הטופס מוכרזת שורה אחת שמסכמת כמה שדות צריך לתקן.",
    "stamped": false
   },
   {
@@ -1870,7 +1870,7 @@
    "id": "L12",
    "file": "legal",
    "path": "heLegal.accessibility.missingTitle",
-   "text": "פרטים שחסרים",
+   "text": "פרטים שעוד יושלמו",
    "stamped": false
   },
   {
@@ -1940,7 +1940,7 @@
    "id": "L22",
    "file": "legal",
    "path": "heLegal.privacy.form[2]",
-   "text": "הפנייה נשלחת באימייל ליוסי גינסברג, ולנציג המטפל בפנייה, כשפרטיו יוגדרו.",
+   "text": "הפנייה נשלחת באימייל ליוסי גינסברג, ולנציג של יוסי בישראל שמטפל בפנייה.",
    "stamped": false
   },
   {
@@ -1996,7 +1996,7 @@
    "id": "L30",
    "file": "legal",
    "path": "heLegal.privacy.missingTitle",
-   "text": "פרטים שחסרים",
+   "text": "פרטים שעוד יושלמו",
    "stamped": false
   },
   {
@@ -2075,7 +2075,175 @@
    "path": "agents[1].nameHe",
    "text": "גילת אביב",
    "stamped": false
+  },
+  {
+   "id": "H24",
+   "file": "home",
+   "path": "heHome.proof.israelLine",
+   "text": "ובישראל: ועידת התיירות של כלכליסט, המועצה המקומית כפר כמא, מלון פסטורל כפר בלום.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "H25",
+   "file": "home",
+   "path": "heHome.israelVideo.title",
+   "text": "מהבמה בישראל",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "H26",
+   "file": "home",
+   "path": "heHome.israelVideo.caption",
+   "text": "ועידת התיירות של כלכליסט, 2018",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S31",
+   "file": "story",
+   "path": "heStory.stage.israelTitle",
+   "text": "על במות בישראל",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S32",
+   "file": "story",
+   "path": "heStory.stage.israel[0]",
+   "text": "המועצה המקומית כפר כמא, ערב מלגות, 2025",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S33",
+   "file": "story",
+   "path": "heStory.stage.israel[1]",
+   "text": "Nataraj, הרצאה, 2022",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S34",
+   "file": "story",
+   "path": "heStory.stage.israel[4]",
+   "text": "מלון פסטורל כפר בלום, הרצאה, 2019",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S35",
+   "file": "story",
+   "path": "heStory.stage.israel[6]",
+   "text": "ועידת התיירות של כלכליסט, הרצאה, 2018",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "S36",
+   "file": "story",
+   "path": "heStory.stage.israel[9]",
+   "text": "INSIDERS, מפגש קהילה",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "K22",
+   "file": "keynotes",
+   "path": "heKeynotesPage.workshopTitle",
+   "text": "יום סדנה מלא",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "K23",
+   "file": "keynotes",
+   "path": "heKeynotesPage.workshopBody",
+   "text": "הרצאה סוחפת אולם לשעה. ביום שלם אנשים עוברים תהליך שנשאר איתם. לארגונים שרוצים יותר מהרצאה, יוסי בונה ומנחה יום סדנה סביב התוצאה שאתם רוצים להשיג, במשרדים שלכם או מחוצה להם. האורך, המקום והמבנה נקבעים יחד איתכם, אחרי תדריך מעמיק.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "K24",
+   "file": "keynotes",
+   "path": "heKeynotesPage.workshopFit",
+   "text": "מתאים לימי הנהלה, לכנסי מכירות ולצוותים שעוברים שינוי.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "V34",
+   "file": "videos",
+   "path": "heVideos[12].title",
+   "text": "ועידת התיירות 2018",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "V35",
+   "file": "videos",
+   "path": "heVideos[12].context",
+   "text": "הרצאה בוועידת התיירות של כלכליסט, 2018.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "M13",
+   "file": "media",
+   "path": "heIsraelMedia[0].outlet",
+   "text": "הפודקאסט של ערן שטרן",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "M14",
+   "file": "media",
+   "path": "heIsraelMedia[0].title",
+   "text": "פרק בהשתתפות יוסי.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "M15",
+   "file": "media",
+   "path": "heIsraelMedia[1].title",
+   "text": "\"בחזרה מטואיצ'י\", גרסת המסך הגדול: \"טיול בפארק לעומת המציאות\"",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "B51",
+   "file": "booking",
+   "path": "heBooking.form.errors.summaryOne",
+   "text": "יש שדה אחד שצריך לתקן.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "B52",
+   "file": "booking",
+   "path": "heBooking.form.errors.summaryMany",
+   "text": "יש {count} שדות שצריך לתקן.",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "B53",
+   "file": "booking",
+   "path": "heBooking.form.honeypotLabel",
+   "text": "לא למילוי",
+   "stamped": true,
+   "added": "2026-11-24"
+  },
+  {
+   "id": "G37",
+   "file": "site",
+   "path": "heSite.meta.ogDraftPrefix",
+   "text": "טיוטה: ",
+   "stamped": true,
+   "added": "2026-11-24"
   }
  ],
- "note": "Row ids are fixed as first exported on 2026-11-24. Texts are refreshed by file+path. A row whose text is empty was cleared on the site."
+ "note": "Row ids are fixed. Texts are refreshed by file+path. An empty text means the string was cleared on the site. Rows with 'added' were appended after the first export."
 }
